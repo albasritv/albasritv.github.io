@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no" />
+    <title>BSR Pro Generator</title>
+    <link rel="icon" type="image/jpg" href="https://up6.cc/2026/04/177672181699171.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- مكتبات Firebase و CryptoJS للتشفير -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <style>
+        :root {
+            --bg-main: #0B0F19;
+            --bg-card: #151C2C;
+            --bg-input: #1D263B;
+            --primary: #00E5FF;
+            --primary-glow: rgba(0, 229, 255, 0.4);
+            --secondary: #7C3AED;
+            --text-main: #FFFFFF;
+            --text-muted: #94A3B8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --success: #10B981;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Tajawal", sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.08), transparent 25%);
+        }
+
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-main); }
+        ::-webkit-scrollbar-thumb { background: #2A3655; border-radius: 10px; }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; }
+        .brand-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; color: white;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+        .brand-text { font-size: 20px; font-weight: 900; letter-spacing: 0.5px; }
+
+        .social-icons { display: flex; gap: 8px; }
+        .social-icons a {
+            width: 36px; height: 36px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-input);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-muted); text-decoration: none;
+            transition: var(--transition);
+        }
+        .social-icons a:hover { color: white; background: var(--secondary); transform: translateY(-2px); }
+
+        /* Container & Cards */
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px; margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 20px; padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .card-header i { color: var(--primary); font-size: 22px; }
+        .card-header h2 { font-size: 18px; font-weight: 800; }
+
+        /* Login Contact Box */
+        .login-contact-box {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(0, 229, 255, 0.15));
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: var(--radius-md);
+            padding: 18px; margin-top: 25px;
+            display: flex; align-items: center; gap: 15px;
+            flex-wrap: wrap; text-align: right;
+        }
+        .login-contact-box i.fa-telegram-plane {
+            font-size: 30px; color: #00E5FF;
+            background: rgba(0, 229, 255, 0.1);
+            padding: 12px; border-radius: 50%;
+        }
+        .login-contact-text { flex: 1; min-width: 150px; }
+        .login-contact-text h3 { font-size: 15px; font-weight: 800; color: white; margin-bottom: 4px; }
+        .login-contact-text p { font-size: 13px; color: var(--text-muted); }
+        .login-contact-btn {
+            background: #0088cc; color: white; text-decoration: none;
+            padding: 10px 18px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 700;
+            display: inline-flex; align-items: center; gap: 6px; transition: var(--transition);
+        }
+        .login-contact-btn:hover { background: #00aaff; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 136, 204, 0.4); }
+
+        /* Inputs & Grid Layout */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media (min-width: 768px) {
+            .form-grid { grid-template-columns: 1fr 1fr; }
+            .form-grid.full-width { grid-column: span 2; }
+        }
+
+        .input-group { position: relative; }
+        .input-group i {
+            position: absolute; top: 50%; right: 18px;
+            transform: translateY(-50%); color: var(--text-muted);
+            font-size: 16px; transition: var(--transition);
+        }
+        .input-group textarea ~ i { top: 24px; transform: none; }
+
+        input, select, textarea {
+            width: 100%; background: var(--bg-input);
+            border: 2px solid transparent; border-radius: var(--radius-md);
+            padding: 16px 45px 16px 16px; color: var(--text-main);
+            font-size: 14px; font-weight: 500;
+            transition: var(--transition); outline: none; appearance: none;
+        }
+        textarea { resize: vertical; min-height: 80px; }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary); background: #172033;
+            box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.1);
+        }
+        input:focus + i, select:focus + i, textarea:focus ~ i { color: var(--primary); }
+
+        /* Buttons */
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; grid-column: 1 / -1; }
+        button {
+            flex: 1; min-width: 120px; padding: 16px;
+            border: none; border-radius: var(--radius-md);
+            font-size: 15px; font-weight: 700; cursor: pointer;
+            display: flex; justify-content: center; align-items: center; gap: 8px;
+            transition: var(--transition);
+        }
+        button:active { transform: scale(0.96); }
+        
+        .btn-primary { background: linear-gradient(135deg, var(--secondary), #3B82F6); color: white; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3); }
+        .btn-primary:hover { box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5); }
+        .btn-secondary { background: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background: #2A3655; }
+        .btn-danger { background: rgba(255, 51, 102, 0.1); color: var(--danger); border: 1px solid rgba(255, 51, 102, 0.2); }
+        .btn-success { background: linear-gradient(135deg, var(--success), #059669); color: white; }
+
+        /* User Bar */
+        .user-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(0, 229, 255, 0.05); border: 1px solid rgba(0, 229, 255, 0.1);
+            padding: 16px 20px; border-radius: var(--radius-lg); margin-bottom: 24px; flex-wrap: wrap; gap: 15px;
+        }
+        .user-details span { display: block; font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+        .user-details strong { color: var(--primary); font-size: 15px; }
+        .user-bar button { flex: none; min-width: auto; padding: 10px 20px; font-size: 14px; }
+
+        /* Server Item */
+        .server-item {
+            background: var(--bg-input); border-radius: var(--radius-md);
+            padding: 16px; margin-bottom: 12px; border: 1px solid var(--border-color);
+        }
+        .server-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .server-title { font-size: 16px; font-weight: 700; color: white; display: flex; align-items: center; gap: 8px; }
+        .server-title i { color: #F59E0B; }
+        .server-actions { display: flex; gap: 8px; }
+        .server-actions button { padding: 8px; min-width: auto; border-radius: var(--radius-sm); }
+        .server-url { direction: ltr; text-align: left; background: #0B0F19; padding: 10px; border-radius: var(--radius-sm); font-size: 13px; color: var(--primary); word-break: break-all; margin-bottom: 10px; }
+        .server-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag { background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 20px; font-size: 11px; color: var(--text-muted); }
+
+        /* Results */
+        .result-box {
+            background: var(--bg-input); border: 2px dashed var(--border-color);
+            border-radius: var(--radius-md); padding: 20px; text-align: center;
+            color: var(--text-muted); margin-bottom: 16px; min-height: 120px;
+            display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px;
+        }
+        .result-content { display: none; width: 100%; text-align: right; }
+        .result-label { font-size: 13px; color: var(--primary); font-weight: bold; margin-bottom: 8px; }
+
+        /* Modal */
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; }
+        .modal.show { display: flex; }
+        .modal-content { background: var(--bg-card); width: 100%; max-width: 600px; border-radius: var(--radius-lg); padding: 24px; max-height: 90vh; overflow-y: auto; border: 1px solid var(--border-color); animation: modalFadeIn 0.3s ease; }
+
+        /* Toasts */
+        .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); background: var(--bg-card); color: white; padding: 14px 24px; border-radius: 50px; font-weight: 700; font-size: 14px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+        .toast.success { border: 1px solid var(--success); }
+        .toast.error { border: 1px solid var(--danger); }
+
+        .hidden { display: none !important; }
+
+        @media (max-width: 600px) {
+            .navbar { padding: 12px 15px; }
+            .container { padding: 15px; }
+            .card { padding: 20px; border-radius: 20px; }
+            button { padding: 14px; font-size: 14px; }
+            .user-bar { flex-direction: column; align-items: stretch; text-align: center; }
+            .login-contact-box { flex-direction: column; text-align: center; justify-content: center; }
+            .modal { padding: 0; align-items: flex-end; }
+            .modal-content { border-radius: 24px 24px 0 0; animation: slideUp 0.3s ease; padding: 20px; }
+        }
+        @keyframes modalFadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="brand">
+            <div class="brand-icon"><i class="fas fa-play"></i></div>
+            <div class="brand-text">BSR PRO</div>
+        </div>
+        <div class="social-icons">
+            <a href="https://t.me/Basritv" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.youtube.com/@Alam_www" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <!-- Login Form -->
+        <div id="loginPage" class="card" style="max-width: 450px; margin: 40px auto;">
+            <div class="card-header">
+                <i class="fas fa-fingerprint"></i>
+                <h2>تسجيل الدخول</h2>
+            </div>
+            
+            <!-- إضافة form ليتم حفظ الباسورد في المتصفح -->
+            <form id="loginForm" onsubmit="loginUser(event)">
+                <div class="input-group" style="margin-bottom: 16px;">
+                    <!-- إضافة name و autocomplete لمساعدة المتصفح -->
+                    <input type="text" id="loginUsername" name="username" autocomplete="username" placeholder="اسم المستخدم" required />
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPassword" name="password" autocomplete="current-password" placeholder="كلمة المرور" required />
+                    <i class="fas fa-lock"></i>
+                </div>
+                <!-- تغيير الزر ليكون submit -->
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px;">
+                    تسجيل الدخول <i class="fas fa-arrow-left"></i>
+                </button>
+            </form>
+
+            <!-- Telegram Contact Box -->
+            <div class="login-contact-box">
+                <i class="fab fa-telegram-plane"></i>
+                <div class="login-contact-text">
+                    <h3>للحصول على يوزر وباسورد</h3>
+                    <p>تواصل معنا لتفعيل حسابك وتصميم مشغلك</p>
+                </div>
+                <a href="https://t.me/Basritv" target="_blank" class="login-contact-btn">
+                    تواصل معنا <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main App -->
+        <div id="appPage" class="hidden">
+            
+            <!-- User Info Bar -->
+            <div class="user-bar">
+                <div class="user-details">
+                    <span>مرحباً بك، <strong id="loggedUserName">-</strong></span>
+                    <span>معرف التطبيق: <strong id="loggedPackageName">-</strong> | السكيم: <strong id="loggedSchemeName">-</strong></span>
+                </div>
+                <button class="btn-secondary" onclick="logoutUser()">
+                    <i class="fas fa-sign-out-alt"></i> خروج
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-server"></i>
+                    <h2>إضافة سيرفر / قناة</h2>
+                </div>
+                
+                <div class="form-grid">
+                    <!-- Row 1 -->
+                    <div class="input-group">
+                        <input id="serverName" placeholder="اسم السيرفر (مثال: بين سبورت 1)" />
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="input-group">
+                        <input id="serverUrl" type="url" placeholder="رابط السيرفر (m3u8, mp4...)" />
+                        <i class="fas fa-link"></i>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="input-group">
+                        <select id="playerMode">
+                            <option value="exo">Exo Player</option>
+                            <option value="web">Web Player</option>
+                            <option value="browser">Browser</option>
+                            <option value="iframe">Iframe</option>
+                        </select>
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="input-group">
+                        <input id="drmKey" placeholder="الكي - DRM (اختياري)" />
+                        <i class="fas fa-key"></i>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="input-group">
+                        <input id="userAgent" placeholder="اليوزر - User-Agent (اختياري)" />
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="input-group">
+                        <input id="referer" placeholder="الريفري - Referer (اختياري)" />
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="input-group">
+                        <input id="origin" placeholder="الأوريجينال - Origin (اختياري)" />
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="input-group">
+                        <input id="cookie" placeholder="الكوكي - Cookie (اختياري)" />
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn-secondary" onclick="addServer()">
+                            <i class="fas fa-plus"></i> إضافة للقائمة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Card -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>إعدادات اللوجو والحماية</h2>
+                </div>
+                
+                <div class="form-grid">
+                    <!-- Logo Row -->
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <input id="logoUrl" type="url" placeholder="رابط اللوجو (اختياري)" />
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="input-group">
+                        <select id="logoPosition">
+                            <option value="bottom_right" selected>مكان اللوجو: يمين جوه (أسفل)</option>
+                            <option value="bottom_left">مكان اللوجو: يسار جوه (أسفل)</option>
+                            <option value="top_right">مكان اللوجو: يمين فوق (أعلى)</option>
+                            <option value="top_left">مكان اللوجو: يسار فوق (أعلى)</option>
+                        </select>
+                        <i class="fas fa-arrows-alt"></i>
+                    </div>
+                    <div class="input-group">
+                        <select id="logoSize">
+                            <option value="40">حجم اللوجو: 40</option>
+                            <option value="60">حجم اللوجو: 60</option>
+                            <option value="80" selected>حجم اللوجو: 80 (افتراضي)</option>
+                            <option value="100">حجم اللوجو: 100</option>
+                            <option value="120">حجم اللوجو: 120</option>
+                        </select>
+                        <i class="fas fa-expand"></i>
+                    </div>
+
+                    <!-- Protection Row -->
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <select id="vpnEnabled">
+                            <option value="true" selected>تفعيل الحماية (VPN Protection)</option>
+                            <option value="false">إيقاف الحماية</option>
+                        </select>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="input-group">
+                        <input id="vpnTitle" placeholder="عنوان رسالة الحماية" value="تحذير أمني" />
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="input-group">
+                        <input id="vpnExitText" placeholder="نص زر الخروج من الحماية" value="خروج" />
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <textarea id="vpnMessage" placeholder="رسالة الحماية عند كشف VPN">يرجى إيقاف الـ VPN أو أي بروكسي حتى يعمل المشغل بشكل صحيح وآمن.</textarea>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn-primary" onclick="generate()">
+                            <i class="fas fa-bolt"></i> توليد الرابط والاكواد النهائية
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List & Results & Decode -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-list-ul"></i>
+                    <h2>قائمة القنوات المضافة (<span id="serverCount">0</span>)</h2>
+                    <button class="btn-danger" style="margin-right:auto; min-width:auto; padding: 6px 12px; font-size: 12px;" onclick="clearAll()">مسح الكل</button>
+                </div>
+                <div id="list" style="max-height: 400px; overflow-y: auto; padding-left: 5px;"></div>
+            </div>
+
+            <!-- Results -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-code"></i>
+                    <h2>الروابط والأكواد الناتجة</h2>
+                </div>
+
+                <div class="result-box" id="hiddenResultBox">
+                    <i class="fas fa-box-open" style="font-size: 30px; opacity: 0.5;"></i>
+                    <p>أضف بياناتك واضغط "توليد" لرؤية النتيجة هنا</p>
+                </div>
+
+                <div class="result-content" id="resultContainers">
+                    <div class="result-label">الرابط المولد (Intent):</div>
+                    <div class="input-group">
+                        <textarea id="result" readonly style="height: 80px; font-family: monospace; font-size: 12px;"></textarea>
+                    </div>
+                    
+                    <div class="result-label" style="margin-top:15px;">كود HTML جاهز (مرفق بزر تشغيل احترافي لموقعك):</div>
+                    <div class="input-group">
+                        <textarea id="htmlResult" readonly style="height: 150px; font-family: monospace; font-size: 12px; white-space: pre; background: #0B0F19; border-color: var(--border-color);"></textarea>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-secondary" onclick="toggleResultVisibility()" id="toggleBtn">
+                        <i class="fas fa-eye"></i> إظهار
+                    </button>
+                    <button class="btn-success" onclick="copyResult()">
+                        <i class="fas fa-link"></i> نسخ الرابط
+                    </button>
+                    <button class="btn-primary" onclick="copyHtmlResult()">
+                        <i class="fas fa-file-code"></i> نسخ HTML
+                    </button>
+                </div>
+            </div>
+
+            <!-- Decode -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-unlock-alt"></i>
+                    <h2>فك تشفير رابط سابق</h2>
+                </div>
+                <div class="input-group">
+                    <textarea id="decodeInput" placeholder="الصق رابط Intent هنا لفك التشفير واسترجاع القنوات..." style="height: 60px;"></textarea>
+                    <i class="fas fa-paste"></i>
+                </div>
+                <button class="btn-secondary" style="width: 100%; margin-top:10px;" onclick="decodeIntentLink()">
+                    <i class="fas fa-magic"></i> استرجاع البيانات
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="card-header">
+                <i class="fas fa-pen"></i>
+                <h2>تعديل السيرفر</h2>
+                <i class="fas fa-times" style="margin-right:auto; cursor:pointer; color:var(--text-muted);" onclick="closeEditModal()"></i>
+            </div>
+            
+            <div class="form-grid">
+                <div class="input-group"><input type="text" id="editName" placeholder="اسم السيرفر" /><i class="fas fa-tag"></i></div>
+                <div class="input-group"><input type="url" id="editUrl" placeholder="رابط السيرفر" /><i class="fas fa-link"></i></div>
+                <div class="input-group">
+                    <select id="editPlayerMode">
+                        <option value="exo">Exo Player</option>
+                        <option value="web">Web Player</option>
+                        <option value="browser">Browser</option>
+                        <option value="iframe">Iframe</option>
+                    </select><i class="fas fa-play"></i>
+                </div>
+                <div class="input-group"><input type="text" id="editDrmKey" placeholder="DRM (اختياري)" /><i class="fas fa-key"></i></div>
+                <div class="input-group"><input type="text" id="editUa" placeholder="User-Agent (اختياري)" /><i class="fas fa-user-secret"></i></div>
+                <div class="input-group"><input type="text" id="editReferer" placeholder="Referer (اختياري)" /><i class="fas fa-globe"></i></div>
+                <div class="input-group"><input type="text" id="editOrigin" placeholder="Origin (اختياري)" /><i class="fas fa-code-branch"></i></div>
+                <div class="input-group"><input type="text" id="editCookie" placeholder="Cookie (اختياري)" /><i class="fas fa-cookie-bite"></i></div>
+                
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="saveEdit()">حفظ التعديلات</button>
+                    <button class="btn-secondary" onclick="closeEditModal()">إلغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // إعدادات Firebase الخاصة بمشروعك
+        const firebaseConfig = {
+            apiKey: "AIzaSyDVMHYmN3AXOaHuSImC7_j0iEDdMfyIi10",
+            authDomain: "albasri-app.firebaseapp.com",
+            databaseURL: "https://albasri-app-default-rtdb.firebaseio.com",
+            projectId: "albasri-app",
+            storageBucket: "albasri-app.firebasestorage.app",
+            messagingSenderId: "380188000251",
+            appId: "1:380188000251:android:1987a3b4cd9aca1b09955e"
+        };
+        
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+        const db = firebase.database();
+
+        const $ = (id) => document.getElementById(id);
+
+        let servers = [];
+        let currentEditIndex = -1;
+        let generatedIntentLink = "";
+        let generatedHtmlCode = "";
+        let isResultVisible = false;
+        let currentUser = null;
+
+        // القائمة القديمة مشفرة الآن بالـ SHA-256 للحماية
+        const USERS = [ 
+            { username: "ali", password: "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "Alithamer900", password: "061d4b6845353ffc5d88f6ab63b6ca1451fdbd8362e8dae48ffb4e871dd82eb6", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "kamelyounss", password: "19b883011c750b2ed656c10eb304db9cb92af8321da3b10b7405be53630d740c", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "Screen", password: "b13978db41f02c61e47f722881a54e9e0307c91cfca5cb5a796bdde249ed1cb8", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "a7qf50", password: "3be8bd26ec49b1477d94e2424cf37482ea08dc7e36fc19d45a90dcd7ff4e09cc", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "TEMOR", password: "154148b5ffb27d49826f4942d997f39446979a0d8bbd43dfbd65dc716d97c550", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "abrhm", password: "b46328328eb9bd9532d56a793aab619e951475c7b3c220f4f9f4a01c3852cb7b", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "Hlearkey", password: "31e9c90b6d2eab1a6db3f55ebbfd83a15234293f0bde157a3d90f23512b9ad72", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "Shehab", password: "7d5ab7abcf0214c77c68b753f5cfcb9c687e1f4090bcfc7dc8bb8562d9c15873", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "Saeed", password: "33d7c5edce5216301ebdbdb881e149f7eeb88dc9c02ff2ebc4de4ba5d7d3d29a", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "mahmoud", password: "67882582b14bb45e3f42c3bdcf707ca123df7dbda6e9b41b802611e9f1a2386e", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" },
+            { username: "user_y85k", password: "d0eef05021577d242c75a401c4e7ab56a908a8019cd5bdcbf7f1e780dc9a377b", packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" }
+        ];
+
+        // دالة تسجيل الدخول المحدثة بفايربيس
+        function loginUser(e) {
+            if(e) e.preventDefault(); 
+
+            const username = $("loginUsername").value.trim();
+            const password = $("loginPassword").value.trim();
+            if (!username || !password) return showToast("أدخل اسم المستخدم وكلمة المرور", "error");
+            
+            // تحديث حالة الزر أثناء التحميل
+            const loginBtn = document.querySelector("#loginForm button[type='submit']");
+            const originalBtnText = loginBtn.innerHTML;
+            loginBtn.innerHTML = 'جاري التحقق... <i class="fas fa-spinner fa-spin"></i>';
+            loginBtn.disabled = true;
+
+            // تشفير الباسورد المُدخل للمقارنة
+            const encryptedInputPassword = CryptoJS.SHA256(password).toString();
+
+            db.ref('bsr_accounts/' + username).once('value').then((snapshot) => {
+                if (snapshot.exists()) {
+                    const userData = snapshot.val();
+                    if (userData.password === encryptedInputPassword && userData.status === "active") {
+                        handleLoginSuccess({ username: username, packageName: "com.bsr.player.pro", schemeName: "BSRPlayer" });
+                    } else {
+                        showToast("كلمة المرور غير صحيحة أو الحساب متوقف", "error");
+                    }
+                } else {
+                    // إذا لم يجده، يبحث في القائمة القديمة
+                    const foundStaticUser = USERS.find(u => u.username === username && u.password === encryptedInputPassword);
+                    if (foundStaticUser) {
+                        handleLoginSuccess(foundStaticUser);
+                    } else {
+                        showToast("بيانات الدخول غير صحيحة", "error");
+                    }
+                }
+            }).catch((error) => {
+                showToast("خطأ في الاتصال بقاعدة البيانات", "error");
+            }).finally(() => {
+                loginBtn.innerHTML = originalBtnText;
+                loginBtn.disabled = false;
+            });
+        }
+
+        function handleLoginSuccess(foundUser) {
+            currentUser = foundUser;
+            localStorage.setItem("bsr_user", JSON.stringify(foundUser));
+            $("loggedUserName").textContent = currentUser.username;
+            $("loggedPackageName").textContent = currentUser.packageName;
+            $("loggedSchemeName").textContent = currentUser.schemeName;
+            $("loginPage").classList.add("hidden");
+            $("appPage").classList.remove("hidden");
+            showToast("تم تسجيل الدخول بنجاح", "success");
+        }
+
+        function logoutUser() {
+            currentUser = null;
+            servers = []; generatedIntentLink = ""; generatedHtmlCode = ""; isResultVisible = false;
+            localStorage.removeItem("bsr_user");
+            $("loginUsername").value = ""; $("loginPassword").value = "";
+            $("loginPage").classList.remove("hidden");
+            $("appPage").classList.add("hidden");
+            clearInputs(); render(); updateResultBox();
+            showToast("تم تسجيل الخروج", "success");
+        }
+
+        function loadSavedLogin() {
+            const savedUser = localStorage.getItem("bsr_user");
+            if (!savedUser) return;
+            try {
+                const parsedUser = JSON.parse(savedUser);
+                currentUser = parsedUser;
+                $("loggedUserName").textContent = currentUser.username;
+                $("loggedPackageName").textContent = currentUser.packageName;
+                $("loggedSchemeName").textContent = currentUser.schemeName;
+                $("loginPage").classList.add("hidden");
+                $("appPage").classList.remove("hidden");
+            } catch { localStorage.removeItem("bsr_user"); }
+        }
+
+        function addServer() {
+            const name = $("serverName").value.trim();
+            const url = $("serverUrl").value.trim();
+            if (!name || !url) return showToast("الرجاء إدخال اسم السيرفر والرابط", "error");
+            
+            servers.push({
+                name: name,
+                url: url,
+                playerMode: $("playerMode").value,
+                drmKey: $("drmKey").value.trim(),
+                ua: $("userAgent").value.trim(),
+                referer: $("referer").value.trim(),
+                origin: $("origin").value.trim(),
+                cookie: $("cookie").value.trim()
+            });
+            
+            render(); clearInputs();
+            showToast(`تم إضافة "${name}"`, "success");
+        }
+
+        function clearInputs() {
+            $("serverName").value = ""; $("serverUrl").value = "";
+            $("playerMode").value = "exo"; $("drmKey").value = "";
+            $("userAgent").value = ""; $("referer").value = "";
+            $("origin").value = ""; $("cookie").value = "";
+        }
+
+        function openEditModal(index) {
+            currentEditIndex = index;
+            const server = servers[index];
+            $("editName").value = server.name || ""; $("editUrl").value = server.url || "";
+            $("editPlayerMode").value = server.playerMode || "exo"; $("editDrmKey").value = server.drmKey || "";
+            $("editUa").value = server.ua || ""; $("editReferer").value = server.referer || "";
+            $("editOrigin").value = server.origin || ""; $("editCookie").value = server.cookie || "";
+            $("editModal").classList.add("show");
+        }
+
+        function closeEditModal() { $("editModal").classList.remove("show"); currentEditIndex = -1; }
+
+        function saveEdit() {
+            if (currentEditIndex === -1) return;
+            const name = $("editName").value.trim();
+            const url = $("editUrl").value.trim();
+            if (!name || !url) return showToast("اسم السيرفر والرابط مطلوبان", "error");
+            
+            servers[currentEditIndex] = {
+                name: name, url: url, playerMode: $("editPlayerMode").value,
+                drmKey: $("editDrmKey").value.trim(), ua: $("editUa").value.trim(),
+                referer: $("editReferer").value.trim(), origin: $("editOrigin").value.trim(), cookie: $("editCookie").value.trim()
+            };
+            
+            render(); closeEditModal(); showToast("تم الحفظ", "success");
+        }
+
+        function removeServer(index) { servers.splice(index, 1); render(); showToast("تم الحذف", "success"); }
+
+        function render() {
+            const list = $("list");
+            if (servers.length === 0) {
+                list.innerHTML = `<div class="empty-state"><i class="fas fa-folder-open"></i><p>لا توجد سيرفرات مضافة</p></div>`;
+                $("serverCount").textContent = "0"; return;
+            }
+            list.innerHTML = "";
+            servers.forEach((s, index) => {
+                const shortUrl = s.url.length > 40 ? s.url.substring(0, 40) + "..." : s.url;
+                list.innerHTML += `
+                    <div class="server-item">
+                        <div class="server-top">
+                            <div class="server-title"><i class="fas fa-tv"></i> ${s.name}</div>
+                            <div class="server-actions">
+                                <button class="btn-secondary" onclick="openEditModal(${index})"><i class="fas fa-pen"></i></button>
+                                <button class="btn-danger" onclick="removeServer(${index})"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="server-url">${shortUrl}</div>
+                        <div class="server-tags">
+                            <span class="tag"><i class="fas fa-play-circle"></i> ${s.playerMode}</span>
+                            ${s.drmKey ? `<span class="tag"><i class="fas fa-key"></i> DRM</span>` : ""}
+                            ${s.ua ? `<span class="tag"><i class="fas fa-user-secret"></i> UA</span>` : ""}
+                        </div>
+                    </div>`;
+            });
+            $("serverCount").textContent = servers.length;
+        }
+
+        function clearAll() { servers = []; generatedIntentLink = ""; generatedHtmlCode = ""; isResultVisible = false; render(); updateResultBox(); showToast("تم المسح", "success"); }
+
+        function encodeData(data) { return btoa(unescape(encodeURIComponent(JSON.stringify(data)))); }
+        function decodeData(base64) { return JSON.parse(decodeURIComponent(escape(atob(base64)))); }
+
+        function generate() {
+            if (!currentUser) return showToast("يجب تسجيل الدخول", "error");
+            if (servers.length === 0) return showToast("أضف سيرفر واحد على الأقل", "error");
+
+            try {
+                // تجميع الإعدادات من الحقول
+                const logoUrl = $("logoUrl").value.trim();
+                const logoPosition = $("logoPosition").value;
+                const logoSize = $("logoSize").value;
+                
+                const vpnProtection = $("vpnEnabled").value === "true";
+                const vpnTitle = $("vpnTitle").value.trim();
+                const vpnMessage = $("vpnMessage").value.trim();
+                const vpnExitText = $("vpnExitText").value.trim();
+                
+                const exportServers = servers.map(s => ({
+                    name: s.name, url: s.url, playerMode: s.playerMode,
+                    drmKey: s.drmKey, ua: s.ua, referer: s.referer, origin: s.origin, cookie: s.cookie,
+                    logoUrl: logoUrl, logoPosition: logoPosition, logoSize: logoSize,
+                    vpnProtection: vpnProtection, vpnTitle: vpnTitle, vpnMessage: vpnMessage, vpnExitText: vpnExitText
+                }));
+
+                const encoded = encodeData(exportServers);
+                generatedIntentLink = `intent://play?data=${encodeURIComponent(encoded)}#Intent;scheme=${currentUser.schemeName};package=${currentUser.packageName};end`;
+                
+                // زر تشغيل احترافي ونبضي بكود HTML
+                const htmlTemplate = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>BSR PLAYER SECURE</title>
+<!-- استدعاء خط عربي احترافي -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+    /* منع تحديد النصوص والنسخ لحماية المحتوى */
+    * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+    }
+
+    body { 
+        margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; 
+        background: #030614; overflow: hidden; font-family: 'Tajawal', sans-serif; 
+    }
+
+    /* خلفية متحركة واحترافية */
+    .bg { 
+        position: fixed; inset: 0; z-index: -1;
+        background: radial-gradient(circle at center, #1a153a 0%, #030614 100%);
+    }
+    .bg::after {
+        content: ''; position: absolute; inset: 0;
+        background-image: linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+        background-size: 30px 30px; opacity: 0.5;
+    }
+
+    /* تأثير النبض خلف زر التشغيل */
+    .play-wrapper { position: relative; display: flex; justify-content: center; align-items: center; }
+    .ring { 
+        position: absolute; width: 110px; height: 110px; border-radius: 50%; 
+        border: 2px solid #00E5FF; animation: ripple 2.5s infinite ease-out; opacity: 0; 
+    }
+    .ring:nth-child(2) { animation-delay: 0.8s; border-color: #FF007A; }
+    .ring:nth-child(3) { animation-delay: 1.6s; border-color: #7C3AED; }
+    
+    @keyframes ripple { 
+        0% { transform: scale(1); opacity: 0.8; } 
+        100% { transform: scale(3); opacity: 0; } 
+    }
+    
+    /* زر التشغيل الرئيسي (تصميم نيون متحرك) */
+    .play-btn { 
+        position: relative; width: 100px; height: 100px; border-radius: 50%; border: none; cursor: pointer; 
+        background: linear-gradient(45deg, #FF007A, #7C3AED, #00E5FF, #FF007A); background-size: 300% 300%;
+        animation: gradientMove 4s ease infinite;
+        color: white; font-size: 40px; display: flex; justify-content: center; align-items: center; 
+        padding-left: 8px; box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); z-index: 10; transition: 0.3s;
+    }
+    .play-btn:active { transform: scale(0.9); box-shadow: 0 0 20px rgba(0, 229, 255, 0.8); }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    /* النافذة المنبثقة (تصميم زجاجي - Glassmorphism) */
+    .popup { 
+        position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(15px); 
+        -webkit-backdrop-filter: blur(15px); display: none; justify-content: center; align-items: center; z-index: 9999; 
+    }
+    
+    .popup-box { 
+        background: rgba(17, 24, 39, 0.7); border: 1px solid rgba(0, 229, 255, 0.3); padding: 40px 30px; 
+        border-radius: 30px; width: 90%; max-width: 380px; text-align: center; color: white; 
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 229, 255, 0.1); 
+        transform: scale(0.5); opacity: 0; animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+    }
+    
+    @keyframes popIn {
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .popup-box h2 { 
+        margin: 0; color: #fff; font-size: 26px; font-weight: 900; 
+        text-shadow: 0 0 15px rgba(0, 229, 255, 0.8); 
+    }
+    
+    .popup-box p { 
+        margin-top: 15px; color: #A1A1AA; line-height: 1.8; font-size: 15px; font-weight: 500; 
+    }
+    
+    /* زر التحميل */
+    .download-btn { 
+        margin-top: 25px; padding: 16px; border: none; border-radius: 16px; width: 100%; font-size: 18px; 
+        font-weight: 700; font-family: 'Tajawal', sans-serif; cursor: pointer; 
+        background: linear-gradient(90deg, #00E5FF, #7C3AED); color: white; 
+        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4); transition: 0.3s;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .download-btn:active { transform: translateY(3px); box-shadow: 0 5px 10px rgba(124, 58, 237, 0.4); }
+
+    /* أيقونة التحذير */
+    .icon-warn {
+        font-size: 50px; margin-bottom: 10px; display: block; text-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
+    }
+</style>
+</head>
+<body>
+    <div class="bg"></div>
+
+    <div class="play-wrapper">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <!-- الزر محمي ويستدعي الكود بشكل آمن -->
+        <button class="play-btn" id="triggerBtn">▶</button>
+    </div>
+
+    <!-- النافذة المنبثقة التفاعلية -->
+    <div class="popup" id="securePopup">
+        <div class="popup-box">
+            <span class="icon-warn">⚠️</span>
+            <h2>المشغل غير متوفر</h2>
+            <p>لضمان مشاهدة ممتعة بأعلى جودة وبدون أي تقطيع، يجب عليك تثبيت <b>BSR PLAYER</b> أولاً للمتابعة.</p>
+            <button class="download-btn" id="installBtn">تثبيت المشغل الآن</button>
+        </div>
+    </div>
+
+<script>
+    /* =========================================
+       1. أكواد الحماية (Anti-Theft System)
+    ========================================= */
+    // تعطيل كليك يمين
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    // تعطيل سحب الصور والعناصر
+    document.addEventListener('dragstart', event => event.preventDefault());
+
+    // تعطيل اختصارات لوحة المفاتيح للمطورين (F12, Ctrl+U, Ctrl+Shift+I)
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123) return false; // F12
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73) return false; // I
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) return false; // J
+        if(e.ctrlKey && e.keyCode == 85) return false; // U
+        if(e.ctrlKey && e.keyCode == 67) return false; // C
+    };
+
+    /* =========================================
+       2. منطق التشغيل والتحويل الآمن (Iframe Logic)
+    ========================================= */
+    // المتغيرات (ضع روابطك هنا)
+    const _0xUrl = "{{INTENT_LINK}}"; 
+    const _0xStore = "https://play.google.com/store/apps/details?id=com.bsr.player.pro"; 
+
+    let _appState = false;
+
+    // مراقبة ما إذا كان التطبيق قد فتح بنجاح
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) { _appState = true; }
+    });
+
+    // عند الضغط على زر التشغيل
+    document.getElementById('triggerBtn').addEventListener('click', function() {
+        _appState = false;
+
+        // إنشاء إطار مخفي للتشغيل الآمن بدون كشف الرابط للمتصفح
+        const _frame = document.createElement("iframe");
+        _frame.style.display = "none";
+        _frame.src = _0xUrl;
+        document.body.appendChild(_frame);
+
+        // الانتظار للتحقق
+        setTimeout(() => {
+            if (!_appState) {
+                // إظهار النافذة إذا لم يفتح التطبيق
+                document.getElementById("securePopup").style.display = "flex";
+            }
+            // مسح الإطار المخفي من الـ DOM لزيادة الحماية
+            _frame.remove();
+        }, 1500); 
+    });
+
+    // عند الضغط على زر التحميل
+    document.getElementById('installBtn').addEventListener('click', function() {
+        window.location.href = _0xStore;
+    });
+<\/script>
+</body>
+</html>`;
+                
+                generatedHtmlCode = htmlTemplate.replace("{{INTENT_LINK}}", generatedIntentLink);
+                isResultVisible = true;
+                updateResultBox();
+                servers = []; render(); clearInputs();
+                showToast("تم توليد الروابط بنجاح", "success");
+            } catch (e) { showToast("حدث خطأ أثناء التوليد", "error"); }
+        }
+
+        function decodeIntentLink() {
+            if (!currentUser) return showToast("يجب تسجيل الدخول", "error");
+            const link = $("decodeInput").value.trim();
+            if (!link) return showToast("الصق الرابط أولاً", "error");
+            try {
+                const match = link.match(/[?&]data=([^#&]+)/);
+                if (!match) throw new Error("Invalid Link");
+                
+                const extracted = decodeData(match[1]);
+                servers = Array.isArray(extracted) ? extracted : [];
+                
+                if(servers.length > 0 && servers[0]) {
+                    $("logoUrl").value = servers[0].logoUrl || "";
+                    $("logoPosition").value = servers[0].logoPosition || "bottom_right";
+                    if(servers[0].logoSize) $("logoSize").value = servers[0].logoSize;
+                    
+                    $("vpnEnabled").value = servers[0].vpnProtection === false ? "false" : "true";
+                    $("vpnTitle").value = servers[0].vpnTitle || "تحذير أمني";
+                    $("vpnMessage").value = servers[0].vpnMessage || "يرجى إيقاف الـ VPN أو أي بروكسي حتى يعمل المشغل بشكل صحيح وآمن.";
+                    $("vpnExitText").value = servers[0].vpnExitText || "خروج";
+                }
+                
+                render(); $("decodeInput").value = ""; generatedIntentLink = link; generatedHtmlCode = "";
+                isResultVisible = true; updateResultBox(); showToast("تم استرجاع البيانات بنجاح", "success");
+            } catch (e) { showToast("فشل فك التشفير، الرابط غير صالح", "error"); }
+        }
+
+        function updateResultBox() {
+            if (!generatedIntentLink) {
+                $("hiddenResultBox").style.display = "flex";
+                $("resultContainers").style.display = "none";
+                $("toggleBtn").innerHTML = '<i class="fas fa-eye"></i> إظهار';
+            } else if (isResultVisible) {
+                $("hiddenResultBox").style.display = "none";
+                $("resultContainers").style.display = "block";
+                $("result").value = generatedIntentLink;
+                $("htmlResult").value = generatedHtmlCode;
+                $("toggleBtn").innerHTML = '<i class="fas fa-eye-slash"></i> إخفاء';
+            } else {
+                $("hiddenResultBox").style.display = "flex";
+                $("hiddenResultBox").innerHTML = '<i class="fas fa-check-circle" style="color:var(--success); font-size:30px;"></i><p>الروابط جاهزة (مخفية للحماية)</p>';
+                $("resultContainers").style.display = "none";
+                $("toggleBtn").innerHTML = '<i class="fas fa-eye"></i> إظهار';
+            }
+        }
+
+        function toggleResultVisibility() { if(generatedIntentLink) { isResultVisible = !isResultVisible; updateResultBox(); } }
+
+        function copyResult() {
+            if (!generatedIntentLink) return;
+            navigator.clipboard.writeText(generatedIntentLink);
+            showToast("تم نسخ رابط Intent", "success");
+        }
+
+        function copyHtmlResult() {
+            if (!generatedHtmlCode) return;
+            navigator.clipboard.writeText(generatedHtmlCode);
+            showToast("تم نسخ كود HTML", "success");
+        }
+
+        function showToast(msg, type="success") {
+            const t = document.createElement("div");
+            t.className = `toast ${type}`;
+            t.innerHTML = type === "success" ? `<i class="fas fa-check-circle" style="color:var(--success)"></i> ${msg}` : `<i class="fas fa-exclamation-circle" style="color:var(--danger)"></i> ${msg}`;
+            document.body.appendChild(t);
+            setTimeout(() => t.classList.add("show"), 10);
+            setTimeout(() => { t.classList.remove("show"); setTimeout(()=>t.remove(), 400); }, 3000);
+        }
+
+        $("editModal").addEventListener("click", function(e) { if(e.target===this) closeEditModal(); });
+        loadSavedLogin(); render(); updateResultBox();
+    </script>
+</body>
+</html>
