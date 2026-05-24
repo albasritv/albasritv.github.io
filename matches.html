@@ -3,457 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>مباريات اليوم - بث مباشر</title>
-    <!-- خطوط عربية احترافية -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <meta name="keywords" content="البصري تي في, albasritv, بث مباشر, مباريات اليوم, جدول مباريات اليوم, كورة لايف, يلا شوت, الاسطورة, ياسين تي في, yacine tv, koora live, yalla shoot, مشاهدة مباريات, بث مباشر مباريات اليوم, روابط بث مباشر, نقل مباشر, دوري أبطال أوروبا, الدوري الإنجليزي, الدوري الإسباني, الدوري الإيطالي, الدوري السعودي, كورة أون لاين, كورة ستار, كورة جول, يلا كورة, هاي كورة, مباريات اليوم مباشر, جوال, بث مباشر للجوال, مشاهدة قنوات بي إن سبورت, beIN Sports, قنوات مشفرة مجانا, البث الرقمي, أخبار كرة القدم, ملخصات مباريات, أهداف اليوم, جدول ترتيب الدوريات, القنوات الناقلة للمباريات, بث سريع بدون تقطيع, سيرفرات مشاهدة, مباريات حصرية, كورة اكسترا, كورة 365, كورة فور لايف, كورة ترافيك, البث الحي للمباريات, متابعة مباريات اليوم, تطبيق ياسين تي في, موقع الاسطورة لبث المباريات, يلا شوت حصري, البصري للبث المباشر, albasritv live, football live streaming, match online, watch live football, free sports streaming, كورة لايف البصري تي في, مشاهدة كورة اليوم, البصري بث حي">
+    <meta name="description" content="البصري تي في - شاهد مباريات اليوم بث مباشر وبجودة عالية. تغطية شاملة لجميع الدوريات العالمية والعربية عبر أقوى سيرفرات البث المباشر.">
+    <title>البصري تيفي للبث المباشر ر</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    
     <style>
-        /* =========================================
-           1. حماية الواجهة (منع التحديد والسحب)
-           ========================================= */
-        body {
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-        }
-
-        img {
-            pointer-events: none;
-            -webkit-user-drag: none;
-        }
-
-        /* =========================================
-           2. التصميم العام والألوان
-           ========================================= */
         :root {
-            --bg-main: #090e17; 
-            --bg-card: rgba(21, 28, 44, 0.6);
-            --bg-card-solid: #151c2c;
+            --bg-main: #090e17;
+            --bg-card: rgba(21, 28, 44, 0.7);
             --primary-color: #00e5ff; 
-            --primary-glow: rgba(0, 229, 255, 0.4);
-            --live-color: #ff2a55; 
-            --live-glow: rgba(255, 42, 85, 0.4);
             --text-light: #ffffff;
             --text-gray: #a0aec0;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(0, 229, 255, 0.5);
+            --live-color: #ff2a55;
         }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
         body {
-            background-color: var(--bg-main);
+            background-color: var(--bg-main) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            font-family: 'Cairo', sans-serif !important;
             color: var(--text-light);
-            font-family: 'Cairo', sans-serif;
-            padding-bottom: 50px;
-            background-image: 
-                radial-gradient(circle at 15% 50px, rgba(0, 229, 255, 0.1), transparent 300px),
-                radial-gradient(circle at 85% 300px, rgba(255, 42, 85, 0.05), transparent 300px);
-            background-attachment: fixed;
-            min-height: 100vh;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
-        .header {
-            background: rgba(9, 14, 23, 0.85);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            padding: 18px 20px;
+        #app-dynamic-wrapper {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px 15px;
+            box-sizing: border-box;
+        }
+
+        .main-title {
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .header h1 {
             font-size: 1.6rem;
             font-weight: 900;
+            margin-bottom: 25px;
             background: linear-gradient(to left, #fff, var(--primary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-            text-shadow: 0 0 20px var(--primary-glow);
         }
 
-        .container { max-width: 900px; margin: 30px auto; padding: 0 15px; animation: fadeIn 0.5s ease; }
-        #matches-container { display: flex; flex-direction: column; gap: 15px; }
-
-        /* =========================================
-           3. تصميم بطاقة المباراة (Mobile First)
-           ========================================= */
         .match-card {
-            background: var(--bg-card); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-            border-radius: 20px; padding: 20px 15px; display: flex; justify-content: space-between;
-            align-items: center; cursor: pointer; border: 1px solid var(--border-color);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
+        .match-card:hover { border-color: var(--primary-color); background: #151c2c; }
+        .static-card { cursor: default; border-color: var(--primary-color); }
 
-        .match-card::after {
-            content: ''; position: absolute; inset: 0; border-radius: 20px; border: 2px solid transparent;
-            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.1), transparent) border-box;
-            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: destination-out; mask-composite: exclude; opacity: 0; transition: 0.4s;
-        }
-
-        .match-card:hover { transform: translateY(-5px); background: var(--bg-card-solid); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); border-color: var(--border-hover); }
-        .match-card:hover::after { opacity: 1; }
-
-        .static-card {
-            cursor: default; transform: none !important; margin-bottom: 25px;
-            background: linear-gradient(145deg, var(--bg-card-solid), #0b0f19);
-            border: 1px solid var(--primary-color); box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
-        }
-
-        .team { display: flex; flex-direction: column; align-items: center; width: 32%; text-align: center; z-index: 2; }
-        .team img { width: 65px; height: 65px; object-fit: contain; margin-bottom: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 50%; padding: 8px; border: 2px solid rgba(255, 255, 255, 0.05); transition: 0.4s; }
-        .match-card:hover .team img { border-color: var(--primary-color); transform: scale(1.1) rotate(5deg); box-shadow: 0 0 15px var(--primary-glow); }
-        .static-card .team img { border-color: var(--primary-color); }
-        .team span { font-size: 0.95rem; font-weight: 700; color: var(--text-light); line-height: 1.3; }
-
-        .match-info { width: 36%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2; }
-
-        /* =========================================
-           ألوان حالات المباراة (تعديل حسب طلبك)
-           ========================================= */
+        .team { display: flex; flex-direction: column; align-items: center; width: 33%; text-align: center; }
+        .team img { width: 55px; height: 55px; object-fit: contain; margin-bottom: 8px; }
+        .team span { font-size: 0.95rem; font-weight: 700; }
         
-        /* 1. انتهت (اللون الأصلي الرمادي) */
-        .status {
-            font-size: 0.8rem; padding: 4px 12px; border-radius: 20px;
-            background: rgba(255, 255, 255, 0.05); color: var(--text-gray);
-            margin-bottom: 8px; font-weight: 700; white-space: nowrap;
-        }
+        .match-info { width: 34%; display: flex; flex-direction: column; align-items: center; }
+        .status { font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; background: rgba(255,255,255,0.05); color: var(--text-gray); margin-bottom: 5px; font-weight: 700; }
+        .status.live { background: rgba(255, 42, 85, 0.15); color: var(--live-color); border: 1px solid var(--live-color); }
+        .status.not-started { background: rgba(0, 255, 136, 0.15); color: #00ff88; }
 
-        /* 2. لم تبدأ (لون أخضر) */
-        .status.not-started {
-            background: rgba(0, 255, 136, 0.15); color: #00ff88;
-            border: 1px solid rgba(0, 255, 136, 0.4);
-            box-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
-        }
+        .score { font-size: 1.7rem; font-weight: 900; color: var(--primary-color); letter-spacing: 2px; }
+        .time { font-size: 1rem; font-weight: 700; background: rgba(0,0,0,0.3); padding: 4px 12px; border-radius: 8px; }
 
-        /* 3. جارية الآن (أحمر ينبض) */
-        .status.live {
-            background: rgba(255, 42, 85, 0.15); color: var(--live-color);
-            border: 1px solid var(--live-glow); animation: pulse-live 1.5s infinite;
-            box-shadow: 0 0 10px var(--live-glow);
-        }
-
-        .score-container { font-size: 2rem; font-weight: 900; letter-spacing: 2px; color: var(--primary-color); text-shadow: 0 0 10px var(--primary-glow); }
+        .back-btn { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 20px; cursor: pointer; font-family: 'Cairo'; font-weight: 700; margin-bottom: 15px; }
+        .back-btn:hover { background: var(--primary-color); color: #000; }
         
-        /* تعديل مربع الوقت (بدون ملصق) */
-        .time-badge { font-size: 1.2rem; color: var(--text-light); font-weight: 900; letter-spacing: 1px; background: rgba(0,0,0,0.3); padding: 5px 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .video-wrapper { position: relative; width: 100%; background: #000; border-radius: 16px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--primary-color); }
+        .video-wrapper iframe, .video-wrapper video { width: 100%; height: 430px; border: none; display: block; }
 
-        /* =========================================
-           4. صفحة الفيديو
-           ========================================= */
-        .controls-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .back-btn { background: rgba(255, 255, 255, 0.05); color: var(--text-light); border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 30px; cursor: pointer; font-size: 0.95rem; font-weight: 700; font-family: 'Cairo', sans-serif; transition: 0.3s; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(5px); }
-        .back-btn:hover { background: var(--primary-color); color: #000; border-color: var(--primary-color); box-shadow: 0 0 15px var(--primary-glow); }
+        .player-ads-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .play-click-btn {
+            background: var(--primary-color);
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Cairo';
+            font-weight: 900;
+            font-size: 1rem;
+            box-shadow: 0 0 15px var(--primary-color);
+            cursor: pointer;
+        }
 
-        .video-wrapper { width: 100%; background: #000; border-radius: 24px; overflow: hidden; margin-bottom: 25px; position: relative; border: 2px solid var(--primary-color); box-shadow: 0 0 30px rgba(0, 229, 255, 0.2), inset 0 0 20px rgba(0,0,0,0.8); padding: 2px; animation: breathe 4s infinite alternate; }
-        .video-inner { border-radius: 20px; overflow: hidden; width: 100%; height: 100%; position: relative; background: #000; }
-        .video-wrapper iframe, .video-wrapper video { width: 100%; height: 450px; border: none; background: #000; display: block; }
-
-        .kora-mask { position: absolute; top: 15px; left: 15px; width: 130px; height: 40px; background: #090e17; border-radius: 8px; z-index: 999; display: flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--live-color); box-shadow: 0 4px 15px rgba(0,0,0,0.9); pointer-events: none; }
-        .kora-mask span { color: #fff; font-weight: 700; font-size: 12px; }
-        .kora-mask .dot { width: 8px; height: 8px; background-color: var(--live-color); border-radius: 50%; animation: pulse-live 1.5s infinite; }
-
-        .servers-section { background: var(--bg-card); padding: 20px; border-radius: 20px; border: 1px solid var(--border-color); backdrop-filter: blur(10px); }
-        .servers-title { font-size: 1.1rem; font-weight: 900; margin-bottom: 15px; color: var(--text-light); display: flex; align-items: center; gap: 8px; }
-        .servers-title::before { content: ''; display: block; width: 4px; height: 18px; background: var(--primary-color); border-radius: 4px; box-shadow: 0 0 8px var(--primary-glow); }
-        .servers-list { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: thin; scrollbar-color: var(--primary-color) rgba(255,255,255,0.05); }
-        .servers-list::-webkit-scrollbar { height: 6px; }
-        .servers-list::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
-        .servers-list::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
-
-        .server-btn { background: rgba(255, 255, 255, 0.05); color: var(--text-gray); border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 12px; cursor: pointer; font-weight: 700; font-family: 'Cairo', sans-serif; font-size: 0.9rem; transition: all 0.3s; white-space: nowrap; flex-shrink: 0; }
-        .server-btn:hover { background: rgba(0, 229, 255, 0.1); border-color: var(--primary-color); color: var(--primary-color); }
-        .server-btn.active { background: var(--primary-color); color: #000; border-color: var(--primary-color); box-shadow: 0 4px 15px var(--primary-glow); }
+        .servers-box { background: var(--bg-card); padding: 15px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+        .servers-list { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
+        .server-btn { background: rgba(255,255,255,0.05); color: var(--text-gray); border: 1px solid rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-family: 'Cairo'; font-weight: 700; white-space: nowrap; }
+        .server-btn.active { background: var(--primary-color); color: #000; }
 
         .hidden { display: none !important; }
-        
-        .loader { text-align: center; margin-top: 80px; }
-        .spinner { width: 50px; height: 50px; border: 4px solid rgba(0, 229, 255, 0.2); border-top: 4px solid var(--primary-color); border-radius: 50%; margin: 0 auto 15px auto; animation: spin 1s linear infinite; }
-        .loader p { color: var(--text-gray); font-size: 1.1rem; font-weight: 700; }
-
-        @keyframes pulse-live { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.05); } 100% { opacity: 1; transform: scale(1); } }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes breathe { 0% { box-shadow: 0 0 20px rgba(0, 229, 255, 0.1), inset 0 0 10px rgba(0,0,0,0.8); } 100% { box-shadow: 0 0 40px rgba(0, 229, 255, 0.4), inset 0 0 20px rgba(0,0,0,0.9); } }
+        .msg { text-align: center; color: var(--text-gray); padding: 50px 0; font-weight: 700; }
 
         @media (max-width: 768px) {
-            .header h1 { font-size: 1.4rem; }
-            .match-card { padding: 15px 10px; border-radius: 16px; }
-            .team img { width: 50px; height: 50px; padding: 5px; margin-bottom: 6px; }
-            .team span { font-size: 0.8rem; }
-            .score-container { font-size: 1.6rem; }
-            .time-badge { font-size: 1rem; padding: 4px 10px; }
-            .status { font-size: 0.75rem; padding: 3px 10px; }
             .video-wrapper iframe, .video-wrapper video { height: 230px; }
-            .video-wrapper { border-radius: 16px; margin-bottom: 15px; border-width: 1px; }
-            .video-inner { border-radius: 14px; }
-            .kora-mask { transform: scale(0.75); transform-origin: top left; top: 10px; left: 10px; }
-            .servers-section { padding: 15px; border-radius: 16px; }
-            .server-btn { font-size: 0.85rem; padding: 8px 16px; }
+            .team img { width: 45px; height: 45px; }
         }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <h1>مباريات اليوم</h1>
-    </header>
+    <div id="app-dynamic-wrapper">
+        <div class="main-title">جدول مباريات</div>
 
-    <div class="container">
-        <div id="loader" class="loader">
-            <div class="spinner"></div>
-            <p>جاري تحديث المباريات...</p>
-        </div>
+        <div id="state-msg" class="msg">جاري جلب وتحديث المباريات بث مباشر...</div>
+        <div id="matches-list" class="hidden"></div>
 
-        <div id="matches-container" class="hidden"></div>
-
-        <div id="player-container" class="hidden">
-            <div class="controls-header">
-                <button class="back-btn" onclick="goBack()">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M5 12l7-7M5 12l7 7"/></svg>
-                    العودة
-                </button>
-            </div>
-            <div id="selected-match-header"></div>
+        <div id="player-view" class="hidden">
+            <button class="back-btn" onclick="triggerBackBehavior()">← العودة للجدول</button>
+            <div id="current-match-card"></div>
             <div class="video-wrapper">
-                <div class="video-inner">
-                    <div class="kora-mask"><div class="dot"></div><span>بث مباشر حصري</span></div>
-                    <iframe id="video-frame" class="hidden" allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
-                    <video id="hls-video" class="hidden" controls autoplay playsinline></video>
+                
+                <div id="player-click-layer" class="player-ads-overlay" onclick="handleAdAndPlay()">
+                    <button class="play-click-btn">اضغط هنا لبدء البث ⚽</button>
                 </div>
+
+                <iframe id="iframe-player" class="hidden" allowfullscreen="true" scrolling="no" sandbox="allow-scripts opacity-animate allow-same-origin allow-presentation"></iframe>
+                <video id="hls-player" class="hidden" controls playsinline></video>
             </div>
-            <div class="servers-section">
-                <div class="servers-title">اختر سيرفر المشاهدة</div>
-                <div class="servers-list" id="servers-list"></div>
+            <div class="servers-box">
+                <div style="margin-bottom: 10px; font-weight: 700;">سيرفرات المشاهدة الاحتياطية:</div>
+                <div class="servers-list" id="servers-render"></div>
             </div>
         </div>
     </div>
 
     <script>
-        const API_URL = "https://api.albasritv1.workers.dev/";
-        const loader = document.getElementById("loader");
-        const loaderText = document.querySelector("#loader p");
-        const matchesContainer = document.getElementById("matches-container");
-        const playerContainer = document.getElementById("player-container");
-        const selectedMatchHeader = document.getElementById("selected-match-header");
-        const videoFrame = document.getElementById("video-frame");
-        const hlsVideo = document.getElementById("hls-video");
-        const serversList = document.getElementById("servers-list");
-        let hlsInstance = null;
-
-        function fixImageUrl(url) {
-            if (!url) return "https://via.placeholder.com/70x70/151c2c/ffffff?text=نادي";
-            if (url.startsWith("http")) return url;
-            if (url.startsWith("//")) return "https:" + url;
-            if (url.startsWith("/")) return "https://koooracity.com" + url;
-            return url;
-        }
-
-        // دالة تحويل الوقت وتنسيقه (إزالة الساعة، ضبط 12 ساعة، إضافة م/ص)
-        function formatArabicTime(timeStr) {
-            if (!timeStr) return "";
-            // إزالة أي ملصقات مثل ⏰ وتفريغ المسافات
-            let t = timeStr.toString().replace(/⏰/g, '').trim();
-            
-            // استخراج الساعات والدقائق
-            let match = t.match(/(\d{1,2}):(\d{2})/);
-            if (match) {
-                let h = parseInt(match[1]);
-                let m = match[2];
-                let ampm = h >= 12 ? 'م' : 'ص';
-                h = h % 12;
-                h = h ? h : 12; // تحويل الصفر إلى 12
-                return `${h}:${m} ${ampm}`;
+        (function() {
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            document.addEventListener('keydown', e => {
+                if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            function staticProtection() {
+                function debuggerTrigger(i) {
+                    if (("" + i / i).length !== 1 || i % 20 === 0) { (function() {}.constructor("debugger")()); } else { (function() {}.constructor("debugger")()); }
+                    debuggerTrigger(++i);
+                }
+                try { debuggerTrigger(0); } catch (e) { setTimeout(staticProtection, 50); }
             }
-            // في حال فشل التحليل، استبدال الكلمات فقط
-            return t.replace(/PM/i, 'م').replace(/AM/i, 'ص');
+            setInterval(staticProtection, 200);
+        })();
+
+        const ADSTERRA_DIRECT_LINK = "https://www.effectivecpmnetwork.com/czmyq4gii?key=68ace7e98fec89536331070124cdcdbb";
+        const WORKER_URL = "https://api.albasritv1.workers.dev/";
+        const stateMsg = document.getElementById("state-msg");
+        const matchesList = document.getElementById("matches-list");
+        const playerView = document.getElementById("player-view");
+        const currentMatchCard = document.getElementById("current-match-card");
+        const iframePlayer = document.getElementById("iframe-player");
+        const hlsPlayer = document.getElementById("hls-player");
+        const serversRender = document.getElementById("servers-render");
+        const playerClickLayer = document.getElementById("player-click-layer");
+        let activeHls = null;
+        let isAdClicked = false; 
+        let currentUrl = "";
+        let currentType = "";
+
+        window.addEventListener('popstate', function (event) {
+            if (!playerView.classList.contains("hidden")) { closePlayerAndReturn(); }
+        });
+
+        function handleAdAndPlay() {
+            if (ADSTERRA_DIRECT_LINK && ADSTERRA_DIRECT_LINK !== "") { window.open(ADSTERRA_DIRECT_LINK, '_blank'); }
+            playerClickLayer.classList.add("hidden");
+            isAdClicked = true;
+            startStreamExecution(currentUrl, currentType);
         }
 
-        function generateCardInnerHtml(match, statusClass, displayStatus, displayMiddleHtml) {
+        function getCleanImg(url) {
+            if (!url) return "https://via.placeholder.com/55x55/151c2c/ffffff?text=TEAM";
+            let u = url.trim();
+            if (u.startsWith("http://") || u.startsWith("https://")) return u;
+            if (u.startsWith("//")) return "https:" + u;
+            return "https://koooracity.com/" + u.replace(/^\//, '');
+        }
+
+        function cleanTime(t) {
+            if(!t) return "";
+            let clean = t.toString().replace(/⏰/g, '').trim();
+            let parts = clean.match(/(\d{1,2}):(\d{2})/);
+            if (parts) {
+                let hours = parseInt(parts[1]);
+                let minutes = parts[2];
+                let ampm = hours >= 12 ? 'م' : 'ص';
+                hours = hours % 12 || 12;
+                return `${hours}:${minutes} ${ampm}`;
+            }
+            return clean;
+        }
+
+        function buildCardHtml(m, statusClass, statusTxt, centerHtml) {
             return `
-                <div class="team"><img src="${fixImageUrl(match.team1.logo)}"><span>${match.team1.name}</span></div>
-                <div class="match-info">
-                    <div class="status ${statusClass}">${displayStatus}</div>
-                    ${displayMiddleHtml}
-                </div>
-                <div class="team"><img src="${fixImageUrl(match.team2.logo)}"><span>${match.team2.name}</span></div>
+                <div class="team"><img src="${getCleanImg(m.team1.logo)}" onerror="this.src='https://via.placeholder.com/55x55/151c2c/ffffff?text=LOGO'"><span>${m.team1.name}</span></div>
+                <div class="match-info"><div class="status ${statusClass}">${statusTxt}</div>${centerHtml}</div>
+                <div class="team"><img src="${getCleanImg(m.team2.logo)}" onerror="this.src='https://via.placeholder.com/55x55/151c2c/ffffff?text=LOGO'"><span>${m.team2.name}</span></div>
             `;
         }
 
-        async function fetchMatches() {
+        async function loadData() {
             try {
-                const response = await fetch(API_URL);
-                const json = await response.json();
-                if (json.success && json.data) renderMatches(json.data);
-                else {
-                    loader.querySelector('.spinner').style.display = 'none';
-                    loaderText.innerHTML = "حدث خطأ أثناء تحميل المباريات.";
-                }
-            } catch (error) {
-                loader.querySelector('.spinner').style.display = 'none';
-                loaderText.innerHTML = "لا يوجد اتصال بالسيرفر.";
-            }
+                const res = await fetch(WORKER_URL);
+                const result = await res.json();
+                if (result.success && result.data) { displayData(result.data); } else { stateMsg.innerText = "لا تتوفر مباريات مجدولة حالياً بالسيرفر."; }
+            } catch (e) { stateMsg.innerText = "فشل الاتصال بـ Worker البث، تأكد من الرابط."; }
         }
 
-        function renderMatches(matches) {
-            loader.classList.add("hidden");
-            matchesContainer.classList.remove("hidden");
-            matchesContainer.innerHTML = "";
-
-            if (matches.length === 0) {
-                matchesContainer.innerHTML = "<h3 style='text-align:center; padding: 40px 0; color:var(--text-gray);'>لا توجد مباريات متاحة اليوم</h3>";
-                return;
-            }
-
-            matches.forEach(match => {
-                const isLive = match.priority === 1;
-                const isFinished = match.priority === 3;
-                const team1Goals = match.team1.goals ? match.team1.goals : "";
-                const team2Goals = match.team2.goals ? match.team2.goals : "";
-                const score = (team1Goals !== "" && team2Goals !== "") ? `${team1Goals} - ${team2Goals}` : "0 - 0";
-
-                let displayMiddleHtml = "";
-                let displayStatus = match.status;
+        function displayData(list) {
+            stateMsg.classList.add("hidden");
+            matchesList.classList.remove("hidden");
+            matchesList.innerHTML = "";
+            if(list.length === 0) { matchesList.innerHTML = "<div class='msg'>لا توجد مباريات لليوم.</div>"; return; }
+            list.forEach(m => {
                 let statusClass = "";
-
-                if (isLive) {
-                    displayStatus = "جارية الآن"; 
-                    displayMiddleHtml = `<div class="score-container">${score}</div>`;
-                    statusClass = "live"; // أحمر ينبض
-                } else if (isFinished) {
-                    displayStatus = "انتهت"; 
-                    displayMiddleHtml = `<div class="score-container">${score}</div>`;
-                    statusClass = ""; // رمادي (اللون الأصلي)
-                } else {
-                    displayStatus = "لم تبدأ"; 
-                    let formattedTime = formatArabicTime(match.time);
-                    displayMiddleHtml = `<div class="time-badge">${formattedTime}</div>`;
-                    statusClass = "not-started"; // أخضر مضيء
-                }
-
-                const cardInnerHtml = generateCardInnerHtml(match, statusClass, displayStatus, displayMiddleHtml);
-                const card = document.createElement("div");
-                card.className = "match-card";
-                card.innerHTML = cardInnerHtml;
-                
-                card.addEventListener("click", () => {
-                    selectedMatchHeader.innerHTML = `<div class="match-card static-card">${cardInnerHtml}</div>`;
-                    fetchServers(match.link);
-                });
-                
-                matchesContainer.appendChild(card);
+                let statusTxt = m.status;
+                let centerHtml = "";
+                const scoreStr = `${m.team1.goals || 0} - ${m.team2.goals || 0}`;
+                if (m.priority === 1) { statusTxt = "مباشر"; statusClass = "live"; centerHtml = `<div class="score">${scoreStr}</div>`; } else if (m.priority === 3) { statusTxt = "انتهت"; centerHtml = `<div class="score">${scoreStr}</div>`; } else { statusTxt = "لم تبدأ"; statusClass = "not-started"; centerHtml = `<div class="time">${cleanTime(m.time)}</div>`; }
+                let html = buildCardHtml(m, statusClass, statusTxt, centerHtml);
+                let div = document.createElement("div");
+                div.className = "match-card";
+                div.innerHTML = html;
+                div.onclick = () => {
+                    history.pushState({view: "player"}, "");
+                    currentMatchCard.innerHTML = `<div class="match-card static-card">${html}</div>`;
+                    loadLiveLinks(m.link);
+                };
+                matchesList.appendChild(div);
             });
         }
 
-        async function fetchServers(matchUrl) {
-            matchesContainer.classList.add("hidden");
-            playerContainer.classList.add("hidden");
-            loader.classList.remove("hidden");
-            loader.querySelector('.spinner').style.display = 'block';
-            loaderText.innerHTML = "جاري تجهيز البث المباشر...";
-
+        async function loadLiveLinks(linkUrl) {
+            matchesList.classList.add("hidden");
+            stateMsg.classList.remove("hidden");
+            stateMsg.innerText = "جاري الاتصال بسيرفر البث...";
             try {
-                const response = await fetch(matchUrl);
-                const json = await response.json();
-
-                loader.classList.add("hidden");
-                playerContainer.classList.remove("hidden");
-                serversList.innerHTML = "";
-                stopVideo(); 
-
-                if (json.success && json.servers && json.servers.length > 0) {
-                    changeServer(json.servers[0].url, json.servers[0].type, null);
-                    json.servers.forEach((server, index) => {
-                        const btn = document.createElement("button");
+                const res = await fetch(linkUrl);
+                const result = await res.json();
+                stateMsg.classList.add("hidden");
+                playerView.classList.remove("hidden");
+                serversRender.innerHTML = "";
+                resetStream();
+                isAdClicked = false;
+                playerClickLayer.classList.remove("hidden");
+                if (result.success && result.servers && result.servers.length > 0) {
+                    setupVisiblePlayer(result.servers[0].url, result.servers[0].type, null);
+                    result.servers.forEach((srv, i) => {
+                        let btn = document.createElement("button");
                         btn.className = "server-btn";
-                        if(index === 0) btn.classList.add("active");
-                        
-                        let serverName = server.name;
-                        if(serverName.includes("M3U") || serverName.includes("مباشر")) serverName = "جودة متعددة " + (index + 1);
-                        else if(serverName.includes("Web") || serverName.includes("ويب")) serverName = "سيرفر ويب " + (index + 1);
-
-                        btn.innerText = serverName;
-                        btn.onclick = (e) => changeServer(server.url, server.type, e.target);
-                        serversList.appendChild(btn);
+                        if(i === 0) btn.classList.add("active");
+                        let name = srv.name;
+                        if(name.includes("M3U")) name = "جودة متعددة " + (i + 1);
+                        else if(name.includes("Web")) name = "سيرفر رئيسي " + (i + 1);
+                        btn.innerText = name;
+                        btn.onclick = (e) => setupVisiblePlayer(srv.url, srv.type, e.target);
+                        serversRender.appendChild(btn);
                     });
-                } else {
-                    serversList.innerHTML = "<div style='color:var(--live-color); font-weight:700; width:100%; text-align:center;'>البث غير متوفر حالياً. جرب وقت المباراة.</div>";
-                }
-            } catch (error) {
-                loader.querySelector('.spinner').style.display = 'none';
-                loaderText.innerHTML = "حدث خطأ أثناء جلب البث.";
-                setTimeout(goBack, 2000);
-            }
+                } else { serversRender.innerHTML = "<div style='color:var(--live-color); font-weight:700;'>روابط البث قيد التجهيز...</div>"; }
+            } catch(e) { triggerBackBehavior(); }
         }
 
-        function changeServer(url, type, btnElement) {
-            stopVideo(); 
+        function setupVisiblePlayer(url, type, btn) {
+            resetStream();
+            currentUrl = url;
+            currentType = type;
+            isAdClicked = false;
+            playerClickLayer.classList.remove("hidden");
+            if(btn) { document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active")); btn.classList.add("active"); }
+            if (type === "m3u8") { iframePlayer.classList.add("hidden"); hlsPlayer.classList.remove("hidden"); } else { hlsPlayer.classList.add("hidden"); iframePlayer.classList.remove("hidden"); iframePlayer.src = url; }
+        }
+
+        function startStreamExecution(url, type) {
             if (type === "m3u8") {
-                videoFrame.classList.add("hidden");
-                hlsVideo.classList.remove("hidden");
                 if (Hls.isSupported()) {
-                    hlsInstance = new Hls(); hlsInstance.loadSource(url); hlsInstance.attachMedia(hlsVideo);
-                    hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => hlsVideo.play().catch(()=>{}));
-                } else if (hlsVideo.canPlayType('application/vnd.apple.mpegurl')) {
-                    hlsVideo.src = url; hlsVideo.play().catch(()=>{});
-                }
-            } else {
-                hlsVideo.classList.add("hidden");
-                videoFrame.classList.remove("hidden");
-                videoFrame.src = url;
-            }
-            if (btnElement) {
-                document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active"));
-                btnElement.classList.add("active");
-            }
+                    activeHls = new Hls(); 
+                    activeHls.loadSource(url); 
+                    activeHls.attachMedia(hlsPlayer);
+                    activeHls.on(Hls.Events.MANIFEST_PARSED, () => { hlsPlayer.play().catch(()=>{}); });
+                } else if (hlsPlayer.canPlayType('application/vnd.apple.mpegurl')) { hlsPlayer.src = url; hlsPlayer.play().catch(()=>{}); }
+            } else { iframePlayer.src = url; }
         }
 
-        function stopVideo() {
-            videoFrame.src = "";
-            if (hlsInstance) { hlsInstance.destroy(); hlsInstance = null; }
-            hlsVideo.pause(); hlsVideo.removeAttribute('src'); hlsVideo.load();
+        function resetStream() {
+            iframePlayer.src = "";
+            if (activeHls) { activeHls.destroy(); activeHls = null; }
+            hlsPlayer.pause(); 
+            hlsPlayer.removeAttribute('src'); 
+            hlsPlayer.load();
         }
 
-        function goBack() {
-            stopVideo();
-            playerContainer.classList.add("hidden");
-            loader.classList.add("hidden");
-            matchesContainer.classList.remove("hidden");
-            selectedMatchHeader.innerHTML = "";
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function triggerBackBehavior() {
+            if (window.history.state && window.history.state.view === "player") { window.history.back(); } else { closePlayerAndReturn(); }
         }
 
-        fetchMatches();
+        function closePlayerAndReturn() {
+            resetStream();
+            playerView.classList.add("hidden");
+            matchesList.classList.remove("hidden");
+        }
 
-        // ==============================================================
-        // نظام الحماية الشامل 
-        // ==============================================================
-
-        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
-            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) { e.preventDefault(); return false; }
-            if (e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.key === 'S' || e.key === 's' || e.key === 'C' || e.key === 'c' || e.key === 'P' || e.key === 'p')) {
-                e.preventDefault(); navigator.clipboard.writeText(''); return false;
-            }
-        });
-        document.addEventListener('copy', function(e) { e.preventDefault(); e.clipboardData.setData('text/plain', ''); });
-
-        setInterval(function() {
-            var before = new Date().getTime();
-            debugger; 
-            var after = new Date().getTime();
-            if (after - before > 100) {
-                document.body.innerHTML = "<div style='display:flex; justify-content:center; align-items:center; height:100vh; background:#000;'><h1 style='color:#ff2a55; font-family:Cairo;'>غير مسموح بالدخول لأدوات المطور!</h1></div>";
-            }
-        }, 1000);
+        loadData();
     </script>
 </body>
 </html>
