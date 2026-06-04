@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- === بداية الكلمات المفتاحية والسيو (SEO) === -->
-    <title>البصري تيفي للبث المباشر </title>
+    <!-- === الكلمات المفتاحية والسيو (SEO) === -->
+    <title>بث مباشر مباريات اليوم - Yalla Shoot | The Star | Al-Masry TV</title>
     <meta name="description" content="شاهد مباريات اليوم بث مباشر بدون تقطيع. تغطية حصرية عبر سيرفرات سريعة تتوافق مع يلا شوت (Yalla Shoot)، الأسطورة (The Star)، النجم، والمصري تي في (Al-Masry TV).">
     <meta name="keywords" content="يلا شوت, Yalla Shoot, الأسطورة, The Star, النجم, المصري, Al-Masry, تي في, TV, بث مباشر, مباريات اليوم, كورة لايف, مباريات">
     <meta name="author" content="Al-Masry TV">
-    <!-- === نهاية الكلمات المفتاحية === -->
+    <!-- ==================================== -->
 
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -82,11 +82,52 @@
         .score { font-size: 1.7rem; font-weight: 900; color: var(--primary-color); letter-spacing: 2px; }
         .time { font-size: 1rem; font-weight: 700; background: rgba(0,0,0,0.3); padding: 4px 12px; border-radius: 8px; }
 
-        .back-btn { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 20px; cursor: pointer; font-family: 'Cairo'; font-weight: 700; margin-bottom: 15px; }
-        .back-btn:hover { background: var(--primary-color); color: #000; }
+        .back-btn { 
+            background: rgba(255,255,255,0.05); 
+            color: #fff; 
+            border: 1px solid rgba(255,255,255,0.1); 
+            padding: 8px 18px; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            font-family: 'Cairo'; 
+            font-weight: 700; 
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover { background: var(--live-color); color: #fff; border-color: var(--live-color); }
         
-        .video-wrapper { position: relative; width: 100%; background: #000; border-radius: 16px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--primary-color); }
+        .video-wrapper { position: relative; width: 100%; background: #000; border-radius: 16px; overflow: hidden; margin-bottom: 15px; border: 1px solid var(--primary-color); }
         .video-wrapper iframe, .video-wrapper video { width: 100%; height: 430px; border: none; display: block; }
+
+        /* تعديلات شاشة التكبير (Fullscreen) */
+        .video-wrapper:fullscreen { border: none; border-radius: 0; }
+        .video-wrapper:fullscreen iframe, .video-wrapper:fullscreen video { height: 100vh; }
+
+        /* حاوية زر التكبير لجعله في المنتصف */
+        .fullscreen-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .fullscreen-btn { 
+            background: rgba(0, 229, 255, 0.08); 
+            color: var(--primary-color); 
+            border: 1px solid var(--primary-color); 
+            padding: 10px 30px; 
+            border-radius: 30px; 
+            cursor: pointer; 
+            font-family: 'Cairo'; 
+            font-weight: 900; 
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+        }
+        .fullscreen-btn:hover { 
+            background: var(--primary-color); 
+            color: #000; 
+            box-shadow: 0 0 15px var(--primary-color);
+        }
 
         .player-ads-overlay {
             position: absolute;
@@ -119,7 +160,29 @@
         .server-btn { background: rgba(255,255,255,0.05); color: var(--text-gray); border: 1px solid rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-family: 'Cairo'; font-weight: 700; white-space: nowrap; }
         .server-btn.active { background: var(--primary-color); color: #000; }
 
-        /* تنسيق قائمة الإعلانات داخل صفحة المباراة */
+        /* === تنسيق إعلانات البانر === */
+        .ad-container-320 {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 10px;
+            margin: 15px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 340px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .ad-container-320::before {
+            content: 'إعلان ممول';
+            font-size: 0.7rem;
+            color: var(--text-gray);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
         .match-page-ads-list {
             background: rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -137,7 +200,6 @@
             padding-bottom: 10px;
         }
 
-        /* تنسيق نص السيو ليظهر بشكل جذاب ولا يخرب التصميم */
         .seo-keywords-footer {
             margin-top: 40px;
             padding: 20px;
@@ -164,25 +226,33 @@
 
         <div id="state-msg" class="msg">جاري جلب وتحديث المباريات بث مباشر...</div>
         
-        <!-- الحاوية الشاملة لجدول المباريات والإعلانات المدمجة معه -->
         <div id="main-schedule-area" class="hidden">
             <div id="matches-list"></div>
-            
-            <!-- إعلان الجدول (Native Banner) مصمم كبطاقة مباراة في نهاية الجدول -->
-            <div class="match-card static-card" style="display: block; padding: 10px; text-align: center;">
-                <div style="font-size: 0.75rem; color: var(--text-gray); margin-bottom: 5px; font-weight: 700;">إعلان ممول</div>
-                <script async="async" data-cfasync="false" src="https://pl29328193.effectivecpmnetwork.com/dc29d3daa278da998dee275e6e196c86/invoke.js"></script>
-                <div id="container-dc29d3daa278da998dee275e6e196c86"></div>
-            </div>
         </div>
 
-        <!-- === صفحة مشاهدة المباراة === -->
         <div id="player-view" class="hidden">
+            <!-- زر العودة -->
             <button class="back-btn" onclick="triggerBackBehavior()">← العودة للجدول</button>
+            
             <div id="current-match-card"></div>
             
-            <div class="video-wrapper">
-                <!-- زر التشغيل الوهمي المربوط بالرابط المباشر لأدستيرا -->
+            <!-- === إعلان أعلى صفحة البث === -->
+            <div class="ad-container-320">
+                <script>
+                  atOptions = {
+                    'key' : '7be1c70617ec5303f18319e3e3453d6f',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
+            </div>
+            <!-- ============================ -->
+
+            <!-- إطار الفيديو -->
+            <div class="video-wrapper" id="main-video-wrapper">
                 <div id="player-click-layer" class="player-ads-overlay" onclick="handleAdAndPlay()">
                     <button class="play-click-btn">اضغط هنا لبدء البث ⚽</button>
                 </div>
@@ -190,31 +260,49 @@
                 <video id="hls-player" class="hidden" controls playsinline></video>
             </div>
             
+            <!-- === زر التكبير أصبح تحت إطار الفيديو في المنتصف === -->
+            <div class="fullscreen-container">
+                <button class="fullscreen-btn" onclick="toggleFullScreen()">📺 تكبير شاشة البث بالكامل</button>
+            </div>
+            <!-- ================================================== -->
+
             <div class="servers-box">
                 <div style="margin-bottom: 10px; font-weight: 700;">سيرفرات المشاهدة الاحتياطية:</div>
                 <div class="servers-list" id="servers-render"></div>
             </div>
 
-            <!-- === قائمة الإعلانات المنظمة داخل صفحة المباراة === -->
+            <!-- قائمة الإعلانات المنظمة تحت البث -->
             <div class="match-page-ads-list">
                 <div class="ads-list-title">إعلانات مقترحة لك</div>
-                <!-- يمكنك لاحقاً إضافة أي أكواد إعلانات إضافية هنا لتظهر كقائمة مرتبة -->
                 <script async="async" data-cfasync="false" src="https://pl29328193.effectivecpmnetwork.com/dc29d3daa278da998dee275e6e196c86/invoke.js"></script>
                 <div id="container-dc29d3daa278da998dee275e6e196c86"></div>
             </div>
-            <!-- ================================================= -->
+
+            <!-- === إعلان أسفل صفحة البث === -->
+            <div class="ad-container-320">
+                <script>
+                  atOptions = {
+                    'key' : '7be1c70617ec5303f18319e3e3453d6f',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
+            </div>
+            <!-- ============================ -->
 
         </div>
         
-        <!-- === نص الكلمات المفتاحية (SEO) لجوجل ومحركات البحث === -->
         <div class="seo-keywords-footer">
-            أفضل موقع لمشاهدة البث المباشر. تغطية شاملة تابع بطولاتك المفضلة مجاناً وبدون تقطيع.
+            أفضل موقع لمشاهدة البث المباشر. تغطية شاملة تنافس يلا شوت (Yalla Shoot)، الأسطورة (The Star)، النجم، و المصري تي في (Al-Masry TV). تابع بطولاتك المفضلة مجاناً وبدون تقطيع.
         </div>
 
     </div>
 
     <script>
-        // نظام جدار الحماية
+        // نظام الحماية
         (function() {
             document.addEventListener('contextmenu', e => e.preventDefault());
             document.addEventListener('keydown', e => {
@@ -241,7 +329,32 @@
             setInterval(staticProtection, 200);
         })();
 
-        // إعدادات البث وإعلانات الرابط المباشر
+        // دالة تكبير شاشة البث (Fullscreen)
+        function toggleFullScreen() {
+            const playerContainer = document.getElementById('main-video-wrapper');
+            if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                if (playerContainer.requestFullscreen) {
+                    playerContainer.requestFullscreen();
+                } else if (playerContainer.msRequestFullscreen) {
+                    playerContainer.msRequestFullscreen();
+                } else if (playerContainer.mozRequestFullScreen) {
+                    playerContainer.mozRequestFullScreen();
+                } else if (playerContainer.webkitRequestFullscreen) {
+                    playerContainer.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+
         const ADSTERRA_DIRECT_LINK = "https://www.effectivecpmnetwork.com/czmyq4gii?key=68ace7e98fec89536331070124cdcdbb";
         const WORKER_URL = "https://api.albasritv1.workers.dev/";
         
@@ -463,10 +576,10 @@
 
         loadData();
     </script>
-
-    <!-- أكواد الإعلانات المخفية والمنبثقة (Adsterra) لا تظهر للمستخدم نهائياً وتعمل في الخلفية -->
+    
+    <!-- === إعلانات إضافية عامة === -->
     <script src="https://pl29328174.effectivecpmnetwork.com/23/80/20/23802071908d14d26fe4c0737b641d1a.js"></script>
     <script src="https://pl29328192.effectivecpmnetwork.com/f4/56/ea/f456eac53dbbb3b6b6d9a3999e993f50.js"></script>
-    
+
 </body>
 </html>
