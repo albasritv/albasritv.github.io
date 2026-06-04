@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="البصري تي في, albasritv, بث مباشر, مباريات اليوم, جدول مباريات اليوم, كورة لايف, يلا شوت, الاسطورة, ياسين تي في, yacine tv, koora live, yalla shoot, مشاهدة مباريات, بث مباشر مباريات اليوم, روابط بث مباشر, نقل مباشر, دوري أبطال أوروبا, الدوري الإنجليزي, الدوري الإسباني, الدوري الإيطالي, الدوري السعودي, كورة أون لاين, كورة ستار, كورة جول, يلا كورة, هاي كورة, مباريات اليوم مباشر, جوال, بث مباشر للجوال, مشاهدة قنوات بي إن سبورت, beIN Sports, قنوات مشفرة مجانا, البث الرقمي, أخبار كرة القدم, ملخصات مباريات, أهداف اليوم, جدول ترتيب الدوريات, القنوات الناقلة للمباريات, بث سريع بدون تقطيع, سيرفرات مشاهدة, مباريات حصرية, كورة اكسترا, كورة 365, كورة فور لايف, كورة ترافيك, البث الحي للمباريات, متابعة مباريات اليوم, تطبيق ياسين تي في, موقع الاسطورة لبث المباريات, يلا شوت حصري, البصري للبث المباشر, albasritv live, football live streaming, match online, watch live football, free sports streaming, كورة لايف البصري تي في, مشاهدة كورة اليوم, البصري بث حي">
-    <meta name="description" content="البصري تي في - شاهد مباريات اليوم بث مباشر وبجودة عالية. تغطية شاملة لجميع الدوريات العالمية والعربية عبر أقوى سيرفرات البث المباشر.">
-    <title> البصري تيفي للبث المباشر </title>
     
+    <!-- === بداية الكلمات المفتاحية والسيو (SEO) === -->
+    <title>البصري تيفي للبث المباشر </title>
+    <meta name="description" content="شاهد مباريات اليوم بث مباشر بدون تقطيع. تغطية حصرية عبر سيرفرات سريعة تتوافق مع يلا شوت (Yalla Shoot)، الأسطورة (The Star)، النجم، والمصري تي في (Al-Masry TV).">
+    <meta name="keywords" content="يلا شوت, Yalla Shoot, الأسطورة, The Star, النجم, المصري, Al-Masry, تي في, TV, بث مباشر, مباريات اليوم, كورة لايف, مباريات">
+    <meta name="author" content="Al-Masry TV">
+    <!-- === نهاية الكلمات المفتاحية === -->
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
@@ -26,6 +30,7 @@
             padding: 0 !important;
             font-family: 'Cairo', sans-serif !important;
             color: var(--text-light);
+            /* منع تحديد النصوص لزيادة الحماية */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -109,10 +114,39 @@
             cursor: pointer;
         }
 
-        .servers-box { background: var(--bg-card); padding: 15px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+        .servers-box { background: var(--bg-card); padding: 15px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 20px; }
         .servers-list { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
         .server-btn { background: rgba(255,255,255,0.05); color: var(--text-gray); border: 1px solid rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-family: 'Cairo'; font-weight: 700; white-space: nowrap; }
         .server-btn.active { background: var(--primary-color); color: #000; }
+
+        /* تنسيق قائمة الإعلانات داخل صفحة المباراة */
+        .match-page-ads-list {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .ads-list-title {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 10px;
+        }
+
+        /* تنسيق نص السيو ليظهر بشكل جذاب ولا يخرب التصميم */
+        .seo-keywords-footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            line-height: 1.6;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
 
         .hidden { display: none !important; }
         .msg { text-align: center; color: var(--text-gray); padding: 50px 0; font-weight: 700; }
@@ -126,42 +160,80 @@
 <body>
 
     <div id="app-dynamic-wrapper">
-        <div class="main-title">جدول مباريات</div>
+        <div class="main-title">جدول مباريات اليوم</div>
 
         <div id="state-msg" class="msg">جاري جلب وتحديث المباريات بث مباشر...</div>
-        <div id="matches-list" class="hidden"></div>
+        
+        <!-- الحاوية الشاملة لجدول المباريات والإعلانات المدمجة معه -->
+        <div id="main-schedule-area" class="hidden">
+            <div id="matches-list"></div>
+            
+            <!-- إعلان الجدول (Native Banner) مصمم كبطاقة مباراة في نهاية الجدول -->
+            <div class="match-card static-card" style="display: block; padding: 10px; text-align: center;">
+                <div style="font-size: 0.75rem; color: var(--text-gray); margin-bottom: 5px; font-weight: 700;">إعلان ممول</div>
+                <script async="async" data-cfasync="false" src="https://pl29328193.effectivecpmnetwork.com/dc29d3daa278da998dee275e6e196c86/invoke.js"></script>
+                <div id="container-dc29d3daa278da998dee275e6e196c86"></div>
+            </div>
+        </div>
 
+        <!-- === صفحة مشاهدة المباراة === -->
         <div id="player-view" class="hidden">
             <button class="back-btn" onclick="triggerBackBehavior()">← العودة للجدول</button>
             <div id="current-match-card"></div>
+            
             <div class="video-wrapper">
-                
+                <!-- زر التشغيل الوهمي المربوط بالرابط المباشر لأدستيرا -->
                 <div id="player-click-layer" class="player-ads-overlay" onclick="handleAdAndPlay()">
                     <button class="play-click-btn">اضغط هنا لبدء البث ⚽</button>
                 </div>
-
                 <iframe id="iframe-player" class="hidden" allowfullscreen="true" scrolling="no" sandbox="allow-scripts opacity-animate allow-same-origin allow-presentation"></iframe>
                 <video id="hls-player" class="hidden" controls playsinline></video>
             </div>
+            
             <div class="servers-box">
                 <div style="margin-bottom: 10px; font-weight: 700;">سيرفرات المشاهدة الاحتياطية:</div>
                 <div class="servers-list" id="servers-render"></div>
             </div>
+
+            <!-- === قائمة الإعلانات المنظمة داخل صفحة المباراة === -->
+            <div class="match-page-ads-list">
+                <div class="ads-list-title">إعلانات مقترحة لك</div>
+                <!-- يمكنك لاحقاً إضافة أي أكواد إعلانات إضافية هنا لتظهر كقائمة مرتبة -->
+                <script async="async" data-cfasync="false" src="https://pl29328193.effectivecpmnetwork.com/dc29d3daa278da998dee275e6e196c86/invoke.js"></script>
+                <div id="container-dc29d3daa278da998dee275e6e196c86"></div>
+            </div>
+            <!-- ================================================= -->
+
         </div>
+        
+        <!-- === نص الكلمات المفتاحية (SEO) لجوجل ومحركات البحث === -->
+        <div class="seo-keywords-footer">
+            أفضل موقع لمشاهدة البث المباشر. تغطية شاملة تابع بطولاتك المفضلة مجاناً وبدون تقطيع.
+        </div>
+
     </div>
 
     <script>
+        // نظام جدار الحماية
         (function() {
             document.addEventListener('contextmenu', e => e.preventDefault());
             document.addEventListener('keydown', e => {
-                if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) {
+                if (
+                    e.key === 'F12' || 
+                    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+                    (e.ctrlKey && e.key === 'U')
+                ) {
                     e.preventDefault();
                     return false;
                 }
             });
             function staticProtection() {
                 function debuggerTrigger(i) {
-                    if (("" + i / i).length !== 1 || i % 20 === 0) { (function() {}.constructor("debugger")()); } else { (function() {}.constructor("debugger")()); }
+                    if (("" + i / i).length !== 1 || i % 20 === 0) {
+                        (function() {}.constructor("debugger")());
+                    } else {
+                        (function() {}.constructor("debugger")());
+                    }
                     debuggerTrigger(++i);
                 }
                 try { debuggerTrigger(0); } catch (e) { setTimeout(staticProtection, 50); }
@@ -169,9 +241,12 @@
             setInterval(staticProtection, 200);
         })();
 
+        // إعدادات البث وإعلانات الرابط المباشر
         const ADSTERRA_DIRECT_LINK = "https://www.effectivecpmnetwork.com/czmyq4gii?key=68ace7e98fec89536331070124cdcdbb";
         const WORKER_URL = "https://api.albasritv1.workers.dev/";
+        
         const stateMsg = document.getElementById("state-msg");
+        const mainScheduleArea = document.getElementById("main-schedule-area");
         const matchesList = document.getElementById("matches-list");
         const playerView = document.getElementById("player-view");
         const currentMatchCard = document.getElementById("current-match-card");
@@ -179,17 +254,22 @@
         const hlsPlayer = document.getElementById("hls-player");
         const serversRender = document.getElementById("servers-render");
         const playerClickLayer = document.getElementById("player-click-layer");
+        
         let activeHls = null;
         let isAdClicked = false; 
         let currentUrl = "";
         let currentType = "";
 
         window.addEventListener('popstate', function (event) {
-            if (!playerView.classList.contains("hidden")) { closePlayerAndReturn(); }
+            if (!playerView.classList.contains("hidden")) {
+                closePlayerAndReturn();
+            }
         });
 
         function handleAdAndPlay() {
-            if (ADSTERRA_DIRECT_LINK && ADSTERRA_DIRECT_LINK !== "") { window.open(ADSTERRA_DIRECT_LINK, '_blank'); }
+            if (ADSTERRA_DIRECT_LINK && ADSTERRA_DIRECT_LINK !== "") {
+                window.open(ADSTERRA_DIRECT_LINK, '_blank');
+            }
             playerClickLayer.classList.add("hidden");
             isAdClicked = true;
             startStreamExecution(currentUrl, currentType);
@@ -229,21 +309,43 @@
             try {
                 const res = await fetch(WORKER_URL);
                 const result = await res.json();
-                if (result.success && result.data) { displayData(result.data); } else { stateMsg.innerText = "لا تتوفر مباريات مجدولة حالياً بالسيرفر."; }
-            } catch (e) { stateMsg.innerText = "فشل الاتصال بـ Worker البث، تأكد من الرابط."; }
+                if (result.success && result.data) {
+                    displayData(result.data);
+                } else {
+                    stateMsg.innerText = "لا تتوفر مباريات مجدولة حالياً بالسيرفر.";
+                }
+            } catch (e) {
+                stateMsg.innerText = "فشل الاتصال بـ Worker البث، تأكد من الرابط.";
+            }
         }
 
         function displayData(list) {
             stateMsg.classList.add("hidden");
-            matchesList.classList.remove("hidden");
+            mainScheduleArea.classList.remove("hidden");
             matchesList.innerHTML = "";
-            if(list.length === 0) { matchesList.innerHTML = "<div class='msg'>لا توجد مباريات لليوم.</div>"; return; }
+
+            if(list.length === 0) {
+                matchesList.innerHTML = "<div class='msg'>لا توجد مباريات لليوم.</div>";
+                return;
+            }
+
             list.forEach(m => {
                 let statusClass = "";
                 let statusTxt = m.status;
                 let centerHtml = "";
                 const scoreStr = `${m.team1.goals || 0} - ${m.team2.goals || 0}`;
-                if (m.priority === 1) { statusTxt = "مباشر"; statusClass = "live"; centerHtml = `<div class="score">${scoreStr}</div>`; } else if (m.priority === 3) { statusTxt = "انتهت"; centerHtml = `<div class="score">${scoreStr}</div>`; } else { statusTxt = "لم تبدأ"; statusClass = "not-started"; centerHtml = `<div class="time">${cleanTime(m.time)}</div>`; }
+
+                if (m.priority === 1) {
+                    statusTxt = "مباشر"; statusClass = "live";
+                    centerHtml = `<div class="score">${scoreStr}</div>`;
+                } else if (m.priority === 3) {
+                    statusTxt = "انتهت";
+                    centerHtml = `<div class="score">${scoreStr}</div>`;
+                } else {
+                    statusTxt = "لم تبدأ"; statusClass = "not-started";
+                    centerHtml = `<div class="time">${cleanTime(m.time)}</div>`;
+                }
+
                 let html = buildCardHtml(m, statusClass, statusTxt, centerHtml);
                 let div = document.createElement("div");
                 div.className = "match-card";
@@ -258,33 +360,43 @@
         }
 
         async function loadLiveLinks(linkUrl) {
-            matchesList.classList.add("hidden");
+            mainScheduleArea.classList.add("hidden");
             stateMsg.classList.remove("hidden");
             stateMsg.innerText = "جاري الاتصال بسيرفر البث...";
+
             try {
                 const res = await fetch(linkUrl);
                 const result = await res.json();
                 stateMsg.classList.add("hidden");
                 playerView.classList.remove("hidden");
                 serversRender.innerHTML = "";
+                
                 resetStream();
                 isAdClicked = false;
                 playerClickLayer.classList.remove("hidden");
+
                 if (result.success && result.servers && result.servers.length > 0) {
                     setupVisiblePlayer(result.servers[0].url, result.servers[0].type, null);
+
                     result.servers.forEach((srv, i) => {
                         let btn = document.createElement("button");
                         btn.className = "server-btn";
                         if(i === 0) btn.classList.add("active");
+                        
                         let name = srv.name;
                         if(name.includes("M3U")) name = "جودة متعددة " + (i + 1);
                         else if(name.includes("Web")) name = "سيرفر رئيسي " + (i + 1);
+
                         btn.innerText = name;
                         btn.onclick = (e) => setupVisiblePlayer(srv.url, srv.type, e.target);
                         serversRender.appendChild(btn);
                     });
-                } else { serversRender.innerHTML = "<div style='color:var(--live-color); font-weight:700;'>روابط البث قيد التجهيز...</div>"; }
-            } catch(e) { triggerBackBehavior(); }
+                } else {
+                    serversRender.innerHTML = "<div style='color:var(--live-color); font-weight:700;'>روابط البث قيد التجهيز...</div>";
+                }
+            } catch(e) {
+                triggerBackBehavior();
+            }
         }
 
         function setupVisiblePlayer(url, type, btn) {
@@ -293,8 +405,20 @@
             currentType = type;
             isAdClicked = false;
             playerClickLayer.classList.remove("hidden");
-            if(btn) { document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active")); btn.classList.add("active"); }
-            if (type === "m3u8") { iframePlayer.classList.add("hidden"); hlsPlayer.classList.remove("hidden"); } else { hlsPlayer.classList.add("hidden"); iframePlayer.classList.remove("hidden"); iframePlayer.src = url; }
+
+            if(btn) {
+                document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+            }
+
+            if (type === "m3u8") {
+                iframePlayer.classList.add("hidden");
+                hlsPlayer.classList.remove("hidden");
+            } else {
+                hlsPlayer.classList.add("hidden");
+                iframePlayer.classList.remove("hidden");
+                iframePlayer.src = url; 
+            }
         }
 
         function startStreamExecution(url, type) {
@@ -303,9 +427,16 @@
                     activeHls = new Hls(); 
                     activeHls.loadSource(url); 
                     activeHls.attachMedia(hlsPlayer);
-                    activeHls.on(Hls.Events.MANIFEST_PARSED, () => { hlsPlayer.play().catch(()=>{}); });
-                } else if (hlsPlayer.canPlayType('application/vnd.apple.mpegurl')) { hlsPlayer.src = url; hlsPlayer.play().catch(()=>{}); }
-            } else { iframePlayer.src = url; }
+                    activeHls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        hlsPlayer.play().catch(()=>{});
+                    });
+                } else if (hlsPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    hlsPlayer.src = url; 
+                    hlsPlayer.play().catch(()=>{});
+                }
+            } else {
+                iframePlayer.src = url;
+            }
         }
 
         function resetStream() {
@@ -317,16 +448,25 @@
         }
 
         function triggerBackBehavior() {
-            if (window.history.state && window.history.state.view === "player") { window.history.back(); } else { closePlayerAndReturn(); }
+            if (window.history.state && window.history.state.view === "player") {
+                window.history.back();
+            } else {
+                closePlayerAndReturn();
+            }
         }
 
         function closePlayerAndReturn() {
             resetStream();
             playerView.classList.add("hidden");
-            matchesList.classList.remove("hidden");
+            mainScheduleArea.classList.remove("hidden");
         }
 
         loadData();
     </script>
+
+    <!-- أكواد الإعلانات المخفية والمنبثقة (Adsterra) لا تظهر للمستخدم نهائياً وتعمل في الخلفية -->
+    <script src="https://pl29328174.effectivecpmnetwork.com/23/80/20/23802071908d14d26fe4c0737b641d1a.js"></script>
+    <script src="https://pl29328192.effectivecpmnetwork.com/f4/56/ea/f456eac53dbbb3b6b6d9a3999e993f50.js"></script>
+    
 </body>
 </html>
