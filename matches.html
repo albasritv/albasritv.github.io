@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- === الكلمات المفتاحية والسيو (SEO) === -->
-    <title>بث مباشر مباريات اليوم - Yalla Shoot | The Star | Al-Masry TV</title>
+    <title>البصري تيفي مباريات اليوم </title>
     <meta name="description" content="شاهد مباريات اليوم بث مباشر بدون تقطيع. تغطية حصرية عبر سيرفرات سريعة تتوافق مع يلا شوت (Yalla Shoot)، الأسطورة (The Star)، النجم، والمصري تي في (Al-Masry TV).">
     <meta name="keywords" content="يلا شوت, Yalla Shoot, الأسطورة, The Star, النجم, المصري, Al-Masry, تي في, TV, بث مباشر, مباريات اليوم, كورة لايف, مباريات">
     <meta name="author" content="Al-Masry TV">
@@ -129,76 +129,10 @@
             box-shadow: 0 0 15px var(--primary-color);
         }
 
-        .player-ads-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            cursor: pointer;
-            background: rgba(0, 0, 0, 0.15);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .play-click-btn {
-            background: var(--primary-color);
-            color: #000;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-family: 'Cairo';
-            font-weight: 900;
-            font-size: 1rem;
-            box-shadow: 0 0 15px var(--primary-color);
-            cursor: pointer;
-        }
-
         .servers-box { background: var(--bg-card); padding: 15px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 20px; }
         .servers-list { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
         .server-btn { background: rgba(255,255,255,0.05); color: var(--text-gray); border: 1px solid rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-family: 'Cairo'; font-weight: 700; white-space: nowrap; }
         .server-btn.active { background: var(--primary-color); color: #000; }
-
-        /* === تنسيق إعلانات البانر === */
-        .ad-container-320 {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 10px;
-            margin: 15px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 340px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .ad-container-320::before {
-            content: 'إعلان ممول';
-            font-size: 0.7rem;
-            color: var(--text-gray);
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .match-page-ads-list {
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 15px;
-            text-align: center;
-            margin-top: 15px;
-        }
-        .ads-list-title {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 10px;
-        }
 
         .seo-keywords-footer {
             margin-top: 40px;
@@ -235,68 +169,27 @@
             <button class="back-btn" onclick="triggerBackBehavior()">← العودة للجدول</button>
             
             <div id="current-match-card"></div>
-            
-            <!-- === إعلان أعلى صفحة البث === -->
-            <div class="ad-container-320">
-                <script>
-                  atOptions = {
-                    'key' : '7be1c70617ec5303f18319e3e3453d6f',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
-                </script>
-                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
-            </div>
-            <!-- ============================ -->
 
             <!-- إطار الفيديو -->
             <div class="video-wrapper" id="main-video-wrapper">
-                <div id="player-click-layer" class="player-ads-overlay" onclick="handleAdAndPlay()">
-                    <button class="play-click-btn">اضغط هنا لبدء البث ⚽</button>
-                </div>
                 <iframe id="iframe-player" class="hidden" allowfullscreen="true" scrolling="no" sandbox="allow-scripts opacity-animate allow-same-origin allow-presentation"></iframe>
                 <video id="hls-player" class="hidden" controls playsinline></video>
             </div>
             
-            <!-- === زر التكبير أصبح تحت إطار الفيديو في المنتصف === -->
+            <!-- === زر التكبير === -->
             <div class="fullscreen-container">
                 <button class="fullscreen-btn" onclick="toggleFullScreen()">📺 تكبير شاشة البث بالكامل</button>
             </div>
-            <!-- ================================================== -->
 
             <div class="servers-box">
                 <div style="margin-bottom: 10px; font-weight: 700;">سيرفرات المشاهدة الاحتياطية:</div>
                 <div class="servers-list" id="servers-render"></div>
             </div>
 
-            <!-- قائمة الإعلانات المنظمة تحت البث -->
-            <div class="match-page-ads-list">
-                <div class="ads-list-title">إعلانات مقترحة لك</div>
-                <script async="async" data-cfasync="false" src="https://pl29328193.effectivecpmnetwork.com/dc29d3daa278da998dee275e6e196c86/invoke.js"></script>
-                <div id="container-dc29d3daa278da998dee275e6e196c86"></div>
-            </div>
-
-            <!-- === إعلان أسفل صفحة البث === -->
-            <div class="ad-container-320">
-                <script>
-                  atOptions = {
-                    'key' : '7be1c70617ec5303f18319e3e3453d6f',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
-                </script>
-                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
-            </div>
-            <!-- ============================ -->
-
         </div>
         
         <div class="seo-keywords-footer">
-            أفضل موقع لمشاهدة البث المباشر. تغطية شاملة تنافس يلا شوت (Yalla Shoot)، الأسطورة (The Star)، النجم، و المصري تي في (Al-Masry TV). تابع بطولاتك المفضلة مجاناً وبدون تقطيع.
+            أفضل موقع لمشاهدة البث المباشر. تغطية شاملة بطولاتك المفضلة مجاناً وبدون تقطيع.
         </div>
 
     </div>
@@ -355,7 +248,6 @@
             }
         }
 
-        const ADSTERRA_DIRECT_LINK = "https://www.effectivecpmnetwork.com/czmyq4gii?key=68ace7e98fec89536331070124cdcdbb";
         const WORKER_URL = "https://ali.albasritv1.workers.dev/";
         
         const stateMsg = document.getElementById("state-msg");
@@ -366,10 +258,8 @@
         const iframePlayer = document.getElementById("iframe-player");
         const hlsPlayer = document.getElementById("hls-player");
         const serversRender = document.getElementById("servers-render");
-        const playerClickLayer = document.getElementById("player-click-layer");
         
         let activeHls = null;
-        let isAdClicked = false; 
         let currentUrl = "";
         let currentType = "";
 
@@ -378,15 +268,6 @@
                 closePlayerAndReturn();
             }
         });
-
-        function handleAdAndPlay() {
-            if (ADSTERRA_DIRECT_LINK && ADSTERRA_DIRECT_LINK !== "") {
-                window.open(ADSTERRA_DIRECT_LINK, '_blank');
-            }
-            playerClickLayer.classList.add("hidden");
-            isAdClicked = true;
-            startStreamExecution(currentUrl, currentType);
-        }
 
         function getCleanImg(url) {
             if (!url) return "https://via.placeholder.com/55x55/151c2c/ffffff?text=TEAM";
@@ -485,8 +366,6 @@
                 serversRender.innerHTML = "";
                 
                 resetStream();
-                isAdClicked = false;
-                playerClickLayer.classList.remove("hidden");
 
                 if (result.success && result.servers && result.servers.length > 0) {
                     setupVisiblePlayer(result.servers[0].url, result.servers[0].type, null);
@@ -516,8 +395,6 @@
             resetStream();
             currentUrl = url;
             currentType = type;
-            isAdClicked = false;
-            playerClickLayer.classList.remove("hidden");
 
             if(btn) {
                 document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active"));
@@ -530,8 +407,10 @@
             } else {
                 hlsPlayer.classList.add("hidden");
                 iframePlayer.classList.remove("hidden");
-                iframePlayer.src = url; 
             }
+            
+            // Starts the stream immediately without waiting for an ad click
+            startStreamExecution(url, type);
         }
 
         function startStreamExecution(url, type) {
@@ -576,10 +455,5 @@
 
         loadData();
     </script>
-    
-    <!-- === إعلانات إضافية عامة === -->
-    <script src="https://pl29328174.effectivecpmnetwork.com/23/80/20/23802071908d14d26fe4c0737b641d1a.js"></script>
-    <script src="https://pl29328192.effectivecpmnetwork.com/f4/56/ea/f456eac53dbbb3b6b6d9a3999e993f50.js"></script>
-
 </body>
 </html>
