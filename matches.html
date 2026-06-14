@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>البصري تيفي مباريات اليوم </title>
+    <title>البصري تيفي مباريات اليوم</title>
     <meta name="description" content="البث المباشر للمباريات بجودات متعددة وبدون تقطيع.">
     <meta name="keywords" content="البث المباشر للمباريات, يلا شوت, كورة لايف, ياسين تيفي, الاسطورة لبث المباريات, كورة 365, مباريات اليوم بث مباشر, عالم روم">
     
@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
     <style>
-        /* === الألوان والتصميم الرياضي الاحترافي (VIP Theme) === */
+        /* === الألوان والتصميم الرياضي === */
         :root {
             --bg-dark: #070b14;
             --card-bg: #111827;
@@ -37,402 +37,165 @@
             line-height: 1.6;
         }
 
-        /* === الحاوية الرئيسية === */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px 15px;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px 15px; }
 
-        /* === عنوان الصفحة === */
         .main-page-title {
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 900;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            background: linear-gradient(to left, var(--accent-cyan), var(--accent-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 4px 20px rgba(6, 182, 212, 0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 30px;
+            padding-bottom: 10px; background: linear-gradient(to left, var(--accent-cyan), var(--accent-gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(6, 182, 212, 0.2); border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* === تصميم البطاقات (Match Cards) === */
+        /* === البطاقات === */
         .match-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-main);
-            padding: 15px 20px;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-main);
+            padding: 15px 20px; margin-bottom: 15px; display: flex; justify-content: space-between;
+            align-items: center; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden;
         }
-
         .match-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--border-color);
-            transition: background 0.3s ease;
+            content: ''; position: absolute; top: 0; right: 0; width: 4px; height: 100%;
+            background: var(--border-color); transition: background 0.3s ease;
         }
-
         .match-card:hover {
-            transform: translateY(-4px);
-            background: var(--card-hover);
-            border-color: var(--accent-cyan);
+            transform: translateY(-4px); background: var(--card-hover); border-color: var(--accent-cyan);
             box-shadow: 0 10px 25px rgba(6, 182, 212, 0.15);
         }
+        .match-card:hover::before { background: var(--accent-cyan); }
+        .static-card { cursor: default; transform: none !important; border-color: var(--accent-gold); background: linear-gradient(145deg, #1f2937, #111827); margin-bottom: 20px; }
+        .static-card::before { background: var(--accent-gold); }
 
-        .match-card:hover::before {
-            background: var(--accent-cyan);
+        .team-box { display: flex; flex-direction: column; align-items: center; width: 30%; text-align: center; }
+        .team-box img { width: 60px; height: 60px; object-fit: contain; margin-bottom: 10px; background: rgba(255,255,255,0.03); padding: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); }
+        .team-box span { font-size: 0.95rem; font-weight: 800; }
+        .center-info { width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        
+        .status-pill { font-size: 1.1rem; font-weight: 900; padding: 4px 18px; border-radius: 30px; margin-bottom: 8px; text-transform: uppercase; }
+        .is-live { background: rgba(239, 68, 68, 0.15); color: var(--live-red); border: 1px solid var(--live-red); animation: pulse-red 2s infinite; }
+        @keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); } 70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
+        .is-upcoming { background: rgba(245, 158, 11, 0.1); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+        .is-ended { background: rgba(156, 163, 175, 0.1); color: var(--text-gray); border: 1px solid var(--text-gray); }
+        .match-time-score { font-size: 1.2rem; font-weight: 800; color: var(--text-light); background: rgba(0,0,0,0.3); padding: 2px 12px; border-radius: 8px; }
+
+        /* === منطقة البث والإعلانات === */
+        .ad-banner-container {
+            display: flex; justify-content: center; align-items: center; margin-bottom: 15px; min-height: 50px;
         }
 
-        .static-card {
-            cursor: default;
-            transform: none !important;
-            border-color: var(--accent-gold);
-            background: linear-gradient(145deg, #1f2937, #111827);
-            margin-bottom: 20px;
+        .player-wrapper {
+            background: #000; border-radius: var(--radius-main); overflow: hidden; border: 2px solid var(--border-color);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6); margin-bottom: 20px; aspect-ratio: 16 / 9; width: 100%; position: relative;
         }
+        .player-wrapper iframe, .player-wrapper video { width: 100%; height: 100%; border: none; display: block; }
 
-        .static-card::before {
-            background: var(--accent-gold);
+        /* === المشغل الوهمي (Fake Player Overlay) === */
+        .fake-player-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(3px); z-index: 50;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            cursor: pointer; transition: opacity 0.3s ease;
         }
-
-        /* === الفرق والنتيجة === */
-        .team-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 30%;
-            text-align: center;
-        }
-
-        .team-box img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 10px;
-            background: rgba(255,255,255,0.03);
-            padding: 8px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .team-box span {
-            font-size: 0.95rem;
-            font-weight: 800;
-        }
-
-        .center-info {
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .status-pill {
-            font-size: 1.1rem; 
-            font-weight: 900;
-            padding: 4px 18px;
-            border-radius: 30px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .is-live {
-            background: rgba(239, 68, 68, 0.15);
-            color: var(--live-red);
-            border: 1px solid var(--live-red);
+        .play-btn-fake {
+            width: 70px; height: 70px; background: rgba(239, 68, 68, 0.8); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: white; font-size: 30px;
+            margin-bottom: 15px; border: 3px solid rgba(255,255,255,0.2); transition: all 0.3s;
             animation: pulse-red 2s infinite;
         }
+        .fake-player-overlay:hover .play-btn-fake { transform: scale(1.1); background: var(--live-red); }
+        .fake-text { font-family: 'Cairo', sans-serif; font-size: 1.3rem; font-weight: 900; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 
-        @keyframes pulse-red {
-            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-            70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-        }
-
-        .is-upcoming {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent-gold);
-            border: 1px solid var(--accent-gold);
-        }
-
-        .is-ended {
-            background: rgba(156, 163, 175, 0.1);
-            color: var(--text-gray);
-            border: 1px solid var(--text-gray);
-        }
-
-        .match-time-score {
-            font-size: 1.2rem; 
-            font-weight: 800;
-            color: var(--text-light);
-            background: rgba(0,0,0,0.3);
-            padding: 2px 12px;
-            border-radius: 8px;
-        }
-
-        /* === مشغل الفيديو (Player UI) === */
-        .player-wrapper {
-            background: #000;
-            border-radius: var(--radius-main);
-            overflow: hidden;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-            margin-bottom: 20px;
-            aspect-ratio: 16 / 9;
-            width: 100%;
-        }
-
-        .player-wrapper iframe, .player-wrapper video {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-
-        /* === الأزرار (Buttons) === */
+        /* === الأزرار والسيرفرات === */
         .btn-fullscreen {
-            width: 100%;
-            background: linear-gradient(to left, var(--accent-cyan), #0284c7);
-            color: #fff;
-            border: none;
-            font-size: 1rem;
-            font-weight: 800;
-            font-family: 'Cairo', sans-serif;
-            padding: 12px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            width: 100%; background: linear-gradient(to left, var(--accent-cyan), #0284c7); color: #fff; border: none; font-size: 1rem;
+            font-weight: 800; font-family: 'Cairo', sans-serif; padding: 12px; border-radius: 12px; margin-bottom: 25px; cursor: pointer; transition: all 0.3s ease;
         }
+        .btn-fullscreen:hover { box-shadow: 0 5px 20px rgba(6, 182, 212, 0.4); transform: translateY(-2px); }
 
-        .btn-fullscreen:hover {
-            box-shadow: 0 5px 20px rgba(6, 182, 212, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* === السيرفرات === */
-        .servers-container {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: var(--radius-main);
-            border: 1px solid var(--border-color);
-        }
-
-        .servers-title {
-            font-weight: 900;
-            color: var(--text-gray);
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-
-        .servers-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
+        .servers-container { background: var(--card-bg); padding: 15px; border-radius: var(--radius-main); border: 1px solid var(--border-color); }
+        .servers-title { font-weight: 900; color: var(--text-gray); margin-bottom: 15px; font-size: 1rem; }
+        .servers-grid { display: flex; flex-wrap: wrap; gap: 10px; }
         .server-btn {
-            flex: 1 1 110px;
-            background: #1f2937;
-            color: var(--text-gray);
-            border: 1px solid transparent;
-            padding: 10px;
-            border-radius: 8px;
-            font-family: 'Cairo', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: center;
+            flex: 1 1 110px; background: #1f2937; color: var(--text-gray); border: 1px solid transparent; padding: 10px;
+            border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease; text-align: center;
         }
+        .server-btn:hover { background: #374151; color: #fff; }
+        .server-btn.active { background: rgba(245, 158, 11, 0.15); color: var(--accent-gold); border-color: var(--accent-gold); }
 
-        .server-btn:hover {
-            background: #374151;
-            color: #fff;
-        }
-
-        .server-btn.active {
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--accent-gold);
-            border-color: var(--accent-gold);
-        }
-
-        /* === حالات التحميل والرسائل === */
         .hidden { display: none !important; }
-        
-        .status-message {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-gray);
-            font-size: 1.1rem;
-            font-weight: 800;
-        }
-
-        .loading-spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid var(--card-hover);
-            border-top: 4px solid var(--accent-gold);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 15px auto;
-        }
-
+        .status-message { text-align: center; padding: 60px 20px; color: var(--text-gray); font-size: 1.1rem; font-weight: 800; }
+        .loading-spinner { width: 40px; height: 40px; border: 4px solid var(--card-hover); border-top: 4px solid var(--accent-gold); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* === النافذة المنبثقة (Pop-up Modal) === */
-        .modal-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(4px);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
+        /* === Modal === */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); z-index: 9999; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .modal-overlay.show { opacity: 1; visibility: visible; }
+        .modal-content { background: var(--card-bg); border: 2px solid var(--live-red); border-radius: var(--radius-main); padding: 30px 20px; text-align: center; width: 85%; max-width: 320px; transform: scale(0.8) translateY(20px); transition: all 0.3s ease; }
+        .modal-overlay.show .modal-content { transform: scale(1) translateY(0); }
+        .modal-icon { font-size: 3rem; margin-bottom: 10px; color: var(--live-red); }
+        .modal-title { margin: 0 0 10px 0; color: var(--text-light); font-weight: 900; font-size: 1.3rem; }
+        .modal-text { color: var(--text-gray); margin: 0 0 20px 0; font-weight: 700; font-size: 0.95rem; }
+        .modal-btn { background: var(--live-red); color: #fff; border: none; padding: 10px 30px; border-radius: 8px; font-weight: 800; font-size: 1rem; cursor: pointer; width: 100%; }
 
-        .modal-overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background: var(--card-bg);
-            border: 2px solid var(--live-red);
-            border-radius: var(--radius-main);
-            padding: 30px 20px;
-            text-align: center;
-            width: 85%;
-            max-width: 320px;
-            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.2);
-            transform: scale(0.8) translateY(20px);
-            transition: all 0.3s ease;
-        }
-
-        .modal-overlay.show .modal-content {
-            transform: scale(1) translateY(0);
-        }
-
-        .modal-icon {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: var(--live-red);
-        }
-
-        .modal-title {
-            margin: 0 0 10px 0;
-            color: var(--text-light);
-            font-weight: 900;
-            font-size: 1.3rem;
-        }
-
-        .modal-text {
-            color: var(--text-gray);
-            margin: 0 0 20px 0;
-            font-weight: 700;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .modal-btn {
-            background: var(--live-red);
-            color: #fff;
-            border: none;
-            padding: 10px 30px;
-            border-radius: 8px;
-            font-family: 'Cairo', sans-serif;
-            font-weight: 800;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.2s;
-            width: 100%;
-        }
-
-        .modal-btn:hover {
-            background: #dc2626;
-        }
-
-        /* === تذييل الموقع (Footer) === */
-        .footer {
-            margin-top: 40px;
-            padding: 25px 20px;
-            background: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        .footer p { 
-            margin: 0; 
-            font-weight: 800; 
-            font-size: 0.9rem;
-            color: var(--text-gray); 
-        }
-
-        @media (max-width: 600px) {
-            .team-box img { width: 45px; height: 45px; margin-bottom: 5px; }
-            .team-box span { font-size: 0.8rem; }
-            .status-pill { font-size: 1rem; padding: 2px 14px; }
-            .match-time-score { font-size: 1rem; }
-            .main-page-title { font-size: 1.5rem; }
-        }
+        .footer { margin-top: 40px; padding: 25px 20px; background: var(--card-bg); border-top: 1px solid var(--border-color); text-align: center; }
+        .footer p { margin: 0; font-weight: 800; font-size: 0.9rem; color: var(--text-gray); }
     </style>
 </head>
 <body>
 
     <div class="container">
-        
-        <!-- عنوان الصفحة -->
         <div class="main-page-title">جدول مباريات اليوم</div>
         
-        <!-- حالة التحميل -->
         <div id="loading-view" class="status-message">
             <div class="loading-spinner"></div>
             <div id="loading-text">جاري إعداد المباريات...</div>
         </div>
         
-        <!-- قسم جدول المباريات -->
         <div id="schedule-view" class="hidden">
             <div id="matches-list"></div>
         </div>
 
-        <!-- قسم مشغل البث (تمت إزالة زر العودة من هنا) -->
+        <!-- ========================================== -->
+        <!-- قسم شاشة البث (هنا تظهر الإعلانات فقط) -->
+        <!-- ========================================== -->
         <div id="player-view" class="hidden">
             
             <div id="active-match-card"></div>
 
+            <!-- البانر الإعلاني (320x50) يظهر فوق المشغل مباشرة -->
+            <div class="ad-banner-container">
+                <script>
+                  atOptions = {
+                    'key' : '7be1c70617ec5303f18319e3e3453d6f',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
+            </div>
+
             <div class="player-wrapper" id="player-wrapper">
+                
+                <!-- طبقة المشغل الوهمي (Fake Player / Installer) -->
+                <div id="fake-overlay" class="fake-player-overlay" onclick="handleFakeOverlayClick()">
+                    <div class="play-btn-fake">▶</div>
+                    <div class="fake-text">اضغط هنا لبدء البث المباشر</div>
+                </div>
+
+                <!-- المشغلات الحقيقية -->
                 <iframe id="iframe-player" class="hidden" allowfullscreen="true" scrolling="no" sandbox="allow-scripts opacity-animate allow-same-origin allow-presentation"></iframe>
                 <video id="hls-player" class="hidden" controls playsinline></video>
             </div>
             
-            <button class="btn-fullscreen" onclick="toggleFullScreen()">
-                تكبير شاشة البث 📺
-            </button>
+            <button class="btn-fullscreen" onclick="toggleFullScreen()">تكبير شاشة البث 📺</button>
 
-            <!-- سيرفرات المشاهدة -->
             <div class="servers-container">
                 <div class="servers-title">سيرفرات المشاهدة:</div>
                 <div class="servers-grid" id="servers-grid"></div>
             </div>
+
+            <!-- سكريبت الإعلانات الثاني (يعمل فقط داخل صفحة المباراة) -->
+            <script src="https://pl29328174.effectivecpmnetwork.com/23/80/20/23802071908d14d26fe4c0737b641d1a.js"></script>
 
         </div>
     </div>
@@ -447,24 +210,20 @@
         </div>
     </div>
 
-    <!-- التذييل -->
     <footer class="footer">
         <p>جميع الحقوق محفوظة لمطور عالم روميو</p>
     </footer>
 
     <script>
-        // === الحماية المتقدمة ===
+        // الحماية
         (function() {
             document.addEventListener('contextmenu', e => e.preventDefault());
             document.addEventListener('keydown', e => {
-                if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) {
-                    e.preventDefault(); return false;
-                }
+                if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) { e.preventDefault(); return false; }
             });
             function staticProtection() {
                 function debuggerTrigger(i) {
-                    if (("" + i / i).length !== 1 || i % 20 === 0) { (function() {}.constructor("debugger")()); } 
-                    else { (function() {}.constructor("debugger")()); }
+                    if (("" + i / i).length !== 1 || i % 20 === 0) { (function() {}.constructor("debugger")()); } else { (function() {}.constructor("debugger")()); }
                     debuggerTrigger(++i);
                 }
                 try { debuggerTrigger(0); } catch (e) { setTimeout(staticProtection, 50); }
@@ -472,49 +231,40 @@
             setInterval(staticProtection, 200);
         })();
 
-        // === تكبير الشاشة ===
         function toggleFullScreen() {
             const player = document.getElementById('player-wrapper');
-            if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
                 if (player.requestFullscreen) player.requestFullscreen();
-                else if (player.msRequestFullscreen) player.msRequestFullscreen();
-                else if (player.mozRequestFullScreen) player.mozRequestFullScreen();
                 else if (player.webkitRequestFullscreen) player.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
             } else {
                 if (document.exitFullscreen) document.exitFullscreen();
-                else if (document.msExitFullscreen) document.msExitFullscreen();
-                else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
                 else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
             }
         }
 
         const WORKER_URL = "https://ali.albasritv1.workers.dev/";
-        
         const loadingView = document.getElementById("loading-view");
         const loadingText = document.getElementById("loading-text");
         const scheduleView = document.getElementById("schedule-view");
         const matchesList = document.getElementById("matches-list");
-        
         const playerView = document.getElementById("player-view");
         const activeMatchCard = document.getElementById("active-match-card");
         const iframePlayer = document.getElementById("iframe-player");
         const hlsPlayer = document.getElementById("hls-player");
         const serversGrid = document.getElementById("servers-grid");
+        const fakeOverlay = document.getElementById("fake-overlay");
         
         let activeHls = null;
+        let isHlsActive = false; // لمعرفة ما إذا كان المشغل الحالي هو فيديو للتمكن من تشغيله برمجياً
 
-        // إدارة الرجوع من زر الهاتف أو المتصفح
         window.addEventListener('popstate', function (event) {
-            if (!playerView.classList.contains("hidden")) { 
-                closePlayer(); 
-            }
+            if (!playerView.classList.contains("hidden")) { closePlayer(); }
         });
 
         function getCleanImg(url) {
             if (!url) return "https://via.placeholder.com/60x60/1f2937/ffffff?text=LOGO";
             let u = url.trim();
-            if (u.startsWith("http://") || u.startsWith("https://")) return u;
-            if (u.startsWith("//")) return "https:" + u;
+            if (u.startsWith("http") || u.startsWith("//")) return u.startsWith("//") ? "https:" + u : u;
             return "https://koooracity.com/" + u.replace(/^\//, '');
         }
 
@@ -523,10 +273,10 @@
             let clean = t.toString().replace(/⏰/g, '').trim();
             let parts = clean.match(/(\d{1,2}):(\d{2})/);
             if (parts) {
-                let hours = parseInt(parts[1]);
-                let minutes = parts[2];
-                let ampm = hours >= 12 ? 'م' : 'ص';
-                hours = hours % 12 || 12;
+                let hours = parseInt(parts[1], 10), minutes = parts[2];
+                let isPM = clean.toLowerCase().includes('pm') || clean.includes('م') || hours >= 12;
+                let ampm = isPM ? 'م' : 'ص'; 
+                hours = hours % 12 || 12; 
                 return `${hours}:${minutes} ${ampm}`;
             }
             return clean;
@@ -534,18 +284,9 @@
 
         function createCardHTML(m, statusClass, statusText, centerValue) {
             return `
-                <div class="team-box">
-                    <img src="${getCleanImg(m.team1.logo)}" alt="${m.team1.name}">
-                    <span>${m.team1.name}</span>
-                </div>
-                <div class="center-info">
-                    <div class="status-pill ${statusClass}">${statusText}</div>
-                    <div class="match-time-score">${centerValue}</div>
-                </div>
-                <div class="team-box">
-                    <img src="${getCleanImg(m.team2.logo)}" alt="${m.team2.name}">
-                    <span>${m.team2.name}</span>
-                </div>
+                <div class="team-box"><img src="${getCleanImg(m.team1.logo)}" alt="${m.team1.name}"><span>${m.team1.name}</span></div>
+                <div class="center-info"><div class="status-pill ${statusClass}">${statusText}</div><div class="match-time-score">${centerValue}</div></div>
+                <div class="team-box"><img src="${getCleanImg(m.team2.logo)}" alt="${m.team2.name}"><span>${m.team2.name}</span></div>
             `;
         }
 
@@ -553,154 +294,107 @@
             try {
                 const res = await fetch(WORKER_URL);
                 const result = await res.json();
-                if (result.success && result.data) {
-                    renderMatches(result.data);
-                } else {
-                    loadingText.innerText = "لا توجد مباريات حالياً في الجدول.";
-                }
-            } catch (e) {
-                loadingText.innerText = "حدث خطأ في الاتصال بالسيرفر. يرجى التحديث.";
-            }
+                if (result.success && result.data) renderMatches(result.data);
+                else loadingText.innerText = "لا توجد مباريات حالياً في الجدول.";
+            } catch (e) { loadingText.innerText = "حدث خطأ في الاتصال بالسيرفر. يرجى التحديث."; }
         }
 
         function renderMatches(list) {
-            loadingView.classList.add("hidden");
-            scheduleView.classList.remove("hidden");
-            matchesList.innerHTML = "";
-
-            if(list.length === 0) {
-                matchesList.innerHTML = "<div class='status-message'>لا توجد مباريات مبرمجة لليوم.</div>";
-                return;
-            }
+            loadingView.classList.add("hidden"); scheduleView.classList.remove("hidden"); matchesList.innerHTML = "";
+            if(list.length === 0) { matchesList.innerHTML = "<div class='status-message'>لا توجد مباريات مبرمجة لليوم.</div>"; return; }
 
             list.forEach(m => {
                 let sClass = "", sText = m.status, cValue = "";
                 const score = `${m.team1.goals || 0} - ${m.team2.goals || 0}`;
-
-                if (m.priority === 1) {
-                    sText = "جاري الآن"; 
-                    sClass = "is-live"; 
-                    cValue = score;
-                } else if (m.priority === 3) {
-                    sText = "انتهت"; 
-                    sClass = "is-ended"; 
-                    cValue = score;
-                } else {
-                    sText = "لم تبدأ"; 
-                    sClass = "is-upcoming"; 
-                    cValue = formatTime(m.time);
-                }
+                if (m.priority === 1) { sText = "جاري الآن"; sClass = "is-live"; cValue = score; }
+                else if (m.priority === 3) { sText = "انتهت"; sClass = "is-ended"; cValue = score; }
+                else { sText = "لم تبدأ"; sClass = "is-upcoming"; cValue = formatTime(m.time); }
 
                 let html = createCardHTML(m, sClass, sText, cValue);
-                let div = document.createElement("div");
-                div.className = "match-card";
-                div.innerHTML = html;
+                let div = document.createElement("div"); div.className = "match-card"; div.innerHTML = html;
                 
                 div.onclick = () => {
                     activeMatchCard.innerHTML = `<div class="match-card static-card">${html}</div>`;
                     startLiveSetup(m.link);
                 };
-                
                 matchesList.appendChild(div);
             });
         }
 
         async function startLiveSetup(linkUrl) {
-            scheduleView.classList.add("hidden");
-            loadingView.classList.remove("hidden");
-            loadingText.innerText = "جاري البحث عن سيرفرات البث...";
-
+            scheduleView.classList.add("hidden"); loadingView.classList.remove("hidden"); loadingText.innerText = "جاري البحث عن سيرفرات البث...";
             try {
-                const res = await fetch(linkUrl);
-                const result = await res.json();
-                
+                const res = await fetch(linkUrl); const result = await res.json();
                 if (result.success && result.servers && result.servers.length > 0) {
-                    // السيرفر موجود -> نقوم بتسجيل الحالة للسماح بالرجوع
                     history.pushState({view: "player"}, "");
+                    loadingView.classList.add("hidden"); playerView.classList.remove("hidden");
                     
-                    loadingView.classList.add("hidden");
-                    playerView.classList.remove("hidden");
-                    serversGrid.innerHTML = "";
+                    // إظهار المشغل الوهمي عند الدخول لأي مباراة
+                    fakeOverlay.classList.remove("hidden");
                     
-                    stopVideo();
+                    serversGrid.innerHTML = ""; stopVideo();
                     playServer(result.servers[0].url, result.servers[0].type, null);
 
                     result.servers.forEach((srv, i) => {
-                        let btn = document.createElement("button");
-                        btn.className = "server-btn";
+                        let btn = document.createElement("button"); btn.className = "server-btn";
                         if(i === 0) btn.classList.add("active");
-                        
-                        let srvName = srv.name;
-                        if(srvName.includes("M3U")) srvName = "سيرفر رئيسي " + (i + 1);
-                        else if(srvName.includes("Web")) srvName = "سيرفر احتياطي " + (i + 1);
-
+                        let srvName = srv.name.includes("M3U") ? "سيرفر رئيسي " + (i+1) : (srv.name.includes("Web") ? "سيرفر احتياطي " + (i+1) : srv.name);
                         btn.innerText = srvName;
                         btn.onclick = (e) => playServer(srv.url, srv.type, e.target);
                         serversGrid.appendChild(btn);
                     });
-                } else {
-                    // لا يوجد سيرفر -> نظهر النافذة المنبثقة
-                    showNoServerModal();
-                }
-            } catch(e) {
-                // خطأ في جلب السيرفر -> نظهر النافذة المنبثقة
-                showNoServerModal();
-            }
+                } else showNoServerModal();
+            } catch(e) { showNoServerModal(); }
         }
 
-        function showNoServerModal() {
-            loadingView.classList.add("hidden");
-            scheduleView.classList.remove("hidden");
-            const modal = document.getElementById("no-server-modal");
-            modal.classList.add("show");
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("no-server-modal");
-            modal.classList.remove("show");
-        }
+        function showNoServerModal() { loadingView.classList.add("hidden"); scheduleView.classList.remove("hidden"); document.getElementById("no-server-modal").classList.add("show"); }
+        function closeModal() { document.getElementById("no-server-modal").classList.remove("show"); }
 
         function playServer(url, type, btnElement) {
             stopVideo();
-
-            if(btnElement) {
-                document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active"));
-                btnElement.classList.add("active");
-            }
+            if(btnElement) { document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active")); btnElement.classList.add("active"); }
 
             if (type === "m3u8") {
-                iframePlayer.classList.add("hidden");
-                hlsPlayer.classList.remove("hidden");
-                
+                isHlsActive = true;
+                iframePlayer.classList.add("hidden"); hlsPlayer.classList.remove("hidden");
                 if (Hls.isSupported()) {
-                    activeHls = new Hls(); 
-                    activeHls.loadSource(url); 
-                    activeHls.attachMedia(hlsPlayer);
-                    activeHls.on(Hls.Events.MANIFEST_PARSED, () => hlsPlayer.play().catch(()=>{}));
+                    activeHls = new Hls(); activeHls.loadSource(url); activeHls.attachMedia(hlsPlayer);
+                    // تم إزالة Auto-play من هنا، لأننا ننتظر المستخدم ليضغط على المشغل الوهمي
                 } else if (hlsPlayer.canPlayType('application/vnd.apple.mpegurl')) {
                     hlsPlayer.src = url; 
-                    hlsPlayer.play().catch(()=>{});
                 }
             } else {
-                hlsPlayer.classList.add("hidden");
-                iframePlayer.classList.remove("hidden");
+                isHlsActive = false;
+                hlsPlayer.classList.add("hidden"); iframePlayer.classList.remove("hidden");
                 iframePlayer.src = url;
             }
+        }
+
+        // ==========================================
+        // حدث النقر على المشغل الوهمي (فتح الإعلان المباشر وبدء البث)
+        // ==========================================
+        function handleFakeOverlayClick() {
+            // 1. فتح الإعلان المباشر
+            window.open("https://www.effectivecpmnetwork.com/czmyq4gii?key=68ace7e98fec89536331070124cdcdbb", "_blank");
+            
+            // 2. إخفاء المشغل الوهمي
+            fakeOverlay.classList.add("hidden");
+            
+            // 3. تشغيل البث المباشر فوراً (إذا كان السيرفر من نوع HLS فيديو)
+            if (isHlsActive) {
+                hlsPlayer.play().catch(e => console.log("Auto-play prevented, waiting for native controls."));
+            }
+            // السيرفرات الآيفريم (Iframe) ستكون جاهزة والنقر عليها يعمل بشكل طبيعي الآن
         }
 
         function stopVideo() {
             iframePlayer.src = "";
             if (activeHls) { activeHls.destroy(); activeHls = null; }
-            hlsPlayer.pause(); 
-            hlsPlayer.removeAttribute('src'); 
-            hlsPlayer.load();
+            hlsPlayer.pause(); hlsPlayer.removeAttribute('src'); hlsPlayer.load();
         }
 
-        // إغلاق المشغل والعودة للجدول (عند ضغط زر رجوع الهاتف)
         function closePlayer() {
-            stopVideo();
-            playerView.classList.add("hidden");
-            scheduleView.classList.remove("hidden");
+            stopVideo(); playerView.classList.add("hidden"); scheduleView.classList.remove("hidden");
         }
 
         loadMatches();
