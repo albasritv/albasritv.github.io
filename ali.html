@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Aboud TV VIP</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.27.1/DPlayer.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* --- الإعدادات العامة والتصميم --- */
+:root { --bg: #030303; --surface: #121212; --surface-light: #1f1f1f; --primary: #e50914; --accent: #ffb400; --text: #ffffff; --text-dim: #a0a0a0; }
+*{margin:0;padding:0;box-sizing:border-box; user-select:none; outline:none !important; -webkit-tap-highlight-color: transparent;}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+a { text-decoration: none; color: inherit; cursor:pointer;}
+.top-bar { position:fixed; top:0; width:100%; height:65px; background:linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, transparent 100%); display:flex; align-items:center; justify-content:space-between; padding:0 20px; z-index:1000; transition: transform 0.3s ease; }
+.back-btn { font-size:22px; color:var(--text); text-shadow: 0 2px 5px rgba(0,0,0,0.8); cursor:pointer;}
+.logo-text { font-weight:900; font-size:22px; letter-spacing:1px; text-shadow: 0 2px 5px rgba(0,0,0,0.8); cursor:pointer;}
+.logo-text span { color:var(--accent); }
+main { padding-top: 75px; padding-bottom: 40px; }
+.hero-banner { margin: 0 15px 25px; height: 220px; border-radius: 16px; background: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format&fit=crop') center/cover; position: relative; overflow: hidden; }
+.hero-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 30px 20px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.vip-badge { background: var(--accent); color: #000; font-size: 11px; font-weight: 900; padding: 4px 8px; border-radius: 4px; align-self: flex-start; margin-bottom: 12px; }
+.hero-content h1 { font-size: 24px; font-weight: 900; line-height: 1.3; margin-bottom: 8px; }
+.hero-content p { font-size: 13px; color: var(--text-dim); }
+.premium-categories { display: flex; flex-direction: column; gap: 10px; padding: 0 15px 30px; }
+.p-cat-box { position: relative; width: 100%; height: 70px; border-radius: 12px; overflow: hidden; display: flex; align-items: center; padding: 0 20px; color: #fff; }
+.p-cat-box.ramadan { background: linear-gradient(45deg, #1a237e, #00c853); }
+.p-cat-box.anime { background: linear-gradient(45deg, #b71c1c, #ff5252); }
+.p-cat-box.anime-movies { background: linear-gradient(45deg, #4a148c, #651fff); }
+.cat-overlay { position: absolute; right: 0; top: 0; height: 100%; width: 50%; background: linear-gradient(to left, rgba(0,0,0,0.5), transparent); }
+.p-cat-box i { position: relative; z-index: 2; font-size: 28px; margin-left: 15px; opacity: 0.9; }
+.p-cat-box span { position: relative; z-index: 2; font-size: 16px; font-weight: 900; }
+.section-title { font-size: 17px; font-weight: 900; margin: 0 15px 10px; color: #fff; border-right: 3px solid var(--accent); padding-right: 10px; }
+.premium-grid-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; padding: 0 15px 25px; }
+.g-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.05); padding: 12px 5px; border-radius: 10px; text-align: center; font-weight: 700; font-size: 12px; color: var(--text-dim); transition: 0.2s; }
+.g-card i { display: block; font-size: 22px; color: var(--accent); margin-bottom: 8px; }
+.g-card:active { background: var(--accent); color: #000; transform: scale(0.95); }
+.g-card:active i { color: #000; }
+.search-box-flex { display: flex; gap: 10px; margin: 0 15px 20px; align-items: stretch; }
+.search-box-flex input[type="text"] { flex: 1; background: var(--surface); border: 1px solid rgba(255,255,255,0.05); padding: 14px 15px; border-radius: 12px; color: #fff; font-family: 'Tajawal'; font-size: 14px; outline: none; }
+.search-box-flex input[type="text"]:focus { border-color: rgba(255,204,0,0.5); }
+.search-box-flex .search-btn-flex { background: linear-gradient(135deg, #ffcc00, #d4a000); color: #000; border: none; padding: 0 25px; border-radius: 12px; font-weight: 800; font-family: 'Tajawal'; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.p-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 0 15px; }
+.p-card { display: flex; flex-direction: column; gap: 6px; contain: content; position: relative; }
+.p-card-img { position: relative; width: 100%; aspect-ratio: 2/3; border-radius: 8px; overflow: hidden; background: var(--surface); }
+.p-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.2s ease; }
+.ak-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: 0.2s ease; z-index: 2; pointer-events: none; }
+.ak-overlay i { font-size: 35px; color: #fff; margin-bottom: 8px; transform: scale(0.5); }
+.ak-overlay span { font-size: 13px; font-weight: 900; color: #fff; transform: translateY(10px); }
+.p-card:active .ak-overlay { opacity: 1; }
+.p-card:active .ak-overlay i { transform: scale(1); color: var(--accent); }
+.p-card:active .ak-overlay span { transform: translateY(0); color: var(--accent); }
+.card-badge { position: absolute; top: 5px; right: 5px; font-size: 9px; font-weight: bold; padding: 2px 5px; border-radius: 3px; background: rgba(0,0,0,0.8); z-index: 3;}
+.card-badge.movie { color: var(--accent); }
+.card-badge.series { color: #00e676; }
+.p-card-title { font-size: 11px; font-weight: 700; color: #eee; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: right; }
+
+/* --- تصميم المشغل --- */
+.watch-header { padding: 0 15px; margin-bottom: 15px; }
+.watch-header h3 { font-size: 18px; font-weight: 900; line-height: 1.4; }
+.player-wrapper { position: relative; margin: 0 15px; background: #000; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; }
+.dplayer { border-radius: 12px; overflow: hidden; background: #000; width: 100% !important; height: 100% !important; }
+.dplayer-video { object-fit: cover !important; width: 100% !important; height: 100% !important; background-color: #000 !important; }
+.dplayer-video-wrap { background: #000 !important; width: 100% !important; height: 100% !important; }
+.dplayer-play-icon, .dplayer-volume, .dplayer-mobile-play, .dplayer-camera-icon, .dplayer-subtitle-icon, .dplayer-comment, .dplayer-comment-box, .dplayer-info-panel, .dplayer-menu, .dplayer-danmaku { display: none !important; } 
+.dplayer-controller { direction: ltr !important; bottom: 0 !important; padding: 0 0 10px 0 !important; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%) !important; }
+.dplayer-bar-wrap { margin-bottom: 25px !important; padding: 0 20px !important; }
+.dplayer-icons { display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 0 20px !important; }
+.dplayer-time { font-size: 13px !important; font-weight: bold !important; color: #fff !important; }
+.netflix-controls { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; gap: 15%; z-index: 999; transition: opacity 0.3s ease; pointer-events: none; }
+.netflix-controls.hidden { opacity: 0; }
+.n-btn { pointer-events: auto; background: transparent; color: #fff; border: none; outline: none; font-size: 35px; cursor: pointer; display: flex; align-items: center; justify-content: center; text-shadow: 0 4px 15px rgba(0,0,0,0.9); }
+.n-btn.main-play { font-size: 55px; color: var(--accent); }
+.n-btn:active { transform: scale(0.85); color: #fff; }
+.iframe-wrapper { position: relative; margin: 0 15px; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; }
+.iframe-wrapper iframe { width: 100%; height: 100%; border: none; }
+.vip-dl-container { margin: 25px 15px 0; display: flex; justify-content: center; }
+.vip-dl-btn { display: flex; align-items: center; justify-content: center; gap: 15px; background: linear-gradient(135deg, #1f1f1f, #121212); border: 1px solid rgba(255, 204, 0, 0.4); padding: 10px 20px; border-radius: 12px; text-decoration: none; color: #fff; width: 100%; max-width: 380px; }
+.dl-icon-box { background: var(--accent); width: 45px; height: 45px; border-radius: 10px; display: flex; justify-content: center; align-items: center; }
+.dl-icon-box i { font-size: 22px; color: #000; }
+.dl-texts { display: flex; flex-direction: column; align-items: flex-start; text-align: right; }
+.dl-main { font-size: 15px; font-weight: 900; color: #fff; }
+.dl-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+.ep-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 10px; padding: 0 15px; }
+.ep-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 15px 5px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+.ep-num { font-size: 20px; font-weight: 900; color: var(--text); }
+.ep-txt { font-size: 11px; color: var(--text-dim); margin-top: 5px; }
+.loader-center { text-align: center; padding: 40px; color: var(--accent); font-size: 30px; }
+.empty-msg { text-align: center; padding: 40px 20px; color: var(--text-dim); }
+.empty-msg i { font-size: 40px; display: block; margin-bottom: 15px; color: var(--accent); opacity: 0.5; }
+</style>
+</head>
+<body oncontextmenu="return false;">
+
+<header class="top-bar">
+    <div id="back-btn-container"></div>
+    <div class="logo-text" onclick="navigate('home')">ABOUD <span>TV</span></div>
+    <div></div>
+</header>
+
+<main id="app-content"></main>
+
+<div id="in-page-offline" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#050505; z-index:99999; flex-direction:column; justify-content:center; align-items:center; color:#fff; text-align:center;">
+    <i class="fas fa-wifi" style="font-size:70px; color:#333; margin-bottom:20px; text-decoration: line-through;"></i>
+    <h2 style="margin-bottom:10px; color:#ffcc00;">لا يوجد اتصال</h2>
+    <p style="color:#a0a0a0; margin-bottom:30px;">يرجى التأكد من جودة الإنترنت أو تسجيل دخول الشبكة.</p>
+    <button onclick="location.reload()" style="background:transparent; border:1px solid #ffcc00; color:#ffcc00; padding:10px 30px; font-size:16px; border-radius:8px; font-weight:bold; cursor:pointer;">تحديث الصفحة</button>
+</div>
+
+<script>
+// ==========================================
+// ⚠️ ضع رابط Cloudflare Worker الخاص بك هنا ⚠️
+// ==========================================
+const API_URL = "https://series.albesriali03.workers.dev/"; 
+const BASE_AKWAM = "https://akwam.com.co";
+
+let currentContext = { action: 'home', query: '', page: 1, isFetching: false };
+const appContent = document.getElementById('app-content');
+const backBtnContainer = document.getElementById('back-btn-container');
+
+function navigate(action, params = {}) {
+    window.scrollTo(0, 0);
+    currentContext = { action, ...params, page: 1, isFetching: false };
+    
+    if(action === 'home') {
+        backBtnContainer.innerHTML = '';
+        renderHome();
+    } else {
+        backBtnContainer.innerHTML = '<div class="back-btn" onclick="navigate(\'home\')"><i class="fas fa-arrow-right"></i></div>';
+        
+        if (action === 'search') {
+            fetchGridData(`?action=search&q=${encodeURIComponent(params.query)}`);
+        } else if (action === 'genre') {
+            fetchGridData(`?action=genre&genre=${encodeURIComponent(params.genre)}`);
+        } else if (action === 'series') {
+            fetchSeriesData(`?action=series&series=${encodeURIComponent(params.series)}`);
+        }
+    }
+}
+
+function renderHome() {
+    appContent.innerHTML = `
+        <div class="hero-banner">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="vip-badge">ABOUD TV VIP</span>
+                <h1>عالم الترفيه<br>بين يديك</h1>
+                <p>أضخم مكتبة آمنة للأفلام، المسلسلات، الأنمي، وبرامج رمضان.</p>
+            </div>
+        </div>
+
+        <div class="search-box-flex">
+            <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل..." required>
+            <button onclick="doSearch()" class="search-btn-flex"><i class="fas fa-search"></i> بحث</button>
+        </div>
+
+        <div class="premium-categories">
+            <div class="p-cat-box ramadan" onclick="navigate('genre', {genre: '${BASE_AKWAM}/series?category=87'})">
+                <div class="cat-overlay"></div><i class="fas fa-moon"></i><span>مسلسلات رمضان 2026</span>
+            </div>
+            <div class="p-cat-box anime" onclick="navigate('genre', {genre: '${BASE_AKWAM}/series?category=30'})">
+                <div class="cat-overlay"></div><i class="fas fa-dragon"></i><span>مسلسلات أنمي</span>
+            </div>
+            <div class="p-cat-box anime-movies" onclick="navigate('genre', {genre: '${BASE_AKWAM}/movies?category=30'})">
+                <div class="cat-overlay"></div><i class="fas fa-fire"></i><span>أفلام أنمي</span>
+            </div>
+        </div>
+
+        <div class="section-title"><i class="fas fa-film"></i> عالم الأفلام</div>
+        <div class="premium-grid-wrap">
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/movies?section=30'})"><i class="fas fa-globe-americas"></i> أجنبية</div>
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/movies?section=29'})"><i class="fas fa-star"></i> عربية</div>
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/movies?section=31'})"><i class="fas fa-motorcycle"></i> هندية</div>
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/movies?section=32'})"><i class="fas fa-magic"></i> تركية</div>
+        </div>
+        
+        <div class="section-title"><i class="fas fa-tv"></i> عالم المسلسلات</div>
+        <div class="premium-grid-wrap">
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/series?section=30'})"><i class="fas fa-globe-americas"></i> أجنبية</div>
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/series?section=29'})"><i class="fas fa-star"></i> عربية</div>
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/series?section=32'})"><i class="fas fa-crown"></i> تركية</div>
+            <div class="g-card" onclick="navigate('genre', {genre: '${BASE_AKWAM}/series?section=33'})"><i class="fas fa-yin-yang"></i> آسيوية</div>
+        </div>
+    `;
+    
+    document.getElementById('searchInput').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') doSearch();
+    });
+}
+
+function doSearch() {
+    const q = document.getElementById('searchInput').value.trim();
+    if(q) navigate('search', { query: q });
+}
+
+// الاتصال بـ Cloudflare Worker (سريع ومباشر)
+function fetchGridData(apiQuery) {
+    appContent.innerHTML = '<div class="loader-center"><i class="fas fa-circle-notch fa-spin"></i></div>';
+    currentContext.apiQuery = apiQuery;
+    
+    fetch(API_URL + apiQuery)
+        .then(res => res.json())
+        .then(data => {
+            if(data.data && data.data.length > 0) {
+                appContent.innerHTML = `<div class="p-grid" id="media-grid"></div><div id="loading-spinner" style="display:none; text-align:center; padding:20px; color:#ffcc00;"><i class="fas fa-circle-notch fa-spin fa-2x"></i></div>`;
+                appendGridCards(data.data);
+            } else {
+                appContent.innerHTML = "<div class='empty-msg'><i class='fas fa-ghost'></i> لا توجد نتائج</div>";
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            appContent.innerHTML = "<div class='empty-msg'><i class='fas fa-exclamation-triangle'></i> خطأ في الاتصال.</div>";
+        });
+}
+
+function appendGridCards(items) {
+    const grid = document.getElementById('media-grid');
+    if(!grid) return;
+    
+    let html = '';
+    items.forEach(item => {
+        const badge = item.is_series ? '<div class="card-badge series">مسلسل</div>' : '<div class="card-badge movie">فيلم</div>';
+        html += `
+        <div class="p-card" onclick="navigate('series', {series: '${item.href}'})">
+            <div class="p-card-img">
+                <img src="${item.img}" loading="lazy">
+                <div class="ak-overlay"><i class="fas fa-play-circle"></i><span>مشاهدة</span></div>
+                ${badge}
+            </div>
+            <div class="p-card-title">${item.title}</div>
+        </div>`;
+    });
+    grid.insertAdjacentHTML('beforeend', html);
+}
+
+window.onscroll = function() {
+    if (currentContext.action !== 'genre' && currentContext.action !== 'search') return;
+    
+    let grid = document.getElementById("media-grid");
+    if (!grid || currentContext.isFetching) return; 
+    
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+        currentContext.isFetching = true;
+        currentContext.page++;
+        document.getElementById("loading-spinner").style.display = "block";
+        
+        fetch(`${API_URL}${currentContext.apiQuery}&p=${currentContext.page}`)
+            .then(res => res.json())
+            .then(data => {
+                if(data.data && data.data.length > 0) appendGridCards(data.data);
+                document.getElementById("loading-spinner").style.display = "none";
+                currentContext.isFetching = false;
+            }).catch(() => {
+                document.getElementById("loading-spinner").style.display = "none";
+                currentContext.isFetching = false;
+            });
+    }
+};
+
+function fetchSeriesData(apiQuery) {
+    appContent.innerHTML = '<div class="loader-center"><i class="fas fa-circle-notch fa-spin"></i></div>';
+    
+    fetch(API_URL + apiQuery)
+        .then(res => res.json())
+        .then(data => {
+            if(data.status === "success") {
+                let html = `<div class="watch-header"><h3>${data.movie_title}</h3></div>`;
+                
+                if (data.media_src) {
+                    if (data.is_iframe) {
+                        html += `<div class="iframe-wrapper"><iframe src="${data.media_src}" frameborder="0" allowfullscreen></iframe></div>`;
+                    } else {
+                        html += `
+                        <div class="player-wrapper">
+                            <div id="dplayer"></div>
+                            <div class="netflix-controls" id="center-ctrls">
+                                <button class="n-btn" id="n-rewind"><i class="fas fa-undo-alt"></i></button>
+                                <button class="n-btn main-play" id="n-play">
+                                    <i class="fas fa-pause" id="n-pause-icon"></i>
+                                    <i class="fas fa-play" id="n-play-icon" style="display:none;"></i>
+                                </button>
+                                <button class="n-btn" id="n-forward"><i class="fas fa-redo-alt"></i></button>
+                            </div>
+                        </div>`;
+                    }
+                } else if (!data.episodes || data.episodes.length === 0) {
+                    html += `<div class="empty-msg"><i class="fas fa-video-slash"></i> الفيديو غير متاح حالياً</div>`;
+                }
+
+                if (data.download_src) {
+                    const scheme = data.download_src.startsWith('https://') ? 'https' : 'http';
+                    const clean_dl = data.download_src.replace(/^https?:\/\//, '');
+                    const intent = `intent://${clean_dl}#Intent;scheme=${scheme};package=com.android.chrome;end`;
+                    html += `
+                    <div class="vip-dl-container">
+                        <a href="${intent}" class="vip-dl-btn">
+                            <div class="dl-icon-box"><i class="fas fa-cloud-download-alt"></i></div>
+                            <div class="dl-texts"><span class="dl-main">تحميل عبر متصفح الهاتف</span><span class="dl-sub">اضغط هنا لفتح الرابط بشكل آمن</span></div>
+                        </a>
+                    </div>`;
+                }
+
+                if (data.episodes && data.episodes.length > 0) {
+                    html += `<div class="section-title" style="margin-top:30px;">الحلقات المتوفرة</div><div class="ep-grid">`;
+                    data.episodes.forEach(ep => {
+                        html += `<div class="ep-card" onclick="navigate('series', {series: '${ep.link}'})"><div class="ep-num">${ep.num}</div><div class="ep-txt">الحلقة</div></div>`;
+                    });
+                    html += `</div>`;
+                }
+
+                appContent.innerHTML = html;
+
+                if(data.media_src && !data.is_iframe) {
+                    initPlayer(data.media_src);
+                }
+
+            } else {
+                appContent.innerHTML = "<div class='empty-msg'><i class='fas fa-times-circle'></i> حدث خطأ أثناء جلب المحتوى</div>";
+            }
+        });
+}
+
+function initPlayer(videoUrl) {
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        preload: 'auto', autoplay: true, theme: '#ffcc00',
+        video: { url: videoUrl, type: 'auto' }
+    });
+    
+    const overlay = document.getElementById("center-ctrls");
+    const wrapper = document.querySelector(".dplayer-video-wrap");
+    if(wrapper) wrapper.appendChild(overlay);
+
+    document.getElementById("n-rewind").onclick = (e) => { e.stopPropagation(); dp.seek(dp.video.currentTime - 10); };
+    document.getElementById("n-forward").onclick = (e) => { e.stopPropagation(); dp.seek(dp.video.currentTime + 10); };
+    document.getElementById("n-play").onclick = (e) => { e.stopPropagation(); dp.toggle(); };
+
+    dp.on("play", () => {
+        document.getElementById("n-play-icon").style.display = "none";
+        document.getElementById("n-pause-icon").style.display = "inline-block";
+    });
+    dp.on("pause", () => {
+        document.getElementById("n-play-icon").style.display = "inline-block";
+        document.getElementById("n-pause-icon").style.display = "none";
+    });
+
+    let uiTimeout;
+    const resetTimeout = () => {
+        clearTimeout(uiTimeout);
+        if (!dp.video.paused) {
+            uiTimeout = setTimeout(() => {
+                dp.container.classList.add("dplayer-hide-controller");
+                overlay.classList.add("hidden");
+            }, 3000);
+        }
+    };
+
+    const toggleUI = () => {
+        const isHidden = overlay.classList.contains("hidden");
+        if (isHidden) {
+            dp.container.classList.remove("dplayer-hide-controller");
+            overlay.classList.remove("hidden");
+            resetTimeout();
+        } else {
+            dp.container.classList.add("dplayer-hide-controller");
+            overlay.classList.add("hidden");
+            clearTimeout(uiTimeout);
+        }
+    };
+
+    document.querySelector(".dplayer-video").addEventListener("click", (e) => {
+        e.preventDefault(); e.stopPropagation(); toggleUI();
+    });
+
+    dp.on("play", () => { dp.container.classList.remove("dplayer-hide-controller"); overlay.classList.remove("hidden"); resetTimeout(); });
+    dp.on("pause", () => { clearTimeout(uiTimeout); dp.container.classList.remove("dplayer-hide-controller"); overlay.classList.remove("hidden"); });
+    
+    dp.on("fullscreen", () => { try { if (screen.orientation && screen.orientation.lock) screen.orientation.lock("landscape"); } catch(e) {} });
+    dp.on("fullscreen_cancel", () => { try { if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock(); } catch(e) {} });
+}
+
+window.addEventListener('offline', () => document.getElementById('in-page-offline').style.display = 'flex');
+window.addEventListener('online', () => document.getElementById('in-page-offline').style.display = 'none');
+
+navigate('home');
+</script>
+</body>
+</html>
