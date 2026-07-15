@@ -4,13 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<!-- الكلمات المفتاحية ومحركات البحث (SEO) -->
-<meta name="description" content="منصة BSR Flix لمشاهدة وتحميل أحدث الأفلام والمسلسلات المترجمة والمدبلجة. مسلسلات عربية، تركية، أجنبية، وأفلام أنمي بأعلى جودة.">
-<meta name="keywords" content="أفلام, مسلسلات, مشاهدة أفلام, مسلسلات عربية, مسلسلات تركية, مسلسلات أجنبية, مسلسلات هندية, أفلام مترجمة, تحميل أفلام, مسلسلات رمضان, أنمي, عرب سيد, شاهد فور يو, ماي سيما, اكوام, فاصل اعلاني, لاروزا, وي سيما, شومان, الو تي في, ايجي بست, دراما صح, قصة عشق, ArabSeed, Showman, Watch4U, Alw TV, Akwam, MyCima, WeCima, FaselHD, EgyBest, Laroza, AlooyTV, Cima4U, movies, series, watch online, arabic series, turkish series">
-<meta name="author" content="BSR Flix">
+<!-- الكلمات المفتاحية ومحركات البحث (SEO) لجوجل -->
+<meta name="description" content="موقع البصري تيفي لمشاهدة وتحميل أحدث الأفلام والمسلسلات. مسلسلات وأفلام البصري تيفي المترجمة والمدبلجة، مسلسلات عربية، تركية، أجنبية، وأفلام أنمي بأعلى جودة.">
+<meta name="keywords" content="البصري تيفي, البصري تيفي الأفلام والمسلسلات, مسلسلات وأفلام البصري تيفي, موقع البصري تيفي, أفلام, مسلسلات, مشاهدة أفلام, مسلسلات عربية, مسلسلات تركية, مسلسلات أجنبية, تحميل أفلام">
+<meta name="author" content="البصري تيفي">
 <meta name="robots" content="index, follow">
 
-<title>البصري تيفي الأفلام والمسلسلات </title>
+<!-- عنوان الموقع الذي سيظهر في نتائج بحث جوجل -->
+<title>البصري تيفي الأفلام والمسلسلات</title>
+
+<!-- إعدادات المشاركة والسوشيال ميديا -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="البصري تيفي الأفلام والمسلسلات">
+<meta property="og:description" content="موقع البصري تيفي: المنصة الأولى لمشاهدة أحدث الأفلام والمسلسلات.">
+<meta property="og:site_name" content="البصري تيفي">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="مسلسلات وأفلام البصري تيفي">
+
+<!-- كود Schema ليخبر جوجل باسم الموقع الرسمي -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "البصري تيفي الأفلام والمسلسلات",
+  "alternateName": ["البصري تيفي", "مسلسلات وأفلام البصري تيفي"],
+  "url": "https://series.albesriali03.workers.dev/"
+}
+</script>
 
 <!-- تسريع الاتصال بالسيرفرات -->
 <link rel="preconnect" href="https://series.albesriali03.workers.dev/">
@@ -26,13 +46,13 @@
 
 <style>
 /* =======================================================
-   الإعدادات العامة والألوان (مريحة للعين)
+   الإعدادات العامة والألوان
 ======================================================= */
 :root { 
-    --bg: #0d0f17; /* اللون الداكن الجديد الذي طلبته */
-    --surface: #161925; /* درجة أفتح قليلاً للبطاقات لتتناسب مع الخلفية */
-    --surface-light: #222635; /* درجة أفتح عند التمرير والضغط */
-    --primary: #0ea5e9; /* أزرق سماوي لطيف ومتناسق مع الخلفية الداكنة */
+    --bg: #0d0f17; 
+    --surface: #161925; 
+    --surface-light: #222635; 
+    --primary: #0ea5e9; 
     --primary-hover: #0284c7;
     --text: #f8fafc; 
     --text-dim: #94a3b8;
@@ -49,11 +69,10 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
 /* =======================================================
-   الشريط العلوي (التنقل الجديد)
+   الشريط العلوي
 ======================================================= */
 .top-bar { 
     position:fixed; top:0; width:100%; height:70px; 
-    /* تعديل لون شفافية الشريط العلوي ليطابق اللون الجديد 0d0f17 */
     background: rgba(13, 15, 23, 0.95); backdrop-filter: blur(10px); 
     border-bottom: 1px solid var(--border-color); 
     display:flex; align-items:center; justify-content:space-between; 
@@ -165,6 +184,7 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
 
 <!-- الشريط العلوي والتنقل -->
 <header class="top-bar">
+    <!-- كما طلبت: هنا يظهر فقط "الأفلام والمسلسلات" للمستخدم -->
     <div class="logo-text"><i class="fas fa-play"></i>الأفلام والمسلسلات</div>
     
     <div class="nav-pills">
