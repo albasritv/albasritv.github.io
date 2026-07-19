@@ -191,6 +191,9 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
 </head>
 <body>
 
+<!-- وسم H1 مخفي تماماً عن المستخدم من أجل أرشفة جوجل SEO -->
+<h1 id="seo-h1" style="position: absolute; left: -9999px;">البصري تيفي الأفلام والمسلسلات</h1>
+
 <!-- الشريط العلوي والتنقل -->
 <header class="top-bar">
     <div class="logo-text"><i class="fas fa-play"></i>الأفلام والمسلسلات</div>
@@ -362,16 +365,27 @@ function restoreState(stateObj) {
     // إظهار المحتوى المطلوب بناءً على التاريخ المحفوظ
     if (stateObj.level === 'grid') {
         document.getElementById(`${tabName}-grid-view`).classList.remove('hidden');
+        resetSeoTitles();
     } else if (stateObj.level === 'ramadan') {
         document.getElementById(`${tabName}-ramadan-years`).classList.remove('hidden');
+        resetSeoTitles();
     } else if (stateObj.level === 'watch') {
         document.getElementById(`${tabName}-watch-view`).classList.remove('hidden');
+        // في حال العودة لصفحة المشاهدة، سيتم تحديث العنوان من الدالة نفسها
     } else {
         document.getElementById(`${tabName}-categories`).classList.remove('hidden');
         currentSubState[tabName] = 'categories';
+        resetSeoTitles();
     }
     
     updateBackButton();
+}
+
+// استعادة العناوين لمحركات البحث (SEO)
+function resetSeoTitles() {
+    document.title = "البصري تيفي الأفلام والمسلسلات";
+    const seoH1 = document.getElementById("seo-h1");
+    if(seoH1) seoH1.innerText = "البصري تيفي الأفلام والمسلسلات";
 }
 
 function switchTab(tabId) {
@@ -514,6 +528,13 @@ function openMediaWatch(apiQuery, type) {
         .then(res => res.json())
         .then(data => {
             if(data.status === "success") {
+
+                // --- خدعة الـ SEO لتغيير العناوين ديناميكياً ---
+                document.title = "البصري تيفي - " + data.movie_title;
+                const seoH1 = document.getElementById("seo-h1");
+                if(seoH1) seoH1.innerText = "البصري تيفي - " + data.movie_title;
+                // ----------------------------------------------
+
                 let html = `<div class="watch-title">${data.movie_title}</div>`;
                 
                 if (data.media_src) {
