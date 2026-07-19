@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
-<!-- الكلمات المفتاحية ومحركات البحث -->
-<meta name="description" content="البصري تيفي مباريات اليوم - البث المباشر للمباريات بجودات متعددة وبدون تقطيع.">
-<meta name="keywords" content="البصري تيفي, البصري تيفي مباريات اليوم, مباريات اليوم بث مباشر, يلا شوت, كورة لايف">
-<title>البصري تيفي مباريات اليوم</title>
+<!-- الكلمات المفتاحية ومحركات البحث (تم تعديلها حسب طلبك) -->
+<meta name="description" content="البصري تيفي للبث المباشر مباريات اليوم - البث المباشر للمباريات بجودات متعددة وبدون تقطيع.">
+<meta name="keywords" content="البصري تيفي, البصري تيفي للبث المباشر, مباريات اليوم بث مباشر, يلا شوت, كورة لايف">
+<title>البصري تيفي للبث المباشر - مباريات اليوم</title>
 
 <!-- الخطوط والأيقونات -->
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -210,7 +210,10 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
 </head>
 <body>
 
-    <!-- الشريط العلوي -->
+    <!-- وسم H1 مخفي تماماً عن المستخدم من أجل أرشفة جوجل SEO -->
+    <h1 id="seo-h1" style="position: absolute; left: -9999px;">البصري تيفي للبث المباشر</h1>
+
+    <!-- الشريط العلوي للمستخدم مباريات اليوم فقط -->
     <header class="top-bar">
         <div class="logo-text"><i class="fas fa-futbol"></i> مباريات اليوم</div>
     </header>
@@ -272,7 +275,7 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
                 </div>
             </div>
 
-            <!-- قسم توقعات النتيجة (محفوظ في الكاش) -->
+            <!-- قسم توقعات النتيجة -->
             <div id="prediction-area" class="prediction-section hidden">
                 <!-- يُملأ برمجياً حسب المباراة -->
             </div>
@@ -292,7 +295,7 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
         })();
 
         // ==========================================
-        // إدارة الحالة
+        // إدارة الحالة و SEO الديناميكي
         // ==========================================
         let currentState = 'schedule';
         let currentMatchObj = null;
@@ -317,6 +320,11 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
             if(view === 'schedule') {
                 document.getElementById('player-view').classList.add('hidden');
                 document.getElementById('schedule-view').classList.remove('hidden');
+                
+                // إعادة العناوين الافتراضية لمحركات البحث عند العودة للجدول
+                document.title = "البصرة تيفي للبث المباشر - مباريات اليوم";
+                document.getElementById("seo-h1").innerText = "البصرة تيفي للبث المباشر";
+
             } else if (view === 'player') {
                 document.getElementById('schedule-view').classList.add('hidden');
                 document.getElementById('player-view').classList.remove('hidden');
@@ -436,11 +444,16 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
             history.pushState({ page: "player" }, "");
             showView('player');
 
+            // --- خدعة الـ SEO لتغيير العناوين ديناميكياً ---
+            const dynamicMatchName = matchObj.team1.name + " ضد " + matchObj.team2.name;
+            document.title = "البصرة تيفي للبث المباشر - " + dynamicMatchName;
+            document.getElementById("seo-h1").innerText = "البصرة تيفي للبث المباشر - " + dynamicMatchName;
+            // ----------------------------------------------
+
             document.getElementById("media-package-container").classList.add("hidden");
             document.getElementById("prediction-area").classList.add("hidden");
             document.getElementById("inner-loading-view").classList.remove("hidden");
             
-            // بناء منطقة التوقعات (مع مراعاة الكاش وحالة انتهاء المباراة)
             renderPredictionUI(matchObj);
 
             try {
@@ -542,17 +555,11 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
         function renderPredictionUI(m) {
             const predArea = document.getElementById("prediction-area");
             
-            // إنشاء مفتاح مميز للمباراة لحفظه في المتصفح بناءً على أسماء الفرق
             const predKey = 'predict_' + btoa(unescape(encodeURIComponent(m.team1.name + m.team2.name))).substring(0,20);
-            
-            // استدعاء التوقع المحفوظ مسبقاً (حتى لو أُغلق المتصفح)
             const savedPred = localStorage.getItem(predKey);
-            
-            // التحقق مما إذا كانت المباراة قد انتهت (priority 3 = انتهت)
             const isMatchEnded = (m.priority === 3);
 
             if (isMatchEnded) {
-                // حالة المباراة منتهية
                 if (savedPred) {
                     let scores = savedPred.split('-');
                     predArea.innerHTML = `
@@ -574,7 +581,6 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
                     `;
                 }
             } else {
-                // حالة المباراة جارية أو لم تبدأ (يمكن التعديل والإدخال)
                 if (savedPred) {
                     let scores = savedPred.split('-');
                     predArea.innerHTML = `
@@ -612,21 +618,16 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
             }
         }
 
-        // حفظ التوقع في الذاكرة الدائمة
         function savePrediction(key) {
             const v1 = document.getElementById("score1").value;
             const v2 = document.getElementById("score2").value;
             if(v1 === "" || v2 === "") { alert("يرجى إدخال أهداف الفريقين"); return; }
             if(v1 < 0 || v2 < 0) { alert("أرقام غير صالحة"); return; }
             
-            // حفظ التوقع في LocalStorage
             localStorage.setItem(key, `${v1}-${v2}`);
-            
-            // تحديث الواجهة فوراً
             renderPredictionUI(currentMatchObj);
         }
 
-        // مسح التوقع من الذاكرة الدائمة للتعديل
         function clearPrediction(key) {
             localStorage.removeItem(key);
             renderPredictionUI(currentMatchObj);
