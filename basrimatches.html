@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- الكلمات المفتاحية ومحركات البحث -->
+<meta name="description" content="البصري تيفي مباريات اليوم - البث المباشر للمباريات بجودات متعددة وبدون تقطيع.">
+<meta name="keywords" content="البصري تيفي, البصري تيفي مباريات اليوم, مباريات اليوم بث مباشر, يلا شوت, كورة لايف">
+<title>البصري تيفي مباريات اليوم</title>
+
+<!-- الخطوط والأيقونات -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<style>
+/* =======================================================
+   الإعدادات العامة والألوان
+======================================================= */
+:root { 
+    --bg: #0d0f17; 
+    --surface: #161925; 
+    --surface-light: #222635; 
+    --primary: #0ea5e9; 
+    --primary-hover: #0284c7;
+    --text: #f8fafc; 
+    --text-dim: #94a3b8;
+    --border-color: rgba(255,255,255,0.06);
+    --live-red: #ef4444;
+    --upcoming-green: #10b981;
+    --ended-gray: #6b7280;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; user-select:none !important; -webkit-user-select:none; outline:none !important; -webkit-tap-highlight-color: transparent;}
+body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text); overflow-x: hidden; scroll-behavior: smooth; }
+
+/* تأثيرات حركية */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes pulseLive { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
+@keyframes floatIcon { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+
+/* =======================================================
+   الشريط العلوي وزر الرجوع
+======================================================= */
+.top-bar { 
+    position:fixed; top:0; width:100%; height:70px; 
+    background: rgba(13, 15, 23, 0.95); backdrop-filter: blur(10px); 
+    border-bottom: 1px solid var(--border-color); 
+    display:flex; align-items:center; justify-content:center; 
+    padding:0 15px; z-index:1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+.logo-text { font-weight:900; font-size:20px; color: var(--text); display: flex; align-items: center; gap: 8px;}
+.logo-text i { color: var(--primary); font-size: 24px; }
+
+.main-container { padding-top: 90px; padding-bottom: 50px; padding-left: 15px; padding-right: 15px; max-width: 700px; margin: 0 auto; min-height: 100vh;}
+
+#global-back-bar { margin-bottom: 20px; animation: fadeIn 0.3s ease-out; }
+.back-bar-content {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px;
+    background: linear-gradient(145deg, var(--surface), var(--surface-light));
+    border: 1px solid var(--border-color); border-radius: 14px;
+    cursor: pointer; color: var(--text); font-weight: 800; font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: all 0.2s; pointer-events: auto;
+}
+.back-bar-content i { color: var(--primary); font-size: 18px; }
+.back-bar-content:active { transform: scale(0.95); background: var(--primary); border-color: var(--primary); color: #fff; }
+.back-bar-content:active i { color: #fff; }
+
+/* =======================================================
+   تصميم بطاقات المباريات (الفخم)
+======================================================= */
+.match-card {
+    background: linear-gradient(145deg, var(--surface), var(--surface-light));
+    border: 1px solid var(--border-color); border-radius: 20px;
+    padding: 20px; margin-bottom: 16px; display: flex; justify-content: space-between;
+    align-items: center; cursor: pointer; transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); position: relative; overflow: hidden; pointer-events: auto;
+}
+.match-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(to right, transparent, var(--primary), transparent); opacity: 0; transition: 0.3s;
+}
+.match-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 12px 25px rgba(14, 165, 233, 0.15); }
+.match-card:hover::after { opacity: 1; }
+
+.static-card { cursor: default; transform: none !important; border-color: var(--primary); margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);}
+.static-card::after { opacity: 1; }
+
+.team-box { display: flex; flex-direction: column; align-items: center; width: 33%; text-align: center; }
+.team-box img { 
+    width: 65px; height: 65px; object-fit: contain; margin-bottom: 12px; 
+    background: var(--bg); padding: 8px; border-radius: 50%; 
+    border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.team-box span { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.3;}
+
+.center-info { width: 34%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
+
+.status-pill { font-size: 13px; font-weight: 900; padding: 6px 16px; border-radius: 20px; color: #fff; letter-spacing: 0.5px;}
+.status-live { background: rgba(239, 68, 68, 0.15); color: var(--live-red); border: 1px solid var(--live-red); animation: pulseLive 2s infinite; }
+.status-upcoming { background: rgba(16, 185, 129, 0.15); color: var(--upcoming-green); border: 1px solid var(--upcoming-green); }
+.status-ended { background: rgba(107, 114, 128, 0.15); color: var(--text-dim); border: 1px solid var(--ended-gray); }
+
+.match-time-score { font-size: 22px; font-weight: 900; color: var(--text); }
+
+/* =======================================================
+   منطقة البث والإطار التشغيلي (شاشة الانتظار)
+======================================================= */
+.media-package {
+    background: var(--surface); border-radius: 20px; padding: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6); border: 1px solid var(--border-color); 
+    margin-bottom: 25px; animation: fadeIn 0.6s ease-out;
+}
+
+.player-wrapper {
+    background: #000; border-radius: 14px; overflow: hidden; aspect-ratio: 16/9; width: 100%; position: relative; pointer-events: auto;
+}
+.player-wrapper iframe, .player-wrapper video { width: 100%; height: 100%; border: none; display: block; object-fit: contain; }
+
+/* الإطار التشغيلي (شاشة التوقف المبهرة) */
+.waiting-screen {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, #1e293b 0%, #000000 100%);
+    display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    padding: 20px; z-index: 10;
+}
+.waiting-screen i { font-size: 55px; color: var(--primary); margin-bottom: 20px; animation: floatIcon 3s ease-in-out infinite; opacity: 0.8; filter: drop-shadow(0 0 15px rgba(14,165,233,0.5));}
+.waiting-screen h3 { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 10px; }
+.waiting-screen p { font-size: 15px; font-weight: 700; color: var(--text-dim); line-height: 1.6; max-width: 80%;}
+.waiting-screen .exact-time { color: var(--upcoming-green); font-size: 17px; font-weight: 900; margin-top: 5px; display: block;}
+
+.btn-fullscreen {
+    width: 100%; background: var(--primary); color: #fff; border: none; padding: 14px; 
+    border-radius: 14px; font-size: 15px; font-weight: 900; font-family: inherit; 
+    cursor: pointer; transition: 0.2s; margin-top: 15px; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+.btn-fullscreen:active { transform: scale(0.96); }
+
+.servers-container { margin-top: 20px; }
+.servers-title { font-weight: 900; color: var(--primary); margin-bottom: 12px; font-size: 16px; display: flex; align-items: center; gap: 8px;}
+.servers-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.server-btn {
+    flex: 1 1 100px; background: var(--surface-light); color: var(--text); border: 1px solid var(--border-color); 
+    padding: 12px 10px; border-radius: 12px; font-weight: 800; font-size: 14px; font-family: inherit;
+    cursor: pointer; transition: 0.2s; text-align: center;
+}
+.server-btn:active { transform: scale(0.95); }
+.server-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 2px 10px rgba(14, 165, 233, 0.4);}
+
+/* =======================================================
+   قسم توقعات نتيجة المباراة
+======================================================= */
+.prediction-section {
+    background: linear-gradient(145deg, var(--surface), var(--surface-light));
+    border-radius: 20px; padding: 25px 20px; border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); animation: fadeIn 0.8s ease-out; margin-bottom: 30px;
+    text-align: center;
+}
+.pred-title { font-size: 18px; font-weight: 900; color: var(--primary); margin-bottom: 20px; display: flex; justify-content: center; align-items: center; gap: 8px;}
+
+.pred-teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.pred-team { width: 35%; display: flex; flex-direction: column; align-items: center; gap: 10px;}
+.pred-team img { width: 50px; height: 50px; object-fit: contain; border-radius: 50%; padding: 5px; background: var(--bg); border: 1px solid var(--border-color);}
+.pred-team span { font-size: 14px; font-weight: 800; line-height: 1.2;}
+.pred-inputs { width: 30%; display: flex; justify-content: center; align-items: center; gap: 10px;}
+.pred-inputs input { 
+    width: 45px; height: 45px; text-align: center; font-size: 20px; font-weight: 900; 
+    border-radius: 12px; background: var(--bg); border: 2px solid var(--border-color); 
+    color: #fff; font-family: inherit; transition: 0.3s; pointer-events: auto;
+}
+.pred-inputs input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(14,165,233,0.3); }
+.pred-dash { font-size: 24px; font-weight: 900; color: var(--text-dim); }
+.pred-btn { 
+    background: var(--upcoming-green); color: #fff; border: none; padding: 12px 30px; 
+    border-radius: 12px; font-size: 15px; font-weight: 900; font-family: inherit; 
+    cursor: pointer; transition: 0.2s; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); pointer-events: auto;
+}
+.pred-btn:active { transform: scale(0.95); }
+
+/* صندوق التوقع المحفوظ */
+.saved-pred-box {
+    background: rgba(16, 185, 129, 0.1); border: 1px solid var(--upcoming-green);
+    border-radius: 14px; padding: 15px; text-align: center; position: relative;
+}
+.saved-pred-box.locked {
+    background: rgba(107, 114, 128, 0.1); border-color: var(--ended-gray);
+}
+.saved-pred-box h4 { color: var(--upcoming-green); font-size: 15px; margin-bottom: 10px; font-weight: 900;}
+.saved-pred-box.locked h4 { color: var(--text-dim); }
+
+.saved-score { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: 5px; margin-bottom: 10px;}
+
+.edit-pred-btn {
+    background: transparent; border: 1px solid var(--text-dim); color: var(--text-dim);
+    padding: 8px 20px; border-radius: 8px; font-family: inherit; font-weight: 700; font-size: 13px; cursor: pointer; pointer-events: auto; transition: 0.2s; margin-top: 10px;
+}
+.edit-pred-btn:hover { background: var(--surface-light); color: #fff; }
+
+.match-ended-msg {
+    font-size: 14px; font-weight: 900; color: var(--live-red); margin-top: 10px; display: inline-block;
+    background: rgba(239, 68, 68, 0.1); padding: 5px 15px; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.hidden { display: none !important; }
+.empty-msg { text-align: center; padding: 40px 10px; color: var(--text-dim); font-size: 16px; font-weight: 700; animation: fadeIn 0.3s;}
+.loading-spinner { width: 40px; height: 40px; border: 3px solid var(--surface-light); border-top: 3px solid var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 15px auto; }
+</style>
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <header class="top-bar">
+        <div class="logo-text"><i class="fas fa-futbol"></i> مباريات اليوم</div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- زر الرجوع -->
+        <div id="global-back-bar" class="hidden">
+            <div class="back-bar-content" onclick="history.back()">
+                <i class="fas fa-arrow-right"></i>
+                <span>الرجوع للجدول</span>
+            </div>
+        </div>
+        
+        <!-- التحميل الرئيسي -->
+        <div id="main-loading-view" class="empty-msg">
+            <div class="loading-spinner"></div>
+            <div>جاري جلب المباريات...</div>
+        </div>
+        
+        <!-- جدول المباريات -->
+        <div id="schedule-view" class="hidden">
+            <div id="matches-list"></div>
+        </div>
+
+        <!-- صفحة تفاصيل المباراة والبث -->
+        <div id="player-view" class="hidden">
+            
+            <!-- بطاقة المباراة المحددة -->
+            <div id="active-match-card"></div>
+
+            <!-- جاري التجهيز الداخلي -->
+            <div id="inner-loading-view" class="empty-msg hidden">
+                <div class="loading-spinner"></div>
+                <div>جاري تجهيز البث...</div>
+            </div>
+
+            <!-- الحزمة الخاصة بالمشغل والإطار التشغيلي -->
+            <div id="media-package-container" class="media-package hidden">
+                <div class="player-wrapper" id="player-wrapper">
+                    <!-- المشغل الفعلي -->
+                    <iframe id="iframe-player" class="hidden" allowfullscreen="true" scrolling="no"></iframe>
+                    <video id="hls-player" class="hidden" controls playsinline></video>
+                    
+                    <!-- الإطار التشغيلي الأنيق (شاشة الانتظار) -->
+                    <div id="waiting-screen" class="waiting-screen hidden">
+                        <i class="fas fa-satellite-dish"></i>
+                        <h3>لا يوجد بث مباشر متاح</h3>
+                        <p>لا توجد سيرفرات بث متاحة في الوقت الحالي.</p>
+                        <span id="waiting-time-text" class="exact-time"></span>
+                    </div>
+                </div>
+                
+                <button class="btn-fullscreen" onclick="toggleFullScreen()"><i class="fas fa-expand"></i> تكبير شاشة البث</button>
+
+                <div id="servers-area" class="servers-container hidden">
+                    <div class="servers-title"><i class="fas fa-server"></i> سيرفرات المشاهدة:</div>
+                    <div class="servers-grid" id="servers-grid"></div>
+                </div>
+            </div>
+
+            <!-- قسم توقعات النتيجة (محفوظ في الكاش) -->
+            <div id="prediction-area" class="prediction-section hidden">
+                <!-- يُملأ برمجياً حسب المباراة -->
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // حماية الكود
+        // ==========================================
+        (function() {
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            document.addEventListener('keydown', e => {
+                if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) { e.preventDefault(); return false; }
+            });
+        })();
+
+        // ==========================================
+        // إدارة الحالة
+        // ==========================================
+        let currentState = 'schedule';
+        let currentMatchObj = null;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            history.replaceState({ page: 'schedule' }, '', '');
+            updateBackButton();
+            loadMatches();
+        });
+
+        window.addEventListener('popstate', function (event) {
+            if (event.state && event.state.page === 'player') {
+                showView('player');
+            } else {
+                stopVideo();
+                showView('schedule');
+            }
+        });
+
+        function showView(view) {
+            currentState = view;
+            if(view === 'schedule') {
+                document.getElementById('player-view').classList.add('hidden');
+                document.getElementById('schedule-view').classList.remove('hidden');
+            } else if (view === 'player') {
+                document.getElementById('schedule-view').classList.add('hidden');
+                document.getElementById('player-view').classList.remove('hidden');
+            }
+            updateBackButton();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateBackButton() {
+            const backBar = document.getElementById('global-back-bar');
+            if (currentState === 'player') backBar.classList.remove('hidden');
+            else backBar.classList.add('hidden');
+        }
+
+        function toggleFullScreen() {
+            const player = document.getElementById('player-wrapper');
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                if (player.requestFullscreen) player.requestFullscreen();
+                else if (player.webkitRequestFullscreen) player.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+            } else {
+                if (document.exitFullscreen) document.exitFullscreen();
+                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            }
+        }
+
+        // ==========================================
+        // الدوال المساعدة والتنسيق
+        // ==========================================
+        const WORKER_URL = "https://ali.albasritv1.workers.dev/";
+        let activeHls = null;
+
+        function getCleanImg(url) {
+            if (!url) return "https://via.placeholder.com/65x65/161925/0ea5e9?text=LOGO";
+            let u = url.trim();
+            if (u.startsWith("http") || u.startsWith("//")) return u.startsWith("//") ? "https:" + u : u;
+            return "https://koooracity.com/" + u.replace(/^\//, '');
+        }
+
+        function formatTime(t) {
+            if(!t) return "";
+            let clean = t.toString().replace(/⏰/g, '').trim();
+            let match = clean.match(/(\d{1,2}):(\d{2})/);
+            if (match) {
+                let h = parseInt(match[1]);
+                let m = match[2];
+                let isPM = clean.toLowerCase().includes('pm') || clean.includes('م');
+                if (!isPM && h >= 12) isPM = true;
+                if (h > 12) h -= 12;
+                if (h === 0) h = 12;
+                let ampm = isPM ? 'م' : 'ص';
+                return `${h}:${m} ${ampm}`;
+            }
+            return clean;
+        }
+
+        function createCardHTML(m, statusClass, statusText, centerValue) {
+            return `
+                <div class="team-box"><img src="${getCleanImg(m.team1.logo)}" alt="${m.team1.name}"><span>${m.team1.name}</span></div>
+                <div class="center-info">
+                    <div class="status-pill ${statusClass}">${statusText}</div>
+                    <div class="match-time-score">${centerValue}</div>
+                </div>
+                <div class="team-box"><img src="${getCleanImg(m.team2.logo)}" alt="${m.team2.name}"><span>${m.team2.name}</span></div>
+            `;
+        }
+
+        // ==========================================
+        // جلب المباريات
+        // ==========================================
+        async function loadMatches() {
+            try {
+                const res = await fetch(WORKER_URL);
+                const result = await res.json();
+                if (result.success && result.data) renderMatches(result.data);
+                else document.getElementById("main-loading-view").innerHTML = "لا توجد مباريات حالياً في الجدول.";
+            } catch (e) { document.getElementById("main-loading-view").innerHTML = "حدث خطأ في الاتصال، يرجى تحديث الصفحة."; }
+        }
+
+        function renderMatches(list) {
+            document.getElementById("main-loading-view").classList.add("hidden"); 
+            document.getElementById("schedule-view").classList.remove("hidden"); 
+            const matchesList = document.getElementById("matches-list");
+            matchesList.innerHTML = "";
+            
+            if(list.length === 0) { matchesList.innerHTML = "<div class='empty-msg'>لا توجد مباريات مبرمجة لليوم.</div>"; return; }
+
+            list.forEach(m => {
+                let sClass = "", sText = m.status, cValue = "";
+                const score = `${m.team1.goals || 0} - ${m.team2.goals || 0}`;
+                
+                if (m.priority === 1) { 
+                    sText = "جاري الآن"; sClass = "status-live"; cValue = score; 
+                } else if (m.priority === 3) { 
+                    sText = "انتهت"; sClass = "status-ended"; cValue = score; 
+                } else { 
+                    sText = "لم تبدأ"; sClass = "status-upcoming"; cValue = formatTime(m.time); 
+                }
+
+                let html = createCardHTML(m, sClass, sText, cValue);
+                let div = document.createElement("div"); 
+                div.className = "match-card"; 
+                div.innerHTML = html;
+                
+                div.onclick = () => {
+                    currentMatchObj = m;
+                    document.getElementById("active-match-card").innerHTML = `<div class="match-card static-card">${html}</div>`;
+                    startLiveSetup(m.link, m);
+                };
+                matchesList.appendChild(div);
+            });
+        }
+
+        // ==========================================
+        // إعداد البث والاطار التشغيلي والتوقعات
+        // ==========================================
+        async function startLiveSetup(linkUrl, matchObj) {
+            history.pushState({ page: "player" }, "");
+            showView('player');
+
+            document.getElementById("media-package-container").classList.add("hidden");
+            document.getElementById("prediction-area").classList.add("hidden");
+            document.getElementById("inner-loading-view").classList.remove("hidden");
+            
+            // بناء منطقة التوقعات (مع مراعاة الكاش وحالة انتهاء المباراة)
+            renderPredictionUI(matchObj);
+
+            try {
+                const res = await fetch(linkUrl); 
+                const result = await res.json();
+                
+                document.getElementById("inner-loading-view").classList.add("hidden");
+                document.getElementById("media-package-container").classList.remove("hidden");
+                document.getElementById("prediction-area").classList.remove("hidden");
+
+                if (result.success && result.servers && result.servers.length > 0) {
+                    document.getElementById("waiting-screen").classList.add("hidden");
+                    document.getElementById("servers-area").classList.remove("hidden");
+                    
+                    const serversGrid = document.getElementById("servers-grid");
+                    serversGrid.innerHTML = ""; 
+                    stopVideo();
+                    playServer(result.servers[0].url, result.servers[0].type, null);
+
+                    result.servers.forEach((srv, i) => {
+                        let btn = document.createElement("button"); 
+                        btn.className = "server-btn";
+                        if(i === 0) btn.classList.add("active");
+                        let srvName = srv.name.includes("M3U") ? "سيرفر جودة " + (i+1) : (srv.name.includes("Web") ? "سيرفر شاشة " + (i+1) : srv.name);
+                        btn.innerText = srvName;
+                        btn.onclick = (e) => playServer(srv.url, srv.type, e.target);
+                        serversGrid.appendChild(btn);
+                    });
+                } else { 
+                    showWaitingScreen(matchObj);
+                }
+            } catch(e) { 
+                document.getElementById("inner-loading-view").classList.add("hidden");
+                document.getElementById("media-package-container").classList.remove("hidden");
+                document.getElementById("prediction-area").classList.remove("hidden");
+                showWaitingScreen(matchObj); 
+            }
+        }
+
+        function showWaitingScreen(m) {
+            stopVideo();
+            document.getElementById("iframe-player").classList.add("hidden");
+            document.getElementById("hls-player").classList.add("hidden");
+            document.getElementById("servers-area").classList.add("hidden");
+            
+            const waitingScreen = document.getElementById("waiting-screen");
+            const exactTimeText = document.getElementById("waiting-time-text");
+            waitingScreen.classList.remove("hidden");
+
+            if (m.priority === 3) {
+                exactTimeText.innerText = "لقد انتهت هذه المباراة.";
+            } else if (m.priority === 1) {
+                exactTimeText.innerText = "المباراة جارية ولكن البث متوقف مؤقتاً.";
+            } else {
+                let exactTime = formatTime(m.time);
+                exactTimeText.innerText = `ستبدأ المباراة في تمام الساعة ${exactTime}`;
+            }
+        }
+
+        function playServer(url, type, btnElement) {
+            stopVideo();
+            const iframePlayer = document.getElementById("iframe-player");
+            const hlsPlayer = document.getElementById("hls-player");
+            document.getElementById("waiting-screen").classList.add("hidden");
+
+            if(btnElement) { 
+                document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active")); 
+                btnElement.classList.add("active"); 
+            }
+
+            if (type === "m3u8") {
+                iframePlayer.classList.add("hidden"); hlsPlayer.classList.remove("hidden");
+                if (Hls.isSupported()) {
+                    activeHls = new Hls(); 
+                    activeHls.loadSource(url); 
+                    activeHls.attachMedia(hlsPlayer);
+                    activeHls.on(Hls.Events.MANIFEST_PARSED, () => hlsPlayer.play().catch(()=>{}));
+                } else if (hlsPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    hlsPlayer.src = url; 
+                    hlsPlayer.addEventListener('loadedmetadata', () => hlsPlayer.play().catch(()=>{}));
+                }
+            } else {
+                hlsPlayer.classList.add("hidden"); iframePlayer.classList.remove("hidden");
+                iframePlayer.src = url;
+            }
+        }
+
+        function stopVideo() {
+            const iframePlayer = document.getElementById("iframe-player");
+            const hlsPlayer = document.getElementById("hls-player");
+            iframePlayer.src = "";
+            if (activeHls) { activeHls.destroy(); activeHls = null; }
+            hlsPlayer.pause(); hlsPlayer.removeAttribute('src'); hlsPlayer.load();
+        }
+
+        // ==========================================
+        // نظام التوقعات السحابي المصغر (بالذاكرة الدائمة - Cache)
+        // ==========================================
+        function renderPredictionUI(m) {
+            const predArea = document.getElementById("prediction-area");
+            
+            // إنشاء مفتاح مميز للمباراة لحفظه في المتصفح بناءً على أسماء الفرق
+            const predKey = 'predict_' + btoa(unescape(encodeURIComponent(m.team1.name + m.team2.name))).substring(0,20);
+            
+            // استدعاء التوقع المحفوظ مسبقاً (حتى لو أُغلق المتصفح)
+            const savedPred = localStorage.getItem(predKey);
+            
+            // التحقق مما إذا كانت المباراة قد انتهت (priority 3 = انتهت)
+            const isMatchEnded = (m.priority === 3);
+
+            if (isMatchEnded) {
+                // حالة المباراة منتهية
+                if (savedPred) {
+                    let scores = savedPred.split('-');
+                    predArea.innerHTML = `
+                        <div class="pred-title" style="color: var(--text-dim);"><i class="fas fa-lock"></i> التوقعات مغلقة</div>
+                        <div class="saved-pred-box locked">
+                            <h4>انتهت المباراة، هذا كان توقعك النهائي:</h4>
+                            <div class="saved-score">${scores[0]} - ${scores[1]}</div>
+                            <div style="font-weight:700; color:var(--text); font-size:14px;">
+                                ${m.team1.name} ضد ${m.team2.name}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    predArea.innerHTML = `
+                        <div class="pred-title" style="color: var(--text-dim);"><i class="fas fa-lock"></i> التوقعات مغلقة</div>
+                        <div class="saved-pred-box locked">
+                            <h4 style="margin:0;">انتهت المباراة، تم إغلاق باب التوقعات.</h4>
+                        </div>
+                    `;
+                }
+            } else {
+                // حالة المباراة جارية أو لم تبدأ (يمكن التعديل والإدخال)
+                if (savedPred) {
+                    let scores = savedPred.split('-');
+                    predArea.innerHTML = `
+                        <div class="pred-title"><i class="fas fa-trophy"></i> توقعك محفوظ بنجاح</div>
+                        <div class="saved-pred-box">
+                            <h4>لقد قمت بتوقع النتيجة:</h4>
+                            <div class="saved-score">${scores[0]} - ${scores[1]}</div>
+                            <div style="font-weight:700; color:#fff; margin-bottom:10px; font-size:14px;">
+                                ${m.team1.name} ضد ${m.team2.name}
+                            </div>
+                            <button class="edit-pred-btn" onclick="clearPrediction('${predKey}')">تعديل التوقع</button>
+                        </div>
+                    `;
+                } else {
+                    predArea.innerHTML = `
+                        <div class="pred-title"><i class="fas fa-pen-alt"></i> أدخل توقعك لنتيجة المباراة</div>
+                        <div class="pred-teams">
+                            <div class="pred-team">
+                                <img src="${getCleanImg(m.team1.logo)}">
+                                <span>${m.team1.name}</span>
+                            </div>
+                            <div class="pred-inputs">
+                                <input type="number" id="score1" min="0" max="20" placeholder="0">
+                                <div class="pred-dash">-</div>
+                                <input type="number" id="score2" min="0" max="20" placeholder="0">
+                            </div>
+                            <div class="pred-team">
+                                <img src="${getCleanImg(m.team2.logo)}">
+                                <span>${m.team2.name}</span>
+                            </div>
+                        </div>
+                        <button class="pred-btn" onclick="savePrediction('${predKey}')">حفظ التوقع</button>
+                    `;
+                }
+            }
+        }
+
+        // حفظ التوقع في الذاكرة الدائمة
+        function savePrediction(key) {
+            const v1 = document.getElementById("score1").value;
+            const v2 = document.getElementById("score2").value;
+            if(v1 === "" || v2 === "") { alert("يرجى إدخال أهداف الفريقين"); return; }
+            if(v1 < 0 || v2 < 0) { alert("أرقام غير صالحة"); return; }
+            
+            // حفظ التوقع في LocalStorage
+            localStorage.setItem(key, `${v1}-${v2}`);
+            
+            // تحديث الواجهة فوراً
+            renderPredictionUI(currentMatchObj);
+        }
+
+        // مسح التوقع من الذاكرة الدائمة للتعديل
+        function clearPrediction(key) {
+            localStorage.removeItem(key);
+            renderPredictionUI(currentMatchObj);
+        }
+
+    </script>
+</body>
+</html>
