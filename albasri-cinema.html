@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <!-- الكلمات المفتاحية ومحركات البحث (SEO) لجوجل -->
-<meta name="description" content="موقع البصري تيفي لمشاهدة وتحميل أحدث الأفلام والمسلسلات. مسلسلات وأفلام البصري تيفي المترجمة والمدبلجة، مسلسلات عربية، تركية، أجنبية، وأفلام أنمي بأعلى جودة.">
+<meta name="description" content="موقع البصري تيفي الأفلام والمسلسلات لمشاهدة وتحميل أحدث الأفلام والمسلسلات. مسلسلات وأفلام البصري تيفي المترجمة والمدبلجة، مسلسلات عربية، تركية، أجنبية، وأفلام أنمي بأعلى جودة.">
 <meta name="keywords" content="البصري تيفي, البصري تيفي الأفلام والمسلسلات, مسلسلات وأفلام البصري تيفي, موقع البصري تيفي, أفلام, مسلسلات, مشاهدة أفلام, مسلسلات عربية, مسلسلات تركية, مسلسلات أجنبية, تحميل أفلام">
 <meta name="author" content="البصري تيفي">
 <meta name="robots" content="index, follow">
@@ -16,10 +16,10 @@
 <!-- إعدادات المشاركة والسوشيال ميديا -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="البصري تيفي الأفلام والمسلسلات">
-<meta property="og:description" content="موقع البصري تيفي: المنصة الأولى لمشاهدة أحدث الأفلام والمسلسلات.">
-<meta property="og:site_name" content="البصري تيفي">
+<meta property="og:description" content="البصري تيفي الأفلام والمسلسلات: المنصة الأولى لمشاهدة أحدث الأفلام والمسلسلات بجودة عالية.">
+<meta property="og:site_name" content="البصري تيفي الأفلام والمسلسلات">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="مسلسلات وأفلام البصري تيفي">
+<meta name="twitter:title" content="البصري تيفي الأفلام والمسلسلات">
 
 <!-- كود Schema ليخبر جوجل باسم الموقع الرسمي -->
 <script type="application/ld+json">
@@ -79,6 +79,7 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
     padding:0 15px; z-index:1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
+/* العنوان الداخلي كما طلبت */
 .logo-text { font-weight:900; font-size:18px; color: var(--text); display: flex; align-items: center; gap: 6px;}
 .logo-text i { color: var(--primary); font-size: 22px; }
 
@@ -94,18 +95,26 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
     background: var(--primary); color: #fff; box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
 }
 
-.header-left { display: flex; align-items: center; justify-content: flex-end; width: 40px; }
-.back-btn { 
-    width: 35px; height: 35px; border-radius: 50%; background: var(--surface-light); 
-    display: flex; align-items: center; justify-content: center; font-size:16px; 
-    color:var(--text); cursor:pointer; transition: 0.2s; pointer-events: auto;
-}
-.back-btn:active { transform: scale(0.9); background: var(--primary); color: #fff; }
-
 /* =======================================================
-   الحاوية الرئيسية
+   الحاوية الرئيسية وشريط الرجوع
 ======================================================= */
 .main-container { padding-top: 90px; padding-bottom: 30px; padding-left: 15px; padding-right: 15px; max-width: 600px; margin: 0 auto; min-height: 100vh;}
+
+/* شريط الرجوع المنظم الجديد */
+#global-back-bar { margin-bottom: 20px; animation: fadeIn 0.3s ease-out; }
+.back-bar-content {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px;
+    background: linear-gradient(145deg, var(--surface), var(--surface-light));
+    border: 1px solid var(--border-color); border-radius: 14px;
+    cursor: pointer; color: var(--text); font-weight: 800; font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: all 0.2s; pointer-events: auto;
+}
+.back-bar-content i { color: var(--primary); font-size: 18px; }
+.back-bar-content:active {
+    transform: scale(0.95); background: var(--primary); border-color: var(--primary); color: #fff;
+}
+.back-bar-content:active i { color: #fff; }
+
 .tab-content { display: none; animation: fadeIn 0.4s ease-out; }
 .tab-content.active { display: block; }
 
@@ -184,21 +193,23 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
 
 <!-- الشريط العلوي والتنقل -->
 <header class="top-bar">
-    <!-- كما طلبت: هنا يظهر فقط "الأفلام والمسلسلات" للمستخدم -->
     <div class="logo-text"><i class="fas fa-play"></i>الأفلام والمسلسلات</div>
     
     <div class="nav-pills">
-        <!-- تم تعيين الأفلام كالصفحة الافتراضية -->
         <div class="nav-pill active" data-tab="tab-movies" onclick="switchTab('tab-movies')">الأفلام</div>
         <div class="nav-pill" data-tab="tab-series" onclick="switchTab('tab-series')">المسلسلات</div>
-    </div>
-
-    <div class="header-left" id="header-back-btn">
-        <!-- زر العودة يظهر هنا عند الحاجة -->
     </div>
 </header>
 
 <div class="main-container">
+    
+    <!-- زر الرجوع الجديد والمنظم أسفل الشريط العلوي -->
+    <div id="global-back-bar" class="hidden">
+        <div class="back-bar-content" onclick="history.back()">
+            <i class="fas fa-arrow-right"></i>
+            <span>الرجوع للقسم السابق</span>
+        </div>
+    </div>
     
     <!-- قسم الأفلام -->
     <div id="tab-movies" class="tab-content active">
@@ -300,83 +311,87 @@ body { font-family:'Tajawal', sans-serif; background:var(--bg); color:var(--text
 })();
 
 // ==========================================
-// نظام إدارة الحالة والتنقل
+// نظام التنقل المتقدم (يتوافق مع أزرار الهاتف والمتصفح)
 // ==========================================
-let currentTab = 'tab-movies'; // الصفحة الافتراضية
+let currentTab = 'tab-movies';
 let currentSubState = { movies: 'categories', series: 'categories' }; 
 let plyrInstance = null;
+const MEDIA_API = "https://series.albesriali03.workers.dev/"; 
+let mediaContext = { query: '', page: 1, isFetching: false, type: '' };
 
-window.addEventListener('popstate', function(event) { handleBackAction(false); });
-function pushStateObj() { history.pushState({ page: 'inner' }, ''); }
+// تهيئة التصفح عند التحميل لأول مرة
+document.addEventListener("DOMContentLoaded", () => {
+    history.replaceState({ level: 'categories', tab: 'tab-movies' }, '', '');
+    updateBackButton();
+});
 
-function handleBackAction(push = true) {
-    const tabName = currentTab.replace('tab-', '');
-    if (currentSubState[tabName] === 'watch') {
-        goBackTo('grid', tabName);
-    } else if (currentSubState[tabName] === 'grid' || currentSubState[tabName] === 'ramadan') {
-        goBackTo('categories', tabName);
+// الاستماع لزر الرجوع الخاص بالهاتف أو المتصفح
+window.addEventListener('popstate', function(e) {
+    if(e.state) {
+        restoreState(e.state);
+    } else {
+        restoreState({ level: 'categories', tab: currentTab });
     }
-}
+});
 
-function switchTab(tabId) {
-    if(currentTab === tabId && currentSubState[tabId.replace('tab-','')] === 'categories') return;
-    
+// دالة لمعالجة حالة الواجهة حسب السجل الزمني للتصفح
+function restoreState(stateObj) {
     stopAllMedia();
-    
+    let tabId = stateObj.tab;
     let tabName = tabId.replace('tab-', '');
-    document.getElementById(`${tabName}-categories`).classList.remove('hidden');
-    if(document.getElementById(`${tabName}-ramadan-years`)) document.getElementById(`${tabName}-ramadan-years`).classList.add('hidden');
-    document.getElementById(`${tabName}-grid-view`).classList.add('hidden');
-    document.getElementById(`${tabName}-watch-view`).classList.add('hidden');
-    currentSubState[tabName] = 'categories';
-    document.getElementById(`search-${tabName}`).value = '';
-
-    // تفعيل الزر العلوي المناسب
-    document.querySelectorAll('.nav-pill').forEach(el => el.classList.remove('active'));
-    document.querySelector(`.nav-pill[data-tab="${tabId}"]`).classList.add('active');
     
-    // تفعيل المحتوى المناسب
+    // تفعيل التبويب العلوي الصحيح
+    document.querySelectorAll('.nav-pill').forEach(el => el.classList.remove('active'));
+    let activePill = document.querySelector(`.nav-pill[data-tab="${tabId}"]`);
+    if(activePill) activePill.classList.add('active');
+    
+    // تفعيل محتوى القسم الصحيح
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
+    let activeContent = document.getElementById(tabId);
+    if(activeContent) activeContent.classList.add('active');
     
     currentTab = tabId;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    updateHeader();
-}
+    currentSubState[tabName] = stateObj.level;
 
-function updateHeader() {
-    const headerBack = document.getElementById('header-back-btn');
-    const tabName = currentTab.replace('tab-', '');
-    
-    if (currentSubState[tabName] !== 'categories') {
-        headerBack.innerHTML = `<div class="back-btn" onclick="handleBackAction()"><i class="fas fa-arrow-right"></i></div>`;
-    } else {
-        headerBack.innerHTML = '';
-    }
-}
-
-function goBackTo(targetState, tabName) {
-    stopAllMedia();
-    
+    // إخفاء كل المحتويات بداخل هذا القسم
     document.getElementById(`${tabName}-categories`).classList.add('hidden');
     if(document.getElementById(`${tabName}-ramadan-years`)) document.getElementById(`${tabName}-ramadan-years`).classList.add('hidden');
     document.getElementById(`${tabName}-grid-view`).classList.add('hidden');
     document.getElementById(`${tabName}-watch-view`).classList.add('hidden');
     
-    if (targetState === 'grid') {
-        if(mediaContext.isRamadan) {
-            document.getElementById(`${tabName}-ramadan-years`).classList.remove('hidden');
-            currentSubState[tabName] = 'ramadan';
-        } else {
-            document.getElementById(`${tabName}-grid-view`).classList.remove('hidden');
-            currentSubState[tabName] = 'grid';
-        }
+    // إظهار المحتوى المطلوب بناءً على التاريخ المحفوظ
+    if (stateObj.level === 'grid') {
+        document.getElementById(`${tabName}-grid-view`).classList.remove('hidden');
+    } else if (stateObj.level === 'ramadan') {
+        document.getElementById(`${tabName}-ramadan-years`).classList.remove('hidden');
+    } else if (stateObj.level === 'watch') {
+        document.getElementById(`${tabName}-watch-view`).classList.remove('hidden');
     } else {
         document.getElementById(`${tabName}-categories`).classList.remove('hidden');
         currentSubState[tabName] = 'categories';
-        mediaContext.isRamadan = false;
     }
-    updateHeader();
+    
+    updateBackButton();
+}
+
+function switchTab(tabId) {
+    if(currentTab === tabId && currentSubState[tabId.replace('tab-','')] === 'categories') return;
+    
+    history.pushState({ level: 'categories', tab: tabId }, '', '');
+    restoreState({ level: 'categories', tab: tabId });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// تحديث ظهور أو اختفاء شريط الرجوع المنظم
+function updateBackButton() {
+    const backBar = document.getElementById('global-back-bar');
+    const tabName = currentTab.replace('tab-', '');
+    
+    if (currentSubState[tabName] !== 'categories') {
+        backBar.classList.remove('hidden');
+    } else {
+        backBar.classList.add('hidden');
+    }
 }
 
 function stopAllMedia() {
@@ -388,33 +403,31 @@ function stopAllMedia() {
 // ==========================================
 // نظام جلب الأفلام والمسلسلات 
 // ==========================================
-const MEDIA_API = "https://series.albesriali03.workers.dev/"; 
-let mediaContext = { query: '', page: 1, isFetching: false, type: '', isRamadan: false };
-
 function doSearch(type) {
     const q = document.getElementById(`search-${type}`).value.trim();
-    if(q) openGridView(`?action=search&q=${encodeURIComponent(q)}`, type, false);
+    if(q) openGridView(`?action=search&q=${encodeURIComponent(q)}`, type, true);
 }
 
 function openRamadanYears() {
-    pushStateObj();
+    history.pushState({ level: 'ramadan', tab: 'tab-series' }, '', '');
+    
     document.getElementById('series-categories').classList.add('hidden');
     document.getElementById('series-ramadan-years').classList.remove('hidden');
     currentSubState['series'] = 'ramadan';
-    updateHeader();
+    updateBackButton();
     
     const grid = document.getElementById('ramadan-years-grid');
     if(grid.innerHTML === "") {
         let currentYear = new Date().getFullYear();
         let maxYear = currentYear > 2026 ? currentYear : 2026;
         for(let y = maxYear; y >= 2019; y--) {
-            grid.innerHTML += `<div class="year-card" onclick="openGridView('https://akwam.com.co/series?category=87&year=${y}', 'series', true, true)">${y}</div>`;
+            grid.innerHTML += `<div class="year-card" onclick="openGridView('https://akwam.com.co/series?category=87&year=${y}', 'series', true)">${y}</div>`;
         }
     }
 }
 
-function openGridView(apiQuery, type, doPushState = true, isRamadanCall = false) {
-    if(doPushState) pushStateObj();
+function openGridView(apiQuery, type, doPushState = true) {
+    if(doPushState) history.pushState({ level: 'grid', tab: `tab-${type}` }, '', '');
     
     document.getElementById(`${type}-categories`).classList.add('hidden');
     if(document.getElementById(`${type}-ramadan-years`)) document.getElementById(`${type}-ramadan-years`).classList.add('hidden');
@@ -425,11 +438,11 @@ function openGridView(apiQuery, type, doPushState = true, isRamadanCall = false)
     contentDiv.innerHTML = `<div class="empty-msg"><div class="loading-spinner"></div>جاري التحميل...</div>`;
     
     currentSubState[type] = 'grid';
-    updateHeader();
+    updateBackButton();
     window.scrollTo({ top: 0 });
     
     let fetchQuery = apiQuery.startsWith('?') ? apiQuery : `?action=genre&genre=${encodeURIComponent(apiQuery)}`;
-    mediaContext = { query: fetchQuery, page: 1, isFetching: false, type: type, isRamadan: isRamadanCall };
+    mediaContext = { query: fetchQuery, page: 1, isFetching: false, type: type };
 
     fetch(MEDIA_API + fetchQuery)
         .then(res => res.json())
@@ -484,7 +497,7 @@ window.onscroll = function() {
 };
 
 function openMediaWatch(apiQuery, type) {
-    pushStateObj();
+    history.pushState({ level: 'watch', tab: `tab-${type}` }, '', '');
     
     document.getElementById(`${type}-grid-view`).classList.add('hidden');
     const watchDiv = document.getElementById(`${type}-watch-view`);
@@ -492,7 +505,7 @@ function openMediaWatch(apiQuery, type) {
     
     watchDiv.innerHTML = `<div class="empty-msg"><div class="loading-spinner"></div>جاري تجهيز المشاهدة...</div>`;
     currentSubState[type] = 'watch';
-    updateHeader();
+    updateBackButton();
     window.scrollTo({ top: 0 });
 
     stopAllMedia();
