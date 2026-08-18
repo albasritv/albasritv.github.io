@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no" />
-    <title>BSR Pro Generator</title>
+    <title>BSR Pro Generator - المولد الشامل</title>
     <link rel="icon" type="image/jpg" href="https://up6.cc/2026/04/177672181699171.jpg">
 
     <!-- Fonts & Icons -->
@@ -12,20 +12,21 @@
 
     <style>
         :root {
-            --bg-main: #0B0F19;
-            --bg-card: #151C2C;
-            --bg-input: #1D263B;
-            --primary: #00E5FF;
-            --primary-glow: rgba(0, 229, 255, 0.4);
-            --secondary: #7C3AED;
-            --text-main: #FFFFFF;
-            --text-muted: #94A3B8;
+            --bg-body: #090e17;
+            --bg-card: #111827;
+            --bg-input: #1f2937;
+            --primary: #00e5ff;
+            --primary-hover: #00c6dd;
+            --secondary: #8b5cf6;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
             --border-color: rgba(255, 255, 255, 0.08);
-            --success: #10B981;
-            --radius-lg: 24px;
-            --radius-md: 16px;
-            --radius-sm: 12px;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --success: #10b981;
+            --danger: #ef4444;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -37,27 +38,28 @@
         }
 
         body {
-            background-color: var(--bg-main);
+            background-color: var(--bg-body);
             color: var(--text-main);
             min-height: 100vh;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.08), transparent 25%);
+                radial-gradient(circle at 15% 0%, rgba(139, 92, 246, 0.15), transparent 25%), 
+                radial-gradient(circle at 85% 100%, rgba(0, 229, 255, 0.15), transparent 25%);
+            background-attachment: fixed;
         }
 
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg-main); }
-        ::-webkit-scrollbar-thumb { background: #2A3655; border-radius: 10px; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
-        /* Sticky Header (Telegram + Navbar) */
+        /* --- Header & Navbar --- */
         .sticky-header {
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
-        /* Telegram Pinned Banner */
         .telegram-banner {
             display: flex;
             justify-content: center;
@@ -66,548 +68,603 @@
             background: linear-gradient(90deg, #0088cc, #00aaff);
             color: white;
             text-decoration: none;
-            padding: 12px;
-            font-size: 15px;
-            font-weight: 800;
-            box-shadow: 0 2px 15px rgba(0, 136, 204, 0.4);
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 700;
             transition: var(--transition);
         }
-        .telegram-banner:hover {
-            background: linear-gradient(90deg, #0099dd, #00bbff);
-        }
-        .telegram-banner i {
-            font-size: 20px;
-        }
+        .telegram-banner:hover { filter: brightness(1.1); }
 
-        /* Navbar */
         .navbar {
-            background: rgba(11, 15, 25, 0.8);
+            background: rgba(17, 24, 39, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
-            padding: 15px 20px;
+            padding: 15px 24px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .brand { display: flex; align-items: center; gap: 12px; }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
         .brand-icon {
-            width: 40px; height: 40px;
+            width: 45px;
+            height: 45px;
             background: linear-gradient(135deg, var(--secondary), var(--primary));
             border-radius: var(--radius-sm);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 20px; color: white;
-            box-shadow: 0 4px 15px var(--primary-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
         }
-        .brand-text { font-size: 20px; font-weight: 900; letter-spacing: 0.5px; }
 
-        .social-icons { display: flex; gap: 8px; }
-        .social-icons a {
-            width: 36px; height: 36px;
-            border-radius: var(--radius-sm);
-            background: var(--bg-input);
-            display: flex; align-items: center; justify-content: center;
-            color: var(--text-muted); text-decoration: none;
-            transition: var(--transition);
+        .brand-text {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            background: linear-gradient(to left, #fff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .social-icons a:hover { color: white; background: var(--secondary); transform: translateY(-2px); }
 
-        /* Container & Cards */
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        /* --- Layout --- */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
 
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-lg);
-            padding: 24px; margin-bottom: 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0.5;
         }
 
         .card-header {
-            display: flex; align-items: center; gap: 12px;
-            margin-bottom: 20px; padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
             border-bottom: 1px solid var(--border-color);
         }
-        .card-header i { color: var(--primary); font-size: 22px; }
-        .card-header h2 { font-size: 18px; font-weight: 800; }
 
-        /* Inputs & Grid Layout */
+        .card-header i {
+            font-size: 22px;
+            color: var(--primary);
+        }
+
+        .card-header h2 {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        /* --- Forms --- */
         .form-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 16px;
+            gap: 18px;
         }
         @media (min-width: 768px) {
             .form-grid { grid-template-columns: 1fr 1fr; }
-            .form-grid.full-width { grid-column: span 2; }
+            .full { grid-column: span 2; }
         }
 
-        .input-group { position: relative; }
+        .input-group {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
         .input-group i {
-            position: absolute; top: 50%; right: 18px;
-            transform: translateY(-50%); color: var(--text-muted);
-            font-size: 16px; transition: var(--transition);
-        }
-        .input-group textarea ~ i { top: 24px; transform: none; }
-
-        input, select, textarea {
-            width: 100%; background: var(--bg-input);
-            border: 2px solid transparent; border-radius: var(--radius-md);
-            padding: 16px 45px 16px 16px; color: var(--text-main);
-            font-size: 14px; font-weight: 500;
-            transition: var(--transition); outline: none; appearance: none;
-        }
-        textarea { resize: vertical; min-height: 80px; }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: var(--primary); background: #172033;
-            box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.1);
-        }
-        input:focus + i, select:focus + i, textarea:focus ~ i { color: var(--primary); }
-
-        /* Buttons */
-        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; grid-column: 1 / -1; }
-        button {
-            flex: 1; min-width: 120px; padding: 16px;
-            border: none; border-radius: var(--radius-md);
-            font-size: 15px; font-weight: 700; cursor: pointer;
-            display: flex; justify-content: center; align-items: center; gap: 8px;
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 16px;
+            pointer-events: none;
             transition: var(--transition);
         }
-        button:active { transform: scale(0.96); }
         
-        .btn-primary { background: linear-gradient(135deg, var(--secondary), #3B82F6); color: white; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3); }
-        .btn-primary:hover { box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5); }
-        .btn-secondary { background: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); }
-        .btn-secondary:hover { background: #2A3655; }
-        .btn-danger { background: rgba(255, 51, 102, 0.1); color: var(--danger); border: 1px solid rgba(255, 51, 102, 0.2); }
-        .btn-success { background: linear-gradient(135deg, var(--success), #059669); color: white; }
+        input, select, textarea {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid #374151;
+            border-radius: var(--radius-md);
+            padding: 15px 45px 15px 15px;
+            color: var(--text-main);
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+            outline: none;
+            appearance: none;
+        }
 
-        /* Server Item */
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+            padding-top: 15px;
+        }
+
+        .input-group textarea ~ i {
+            top: 25px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary);
+            background: #111827;
+            box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+        }
+
+        input:focus ~ i, select:focus ~ i, textarea:focus ~ i {
+            color: var(--text-main);
+        }
+
+        /* --- Buttons --- */
+        button {
+            padding: 15px 24px;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), #3B82F6);
+            color: white;
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4); }
+
+        .btn-secondary {
+            background: var(--bg-input);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        .btn-secondary:hover { background: rgba(0, 229, 255, 0.1); transform: translateY(-2px); }
+
+        .btn-success {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+        .btn-success:hover { transform: translateY(-2px); filter: brightness(1.1); }
+
+        .btn-danger {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            width: auto;
+            padding: 8px 16px;
+        }
+        .btn-danger:hover { background: var(--danger); color: white; }
+
+        /* --- Server List --- */
         .server-item {
-            background: var(--bg-input); border-radius: var(--radius-md);
-            padding: 16px; margin-bottom: 12px; border: 1px solid var(--border-color);
+            background: var(--bg-input);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            margin-bottom: 15px;
+            border: 1px solid #374151;
+            transition: var(--transition);
+            animation: fadeIn 0.4s ease forwards;
         }
-        .server-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .server-title { font-size: 16px; font-weight: 700; color: white; display: flex; align-items: center; gap: 8px; }
-        .server-title i { color: #F59E0B; }
-        .server-actions { display: flex; gap: 8px; }
-        .server-actions button { padding: 8px; min-width: auto; border-radius: var(--radius-sm); }
-        .server-url { direction: ltr; text-align: left; background: #0B0F19; padding: 10px; border-radius: var(--radius-sm); font-size: 13px; color: var(--primary); word-break: break-all; margin-bottom: 10px; }
-        .server-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-        .tag { background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 20px; font-size: 11px; color: var(--text-muted); }
+        .server-item:hover { border-color: var(--secondary); transform: translateX(-5px); }
 
-        /* Results */
+        .server-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .server-title {
+            font-weight: 800;
+            color: white;
+            font-size: 16px;
+        }
+
+        .server-url {
+            direction: ltr;
+            text-align: left;
+            font-size: 13px;
+            color: var(--text-muted);
+            background: #111827;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            word-break: break-all;
+            font-family: monospace;
+            border: 1px solid #374151;
+        }
+
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+        
+        .tag {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .tag.mode { background: rgba(0, 229, 255, 0.15); color: var(--primary); }
+        .tag.drm { background: rgba(139, 92, 246, 0.15); color: var(--secondary); }
+
+        /* --- Results Area --- */
         .result-box {
-            background: var(--bg-input); border: 2px dashed var(--border-color);
-            border-radius: var(--radius-md); padding: 20px; text-align: center;
-            color: var(--text-muted); margin-bottom: 16px; min-height: 120px;
-            display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px;
+            background: rgba(31, 41, 55, 0.5);
+            border: 2px dashed #374151;
+            border-radius: var(--radius-md);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-weight: 500;
         }
-        .result-content { display: none; width: 100%; text-align: right; }
-        .result-label { font-size: 13px; color: var(--primary); font-weight: bold; margin-bottom: 8px; }
 
-        /* Modal */
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; }
-        .modal.show { display: flex; }
-        .modal-content { background: var(--bg-card); width: 100%; max-width: 600px; border-radius: var(--radius-lg); padding: 24px; max-height: 90vh; overflow-y: auto; border: 1px solid var(--border-color); animation: modalFadeIn 0.3s ease; }
+        .code-block { margin-bottom: 20px; }
+        .code-block label { display: block; margin-bottom: 8px; font-weight: 700; color: var(--primary); }
+        
+        textarea.code {
+            height: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            background: #000;
+            border-color: #374151;
+            color: #a78bfa;
+            padding: 15px;
+            direction: ltr;
+            text-align: left;
+            border-radius: var(--radius-md);
+        }
 
-        /* Toasts */
-        .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); background: var(--bg-card); color: white; padding: 14px 24px; border-radius: 50px; font-weight: 700; font-size: 14px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        /* --- Toast Notification --- */
+        .toast {
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-150px);
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            z-index: 9999;
+            transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid var(--success);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
         .toast.show { transform: translateX(-50%) translateY(0); }
-        .toast.success { border: 1px solid var(--success); }
-        .toast.error { border: 1px solid var(--danger); }
+        .toast i { font-size: 18px; }
 
-        @media (max-width: 600px) {
-            .navbar { padding: 12px 15px; }
-            .container { padding: 15px; }
-            .card { padding: 20px; border-radius: 20px; }
-            button { padding: 14px; font-size: 14px; }
-            .modal { padding: 0; align-items: flex-end; }
-            .modal-content { border-radius: 24px 24px 0 0; animation: slideUp 0.3s ease; padding: 20px; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes modalFadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-        @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <!-- Sticky Header containing Telegram Banner and Navbar -->
+    <!-- Header -->
     <div class="sticky-header">
-        <!-- Telegram Pinned Banner -->
         <a href="https://t.me/Basritv" target="_blank" class="telegram-banner">
-            <i class="fab fa-telegram-plane"></i>
-            انضم إلى قناتنا الرسمية للحصول على أحدث التحديثات والمشغلات
+            <i class="fab fa-telegram-plane"></i> انضم لقناتنا للحصول على التحديثات
         </a>
-
-        <!-- Navbar -->
         <div class="navbar">
             <div class="brand">
                 <div class="brand-icon"><i class="fas fa-play"></i></div>
-                <div class="brand-text">BSR PRO</div>
-            </div>
-            <div class="social-icons">
-                <a href="https://t.me/Basritv" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                <a href="https://www.youtube.com/@Alam_www" target="_blank"><i class="fab fa-youtube"></i></a>
+                <div class="brand-text">BSR PRO GENERATOR</div>
             </div>
         </div>
     </div>
 
     <div class="container">
         
-        <!-- Main App Page -->
-        <div id="appPage">
-            
-            <!-- Card: Add Server -->
-            <div class="card">
-                <div class="card-header">
-                    <i class="fas fa-server"></i>
-                    <h2>إضافة سيرفر / قناة</h2>
-                </div>
-                
-                <div class="form-grid">
-                    <!-- Row 1 -->
-                    <div class="input-group">
-                        <input id="serverName" placeholder="اسم السيرفر (مثال: بين سبورت 1)" />
-                        <i class="fas fa-tv"></i>
-                    </div>
-                    <div class="input-group">
-                        <input id="serverUrl" type="url" placeholder="رابط السيرفر (m3u8, mp4...)" />
-                        <i class="fas fa-link"></i>
-                    </div>
-
-                    <!-- Row 2 -->
-                    <div class="input-group">
-                        <select id="playerMode">
-                            <option value="exo">Exo Player</option>
-                            <option value="web">Web Player</option>
-                            <option value="browser">Browser</option>
-                            <option value="iframe">Iframe</option>
-                        </select>
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div class="input-group">
-                        <input id="drmKey" placeholder="الكي - DRM (اختياري)" />
-                        <i class="fas fa-key"></i>
-                    </div>
-
-                    <!-- Row 3 -->
-                    <div class="input-group">
-                        <input id="userAgent" placeholder="اليوزر - User-Agent (اختياري)" />
-                        <i class="fas fa-user-secret"></i>
-                    </div>
-                    <div class="input-group">
-                        <input id="referer" placeholder="الريفري - Referer (اختياري)" />
-                        <i class="fas fa-globe"></i>
-                    </div>
-
-                    <!-- Row 4 -->
-                    <div class="input-group">
-                        <input id="origin" placeholder="الأوريجينال - Origin (اختياري)" />
-                        <i class="fas fa-code-branch"></i>
-                    </div>
-                    <div class="input-group">
-                        <input id="cookie" placeholder="الكوكي - Cookie (اختياري)" />
-                        <i class="fas fa-cookie-bite"></i>
-                    </div>
-
-                    <div class="btn-group">
-                        <button class="btn-secondary" onclick="addServer()">
-                            <i class="fas fa-plus"></i> إضافة للقائمة
-                        </button>
-                    </div>
-                </div>
+        <!-- Section 1: Server Inputs -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-server"></i>
+                <h2>بيانات السيرفر / القناة</h2>
             </div>
-
-            <!-- Settings Card -->
-            <div class="card">
-                <div class="card-header">
-                    <i class="fas fa-shield-alt"></i>
-                    <h2>إعدادات اللوجو والحماية</h2>
-                </div>
-                
-                <div class="form-grid">
-                    <!-- Logo Row -->
-                    <div class="input-group" style="grid-column: 1 / -1;">
-                        <input id="logoUrl" type="url" placeholder="رابط اللوجو (اختياري)" />
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <div class="input-group">
-                        <select id="logoPosition">
-                            <option value="bottom_right" selected>مكان اللوجو: يمين جوه (أسفل)</option>
-                            <option value="bottom_left">مكان اللوجو: يسار جوه (أسفل)</option>
-                            <option value="top_right">مكان اللوجو: يمين فوق (أعلى)</option>
-                            <option value="top_left">مكان اللوجو: يسار فوق (أعلى)</option>
-                        </select>
-                        <i class="fas fa-arrows-alt"></i>
-                    </div>
-                    <div class="input-group">
-                        <select id="logoSize">
-                            <option value="40">حجم اللوجو: 40</option>
-                            <option value="60">حجم اللوجو: 60</option>
-                            <option value="80" selected>حجم اللوجو: 80 (افتراضي)</option>
-                            <option value="100">حجم اللوجو: 100</option>
-                            <option value="120">حجم اللوجو: 120</option>
-                        </select>
-                        <i class="fas fa-expand"></i>
-                    </div>
-
-                    <!-- Protection Row -->
-                    <div class="input-group" style="grid-column: 1 / -1;">
-                        <select id="vpnEnabled">
-                            <option value="true" selected>تفعيل الحماية (VPN Protection)</option>
-                            <option value="false">إيقاف الحماية</option>
-                        </select>
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="input-group">
-                        <input id="vpnTitle" placeholder="عنوان رسالة الحماية" value="تحذير أمني" />
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="input-group">
-                        <input id="vpnExitText" placeholder="نص زر الخروج من الحماية" value="خروج" />
-                        <i class="fas fa-sign-out-alt"></i>
-                    </div>
-                    <div class="input-group" style="grid-column: 1 / -1;">
-                        <textarea id="vpnMessage" placeholder="رسالة الحماية عند كشف VPN">يرجى إيقاف الـ VPN أو أي بروكسي حتى يعمل المشغل بشكل صحيح وآمن.</textarea>
-                        <i class="fas fa-comment-dots"></i>
-                    </div>
-
-                    <div class="btn-group">
-                        <button class="btn-primary" onclick="generate()">
-                            <i class="fas fa-bolt"></i> توليد الرابط والاكواد النهائية
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- List & Results & Decode -->
-            <div class="card">
-                <div class="card-header">
-                    <i class="fas fa-list-ul"></i>
-                    <h2>قائمة القنوات المضافة (<span id="serverCount">0</span>)</h2>
-                    <button class="btn-danger" style="margin-right:auto; min-width:auto; padding: 6px 12px; font-size: 12px;" onclick="clearAll()">مسح الكل</button>
-                </div>
-                <div id="list" style="max-height: 400px; overflow-y: auto; padding-left: 5px;"></div>
-            </div>
-
-            <!-- Results -->
-            <div class="card">
-                <div class="card-header">
-                    <i class="fas fa-code"></i>
-                    <h2>الروابط والأكواد الناتجة</h2>
-                </div>
-
-                <div class="result-box" id="hiddenResultBox">
-                    <i class="fas fa-box-open" style="font-size: 30px; opacity: 0.5;"></i>
-                    <p>أضف بياناتك واضغط "توليد" لرؤية النتيجة هنا</p>
-                </div>
-
-                <div class="result-content" id="resultContainers">
-                    <div class="result-label">الرابط المولد (Intent):</div>
-                    <div class="input-group">
-                        <textarea id="result" readonly style="height: 80px; font-family: monospace; font-size: 12px;"></textarea>
-                    </div>
-                    
-                    <div class="result-label" style="margin-top:15px;">كود HTML جاهز (مرفق بزر تشغيل احترافي لموقعك):</div>
-                    <div class="input-group">
-                        <textarea id="htmlResult" readonly style="height: 150px; font-family: monospace; font-size: 12px; white-space: pre; background: #0B0F19; border-color: var(--border-color);"></textarea>
-                    </div>
-                </div>
-
-                <div class="btn-group">
-                    <button class="btn-secondary" onclick="toggleResultVisibility()" id="toggleBtn">
-                        <i class="fas fa-eye"></i> إظهار
-                    </button>
-                    <button class="btn-success" onclick="copyResult()">
-                        <i class="fas fa-link"></i> نسخ الرابط
-                    </button>
-                    <button class="btn-primary" onclick="copyHtmlResult()">
-                        <i class="fas fa-file-code"></i> نسخ HTML
-                    </button>
-                </div>
-            </div>
-
-            <!-- Decode -->
-            <div class="card">
-                <div class="card-header">
-                    <i class="fas fa-unlock-alt"></i>
-                    <h2>فك تشفير رابط سابق</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <input id="serverName" placeholder="اسم القناة" />
+                    <i class="fas fa-tv"></i>
                 </div>
                 <div class="input-group">
-                    <textarea id="decodeInput" placeholder="الصق رابط Intent هنا لفك التشفير واسترجاع القنوات..." style="height: 60px;"></textarea>
-                    <i class="fas fa-paste"></i>
+                    <input id="serverUrl" placeholder="رابط البث المباشر (URL)" />
+                    <i class="fas fa-link"></i>
                 </div>
-                <button class="btn-secondary" style="width: 100%; margin-top:10px;" onclick="decodeIntentLink()">
-                    <i class="fas fa-magic"></i> استرجاع البيانات
+                
+                <div class="input-group">
+                    <select id="playerMode">
+                        <option value="EXO">Exo Player</option>
+                        <option value="WEB">Web Player</option>
+                        <option value="WEB2EXO">Web To Exo</option>
+                        <option value="JSON">JSON Resolver</option>
+                        <option value="M3U">M3U Playlist</option>
+                        <option value="BROWSER">External Browser</option>
+                        <option value="IFRAME">Iframe Mode</option>
+                    </select>
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                
+                <div class="input-group">
+                    <select id="drmType">
+                        <option value="None">بدون تشفير (No DRM)</option>
+                        <option value="WIDEVINE">Widevine</option>
+                        <option value="CLEARKEY">ClearKey</option>
+                        <option value="PLAYREADY">PlayReady</option>
+                    </select>
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <div class="input-group full">
+                    <input id="drmKey" placeholder="مفتاح التشفير DRM Key (KID:KEY)" />
+                    <i class="fas fa-key"></i>
+                </div>
+                <div class="input-group full">
+                    <input id="drmLicense" placeholder="رابط الترخيص License URL (اختياري)" />
+                    <i class="fas fa-certificate"></i>
+                </div>
+                
+                <div class="input-group">
+                    <input id="userAgent" placeholder="User-Agent (اختياري)" />
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <div class="input-group">
+                    <input id="referer" placeholder="Referer (اختياري)" />
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="input-group">
+                    <input id="origin" placeholder="Origin (اختياري)" />
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <div class="input-group">
+                    <input id="cookie" placeholder="Cookie (اختياري)" />
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+
+                <div class="full" style="margin-top: 10px;">
+                    <button class="btn-secondary" onclick="addServer()">
+                        <i class="fas fa-plus"></i> إضافة إلى القائمة
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Global Settings -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-cogs"></i>
+                <h2>إعدادات المظهر والحماية (عامة)</h2>
+            </div>
+            <div class="form-grid">
+                <div class="input-group full">
+                    <input id="logoUrl" placeholder="رابط شعار القناة Logo URL (اختياري)" />
+                    <i class="fas fa-image"></i>
+                </div>
+                <div class="input-group">
+                    <select id="logoPosition">
+                        <option value="top_right">أعلى اليمين</option>
+                        <option value="top_left">أعلى اليسار</option>
+                        <option value="bottom_right" selected>أسفل اليمين</option>
+                        <option value="bottom_left">أسفل اليسار</option>
+                    </select>
+                    <i class="fas fa-location-arrow"></i>
+                </div>
+                <div class="input-group">
+                    <select id="logoAlpha">
+                        <option value="1.0">وضوح كامل (100%)</option>
+                        <option value="0.8" selected>شبه شفاف (80%)</option>
+                        <option value="0.5">شفاف (50%)</option>
+                        <option value="0.3">خفيف جداً (30%)</option>
+                    </select>
+                    <i class="fas fa-ghost"></i>
+                </div>
+
+                <div class="input-group full">
+                    <select id="vpnEnabled">
+                        <option value="true" selected>تفعيل حظر الـ VPN</option>
+                        <option value="false">إيقاف حظر الـ VPN</option>
+                    </select>
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="input-group">
+                    <input id="vpnTitle" value="تحذير أمني" placeholder="عنوان رسالة الـ VPN" />
+                    <i class="fas fa-heading"></i>
+                </div>
+                <div class="input-group">
+                    <input id="vpnExit" value="خروج" placeholder="نص زر الخروج" />
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+                <div class="input-group full">
+                    <textarea id="vpnMsg" placeholder="نص رسالة الـ VPN">يرجى إيقاف الـ VPN حتى يعمل المشغل بشكل صحيح.</textarea>
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+
+                <div class="full" style="margin-top: 15px;">
+                    <button class="btn-primary" onclick="generate()">
+                        <i class="fas fa-bolt"></i> توليد الروابط النهائية
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: List -->
+        <div class="card">
+            <div class="card-header" style="justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fas fa-list-ul"></i>
+                    <h2>القائمة المضافة (<span id="serverCount">0</span>)</h2>
+                </div>
+                <button class="btn-danger" onclick="clearAll()">
+                    <i class="fas fa-trash-alt"></i> مسح الكل
                 </button>
             </div>
-            
+            <div id="list">
+                <!-- القائمة تظهر هنا -->
+            </div>
         </div>
-    </div>
 
-    <!-- Edit Modal -->
-    <div class="modal" id="editModal">
-        <div class="modal-content">
+        <!-- Section 4: Results -->
+        <div class="card">
             <div class="card-header">
-                <i class="fas fa-pen"></i>
-                <h2>تعديل السيرفر</h2>
-                <i class="fas fa-times" style="margin-right:auto; cursor:pointer; color:var(--text-muted);" onclick="closeEditModal()"></i>
+                <i class="fas fa-code"></i>
+                <h2>النتائج النهائية</h2>
+            </div>
+            <div id="resultBox" class="result-box">
+                <i class="fas fa-box-open" style="font-size: 40px; margin-bottom: 15px; color: #374151;"></i>
+                <p>قم بإضافة بيانات السيرفر واضغط على "توليد الروابط" لتظهر النتائج هنا.</p>
             </div>
             
-            <div class="form-grid">
-                <div class="input-group"><input type="text" id="editName" placeholder="اسم السيرفر" /><i class="fas fa-tag"></i></div>
-                <div class="input-group"><input type="url" id="editUrl" placeholder="رابط السيرفر" /><i class="fas fa-link"></i></div>
-                <div class="input-group">
-                    <select id="editPlayerMode">
-                        <option value="exo">Exo Player</option>
-                        <option value="web">Web Player</option>
-                        <option value="browser">Browser</option>
-                        <option value="iframe">Iframe</option>
-                    </select><i class="fas fa-play"></i>
+            <div id="resultContent" style="display:none">
+                <div class="code-block">
+                    <label><i class="fas fa-link"></i> رابط Intent (للتشغيل المباشر في التطبيق):</label>
+                    <textarea id="intentOut" class="code" readonly></textarea>
+                    <button class="btn-success" style="margin-top:10px" onclick="copy('intentOut', this)">
+                        <i class="fas fa-copy"></i> نسخ الرابط
+                    </button>
                 </div>
-                <div class="input-group"><input type="text" id="editDrmKey" placeholder="DRM (اختياري)" /><i class="fas fa-key"></i></div>
-                <div class="input-group"><input type="text" id="editUa" placeholder="User-Agent (اختياري)" /><i class="fas fa-user-secret"></i></div>
-                <div class="input-group"><input type="text" id="editReferer" placeholder="Referer (اختياري)" /><i class="fas fa-globe"></i></div>
-                <div class="input-group"><input type="text" id="editOrigin" placeholder="Origin (اختياري)" /><i class="fas fa-code-branch"></i></div>
-                <div class="input-group"><input type="text" id="editCookie" placeholder="Cookie (اختياري)" /><i class="fas fa-cookie-bite"></i></div>
                 
-                <div class="btn-group">
-                    <button class="btn-primary" onclick="saveEdit()">حفظ التعديلات</button>
-                    <button class="btn-secondary" onclick="closeEditModal()">إلغاء</button>
+                <div class="code-block">
+                    <label><i class="fab fa-html5"></i> كود HTML (زر جاهز لموقعك):</label>
+                    <textarea id="htmlOut" class="code" readonly></textarea>
+                    <button class="btn-secondary" style="margin-top:10px" onclick="copy('htmlOut', this)">
+                        <i class="fas fa-copy"></i> نسخ كود HTML
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Section 5: Decode -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-unlock-alt"></i>
+                <h2>تفكيك / استرجاع بيانات رابط سابق</h2>
+            </div>
+            <div class="input-group">
+                <textarea id="decodeIn" placeholder="الصق رابط Intent هنا لاسترجاع كافة الحقول والتعديل عليها..."></textarea>
+                <i class="fas fa-magic" style="top: 25px;"></i>
+            </div>
+            <button class="btn-secondary" style="margin-top:15px" onclick="decode()">
+                <i class="fas fa-sync-alt"></i> استخراج واسترجاع البيانات
+            </button>
+        </div>
+        
     </div>
 
     <script>
-        const $ = (id) => document.getElementById(id);
-
         let servers = [];
-        let currentEditIndex = -1;
-        let generatedIntentLink = "";
-        let generatedHtmlCode = "";
-        let isResultVisible = false;
-
-        // Constants for intent generation
-        const DEFAULT_PACKAGE_NAME = "com.bsr.player.pro";
-        const DEFAULT_SCHEME_NAME = "BSRPlayer";
+        const ids = ["serverName", "serverUrl", "playerMode", "drmType", "drmKey", "drmLicense", "userAgent", "referer", "origin", "cookie"];
+        const settingsIds = ["logoUrl", "logoPosition", "logoAlpha", "vpnEnabled", "vpnTitle", "vpnExit", "vpnMsg"];
 
         function addServer() {
-            const name = $("serverName").value.trim();
-            const url = $("serverUrl").value.trim();
-            if (!name || !url) return showToast("الرجاء إدخال اسم السيرفر والرابط", "error");
+            const data = {};
+            ids.forEach(id => data[id] = document.getElementById(id).value.trim());
             
-            servers.push({
-                name: name,
-                url: url,
-                playerMode: $("playerMode").value,
-                drmKey: $("drmKey").value.trim(),
-                ua: $("userAgent").value.trim(),
-                referer: $("referer").value.trim(),
-                origin: $("origin").value.trim(),
-                cookie: $("cookie").value.trim()
-            });
+            if(!data.serverName || !data.serverUrl) {
+                return toast("يرجى إدخال اسم القناة ورابط البث على الأقل", "error");
+            }
             
-            render(); clearInputs();
-            showToast(`تم إضافة "${name}"`, "success");
-        }
-
-        function clearInputs() {
-            $("serverName").value = ""; $("serverUrl").value = "";
-            $("playerMode").value = "exo"; $("drmKey").value = "";
-            $("userAgent").value = ""; $("referer").value = "";
-            $("origin").value = ""; $("cookie").value = "";
-        }
-
-        function openEditModal(index) {
-            currentEditIndex = index;
-            const server = servers[index];
-            $("editName").value = server.name || ""; $("editUrl").value = server.url || "";
-            $("editPlayerMode").value = server.playerMode || "exo"; $("editDrmKey").value = server.drmKey || "";
-            $("editUa").value = server.ua || ""; $("editReferer").value = server.referer || "";
-            $("editOrigin").value = server.origin || ""; $("editCookie").value = server.cookie || "";
-            $("editModal").classList.add("show");
-        }
-
-        function closeEditModal() { $("editModal").classList.remove("show"); currentEditIndex = -1; }
-
-        function saveEdit() {
-            if (currentEditIndex === -1) return;
-            const name = $("editName").value.trim();
-            const url = $("editUrl").value.trim();
-            if (!name || !url) return showToast("اسم السيرفر والرابط مطلوبان", "error");
+            servers.push(data); 
+            render();
             
-            servers[currentEditIndex] = {
-                name: name, url: url, playerMode: $("editPlayerMode").value,
-                drmKey: $("editDrmKey").value.trim(), ua: $("editUa").value.trim(),
-                referer: $("editReferer").value.trim(), origin: $("editOrigin").value.trim(), cookie: $("editCookie").value.trim()
-            };
+            // إفراغ الحقول الأساسية فقط لسهولة إضافة قناة أخرى
+            document.getElementById('serverName').value = ""; 
+            document.getElementById('serverUrl').value = "";
+            document.getElementById('serverName').focus();
             
-            render(); closeEditModal(); showToast("تم الحفظ", "success");
+            toast("تمت الإضافة إلى القائمة بنجاح");
         }
-
-        function removeServer(index) { servers.splice(index, 1); render(); showToast("تم الحذف", "success"); }
 
         function render() {
-            const list = $("list");
-            if (servers.length === 0) {
-                list.innerHTML = `<div class="empty-state"><i class="fas fa-folder-open"></i><p>لا توجد سيرفرات مضافة</p></div>`;
-                $("serverCount").textContent = "0"; return;
+            const list = document.getElementById('list');
+            document.getElementById('serverCount').innerText = servers.length;
+            
+            if(servers.length === 0) {
+                list.innerHTML = `<p style="text-align:center; color:var(--text-muted); font-size:14px; padding:20px;">القائمة فارغة حالياً</p>`;
+                return;
             }
-            list.innerHTML = "";
-            servers.forEach((s, index) => {
-                const shortUrl = s.url.length > 40 ? s.url.substring(0, 40) + "..." : s.url;
-                list.innerHTML += `
-                    <div class="server-item">
-                        <div class="server-top">
-                            <div class="server-title"><i class="fas fa-tv"></i> ${s.name}</div>
-                            <div class="server-actions">
-                                <button class="btn-secondary" onclick="openEditModal(${index})"><i class="fas fa-pen"></i></button>
-                                <button class="btn-danger" onclick="removeServer(${index})"><i class="fas fa-trash"></i></button>
-                            </div>
-                        </div>
-                        <div class="server-url">${shortUrl}</div>
-                        <div class="server-tags">
-                            <span class="tag"><i class="fas fa-play-circle"></i> ${s.playerMode}</span>
-                            ${s.drmKey ? `<span class="tag"><i class="fas fa-key"></i> DRM</span>` : ""}
-                            ${s.ua ? `<span class="tag"><i class="fas fa-user-secret"></i> UA</span>` : ""}
-                        </div>
-                    </div>`;
-            });
-            $("serverCount").textContent = servers.length;
+
+            list.innerHTML = servers.map((s, i) => `
+                <div class="server-item">
+                    <div class="server-top">
+                        <span class="server-title"><i class="fas fa-tv" style="color:var(--primary); margin-left:8px;"></i>${s.serverName}</span>
+                        <button class="btn-danger" onclick="remove(${i})"><i class="fas fa-times"></i> حذف</button>
+                    </div>
+                    <div class="server-url">${s.serverUrl}</div>
+                    <div class="tags">
+                        <span class="tag mode"><i class="fas fa-play"></i> ${s.playerMode}</span>
+                        <span class="tag drm"><i class="fas fa-shield-alt"></i> DRM: ${s.drmType}</span>
+                    </div>
+                </div>`).join('');
         }
 
-        function clearAll() { servers = []; generatedIntentLink = ""; generatedHtmlCode = ""; isResultVisible = false; render(); updateResultBox(); showToast("تم المسح", "success"); }
+        function remove(i) { 
+            servers.splice(i, 1); 
+            render(); 
+            toast("تم حذف السيرفر");
+        }
 
-        function encodeData(data) { return btoa(unescape(encodeURIComponent(JSON.stringify(data)))); }
-        function decodeData(base64) { return JSON.parse(decodeURIComponent(escape(atob(base64)))); }
+        function clearAll() { 
+            if(servers.length === 0) return;
+            if(confirm("هل أنت متأكد من مسح جميع السيرفرات المضافة؟")){
+                servers = []; 
+                render(); 
+                document.getElementById('resultContent').style.display = "none"; 
+                document.getElementById('resultBox').style.display = "block"; 
+                toast("تم مسح القائمة بالكامل");
+            }
+        }
 
         function generate() {
-            if (servers.length === 0) return showToast("أضف سيرفر واحد على الأقل", "error");
-
-            try {
-                const logoUrl = $("logoUrl").value.trim();
-                const logoPosition = $("logoPosition").value;
-                const logoSize = $("logoSize").value;
-                
-                const vpnProtection = $("vpnEnabled").value === "true";
-                const vpnTitle = $("vpnTitle").value.trim();
-                const vpnMessage = $("vpnMessage").value.trim();
-                const vpnExitText = $("vpnExitText").value.trim();
-                
-                const exportServers = servers.map(s => ({
-                    name: s.name, url: s.url, playerMode: s.playerMode,
-                    drmKey: s.drmKey, ua: s.ua, referer: s.referer, origin: s.origin, cookie: s.cookie,
-                    logoUrl: logoUrl, logoPosition: logoPosition, logoSize: logoSize,
-                    vpnProtection: vpnProtection, vpnTitle: vpnTitle, vpnMessage: vpnMessage, vpnExitText: vpnExitText
-                }));
-
-                const encoded = encodeData(exportServers);
-                generatedIntentLink = `intent://play?data=${encodeURIComponent(encoded)}#Intent;scheme=${DEFAULT_SCHEME_NAME};package=${DEFAULT_PACKAGE_NAME};end`;
-                
-                const htmlTemplate = `<!DOCTYPE html>
+            if(!servers.length) return toast("يرجى إضافة سيرفر واحد على الأقل أولاً", "error");
+            
+            const config = { servers: servers, settings: {} };
+            settingsIds.forEach(id => config.settings[id] = document.getElementById(id).value);
+            
+            const data = btoa(unescape(encodeURIComponent(JSON.stringify(config))));
+            const intent = `intent://play?data=${encodeURIComponent(data)}#Intent;scheme=BSRPlayer;package=com.bsr.player.pro;end`;
+            
+            document.getElementById('intentOut').value = intent;
+            document.getElementById('htmlOut').value = `<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -798,87 +855,86 @@
 <\/script>
 </body>
 </html>`;
-                
-                generatedHtmlCode = htmlTemplate.replace("{{INTENT_LINK}}", generatedIntentLink);
-                isResultVisible = true;
-                updateResultBox();
-                servers = []; render(); clearInputs();
-                showToast("تم توليد الروابط بنجاح", "success");
-            } catch (e) { showToast("حدث خطأ أثناء التوليد", "error"); }
+            
+            document.getElementById('resultBox').style.display = "none";
+            document.getElementById('resultContent').style.display = "block";
+            
+            // تمرير الشاشة ببطء نحو النتائج
+            document.getElementById('resultContent').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            toast("تم توليد الروابط بنجاح");
         }
 
-        function decodeIntentLink() {
-            const link = $("decodeInput").value.trim();
-            if (!link) return showToast("الصق الرابط أولاً", "error");
+        function decode() {
             try {
-                const match = link.match(/[?&]data=([^#&]+)/);
-                if (!match) throw new Error("Invalid Link");
-                
-                const extracted = decodeData(match[1]);
-                servers = Array.isArray(extracted) ? extracted : [];
-                
-                if(servers.length > 0 && servers[0]) {
-                    $("logoUrl").value = servers[0].logoUrl || "";
-                    $("logoPosition").value = servers[0].logoPosition || "bottom_right";
-                    if(servers[0].logoSize) $("logoSize").value = servers[0].logoSize;
-                    
-                    $("vpnEnabled").value = servers[0].vpnProtection === false ? "false" : "true";
-                    $("vpnTitle").value = servers[0].vpnTitle || "تحذير أمني";
-                    $("vpnMessage").value = servers[0].vpnMessage || "يرجى إيقاف الـ VPN أو أي بروكسي حتى يعمل المشغل بشكل صحيح وآمن.";
-                    $("vpnExitText").value = servers[0].vpnExitText || "خروج";
-                }
-                
-                render(); $("decodeInput").value = ""; generatedIntentLink = link; generatedHtmlCode = "";
-                isResultVisible = true; updateResultBox(); showToast("تم استرجاع البيانات بنجاح", "success");
-            } catch (e) { showToast("فشل فك التشفير، الرابط غير صالح", "error"); }
-        }
+                const val = document.getElementById('decodeIn').value.trim();
+                if(!val) return toast("يرجى لصق الرابط أولاً", "error");
 
-        function updateResultBox() {
-            if (!generatedIntentLink) {
-                $("hiddenResultBox").style.display = "flex";
-                $("resultContainers").style.display = "none";
-                $("toggleBtn").innerHTML = '<i class="fas fa-eye"></i> إظهار';
-            } else if (isResultVisible) {
-                $("hiddenResultBox").style.display = "none";
-                $("resultContainers").style.display = "block";
-                $("result").value = generatedIntentLink;
-                $("htmlResult").value = generatedHtmlCode;
-                $("toggleBtn").innerHTML = '<i class="fas fa-eye-slash"></i> إخفاء';
-            } else {
-                $("hiddenResultBox").style.display = "flex";
-                $("hiddenResultBox").innerHTML = '<i class="fas fa-check-circle" style="color:var(--success); font-size:30px;"></i><p>الروابط جاهزة (مخفية للحماية)</p>';
-                $("resultContainers").style.display = "none";
-                $("toggleBtn").innerHTML = '<i class="fas fa-eye"></i> إظهار';
+                const url = new URL(val.replace("intent://", "http://"));
+                const data = url.searchParams.get("data");
+                const obj = JSON.parse(decodeURIComponent(escape(atob(data))));
+                
+                if(obj.servers) servers = obj.servers;
+                if(obj.settings) {
+                    settingsIds.forEach(id => { 
+                        if(obj.settings[id] !== undefined) {
+                            document.getElementById(id).value = obj.settings[id]; 
+                        }
+                    });
+                }
+                render();
+                document.getElementById('decodeIn').value = "";
+                
+                // التمرير لأعلى الصفحة لمشاهدة البيانات
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                toast("تم استرجاع البيانات بنجاح");
+            } catch(e) { 
+                toast("الرابط غير صالح أو تالف", "error"); 
             }
         }
 
-        function toggleResultVisibility() { if(generatedIntentLink) { isResultVisible = !isResultVisible; updateResultBox(); } }
+        function copy(id, btnElement) { 
+            const el = document.getElementById(id);
+            el.select(); 
+            document.execCommand('copy'); 
+            
+            // تغيير شكل الزر مؤقتاً
+            const originalHTML = btnElement.innerHTML;
+            btnElement.innerHTML = `<i class="fas fa-check"></i> تم النسخ`;
+            btnElement.style.background = "var(--success)";
+            
+            setTimeout(() => {
+                btnElement.innerHTML = originalHTML;
+                btnElement.style.background = "";
+            }, 2000);
 
-        function copyResult() {
-            if (!generatedIntentLink) return;
-            navigator.clipboard.writeText(generatedIntentLink);
-            showToast("تم نسخ رابط Intent", "success");
+            toast("تم نسخ الكود للحافظة"); 
         }
 
-        function copyHtmlResult() {
-            if (!generatedHtmlCode) return;
-            navigator.clipboard.writeText(generatedHtmlCode);
-            showToast("تم نسخ كود HTML", "success");
-        }
+        function toast(msg, type="success") {
+            // إزالة أي توست سابق
+            const existing = document.querySelector('.toast');
+            if(existing) existing.remove();
 
-        function showToast(msg, type="success") {
             const t = document.createElement("div");
-            t.className = `toast ${type}`;
-            t.innerHTML = type === "success" ? `<i class="fas fa-check-circle" style="color:var(--success)"></i> ${msg}` : `<i class="fas fa-exclamation-circle" style="color:var(--danger)"></i> ${msg}`;
+            t.className = "toast show";
+            
+            if(type === "error") {
+                t.style.borderColor = "var(--danger)";
+                t.innerHTML = `<i class="fas fa-exclamation-circle" style="color:var(--danger)"></i> ${msg}`;
+            } else {
+                t.style.borderColor = "var(--success)";
+                t.innerHTML = `<i class="fas fa-check-circle" style="color:var(--success)"></i> ${msg}`;
+            }
+            
             document.body.appendChild(t);
-            setTimeout(() => t.classList.add("show"), 10);
-            setTimeout(() => { t.classList.remove("show"); setTimeout(()=>t.remove(), 400); }, 3000);
+            setTimeout(() => { 
+                t.classList.remove("show"); 
+                setTimeout(() => t.remove(), 500); 
+            }, 3000);
         }
 
-        $("editModal").addEventListener("click", function(e) { if(e.target===this) closeEditModal(); });
-        
-        // Initial setup
-        render(); updateResultBox();
+        // التهيئة الأولية
+        render();
     </script>
 </body>
 </html>
