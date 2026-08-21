@@ -1,12 +1,832 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
 
-<!-- BSR Player Intent Receiver -->
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
+
+<title>BSR PLAYER SECURE</title>
+
+<!-- الخط -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;900&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+    /* ===============================
+       الإعدادات العامة
+    =============================== */
+
+    * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+
+        box-sizing: border-box;
+    }
+
+    body {
+
+        margin: 0;
+
+        height: 100vh;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        background: #030614;
+
+        overflow: hidden;
+
+        font-family: 'Tajawal', sans-serif;
+    }
+
+
+    /* ===============================
+       الخلفية
+    =============================== */
+
+    .bg {
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: -1;
+
+        background:
+            radial-gradient(
+                circle at center,
+                #1a153a 0%,
+                #030614 100%
+            );
+    }
+
+
+    .bg::after {
+
+        content: '';
+
+        position: absolute;
+
+        inset: 0;
+
+        background-image:
+
+            linear-gradient(
+                rgba(0,229,255,0.03) 1px,
+                transparent 1px
+            ),
+
+            linear-gradient(
+                90deg,
+                rgba(0,229,255,0.03) 1px,
+                transparent 1px
+            );
+
+        background-size: 30px 30px;
+
+        opacity: 0.5;
+    }
+
+
+    /* ===============================
+       منطقة زر التشغيل
+    =============================== */
+
+    .play-wrapper {
+
+        position: relative;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* ===============================
+       حلقات النبض
+    =============================== */
+
+    .ring {
+
+        position: absolute;
+
+        width: 110px;
+        height: 110px;
+
+        border-radius: 50%;
+
+        border: 2px solid #00E5FF;
+
+        animation:
+            ripple 2.5s infinite ease-out;
+
+        opacity: 0;
+    }
+
+
+    .ring:nth-child(2) {
+
+        animation-delay: 0.8s;
+
+        border-color: #FF007A;
+    }
+
+
+    .ring:nth-child(3) {
+
+        animation-delay: 1.6s;
+
+        border-color: #7C3AED;
+    }
+
+
+    @keyframes ripple {
+
+        0% {
+
+            transform: scale(1);
+
+            opacity: 0.8;
+        }
+
+        100% {
+
+            transform: scale(3);
+
+            opacity: 0;
+        }
+    }
+
+
+    /* ===============================
+       زر التشغيل
+    =============================== */
+
+    .play-btn {
+
+        position: relative;
+
+        width: 100px;
+        height: 100px;
+
+        border-radius: 50%;
+
+        border: none;
+
+        cursor: pointer;
+
+        background:
+
+            linear-gradient(
+                45deg,
+                #FF007A,
+                #7C3AED,
+                #00E5FF,
+                #FF007A
+            );
+
+        background-size: 300% 300%;
+
+        animation:
+            gradientMove 4s ease infinite;
+
+        color: white;
+
+        font-size: 40px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 8px;
+
+        box-shadow:
+            0 0 40px rgba(124,58,237,0.6);
+
+        z-index: 10;
+
+        transition: 0.3s;
+    }
+
+
+    .play-btn:active {
+
+        transform: scale(0.9);
+
+        box-shadow:
+            0 0 20px rgba(0,229,255,0.8);
+    }
+
+
+    @keyframes gradientMove {
+
+        0% {
+
+            background-position:
+                0% 50%;
+        }
+
+        50% {
+
+            background-position:
+                100% 50%;
+        }
+
+        100% {
+
+            background-position:
+                0% 50%;
+        }
+    }
+
+
+    /* ===============================
+       النافذة المنبثقة
+    =============================== */
+
+    .popup {
+
+        position: fixed;
+
+        inset: 0;
+
+        background:
+            rgba(0,0,0,0.85);
+
+        backdrop-filter:
+            blur(15px);
+
+        -webkit-backdrop-filter:
+            blur(15px);
+
+        display: none;
+
+        justify-content: center;
+        align-items: center;
+
+        z-index: 9999;
+    }
+
+
+    .popup-box {
+
+        background:
+            rgba(17,24,39,0.7);
+
+        border:
+            1px solid rgba(0,229,255,0.3);
+
+        padding:
+            40px 30px;
+
+        border-radius:
+            30px;
+
+        width:
+            90%;
+
+        max-width:
+            380px;
+
+        text-align:
+            center;
+
+        color:
+            white;
+
+        box-shadow:
+
+            0 20px 50px rgba(0,0,0,0.8),
+
+            inset
+            0 0 20px
+            rgba(0,229,255,0.1);
+
+        transform:
+            scale(0.5);
+
+        opacity:
+            0;
+
+        animation:
+            popIn
+            0.5s
+            cubic-bezier(
+                0.175,
+                0.885,
+                0.32,
+                1.275
+            )
+            forwards;
+    }
+
+
+    @keyframes popIn {
+
+        to {
+
+            transform:
+                scale(1);
+
+            opacity:
+                1;
+        }
+    }
+
+
+    .popup-box h2 {
+
+        margin: 0;
+
+        color: #fff;
+
+        font-size: 26px;
+
+        font-weight: 900;
+
+        text-shadow:
+            0 0 15px
+            rgba(0,229,255,0.8);
+    }
+
+
+    .popup-box p {
+
+        margin-top:
+            15px;
+
+        color:
+            #A1A1AA;
+
+        line-height:
+            1.8;
+
+        font-size:
+            15px;
+
+        font-weight:
+            500;
+    }
+
+
+    /* ===============================
+       زر تثبيت التطبيق
+    =============================== */
+
+    .download-btn {
+
+        margin-top:
+            25px;
+
+        padding:
+            16px;
+
+        border:
+            none;
+
+        border-radius:
+            16px;
+
+        width:
+            100%;
+
+        font-size:
+            18px;
+
+        font-weight:
+            700;
+
+        font-family:
+            'Tajawal',
+            sans-serif;
+
+        cursor:
+            pointer;
+
+        background:
+
+            linear-gradient(
+                90deg,
+                #00E5FF,
+                #7C3AED
+            );
+
+        color:
+            white;
+
+        box-shadow:
+
+            0 10px 25px
+            rgba(124,58,237,0.4);
+
+        transition:
+            0.3s;
+
+        text-shadow:
+
+            0 2px 4px
+            rgba(0,0,0,0.3);
+    }
+
+
+    .download-btn:active {
+
+        transform:
+            translateY(3px);
+
+        box-shadow:
+
+            0 5px 10px
+            rgba(124,58,237,0.4);
+    }
+
+
+    /* ===============================
+       أيقونة التحذير
+    =============================== */
+
+    .icon-warn {
+
+        font-size:
+            50px;
+
+        margin-bottom:
+            10px;
+
+        display:
+            block;
+
+        text-shadow:
+
+            0 0 20px
+            rgba(255,0,122,0.8);
+    }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- الخلفية -->
+<div class="bg"></div>
+
+
+<!-- ===============================
+     زر التشغيل
+=============================== -->
+
+<div class="play-wrapper">
+
+    <div class="ring"></div>
+
+    <div class="ring"></div>
+
+    <div class="ring"></div>
+
+
+    <button
+        class="play-btn"
+        id="triggerBtn"
+        aria-label="تشغيل"
+    >
+        ▶
+    </button>
+
+</div>
+
+
+
+<!-- ===============================
+     نافذة عدم توفر التطبيق
+=============================== -->
+
+<div
+    class="popup"
+    id="securePopup"
+>
+
+    <div class="popup-box">
+
+
+        <span class="icon-warn">
+            ⚠️
+        </span>
+
+
+        <h2>
+            المشغل غير متوفر
+        </h2>
+
+
+        <p>
+
+            لضمان مشاهدة ممتعة بأعلى جودة
+            وبدون أي تقطيع،
+
+            يجب عليك تثبيت
+
+            <b>BSR PLAYER</b>
+
+            أولاً للمتابعة.
+
+        </p>
+
+
+        <button
+            class="download-btn"
+            id="installBtn"
+        >
+
+            تثبيت المشغل الآن
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
 <script>
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  const intent = params.get('intent');
-  if (!intent) return;
 
-  // فتح تطبيق البصري بلاير بواسطة رابط Intent القادم من المولد
-  window.location.href = intent;
-})();
+
+/* =========================================
+   1. الحماية
+========================================= */
+
+
+// تعطيل كليك يمين
+document.addEventListener(
+    'contextmenu',
+    event => event.preventDefault()
+);
+
+
+// تعطيل السحب
+document.addEventListener(
+    'dragstart',
+    event => event.preventDefault()
+);
+
+
+// تعطيل بعض اختصارات المطور
+document.onkeydown = function(e) {
+
+
+    // F12
+    if (e.keyCode === 123) {
+
+        return false;
+    }
+
+
+    // Ctrl + Shift + I
+    if (
+        e.ctrlKey &&
+        e.shiftKey &&
+        e.keyCode === 73
+    ) {
+
+        return false;
+    }
+
+
+    // Ctrl + Shift + J
+    if (
+        e.ctrlKey &&
+        e.shiftKey &&
+        e.keyCode === 74
+    ) {
+
+        return false;
+    }
+
+
+    // Ctrl + U
+    if (
+        e.ctrlKey &&
+        e.keyCode === 85
+    ) {
+
+        return false;
+    }
+
+
+    // Ctrl + C
+    if (
+        e.ctrlKey &&
+        e.keyCode === 67
+    ) {
+
+        return false;
+    }
+
+};
+
+
+
+/* =========================================
+   2. استقبال رابط Intent
+========================================= */
+
+
+// مثال الرابط:
+//
+// https://albasritv.github.io/Player?intent=INTENT_LINK
+//
+
+
+// قراءة الرابط الحالي
+const _params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+// الحصول على قيمة intent
+const _0xUrl =
+    _params.get("intent") || "";
+
+
+// رابط التطبيق في Google Play
+const _0xStore =
+    "https://play.google.com/store/apps/details?id=com.bsr.player.pro";
+
+
+
+/* =========================================
+   3. مراقبة فتح التطبيق
+========================================= */
+
+
+let _appState = false;
+
+
+document.addEventListener(
+    "visibilitychange",
+    function () {
+
+        if (document.hidden) {
+
+            _appState = true;
+        }
+
+    }
+);
+
+
+
+window.addEventListener(
+    "pagehide",
+    function () {
+
+        _appState = true;
+
+    }
+);
+
+
+
+/* =========================================
+   4. زر التشغيل
+========================================= */
+
+
+document
+.getElementById("triggerBtn")
+.addEventListener(
+    "click",
+    function () {
+
+
+        /*
+        إذا لم يصل رابط Intent
+        لا يتم تنفيذ شيء
+        */
+
+        if (!_0xUrl) {
+
+            console.log(
+                "No Intent URL received"
+            );
+
+            return;
+        }
+
+
+        _appState = false;
+
+
+
+        /*
+        إنشاء iframe مخفي
+        لمحاولة فتح التطبيق
+        */
+
+        const _frame =
+            document.createElement(
+                "iframe"
+            );
+
+
+        _frame.style.display =
+            "none";
+
+
+        _frame.src =
+            _0xUrl;
+
+
+        document.body.appendChild(
+            _frame
+        );
+
+
+
+        /*
+        إذا لم يفتح التطبيق
+        تظهر نافذة التثبيت
+        */
+
+        setTimeout(
+            function () {
+
+
+                if (!_appState) {
+
+
+                    document
+                    .getElementById(
+                        "securePopup"
+                    )
+                    .style
+                    .display =
+                        "flex";
+
+                }
+
+
+                /*
+                حذف iframe
+                */
+
+                if (_frame.parentNode) {
+
+                    _frame.remove();
+
+                }
+
+
+            },
+            1500
+        );
+
+
+    }
+);
+
+
+
+/* =========================================
+   5. زر تثبيت التطبيق
+========================================= */
+
+
+document
+.getElementById("installBtn")
+.addEventListener(
+    "click",
+    function () {
+
+
+        window.location.href =
+            _0xStore;
+
+
+    }
+);
+
+
 </script>
+
+
+</body>
+</html>
