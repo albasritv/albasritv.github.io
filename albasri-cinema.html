@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#0b1020">
   <meta name="color-scheme" content="dark">
-  <title>مسلسلات وفلام البصري تيفي </title>
+  <title>افلام ومسلسلات البصري تيفي </title>
   <meta name="description" content="مسلسلات وأفلام البصري TV - تصفح المسلسلات والأفلام العربية والأجنبية والتركية والآسيوية والأنمي، وابحث عن العمل وشاهد الحلقات من واجهة مناسبة للتطبيقات.">
   <meta name="keywords" content="البصري TV, مسلسلات وأفلام البصري TV, البصري تي في, مسلسلات, أفلام, حلقات, مسلسلات عربية, مسلسلات أجنبية, مسلسلات تركية, مسلسلات آسيوية, مسلسلات أنمي, مسلسلات رمضان, أفلام عربية, أفلام أجنبية, أفلام تركية, أفلام هندية, أفلام آسيوية, أفلام أنمي, مشاهدة مسلسلات, مشاهدة أفلام, تحميل أفلام, تحميل مسلسلات, Series, Movies, TV Series, Arabic Series, Turkish Series, Asian Series, Anime Series, Arabic Movies, Foreign Movies, Indian Movies, Asian Movies, Anime Movies, Watch Series, Watch Movies, Download Movies, Download Series, Streaming Movies, Streaming Series">
   <meta property="og:title" content="مسلسلات وأفلام البصري TV">
@@ -348,8 +348,37 @@
       if(data && data.status === 'success') renderCards(Array.isArray(data.data) ? data.data : []);
     }
 
-    document.getElementById('searchInput').addEventListener('keydown', e => {
-      if(e.key === 'Enter'){ e.preventDefault(); executeSearch(); }
+    // البحث التلقائي أثناء الكتابة بدون الحاجة إلى الضغط على Enter
+    let searchTimer = null;
+    let lastSearchQuery = '';
+    const searchInput = document.getElementById('searchInput');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim();
+      clearTimeout(searchTimer);
+
+      if(!query){
+        lastSearchQuery = '';
+        goHome();
+        return;
+      }
+
+      // مهلة قصيرة تمنع إرسال طلب API مع كل ضغطة بسرعة شديدة
+      searchTimer = setTimeout(() => {
+        if(query !== lastSearchQuery){
+          lastSearchQuery = query;
+          executeSearch();
+        }
+      }, 250);
+    });
+
+    searchInput.addEventListener('keydown', e => {
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        clearTimeout(searchTimer);
+        lastSearchQuery = searchInput.value.trim();
+        executeSearch();
+      }
     });
 
     function loadMore(){
