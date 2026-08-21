@@ -1,300 +1,140 @@
+
 <!DOCTYPE html>
-<html lang="ar" dir="rtl"> 
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>البصري تيفي للبث المباشر</title>
-    <meta name="description" content="البصري تيفي - البث المباشر للمباريات بجودات متعددة وبدون تقطيع.">
-    
-    <!-- خطوط جوجل -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- مكتبة الأيقونات -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- مشغل HLS -->
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    
-    <style>
-        /* === الألوان والمتغيرات === */
-        :root {
-            --bg-dark: #050a15;
-            --header-bg: #0b1325;
-            --card-bg: #121c33;
-            --card-hover: #1a2642;
-            --accent-cyan: #00d4ff;
-            --accent-gold: #ffc107;
-            --live-red: #ff3333;
-            --telegram-blue: #0088cc;
-            --whatsapp-green: #25d366;
-            --instagram-pink: #e1306c;
-            --text-light: #ffffff;
-            --text-gray: #a0aec0;
-            --border-color: #1e293b;
-            --radius: 12px;
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            background-color: var(--bg-dark);
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-            color: var(--text-light);
-            -webkit-user-select: none;
-            user-select: none;
-            padding-top: 80px; /* مسافة الهيدر */
-        }
-
-        /* === الشريط العلوي (Header) === */
-        .top-bar {
-            position: fixed; top: 0; left: 0; width: 100%; height: 70px;
-            background: rgba(11, 19, 37, 0.95); backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--border-color); z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        .site-title {
-            font-size: 1.4rem; font-weight: 900;
-            background: linear-gradient(to left, var(--accent-cyan), var(--text-light));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            display: flex; align-items: center; gap: 8px;
-        }
-        .site-title i { color: var(--accent-cyan); -webkit-text-fill-color: initial; }
-        
-        /* أيقونات التواصل مع Underline */
-        .social-icons { display: flex; gap: 20px; }
-        .social-icons a {
-            color: var(--text-light); font-size: 1.6rem; transition: all 0.3s ease;
-            position: relative; padding-bottom: 5px; text-decoration: none;
-            display: flex; justify-content: center; align-items: center;
-        }
-        .social-icons a::after {
-            content: ''; position: absolute; bottom: 0; left: 50%; width: 0%;
-            height: 3px; background: var(--text-light); transition: all 0.3s ease;
-            transform: translateX(-50%); border-radius: 2px;
-        }
-        .social-icons a:hover::after { width: 100%; }
-        
-        .social-icons .fa-telegram:hover { color: var(--telegram-blue); }
-        .social-icons .fa-telegram:hover::after { background: var(--telegram-blue); }
-        .social-icons .fa-whatsapp:hover { color: var(--whatsapp-green); }
-        .social-icons .fa-whatsapp:hover::after { background: var(--whatsapp-green); }
-        .social-icons .fa-instagram:hover { color: var(--instagram-pink); }
-        .social-icons .fa-instagram:hover::after { background: var(--instagram-pink); }
-
-        .container { max-width: 850px; margin: 0 auto; padding: 0 15px 30px 15px; }
-
-        /* === الإعلانات (التنسيق الجمالي) === */
-        .ad-container { width: 100%; display: flex; justify-content: center; align-items: center; margin-bottom: 20px; border-radius: var(--radius); overflow: hidden; }
-        .ad-banner { min-height: 50px; }
-        .ad-native { margin-top: 30px; border-top: 2px dashed var(--border-color); padding-top: 20px; }
-
-        /* === شريط التيليجرام === */
-        .telegram-join-bar {
-            background: linear-gradient(135deg, #0b1325, #121c33);
-            border: 3px solid var(--telegram-blue); border-radius: var(--radius);
-            padding: 15px; margin-bottom: 20px; text-align: center;
-            display: flex; justify-content: center; align-items: center; gap: 15px;
-            text-decoration: none; color: white; font-weight: 900; font-size: 1.1rem;
-            animation: pulse-border 2s infinite; transition: all 0.3s;
-        }
-        .telegram-join-bar:hover { background: var(--telegram-blue); color: white; transform: scale(1.02); }
-        .telegram-join-bar i { font-size: 1.8rem; animation: bounce 2s infinite; }
-
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(0, 136, 204, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
-        }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-
-        /* === بطاقات المباريات === */
-        .match-card {
-            background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius);
-            padding: 15px; margin-bottom: 15px; display: flex; justify-content: space-between;
-            align-items: center; cursor: pointer; transition: all 0.3s ease; position: relative;
-        }
-        .match-card:hover {
-            transform: translateY(-4px); background: var(--card-hover); border-color: var(--accent-cyan);
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.15);
-        }
-        .static-card { cursor: default; transform: none !important; border-color: var(--accent-gold); box-shadow: 0 5px 15px rgba(255, 193, 7, 0.1); margin-bottom: 20px; background: linear-gradient(145deg, #1a2642, #121c33); }
-
-        .team-box { width: 33%; text-align: center; }
-        .team-box img { width: 55px; height: 55px; object-fit: contain; margin-bottom: 8px; }
-        .team-box span { display: block; font-size: 0.95rem; font-weight: 800; }
-        
-        .center-info { width: 34%; text-align: center; }
-        .status-pill { display: inline-block; padding: 4px 15px; border-radius: 20px; font-weight: 900; font-size: 0.9rem; margin-bottom: 8px; }
-        .is-live { background: rgba(255, 51, 51, 0.15); color: var(--live-red); border: 1px solid var(--live-red); animation: blink 1.5s infinite; }
-        .is-upcoming { background: rgba(255, 193, 7, 0.1); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
-        .is-ended { background: rgba(160, 174, 192, 0.1); color: var(--text-gray); border: 1px solid var(--text-gray); }
-        .match-time-score { font-size: 1.4rem; font-weight: 900; background: rgba(0,0,0,0.3); padding: 2px 10px; border-radius: 6px; }
-
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
-
-        /* === المشغل والتحميل === */
-        .player-wrapper {
-            background: #000; border-radius: var(--radius); overflow: hidden; border: 2px solid var(--border-color);
-            aspect-ratio: 16 / 9; width: 100%; position: relative; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .player-wrapper iframe, .player-wrapper video { width: 100%; height: 100%; border: none; object-fit: contain; }
-        .player-wrapper:fullscreen { border: none; border-radius: 0; }
-
-        /* عنصر التحميل */
-        .loading-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: #050a15; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10;
-        }
-        .loader-spinner {
-            width: 60px; height: 60px; border: 5px solid rgba(0, 212, 255, 0.2);
-            border-top: 5px solid var(--accent-cyan); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;
-        }
-        .loading-text { font-size: 1.2rem; font-weight: 900; color: var(--accent-cyan); animation: pulse-text 1.5s infinite; }
-
-        /* المشغل الوهمي */
-        .fake-player-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); z-index: 20;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;
-        }
-        .play-btn-fake {
-            width: 80px; height: 80px; background: var(--live-red); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; color: white; font-size: 35px;
-            margin-bottom: 15px; border: 4px solid rgba(255,255,255,0.3); transition: all 0.3s;
-            animation: pulse-border 2s infinite; padding-left: 5px;
-        }
-        .fake-player-overlay:hover .play-btn-fake { transform: scale(1.1); background: #ff1a1a; }
-        .fake-text { font-size: 1.4rem; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,0.8); background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 10px; }
-
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        @keyframes pulse-text { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-
-        /* === الأزرار والسيرفرات === */
-        .btn-fullscreen { width: 100%; background: var(--accent-cyan); color: #000; border: none; font-weight: 900; font-family: 'Cairo', sans-serif; padding: 12px; border-radius: var(--radius); cursor: pointer; transition: 0.3s; margin-bottom: 20px; font-size: 1.1rem; }
-        .btn-fullscreen:hover { background: #00bce6; }
-        .btn-back { width: 100%; background: transparent; border: 2px solid var(--border-color); color: var(--text-light); font-weight: 800; font-family: 'Cairo'; padding: 10px; border-radius: var(--radius); cursor: pointer; transition: 0.3s; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; gap: 10px; }
-        .btn-back:hover { background: var(--border-color); }
-
-        .servers-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-        .server-btn { flex: 1 1 100px; background: var(--card-bg); color: var(--text-light); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; font-weight: 800; cursor: pointer; text-align: center; transition: 0.2s; }
-        .server-btn:hover { background: var(--card-hover); }
-        .server-btn.active { background: var(--accent-gold); color: #000; border-color: var(--accent-gold); }
-
-        .hidden { display: none !important; }
-        .global-loading { text-align: center; padding: 50px 0; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="color-scheme" content="dark light">
+  <title>البصري تيفي للبث المباشر</title>
+  <meta name="description" content="البصرة TV للبث المباشر - جدول مباريات اليوم، مواعيد المباريات، حالة المباراة وصفحة بث مرتبة وسريعة على الهاتف والكمبيوتر.">
+  <meta name="keywords" content="البصرة TV, البصرة TV, البث المباشر, مباريات اليوم, بث مباشر مباريات, كرة القدم, جدول المباريات, مشاهدة المباريات, يلا شوت, Yalla Shoot, الأسطورة, الاسطورة للبث المباشر, ياسين تي في, Yacine TV, كورة لايف, كورة اون لاين, koora live, football live, live matches, الدوري العراقي, الدوري الإنجليزي, الدوري الإسباني, دوري أبطال أوروبا">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="البصرة TV للبث المباشر">
+  <meta property="og:description" content="جدول مباريات اليوم وصفحات بث مباشرة بتصميم سريع ومتجاوب.">
+  <meta property="og:site_name" content="البصرة TV">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="البصرة TV للبث المباشر">
+  <meta name="twitter:description" content="مباريات اليوم والبث المباشر في مكان واحد.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"البصرة TV للبث المباشر",
+    "inLanguage":"ar",
+    "description":"جدول مباريات اليوم والبث المباشر لكرة القدم",
+    "potentialAction":{"@type":"SearchAction","target":"/?q={search_term_string}","query-input":"required name=search_term_string"}
+  }</script>
+<style>
+:root{
+  --bg:#07101e; --bg-soft:#0b1628; --surface:#0f1c31; --surface-2:#14243d;
+  --text:#f8fafc; --muted:#9eb0c7; --line:rgba(148,163,184,.16);
+  --primary:#22d3ee; --primary-2:#38bdf8; --accent:#fbbf24; --danger:#fb4b5f;
+  --success:#20c997; --shadow:0 18px 55px rgba(0,0,0,.28); --radius:20px;
+}
+body.light{
+  --bg:#f4f7fb; --bg-soft:#eef3f8; --surface:#ffffff; --surface-2:#f8fafc;
+  --text:#0f172a; --muted:#64748b; --line:rgba(15,23,42,.10);
+  --primary:#0891b2; --primary-2:#0284c7; --shadow:0 16px 45px rgba(15,23,42,.10);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:
+radial-gradient(circle at 85% -10%,rgba(34,211,238,.14),transparent 28%),
+radial-gradient(circle at -10% 18%,rgba(56,189,248,.10),transparent 24%),var(--bg);
+font-family:'Cairo',sans-serif;color:var(--text);min-height:100vh;transition:.25s;background-color:var(--bg)}
+a{color:inherit} button{font:inherit} .hidden{display:none!important}
+.site-shell{min-height:100vh} .topbar{position:sticky;top:0;z-index:1000;background:rgba(7,16,30,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+body.light .topbar{background:rgba(255,255,255,.86)}
+.nav{max-width:1180px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0} .brand-mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(145deg,var(--primary),var(--primary-2));display:grid;place-items:center;color:#02131a;box-shadow:0 10px 26px rgba(34,211,238,.22);font-size:20px}
+.brand-copy{line-height:1.15} .brand-copy strong{display:block;font-weight:900;font-size:1.06rem;white-space:nowrap} .brand-copy small{color:var(--muted);font-size:.72rem}
+.nav-actions{display:flex;align-items:center;gap:8px} .icon-btn,.social-link{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;text-decoration:none;color:var(--text);cursor:pointer;transition:.2s}
+.icon-btn:hover,.social-link:hover{transform:translateY(-2px);border-color:rgba(34,211,238,.55);color:var(--primary)} .social-link.telegram:hover{color:#229ed9} .social-link.whatsapp:hover{color:#25d366} .social-link.instagram:hover{color:#e1306c} .social-link.facebook:hover{color:#1877f2} .social-link.youtube:hover{color:#ff0033}
+.container{max-width:1080px;margin:0 auto;padding:22px 16px 40px} .hero{background:linear-gradient(145deg,rgba(34,211,238,.12),rgba(56,189,248,.03)),var(--surface);border:1px solid var(--line);border-radius:28px;padding:24px;margin-bottom:18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(34,211,238,.10);left:-60px;top:-80px;filter:blur(2px)} .eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(34,211,238,.28);background:rgba(34,211,238,.08);color:var(--primary);padding:6px 11px;border-radius:999px;font-weight:800;font-size:.78rem}
+.hero h1{font-size:clamp(1.45rem,4vw,2.4rem);margin:12px 0 7px;font-weight:900;letter-spacing:-.4px} .hero p{margin:0;color:var(--muted);font-size:.94rem;max-width:650px;line-height:1.9}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:22px 2px 13px} .section-head h2{margin:0;font-size:1.08rem;font-weight:900} .section-head span{font-size:.75rem;color:var(--muted)}
+.ad-slot{width:100%;display:flex;align-items:center;justify-content:center;min-height:72px;background:linear-gradient(145deg,rgba(148,163,184,.05),rgba(148,163,184,.015));border:1px dashed var(--line);border-radius:16px;margin:16px 0;overflow:hidden;position:relative} .ad-slot:before{content:"إعلان";position:absolute;top:5px;left:8px;color:var(--muted);font-size:9px;opacity:.55;pointer-events:none}
+.matches-grid{display:grid;gap:13px} .match-card{background:linear-gradient(145deg,rgba(255,255,255,.018),rgba(255,255,255,0)),var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;display:grid;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);align-items:center;gap:10px;cursor:pointer;transition:.22s;box-shadow:0 8px 24px rgba(0,0,0,.08);position:relative;overflow:hidden}
+.match-card:before{content:"";position:absolute;right:0;top:0;bottom:0;width:3px;background:transparent;transition:.2s} .match-card:hover{transform:translateY(-3px);border-color:rgba(34,211,238,.38);box-shadow:var(--shadow)} .match-card:hover:before{background:var(--primary)} .static-card{cursor:default!important;transform:none!important;margin-bottom:14px;border-color:rgba(251,191,36,.30)}
+.team-box{min-width:0;text-align:center} .team-box img{width:64px;height:64px;object-fit:contain;display:block;margin:0 auto 8px;filter:drop-shadow(0 7px 12px rgba(0,0,0,.16))} .team-box span{display:block;font-size:.94rem;font-weight:850;white-space:normal;line-height:1.5}
+.center-info{text-align:center} .status-pill{display:inline-flex;align-items:center;justify-content:center;min-width:84px;padding:5px 11px;border-radius:999px;font-size:.72rem;font-weight:900;margin-bottom:8px} .is-live{background:rgba(251,75,95,.11);color:var(--danger);border:1px solid rgba(251,75,95,.30)} .is-live:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;margin-left:6px;box-shadow:0 0 0 4px rgba(251,75,95,.10);animation:pulseDot 1.2s infinite}
+.is-upcoming{background:rgba(251,191,36,.10);color:var(--accent);border:1px solid rgba(251,191,36,.25)} .is-ended{background:rgba(148,163,184,.09);color:var(--muted);border:1px solid var(--line)} .match-time-score{font-size:1.18rem;font-weight:900;letter-spacing:.3px}
+@keyframes pulseDot{50%{opacity:.35}} .global-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 0;color:var(--muted)} .loader-spinner{width:44px;height:44px;border:4px solid rgba(34,211,238,.14);border-top-color:var(--primary);border-radius:50%;animation:spin .85s linear infinite;margin-bottom:12px} @keyframes spin{to{transform:rotate(360deg)}} .loading-text{font-weight:800;font-size:.9rem}
+.player-toolbar{display:flex;gap:10px;align-items:center;margin-bottom:13px} .btn-back,.btn-fullscreen{border:1px solid var(--line);border-radius:14px;padding:11px 14px;font-weight:850;cursor:pointer;transition:.2s} .btn-back{background:var(--surface);color:var(--text);flex:1} .btn-fullscreen{background:linear-gradient(145deg,var(--primary),var(--primary-2));color:#03151b;border:none;width:100%;margin:12px 0 14px} .btn-back:hover,.btn-fullscreen:hover{transform:translateY(-2px)}
+.telegram-join-bar{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;background:linear-gradient(145deg,rgba(34,158,217,.13),rgba(34,158,217,.04));border:1px solid rgba(34,158,217,.34);border-radius:16px;padding:12px 14px;font-weight:850;margin:12px 0 16px;color:#58bff2}
+.player-wrapper{width:100%;aspect-ratio:16/9;background:#000;border-radius:20px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:var(--shadow)} .player-wrapper iframe,.player-wrapper video{width:100%;height:100%;border:0;object-fit:contain} .loading-overlay,.fake-player-overlay{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#03070d} .fake-player-overlay{background:radial-gradient(circle,rgba(34,211,238,.10),transparent 34%),#02060b;cursor:pointer} .play-btn-fake{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--danger),#ef233c);font-size:28px;color:#fff;box-shadow:0 14px 36px rgba(251,75,95,.30);margin-bottom:12px;padding-left:4px} .fake-text{font-weight:850;font-size:.94rem;color:#fff}
+.servers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:18px} .server-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:10px;border-radius:13px;font-weight:800;cursor:pointer;transition:.2s} .server-btn:hover{border-color:rgba(34,211,238,.42)} .server-btn.active{background:linear-gradient(145deg,var(--accent),#f59e0b);color:#171006;border-color:transparent}
+.ad-native{margin-top:26px;min-height:110px} .footer{text-align:center;color:var(--muted);font-size:.74rem;padding:16px 0 6px} .footer strong{color:var(--text)}
+@media(max-width:720px){.nav{padding:9px 11px} .brand-mark{width:39px;height:39px;border-radius:12px} .brand-copy small{display:none} .brand-copy strong{font-size:.91rem} .nav-actions{gap:5px} .social-link{display:none} .social-link.telegram,.social-link.instagram{display:grid} .icon-btn,.social-link{width:36px;height:36px;border-radius:10px} .container{padding:14px 10px 26px} .hero{border-radius:20px;padding:18px 15px} .hero p{font-size:.84rem} .match-card{grid-template-columns:minmax(0,1fr) 94px minmax(0,1fr);padding:13px 8px;border-radius:16px;gap:4px} .team-box img{width:48px;height:48px} .team-box span{font-size:.79rem} .status-pill{font-size:.65rem;min-width:70px;padding:4px 7px} .match-time-score{font-size:.98rem} .player-wrapper{border-radius:15px}}
+</style>
 </head>
 <body>
-
-    <!-- الشريط العلوي -->
-    <header class="top-bar">
-        <div class="site-title">
-            <i class="fa-solid fa-tv"></i> البصري تيفي
-        </div>
-        <div class="social-icons">
-            <a href="رابط_انستجرام_هنا" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="رابط_واتساب_هنا" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="رابط_تيليجرام_هنا" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        </div>
-    </header>
-
-    <div class="container">
-        
-        <!-- ===================================== -->
-        <!-- الصفحة الرئيسية (جدول المباريات) -->
-        <!-- ===================================== -->
-        <div id="schedule-view">
-            
-            <!-- إعلان البانر في البداية -->
-            <div class="ad-container ad-banner">
-                <script>
-                  atOptions = { 'key' : '7be1c70617ec5303f18319e3e3453d6f', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-                </script>
-                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
-            </div>
-
-            <!-- المباريات -->
-            <div id="global-loading" class="global-loading">
-                <div class="loader-spinner"></div>
-                <div class="loading-text">جاري إحضار المباريات...</div>
-            </div>
-            <div id="matches-list"></div>
-
-            <!-- إعلان البانر في الأسفل بعد المباريات -->
-            <div class="ad-container ad-banner">
-                <script>
-                  atOptions = { 'key' : '7be1c70617ec5303f18319e3e3453d6f', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-                </script>
-                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
-            </div>
-            
-        </div>
-
-        <!-- ===================================== -->
-        <!-- صفحة البث (المباراة) -->
-        <!-- ===================================== -->
-        <div id="player-view" class="hidden">
-            
-            <button class="btn-back" onclick="goBackToSchedule()">
-                <i class="fa-solid fa-arrow-right"></i> العودة لجدول المباريات
-            </button>
-
-            <a href="https://t.me/albasri_tv" target="_blank" class="telegram-join-bar">
-                <i class="fa-brands fa-telegram"></i>
-                انضم لقناتنا على تيليجرام لمتابعة كل جديد!
-            </a>
-
-            <!-- إعلان البانر في أعلى صفحة المباراة -->
-            <div class="ad-container ad-banner">
-                <script>
-                  atOptions = { 'key' : '7be1c70617ec5303f18319e3e3453d6f', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-                </script>
-                <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
-            </div>
-
-            <!-- تفاصيل المباراة والمشغل -->
-            <div id="active-match-card"></div>
-
-            <div class="player-wrapper" id="player-wrapper">
-                <div id="player-loading" class="loading-overlay hidden">
-                    <div class="loader-spinner"></div>
-                    <div class="loading-text">جاري إعداد البث المباشر...</div>
-                </div>
-                <div id="fake-overlay" class="fake-player-overlay hidden">
-                    <div class="play-btn-fake"><i class="fa-solid fa-play"></i></div>
-                    <div class="fake-text">اضغط هنا لبدء البث المباشر</div>
-                </div>
-                <iframe id="iframe-player" class="hidden" allowfullscreen="true" scrolling="no" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
-                <video id="hls-player" class="hidden" controls playsinline></video>
-            </div>
-            
-            <button class="btn-fullscreen" onclick="toggleFullScreen()">
-                <i class="fa-solid fa-expand"></i> تكبير الشاشة
-            </button>
-
-            <div class="servers-grid" id="servers-grid"></div>
-
-        </div>
-
-        <!-- ===================================== -->
-        <!-- إعلان الصور (الناتيف) في النهاية تماماً -->
-        <!-- يظهر دائماً في أسفل الصفحة كآخر عنصر -->
-        <!-- ===================================== -->
-        <div class="ad-container ad-native">
-            <script async="async" data-cfasync="false" src="https://pl29328193.effectivecpmnetwork.com/dc29d3daa278da998dee275e6e196c86/invoke.js"></script>
-            <div id="container-dc29d3daa278da998dee275e6e196c86"></div>
-        </div>
-
+<div class="site-shell">
+<header class="topbar">
+  <nav class="nav" aria-label="القائمة الرئيسية">
+    <a class="brand" href="https://albasritv.github.io/index.html" onclick="goBackToSchedule();return false;" aria-label="البصري تيفي للبث المباشر">
+      <span class="brand-mark"><i class="fa-solid fa-tv"></i></span>
+      <span class="brand-copy"><strong>البصري تيفي للبث المباشر</strong><small>للبث المباشر ومباريات اليوم</small></span>
+    </a>
+    <div class="nav-actions">
+      <a class="social-link facebook" href="رابط_فيسبوك_هنا" target="_blank" rel="noopener" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="social-link youtube" href="رابط_يوتيوب_هنا" target="_blank" rel="noopener" aria-label="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+      <a class="social-link instagram" href="رابط_انستجرام_هنا" target="_blank" rel="noopener" aria-label="انستجرام"><i class="fa-brands fa-instagram"></i></a>
+      <a class="social-link whatsapp" href="رابط_واتساب_هنا" target="_blank" rel="noopener" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+      <a class="social-link telegram" href="https://t.me/albasri_tv" target="_blank" rel="noopener" aria-label="تيليجرام"><i class="fa-brands fa-telegram"></i></a>
+      <button class="icon-btn" id="theme-toggle" aria-label="تبديل الوضع الليلي والنهاري" title="الوضع الليلي / النهاري"><i class="fa-solid fa-moon"></i></button>
     </div>
+  </nav>
+</header>
+<main class="container">
+  <section id="schedule-view">
+    <div class="ad-slot ad-banner">
+      <script>atOptions={'key':'7be1c70617ec5303f18319e3e3453d6f','format':'iframe','height':50,'width':320,'params':{}};</script>
+      <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
+    </div>
+    <div class="section-head"><div><h2><i class="fa-regular fa-calendar-days"></i> جدول المباريات</h2><span>آخر حالة متوفرة للمباريات</span></div></div>
+    <div id="global-loading" class="global-loading"><div class="loader-spinner"></div><div class="loading-text">جاري إحضار المباريات...</div></div>
+    <div id="matches-list" class="matches-grid"></div>
+    <div class="ad-slot ad-banner">
+      <script>atOptions={'key':'7be1c70617ec5303f18319e3e3453d6f','format':'iframe','height':50,'width':320,'params':{}};</script>
+      <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
+    </div>
+  </section>
 
-    <!-- === الإعلانات الخلفية (Popunders) === -->
-    <script src="https://pl29328174.effectivecpmnetwork.com/23/80/20/23802071908d14d26fe4c0737b641d1a.js"></script>
-    <script src="https://pl29328192.effectivecpmnetwork.com/f4/56/ea/f456eac53dbbb3b6b6d9a3999e993f50.js"></script>
+  <section id="player-view" class="hidden" aria-label="صفحة المباراة">
+    <a href="https://t.me/albasri_tv" target="_blank" rel="noopener" class="telegram-join-bar"><i class="fa-brands fa-telegram"></i> انضم لقناة البصرة TV على تيليجرام</a>
+    <div class="ad-slot ad-banner">
+      <script>atOptions={'key':'7be1c70617ec5303f18319e3e3453d6f','format':'iframe','height':50,'width':320,'params':{}};</script>
+      <script src="https://www.highperformanceformat.com/7be1c70617ec5303f18319e3e3453d6f/invoke.js"></script>
+    </div>
+    <div id="active-match-card"></div>
+    <div class="player-wrapper" id="player-wrapper">
+      <div id="player-loading" class="loading-overlay hidden"><div class="loader-spinner"></div><div class="loading-text">جاري إعداد البث المباشر...</div></div>
+      <div id="fake-overlay" class="fake-player-overlay hidden"><div class="play-btn-fake"><i class="fa-solid fa-play"></i></div><div class="fake-text">اضغط هنا لبدء البث المباشر</div></div>
+      <iframe id="iframe-player" class="hidden" allowfullscreen="true" scrolling="no" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+      <video id="hls-player" class="hidden" controls playsinline></video>
+    </div>
+    <button class="btn-fullscreen" onclick="toggleFullScreen()"><i class="fa-solid fa-expand"></i> تكبير الشاشة</button>
+    <div class="section-head"><div><h2><i class="fa-solid fa-server"></i> سيرفرات البث</h2><span>اختر السيرفر الأنسب</span></div></div>
+    <div class="servers-grid" id="servers-grid"></div>
+  </section>
 
-    <!-- === سكريبت التشغيل === -->
-    <script>
+  <div class="ad-slot ad-native">
+    <script async data-cfasync="false" src="https://pl29328193.effectivecpmnetwork.com/dc29d3daa278da998dee275e6e196c86/invoke.js"></script>
+    <div id="container-dc29d3daa278da998dee275e6e196c86"></div>
+  </div>
+  <footer class="footer"><strong>البصرة TV للبث المباشر</strong><br>واجهة متجاوبة مع الهاتف والكمبيوتر.</footer>
+</main>
+</div>
+<script src="https://pl29328174.effectivecpmnetwork.com/23/80/20/23802071908d14d26fe4c0737b641d1a.js"></script>
+<script src="https://pl29328192.effectivecpmnetwork.com/f4/56/ea/f456eac53dbbb3b6b6d9a3999e993f50.js"></script>
+<script>
         const WORKER_URL = "https://ali.albasritv1.workers.dev/";
         const FALLBACK_VIDEO = "https://ar-hosting.pages.dev/1777233612204.mp4";
 
@@ -310,6 +150,27 @@
         const serversGrid = document.getElementById("servers-grid");
 
         let activeHls = null;
+
+        // تنفيذ الإجراء من أول لمسة/ضغطة حتى لو حاول إعلان منبثق استهلاك حدث click
+        function bindFirstPress(el, action) {
+            el.__firstPressAction = action;
+            if (el.__firstPressBound) return;
+            el.__firstPressBound = true;
+            let lastPointerRun = 0;
+            el.addEventListener('pointerdown', function(e) {
+                if (e.button !== undefined && e.button !== 0) return;
+                lastPointerRun = Date.now();
+                if (typeof el.__firstPressAction === 'function') el.__firstPressAction(e);
+            }, { passive: true });
+            el.addEventListener('click', function(e) {
+                // منع تنفيذ الإجراء مرتين بعد pointerdown، مع إبقاء click للكيبورد متاحاً
+                if (Date.now() - lastPointerRun < 900) {
+                    e.preventDefault();
+                    return;
+                }
+                if (typeof el.__firstPressAction === 'function') el.__firstPressAction(e);
+            });
+        }
 
         window.addEventListener('popstate', function () {
             if (!playerView.classList.contains("hidden")) closePlayer();
@@ -372,15 +233,17 @@
                 
                 let div = document.createElement("div"); div.className = "match-card"; div.innerHTML = html;
                 
-                div.onclick = () => {
+                bindFirstPress(div, () => {
                     activeMatchCard.innerHTML = `<div class="match-card static-card">${html}</div>`;
+                    document.title = `${m.team1.name} ضد ${m.team2.name} | البصرة TV للبث المباشر`;
                     startMatch(m.link, m.priority);
-                };
+                });
                 matchesList.appendChild(div);
             });
         }
 
         async function startMatch(linkUrl, priority) {
+            stopVideo();
             scheduleView.classList.add("hidden");
             playerView.classList.remove("hidden");
             history.pushState({view: "player"}, "");
@@ -424,17 +287,16 @@
                 if(i === 0) btn.classList.add("active");
                 btn.innerText = srv.name.includes("M3U") ? "سيرفر رئيسي " + (i+1) : (srv.name.includes("Web") ? "سيرفر احتياطي " + (i+1) : srv.name);
                 
-                btn.onclick = () => {
+                bindFirstPress(btn, () => {
                     document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active"));
                     btn.classList.add("active");
-                    
-                    iframePlayer.classList.add("hidden"); hlsPlayer.classList.add("hidden");
-                    fakeOverlay.classList.remove("hidden");
-                    fakeOverlay.onclick = () => playServerVideo(srv.url, srv.type);
-                };
+                    // اختيار السيرفر وتشغيله فوراً من نفس الضغطة
+                    playServerVideo(srv.url, srv.type);
+                });
                 serversGrid.appendChild(btn);
             });
-            fakeOverlay.onclick = () => playServerVideo(servers[0].url, servers[0].type);
+            // المشغل يبدأ من أول ضغطة فقط
+            bindFirstPress(fakeOverlay, () => playServerVideo(servers[0].url, servers[0].type));
         }
 
         function playServerVideo(url, type) {
@@ -471,6 +333,7 @@
             stopVideo();
             playerView.classList.add("hidden");
             scheduleView.classList.remove("hidden");
+            document.title = "البصرة TV للبث المباشر | مباريات اليوم";
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -486,6 +349,30 @@
         }
 
         loadMatches();
-    </script>
+
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('albasri-theme');
+if (savedTheme === 'light') document.body.classList.add('light');
+function syncThemeIcon() {
+  themeToggle.innerHTML = document.body.classList.contains('light') ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+}
+syncThemeIcon();
+bindFirstPress(themeToggle, () => {
+  document.body.classList.toggle('light');
+  localStorage.setItem('albasri-theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  syncThemeIcon();
+});
+
+const fullscreenBtn = document.querySelector('.btn-fullscreen');
+if (fullscreenBtn) {
+  fullscreenBtn.removeAttribute('onclick');
+  bindFirstPress(fullscreenBtn, toggleFullScreen);
+}
+const brandBtn = document.querySelector('.brand');
+if (brandBtn) {
+  brandBtn.removeAttribute('onclick');
+  bindFirstPress(brandBtn, (e) => { if (e) e.preventDefault?.(); goBackToSchedule(); });
+}
+</script>
 </body>
 </html>
