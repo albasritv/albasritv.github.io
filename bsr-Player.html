@@ -1,940 +1,778 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no" />
-    <title>BSR Pro Generator - المولد الشامل</title>
-    <link rel="icon" type="image/jpg" href="https://up6.cc/2026/04/177672181699171.jpg">
-
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
-
-    <style>
-        :root {
-            --bg-body: #090e17;
-            --bg-card: #111827;
-            --bg-input: #1f2937;
-            --primary: #00e5ff;
-            --primary-hover: #00c6dd;
-            --secondary: #8b5cf6;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --success: #10b981;
-            --danger: #ef4444;
-            --radius-lg: 20px;
-            --radius-md: 12px;
-            --radius-sm: 8px;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Tajawal", sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            min-height: 100vh;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 15% 0%, rgba(139, 92, 246, 0.15), transparent 25%), 
-                radial-gradient(circle at 85% 100%, rgba(0, 229, 255, 0.15), transparent 25%);
-            background-attachment: fixed;
-        }
-
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-body); }
-        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
-
-        /* --- Header & Navbar --- */
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .telegram-banner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(90deg, #0088cc, #00aaff);
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            font-size: 14px;
-            font-weight: 700;
-            transition: var(--transition);
-        }
-        .telegram-banner:hover { filter: brightness(1.1); }
-
-        .navbar {
-            background: rgba(17, 24, 39, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 15px 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .brand-icon {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: white;
-            box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
-        }
-
-        .brand-text {
-            font-size: 22px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            background: linear-gradient(to left, #fff, #9ca3af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* --- Layout --- */
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 25px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            opacity: 0.5;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .card-header i {
-            font-size: 22px;
-            color: var(--primary);
-        }
-
-        .card-header h2 {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--text-main);
-        }
-
-        /* --- Forms --- */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 18px;
-        }
-        @media (min-width: 768px) {
-            .form-grid { grid-template-columns: 1fr 1fr; }
-            .full { grid-column: span 2; }
-        }
-
-        .input-group {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .input-group i {
-            position: absolute;
-            top: 50%;
-            right: 16px;
-            transform: translateY(-50%);
-            color: var(--primary);
-            font-size: 16px;
-            pointer-events: none;
-            transition: var(--transition);
-        }
-        
-        input, select, textarea {
-            width: 100%;
-            background: var(--bg-input);
-            border: 1px solid #374151;
-            border-radius: var(--radius-md);
-            padding: 15px 45px 15px 15px;
-            color: var(--text-main);
-            font-size: 14px;
-            font-weight: 500;
-            transition: var(--transition);
-            outline: none;
-            appearance: none;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 90px;
-            padding-top: 15px;
-        }
-
-        .input-group textarea ~ i {
-            top: 25px;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: var(--primary);
-            background: #111827;
-            box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
-        }
-
-        input:focus ~ i, select:focus ~ i, textarea:focus ~ i {
-            color: var(--text-main);
-        }
-
-        /* --- Buttons --- */
-        button {
-            padding: 15px 24px;
-            border: none;
-            border-radius: var(--radius-md);
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-            width: 100%;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--secondary), #3B82F6);
-            color: white;
-            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4); }
-
-        .btn-secondary {
-            background: var(--bg-input);
-            color: var(--primary);
-            border: 1px solid var(--primary);
-        }
-        .btn-secondary:hover { background: rgba(0, 229, 255, 0.1); transform: translateY(-2px); }
-
-        .btn-success {
-            background: linear-gradient(135deg, var(--success), #059669);
-            color: white;
-            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
-        }
-        .btn-success:hover { transform: translateY(-2px); filter: brightness(1.1); }
-
-        .btn-danger {
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--danger);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            width: auto;
-            padding: 8px 16px;
-        }
-        .btn-danger:hover { background: var(--danger); color: white; }
-
-        /* --- Server List --- */
-        .server-item {
-            background: var(--bg-input);
-            border-radius: var(--radius-md);
-            padding: 18px;
-            margin-bottom: 15px;
-            border: 1px solid #374151;
-            transition: var(--transition);
-            animation: fadeIn 0.4s ease forwards;
-        }
-        .server-item:hover { border-color: var(--secondary); transform: translateX(-5px); }
-
-        .server-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .server-title {
-            font-weight: 800;
-            color: white;
-            font-size: 16px;
-        }
-
-        .server-url {
-            direction: ltr;
-            text-align: left;
-            font-size: 13px;
-            color: var(--text-muted);
-            background: #111827;
-            padding: 10px;
-            border-radius: var(--radius-sm);
-            margin-bottom: 12px;
-            word-break: break-all;
-            font-family: monospace;
-            border: 1px solid #374151;
-        }
-
-        .tags { display: flex; gap: 8px; flex-wrap: wrap; }
-        
-        .tag {
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-        .tag.mode { background: rgba(0, 229, 255, 0.15); color: var(--primary); }
-        .tag.drm { background: rgba(139, 92, 246, 0.15); color: var(--secondary); }
-
-        /* --- Results Area --- */
-        .result-box {
-            background: rgba(31, 41, 55, 0.5);
-            border: 2px dashed #374151;
-            border-radius: var(--radius-md);
-            padding: 40px 20px;
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-
-        .code-block { margin-bottom: 20px; }
-        .code-block label { display: block; margin-bottom: 8px; font-weight: 700; color: var(--primary); }
-        
-        textarea.code {
-            height: 100px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 13px;
-            background: #000;
-            border-color: #374151;
-            color: #a78bfa;
-            padding: 15px;
-            direction: ltr;
-            text-align: left;
-            border-radius: var(--radius-md);
-        }
-
-        /* --- Toast Notification --- */
-        .toast {
-            position: fixed;
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-150px);
-            background: rgba(17, 24, 39, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-weight: 700;
-            z-index: 9999;
-            transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border: 1px solid var(--success);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .toast.show { transform: translateX(-50%) translateY(0); }
-        .toast i { font-size: 18px; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08111d">
+<title>مولد مشغل البصري بلاير</title>
+<style>
+:root{
+  --bg:#07111d;--panel:#0e1c2b;--panel2:#12283f;--line:#254462;
+  --text:#f8fafc;--muted:#9fb1c5;--green:#34d26f;--blue:#38bdf8;
+  --danger:#ef4444;--shadow:0 18px 48px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Tahoma,Arial,sans-serif;color:var(--text);min-height:100vh;
+  background:
+    radial-gradient(circle at 10% 4%,rgba(56,189,248,.12),transparent 28%),
+    radial-gradient(circle at 90% 0%,rgba(52,210,111,.10),transparent 25%),
+    var(--bg)
+}
+.wrap{max-width:1180px;margin:auto;padding:26px 16px 60px}
+.hero{
+  padding:24px;border:1px solid var(--line);border-radius:26px;
+  background:linear-gradient(135deg,#142940,#0a1725);box-shadow:var(--shadow);margin-bottom:18px
+}
+.hero h1{margin:0 0 8px;font-size:clamp(27px,4vw,42px)}
+.hero p{margin:0;color:var(--muted);line-height:1.8}
+.modebar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+@media(max-width:720px){.modebar{grid-template-columns:1fr}}
+.modebtn{
+  padding:16px;border-radius:18px;border:1px solid var(--line);background:#102238;
+  color:#eaf3fb;font:inherit;font-weight:800;cursor:pointer;transition:.2s
+}
+.modebtn:hover{transform:translateY(-1px)}
+.modebtn.active{background:linear-gradient(135deg,var(--green),#16a34a);color:#041208;border-color:transparent}
+.grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px}
+@media(max-width:920px){.grid{grid-template-columns:1fr}}
+.card{
+  padding:20px;border:1px solid var(--line);border-radius:22px;
+  background:rgba(14,28,43,.96);box-shadow:var(--shadow)
+}
+.card h2{margin:0 0 16px}
+.decode{
+  padding:16px;border:1px solid #2d5377;border-radius:18px;
+  background:linear-gradient(135deg,rgba(56,189,248,.08),rgba(52,210,111,.06));margin-bottom:18px
+}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:650px){.row{grid-template-columns:1fr}}
+.field{margin:12px 0}
+label{display:block;margin-bottom:7px;color:#cbd8e5;font-size:13px}
+input,textarea{
+  width:100%;border:1px solid var(--line);background:#071522;color:var(--text);
+  border-radius:13px;padding:13px 14px;font:inherit;outline:none;transition:.2s
+}
+textarea{min-height:92px;resize:vertical}
+input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(56,189,248,.11)}
+.section{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-weight:800;color:#dce9f5}
+.server{background:#091a2a;border:1px solid var(--line);border-radius:16px;padding:14px;margin:11px 0}
+.serverhead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+button{
+  border:0;border-radius:13px;padding:11px 15px;font:inherit;font-weight:800;cursor:pointer;transition:.2s
+}
+button:hover{transform:translateY(-1px)}
+.primary{background:linear-gradient(135deg,var(--green),#16a34a);color:#041208}
+.blue{background:linear-gradient(135deg,#38bdf8,#0ea5e9);color:#04131d}
+.secondary{background:#142c45;color:#e8f4ff;border:1px solid #2d4f70}
+.danger{background:#35141d;color:#fecaca;border:1px solid #652634}
+.output{
+  min-height:118px;padding:14px;border:1px dashed #355b7d;border-radius:14px;
+  background:#06101b;color:#bde8ff;white-space:pre-wrap;word-break:break-all;line-height:1.75
+}
+.hint{font-size:12px;color:var(--muted);line-height:1.8}
+.status{min-height:20px;margin-top:10px;color:#a7f3d0;font-size:13px}
+.toggle{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:#0a1928;margin:12px 0
+}
+.switch{position:relative;width:52px;height:28px;flex:0 0 auto}
+.switch input{display:none}
+.slider{position:absolute;inset:0;background:#334155;border-radius:999px;cursor:pointer;transition:.2s}
+.slider:before{
+  content:"";position:absolute;width:22px;height:22px;right:3px;top:3px;border-radius:50%;
+  background:#fff;transition:.2s
+}
+.switch input:checked + .slider{background:var(--green)}
+.switch input:checked + .slider:before{transform:translateX(-24px)}
+.hidden{display:none!important}
+.preview-link{
+  display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:14px;
+  background:linear-gradient(135deg,#34d26f,#16a34a);color:#041208;text-decoration:none;
+  font-weight:900;box-shadow:0 10px 24px rgba(22,163,74,.25)
+}
+.play-icon{
+  width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.82);
+  display:inline-flex;align-items:center;justify-content:center;color:#0a5b2b;font-size:15px
+}
+.logo-note{font-size:12px;color:#aebfd0;line-height:1.7}
+</style>
 </head>
 <body>
+<div class="wrap">
 
-    <!-- Header -->
-    <div class="sticky-header">
-        <a href="https://t.me/Basritv" target="_blank" class="telegram-banner">
-            <i class="fab fa-telegram-plane"></i> انضم لقناتنا للحصول على التحديثات
-        </a>
-        <div class="navbar">
-            <div class="brand">
-                <div class="brand-icon"><i class="fas fa-play"></i></div>
-                <div class="brand-text">BSR PRO GENERATOR</div>
-            </div>
+  <div class="hero">
+    <h1>مولد مشغل البصري بلاير</h1>
+    <p>أنشئ رابط Intent، رابط ويب، أو زر HTML احترافي لتشغيل السيرفرات في البصري بلاير.</p>
+  </div>
+
+  <div class="modebar">
+    <button class="modebtn active" onclick="setMode('intent',this)">الحصول على رابط Intent</button>
+    <button class="modebtn" onclick="setMode('web',this)">الحصول على روابط ويب</button>
+    <button class="modebtn" onclick="setMode('html',this)">الحصول على كود HTML</button>
+  </div>
+
+  <div class="decode">
+    <strong>فك رابط سابق وإرجاع البيانات</strong>
+    <div class="field">
+      <label>ألصق رابط Intent أو رابط ويب</label>
+      <textarea id="decodeInput" placeholder="ألصق الرابط هنا ثم اضغط فك التشفير"></textarea>
+    </div>
+    <div class="actions">
+      <button class="blue" onclick="decodeGenerated()">فك التشفير وإرجاع الحقول</button>
+      <button class="secondary" onclick="document.getElementById('decodeInput').value=''">مسح</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>بيانات التشغيل</h2>
+
+      <div class="section" style="margin-top:0;padding-top:0;border-top:0">بيانات السيرفر</div>
+      <div class="row">
+        <div class="field">
+          <label>اسم السيرفر</label>
+          <input id="newServerName" placeholder="Server 1">
         </div>
+        <div class="field">
+          <label>رابط السيرفر</label>
+          <input id="newServerUrl" placeholder="https://...">
+        </div>
+      </div>
+      <div class="hint">أدخل بيانات السيرفر، أكمل بقية الحقول، ثم اضغط «إضافة السيرفر» الموجود تحت رابط اللوجو. بعدها تفرغ حقول السيرفر حتى تضيف السيرفر التالي.</div>
+
+      <div class="section">حقول التشغيل</div>
+      <div class="row">
+        <div class="field"><label>User-Agent</label><input id="ua" placeholder="اختياري"></div>
+        <div class="field"><label>Referer</label><input id="referer" placeholder="اختياري"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Origin</label><input id="origin" placeholder="اختياري"></div>
+        <div class="field"><label>Cookie</label><input id="cookie" placeholder="اختياري"></div>
+      </div>
+      <div class="field">
+        <label>cURL / Headers JSON</label>
+        <textarea id="headers" placeholder='{"Authorization":"Bearer ...","X-Test":"value"}'></textarea>
+      </div>
+
+      <div class="section">DRM</div>
+      <div class="field">
+        <label>مفتاح / قيمة DRM</label>
+        <input id="drmValue" placeholder="حقل واحد فقط — يوضع المفتاح هنا إذا كان المصدر يحتاجه">
+      </div>
+      <div class="hint">يبقى حقل DRM واحد فقط، والمشغل يقرر طريقة التعامل معه حسب المصدر ودعمه.</div>
+
+      <div class="section">الحماية</div>
+      <div class="toggle">
+        <div>
+          <strong>حماية VPN</strong>
+          <div class="hint">مفعلة افتراضياً. يمكن للمستخدم إطفاؤها إذا لا يريد حماية VPN.</div>
+        </div>
+        <label class="switch">
+          <input id="vpnProtection" type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+<div class="section">اللوجو</div>
+      <div class="field">
+        <label>رابط اللوجو</label>
+        <input id="logo" placeholder="https://example.com/logo.png">
+      </div>
+      <div class="logo-note">يتم إرسال رابط اللوجو كما هو بدون طلب قص أو تغيير أبعاد؛ يعرضه التطبيق بالحجم/النسبة الأصلية حسب واجهته.</div>
+
+      <div class="actions">
+        <button class="secondary" onclick="saveCurrentServer()">+ إضافة السيرفر</button>
+      </div>
+
+      <div class="section">السيرفرات المضافة</div>
+      <div id="servers"></div>
+      <div class="hint" id="serverListHint">بعد الضغط على «إضافة السيرفر» يظهر السيرفر هنا، ويمكنك بعدها إدخال سيرفر جديد.</div>
+
+      <div class="actions">
+        <button class="blue" onclick="testGenerated()">تجربة الرابط</button>
+        <button class="secondary" onclick="copyOutput()">نسخ</button>
+        <button class="secondary" onclick="downloadOutput()">تنزيل</button>
+        <button class="danger" onclick="resetAll()">مسح الحقول</button>
+      </div>
+      <div id="status" class="status"></div>
     </div>
 
-    <div class="container">
-        
-        <!-- Section 1: Server Inputs -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-server"></i>
-                <h2>بيانات السيرفر / القناة</h2>
-            </div>
-            <div class="form-grid">
-                <div class="input-group">
-                    <input id="serverName" placeholder="اسم القناة" />
-                    <i class="fas fa-tv"></i>
-                </div>
-                <div class="input-group">
-                    <input id="serverUrl" placeholder="رابط البث المباشر (URL)" />
-                    <i class="fas fa-link"></i>
-                </div>
-                
-                <div class="input-group">
-                    <select id="playerMode">
-                        <option value="EXO">Exo Player</option>
-                        <option value="WEB">Web Player</option>
-                        <option value="WEB2EXO">Web To Exo</option>
-                        <option value="JSON">JSON Resolver</option>
-                        <option value="M3U">M3U Playlist</option>
-                        <option value="BROWSER">External Browser</option>
-                        <option value="IFRAME">Iframe Mode</option>
-                    </select>
-                    <i class="fas fa-play-circle"></i>
-                </div>
-                
-                <div class="input-group">
-                    <select id="drmType">
-                        <option value="None">بدون تشفير (No DRM)</option>
-                        <option value="WIDEVINE">Widevine</option>
-                        <option value="CLEARKEY">ClearKey</option>
-                        <option value="PLAYREADY">PlayReady</option>
-                    </select>
-                    <i class="fas fa-shield-alt"></i>
-                </div>
+    <div class="card">
+      <h2 id="outputTitle">رابط Intent الناتج</h2>
+      <div id="output" class="output">اضغط «إنشاء».</div>
 
-                <div class="input-group full">
-                    <input id="drmKey" placeholder="مفتاح التشفير DRM Key (KID:KEY)" />
-                    <i class="fas fa-key"></i>
-                </div>
-                <div class="input-group full">
-                    <input id="drmLicense" placeholder="رابط الترخيص License URL (اختياري)" />
-                    <i class="fas fa-certificate"></i>
-                </div>
-                
-                <div class="input-group">
-                    <input id="userAgent" placeholder="User-Agent (اختياري)" />
-                    <i class="fas fa-user-secret"></i>
-                </div>
-                <div class="input-group">
-                    <input id="referer" placeholder="Referer (اختياري)" />
-                    <i class="fas fa-globe"></i>
-                </div>
-                <div class="input-group">
-                    <input id="origin" placeholder="Origin (اختياري)" />
-                    <i class="fas fa-code-branch"></i>
-                </div>
-                <div class="input-group">
-                    <input id="cookie" placeholder="Cookie (اختياري)" />
-                    <i class="fas fa-cookie-bite"></i>
-                </div>
+      <div id="htmlPreviewSection" class="hidden">
+        <div class="section">معاينة زر HTML</div>
+        <div id="htmlPreview" style="padding:18px 0"></div>
+      </div>
 
-                <div class="full" style="margin-top: 10px;">
-                    <button class="btn-secondary" onclick="addServer()">
-                        <i class="fas fa-plus"></i> إضافة إلى القائمة
-                    </button>
-                </div>
-            </div>
-        </div>
+      
 
-        <!-- Section 2: Global Settings -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-cogs"></i>
-                <h2>إعدادات المظهر والحماية (عامة)</h2>
-            </div>
-            <div class="form-grid">
-                <div class="input-group full">
-                    <input id="logoUrl" placeholder="رابط شعار القناة Logo URL (اختياري)" />
-                    <i class="fas fa-image"></i>
-                </div>
-                <div class="input-group">
-                    <select id="logoPosition">
-                        <option value="top_right">أعلى اليمين</option>
-                        <option value="top_left">أعلى اليسار</option>
-                        <option value="bottom_right" selected>أسفل اليمين</option>
-                        <option value="bottom_left">أسفل اليسار</option>
-                    </select>
-                    <i class="fas fa-location-arrow"></i>
-                </div>
-                <div class="input-group">
-                    <select id="logoAlpha">
-                        <option value="1.0">وضوح كامل (100%)</option>
-                        <option value="0.8" selected>شبه شفاف (80%)</option>
-                        <option value="0.5">شفاف (50%)</option>
-                        <option value="0.3">خفيف جداً (30%)</option>
-                    </select>
-                    <i class="fas fa-ghost"></i>
-                </div>
-
-                <div class="input-group full">
-                    <select id="vpnEnabled">
-                        <option value="true" selected>تفعيل حظر الـ VPN</option>
-                        <option value="false">إيقاف حظر الـ VPN</option>
-                    </select>
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                <div class="input-group">
-                    <input id="vpnTitle" value="تحذير أمني" placeholder="عنوان رسالة الـ VPN" />
-                    <i class="fas fa-heading"></i>
-                </div>
-                <div class="input-group">
-                    <input id="vpnExit" value="خروج" placeholder="نص زر الخروج" />
-                    <i class="fas fa-sign-out-alt"></i>
-                </div>
-                <div class="input-group full">
-                    <textarea id="vpnMsg" placeholder="نص رسالة الـ VPN">يرجى إيقاف الـ VPN حتى يعمل المشغل بشكل صحيح.</textarea>
-                    <i class="fas fa-comment-dots"></i>
-                </div>
-
-                <div class="full" style="margin-top: 15px;">
-                    <button class="btn-primary" onclick="generate()">
-                        <i class="fas fa-bolt"></i> توليد الروابط النهائية
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section 3: List -->
-        <div class="card">
-            <div class="card-header" style="justify-content: space-between;">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <i class="fas fa-list-ul"></i>
-                    <h2>القائمة المضافة (<span id="serverCount">0</span>)</h2>
-                </div>
-                <button class="btn-danger" onclick="clearAll()">
-                    <i class="fas fa-trash-alt"></i> مسح الكل
-                </button>
-            </div>
-            <div id="list">
-                <!-- القائمة تظهر هنا -->
-            </div>
-        </div>
-
-        <!-- Section 4: Results -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-code"></i>
-                <h2>النتائج النهائية</h2>
-            </div>
-            <div id="resultBox" class="result-box">
-                <i class="fas fa-box-open" style="font-size: 40px; margin-bottom: 15px; color: #374151;"></i>
-                <p>قم بإضافة بيانات السيرفر واضغط على "توليد الروابط" لتظهر النتائج هنا.</p>
-            </div>
-            
-            <div id="resultContent" style="display:none">
-                <div class="code-block">
-                    <label><i class="fas fa-link"></i> رابط Intent (للتشغيل المباشر في التطبيق):</label>
-                    <textarea id="intentOut" class="code" readonly></textarea>
-                    <button class="btn-success" style="margin-top:10px" onclick="copy('intentOut', this)">
-                        <i class="fas fa-copy"></i> نسخ الرابط
-                    </button>
-                </div>
-                
-                <div class="code-block">
-                    <label><i class="fab fa-html5"></i> كود HTML (زر جاهز لموقعك):</label>
-                    <textarea id="htmlOut" class="code" readonly></textarea>
-                    <button class="btn-secondary" style="margin-top:10px" onclick="copy('htmlOut', this)">
-                        <i class="fas fa-copy"></i> نسخ كود HTML
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section 5: Decode -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-unlock-alt"></i>
-                <h2>تفكيك / استرجاع بيانات رابط سابق</h2>
-            </div>
-            <div class="input-group">
-                <textarea id="decodeIn" placeholder="الصق رابط Intent هنا لاسترجاع كافة الحقول والتعديل عليها..."></textarea>
-                <i class="fas fa-magic" style="top: 25px;"></i>
-            </div>
-            <button class="btn-secondary" style="margin-top:15px" onclick="decode()">
-                <i class="fas fa-sync-alt"></i> استخراج واسترجاع البيانات
-            </button>
-        </div>
-        
+      
     </div>
+  </div>
+</div>
 
-    <script>
-        let servers = [];
-        const ids = ["serverName", "serverUrl", "playerMode", "drmType", "drmKey", "drmLicense", "userAgent", "referer", "origin", "cookie"];
-        const settingsIds = ["logoUrl", "logoPosition", "logoAlpha", "vpnEnabled", "vpnTitle", "vpnExit", "vpnMsg"];
+<script>
+const FIXED_PACKAGE='com.bsr.player.pro';
+const FIXED_SCHEME='bsrplayer';
+const FIXED_HOST='play';
+const FIXED_WEB_PLAYER='https://albasritv.github.io/Player.html';
 
-        function addServer() {
-            const data = {};
-            ids.forEach(id => data[id] = document.getElementById(id).value.trim());
-            
-            if(!data.serverName || !data.serverUrl) {
-                return toast("يرجى إدخال اسم القناة ورابط البث على الأقل", "error");
-            }
-            
-            servers.push(data); 
-            render();
-            
-            // إفراغ الحقول الأساسية فقط لسهولة إضافة قناة أخرى
-            document.getElementById('serverName').value = ""; 
-            document.getElementById('serverUrl').value = "";
-            document.getElementById('serverName').focus();
-            
-            toast("تمت الإضافة إلى القائمة بنجاح");
-        }
+let mode='intent';
+let serverCounter=0;
 
-        function render() {
-            const list = document.getElementById('list');
-            document.getElementById('serverCount').innerText = servers.length;
-            
-            if(servers.length === 0) {
-                list.innerHTML = `<p style="text-align:center; color:var(--text-muted); font-size:14px; padding:20px;">القائمة فارغة حالياً</p>`;
-                return;
-            }
+function esc(s){
+  return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+function val(id){return document.getElementById(id).value.trim()}
 
-            list.innerHTML = servers.map((s, i) => `
-                <div class="server-item">
-                    <div class="server-top">
-                        <span class="server-title"><i class="fas fa-tv" style="color:var(--primary); margin-left:8px;"></i>${s.serverName}</span>
-                        <button class="btn-danger" onclick="remove(${i})"><i class="fas fa-times"></i> حذف</button>
-                    </div>
-                    <div class="server-url">${s.serverUrl}</div>
-                    <div class="tags">
-                        <span class="tag mode"><i class="fas fa-play"></i> ${s.playerMode}</span>
-                        <span class="tag drm"><i class="fas fa-shield-alt"></i> DRM: ${s.drmType}</span>
-                    </div>
-                </div>`).join('');
-        }
+function setMode(m,btn){
+  mode=m;
+  document.querySelectorAll('.modebtn').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
 
-        function remove(i) { 
-            servers.splice(i, 1); 
-            render(); 
-            toast("تم حذف السيرفر");
-        }
+  document.getElementById('htmlPreviewSection').classList.toggle('hidden',m!=='html');
 
-        function clearAll() { 
-            if(servers.length === 0) return;
-            if(confirm("هل أنت متأكد من مسح جميع السيرفرات المضافة؟")){
-                servers = []; 
-                render(); 
-                document.getElementById('resultContent').style.display = "none"; 
-                document.getElementById('resultBox').style.display = "block"; 
-                toast("تم مسح القائمة بالكامل");
-            }
-        }
+  document.getElementById('outputTitle').textContent =
+    m==='intent' ? 'رابط Intent الناتج' :
+    m==='web' ? 'رابط الويب الناتج' :
+    'كود HTML الناتج';
 
-        function generate() {
-            if(!servers.length) return toast("يرجى إضافة سيرفر واحد على الأقل أولاً", "error");
-            
-            const config = { servers: servers, settings: {} };
-            settingsIds.forEach(id => config.settings[id] = document.getElementById(id).value);
-            
-            const data = btoa(unescape(encodeURIComponent(JSON.stringify(config))));
-            const intent = `intent://play?data=${encodeURIComponent(data)}#Intent;scheme=BSRPlayer;package=com.bsr.player.pro;end`;
-            
-            document.getElementById('intentOut').value = intent;
-            document.getElementById('htmlOut').value = `<!DOCTYPE html>
+  generate(true);
+}
+
+function addServer(name='',url=''){
+  serverCounter++;
+  const d=document.createElement('div');
+  d.className='server';
+  d.dataset.name=name;
+  d.dataset.url=url;
+  d.innerHTML=`
+    <div class="serverhead">
+      <div>
+        <strong>Server ${serverCounter}</strong>
+        <div class="hint">${esc(name || 'بدون اسم')}</div>
+        <div class="hint" style="word-break:break-all">${esc(url)}</div>
+      </div>
+      <div class="actions" style="margin-top:0">
+        <button class="secondary" type="button" onclick="editServer(this.closest('.server'))">تعديل</button>
+        <button class="danger" type="button" onclick="this.closest('.server').remove(); generate(true)">حذف</button>
+      </div>
+    </div>`;
+  document.getElementById('servers').appendChild(d);
+}
+function saveCurrentServer(){
+  const name=document.getElementById('newServerName').value.trim();
+  const url=document.getElementById('newServerUrl').value.trim();
+  if(!url){
+    document.getElementById('status').textContent='أدخل رابط السيرفر أولاً';
+    return;
+  }
+  addServer(name,url);
+  document.getElementById('newServerName').value='';
+  document.getElementById('newServerUrl').value='';
+  document.getElementById('status').textContent='تمت إضافة السيرفر وتوليد النتيجة تلقائياً.';
+  generate(true);
+}
+function editServer(el){
+  if(!el) return;
+  document.getElementById('newServerName').value=el.dataset.name||'';
+  document.getElementById('newServerUrl').value=el.dataset.url||'';
+  el.remove();
+  generate(true);
+  document.getElementById('newServerName').focus();
+  document.getElementById('status').textContent='تم إرجاع بيانات السيرفر إلى الحقول. عدّلها ثم اضغط «إضافة السيرفر».';
+}
+function parseJsonText(text){
+  if(!text.trim()) return {};
+  try{return JSON.parse(text)}
+  catch(e){throw new Error('صيغة cURL / Headers JSON غير صحيحة')}
+}
+
+function collectServers(){
+  const saved=[...document.querySelectorAll('.server')].map(el=>({
+    name:el.dataset.name||'',
+    url:el.dataset.url||''
+  })).filter(x=>x.url);
+
+  // If the user entered a final server but did not press Add Server yet, include it.
+  const pendingUrl=document.getElementById('newServerUrl').value.trim();
+  if(pendingUrl){
+    saved.push({
+      name:document.getElementById('newServerName').value.trim(),
+      url:pendingUrl
+    });
+  }
+  return saved;
+}
+
+function payload(){
+  return {
+    version:3,
+    servers:collectServers(),
+    userAgent:val('ua'),
+    referer:val('referer'),
+    origin:val('origin'),
+    cookie:val('cookie'),
+    headers:parseJsonText(val('headers')),
+    drm:val('drmValue'),
+    vpnProtection:document.getElementById('vpnProtection').checked,
+    logo:val('logo')
+  };
+}
+
+function b64uEncode(s){
+  const bytes=new TextEncoder().encode(s);
+  let bin='';bytes.forEach(b=>bin+=String.fromCharCode(b));
+  return btoa(bin).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+}
+function b64uDecode(s){
+  s=s.replace(/-/g,'+').replace(/_/g,'/');
+  while(s.length%4)s+='=';
+  const bin=atob(s);
+  const bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+function makeEndpoint(p){
+  return `${FIXED_SCHEME}://${FIXED_HOST}?data=${encodeURIComponent(b64uEncode(JSON.stringify(p)))}`;
+}
+function makeIntent(p){
+  const data=b64uEncode(JSON.stringify(p));
+  return `intent://${FIXED_HOST}?data=${encodeURIComponent(data)}#Intent;scheme=${FIXED_SCHEME};package=${FIXED_PACKAGE};end`;
+}
+function makeWebLink(p){
+  const intent = makeIntent(p);
+  const base = FIXED_WEB_PLAYER.replace(/\/+$/, '');
+  return `${base}?intent=${encodeURIComponent(intent)}`;
+}
+
+function makeHtml(p){
+  const intent=makeIntent(p);
+  const safeIntent = intent.replace(/\\/g,'\\\\').replace(/`/g,'\\`').replace(/\$\{/g,'\\${');
+
+  return `<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>BSR PLAYER SECURE</title>
-<!-- استدعاء خط عربي احترافي -->
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
 
 <style>
-    /* منع تحديد النصوص والنسخ لحماية المحتوى */
-    * {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
-        box-sizing: border-box;
-    }
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
 
-    body { 
-        margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; 
-        background: #030614; overflow: hidden; font-family: 'Tajawal', sans-serif; 
-    }
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #030614;
+    overflow: hidden;
+    font-family: 'Tajawal', sans-serif;
+}
 
-    /* خلفية متحركة واحترافية */
-    .bg { 
-        position: fixed; inset: 0; z-index: -1;
-        background: radial-gradient(circle at center, #1a153a 0%, #030614 100%);
-    }
-    .bg::after {
-        content: ''; position: absolute; inset: 0;
-        background-image: linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1a153a 0%, #030614 100%);
+}
+
+.bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
-        background-size: 30px 30px; opacity: 0.5;
-    }
+    background-size: 30px 30px;
+    opacity: 0.5;
+}
 
-    /* تأثير النبض خلف زر التشغيل */
-    .play-wrapper { position: relative; display: flex; justify-content: center; align-items: center; }
-    .ring { 
-        position: absolute; width: 110px; height: 110px; border-radius: 50%; 
-        border: 2px solid #00E5FF; animation: ripple 2.5s infinite ease-out; opacity: 0; 
-    }
-    .ring:nth-child(2) { animation-delay: 0.8s; border-color: #FF007A; }
-    .ring:nth-child(3) { animation-delay: 1.6s; border-color: #7C3AED; }
-    
-    @keyframes ripple { 
-        0% { transform: scale(1); opacity: 0.8; } 
-        100% { transform: scale(3); opacity: 0; } 
-    }
-    
-    /* زر التشغيل الرئيسي (تصميم نيون متحرك) */
-    .play-btn { 
-        position: relative; width: 100px; height: 100px; border-radius: 50%; border: none; cursor: pointer; 
-        background: linear-gradient(45deg, #FF007A, #7C3AED, #00E5FF, #FF007A); background-size: 300% 300%;
-        animation: gradientMove 4s ease infinite;
-        color: white; font-size: 40px; display: flex; justify-content: center; align-items: center; 
-        padding-left: 8px; box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); z-index: 10; transition: 0.3s;
-    }
-    .play-btn:active { transform: scale(0.9); box-shadow: 0 0 20px rgba(0, 229, 255, 0.8); }
+.play-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    @keyframes gradientMove {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    
-    /* النافذة المنبثقة (تصميم زجاجي - Glassmorphism) */
-    .popup { 
-        position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(15px); 
-        -webkit-backdrop-filter: blur(15px); display: none; justify-content: center; align-items: center; z-index: 9999; 
-    }
-    
-    .popup-box { 
-        background: rgba(17, 24, 39, 0.7); border: 1px solid rgba(0, 229, 255, 0.3); padding: 40px 30px; 
-        border-radius: 30px; width: 90%; max-width: 380px; text-align: center; color: white; 
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 229, 255, 0.1); 
-        transform: scale(0.5); opacity: 0; animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
-    }
-    
-    @keyframes popIn {
-        to { transform: scale(1); opacity: 1; }
-    }
+.ring {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #00E5FF;
+    animation: ripple 2.5s infinite ease-out;
+    opacity: 0;
+}
 
-    .popup-box h2 { 
-        margin: 0; color: #fff; font-size: 26px; font-weight: 900; 
-        text-shadow: 0 0 15px rgba(0, 229, 255, 0.8); 
-    }
-    
-    .popup-box p { 
-        margin-top: 15px; color: #A1A1AA; line-height: 1.8; font-size: 15px; font-weight: 500; 
-    }
-    
-    /* زر التحميل */
-    .download-btn { 
-        margin-top: 25px; padding: 16px; border: none; border-radius: 16px; width: 100%; font-size: 18px; 
-        font-weight: 700; font-family: 'Tajawal', sans-serif; cursor: pointer; 
-        background: linear-gradient(90deg, #00E5FF, #7C3AED); color: white; 
-        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4); transition: 0.3s;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    .download-btn:active { transform: translateY(3px); box-shadow: 0 5px 10px rgba(124, 58, 237, 0.4); }
+.ring:nth-child(2) {
+    animation-delay: 0.8s;
+    border-color: #FF007A;
+}
 
-    /* أيقونة التحذير */
-    .icon-warn {
-        font-size: 50px; margin-bottom: 10px; display: block; text-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
-    }
+.ring:nth-child(3) {
+    animation-delay: 1.6s;
+    border-color: #7C3AED;
+}
+
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+.play-btn {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #FF007A, #7C3AED, #00E5FF, #FF007A);
+    background-size: 300% 300%;
+    animation: gradientMove 4s ease infinite;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.play-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-box {
+    background: rgba(17, 24, 39, 0.7);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    padding: 40px 30px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    color: white;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.8),
+        inset 0 0 20px rgba(0, 229, 255, 0.1);
+    transform: scale(0.5);
+    opacity: 0;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+    to { transform: scale(1); opacity: 1; }
+}
+
+.popup-box h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+}
+
+.popup-box p {
+    margin-top: 15px;
+    color: #A1A1AA;
+    line-height: 1.8;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.download-btn {
+    margin-top: 25px;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00E5FF, #7C3AED);
+    color: white;
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+    transition: 0.3s;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.download-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(124, 58, 237, 0.4);
+}
+
+.icon-warn {
+    font-size: 50px;
+    margin-bottom: 10px;
+    display: block;
+    text-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
+}
 </style>
 </head>
+
 <body>
-    <div class="bg"></div>
 
-    <div class="play-wrapper">
-        <div class="ring"></div>
-        <div class="ring"></div>
-        <div class="ring"></div>
-        <!-- الزر محمي ويستدعي الكود بشكل آمن -->
-        <button class="play-btn" id="triggerBtn">▶</button>
-    </div>
+<div class="bg"></div>
 
-    <!-- النافذة المنبثقة التفاعلية -->
-    <div class="popup" id="securePopup">
-        <div class="popup-box">
-            <span class="icon-warn">⚠️</span>
-            <h2>المشغل غير متوفر</h2>
-            <p>لضمان مشاهدة ممتعة بأعلى جودة وبدون أي تقطيع، يجب عليك تثبيت <b>BSR PLAYER</b> أولاً للمتابعة.</p>
-            <button class="download-btn" id="installBtn">تثبيت المشغل الآن</button>
-        </div>
+<div class="play-wrapper">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <button class="play-btn" id="triggerBtn" aria-label="تشغيل">▶</button>
+</div>
+
+<div class="popup" id="securePopup">
+    <div class="popup-box">
+        <span class="icon-warn">⚠️</span>
+        <h2>المشغل غير متوفر</h2>
+        <p>
+            لضمان مشاهدة ممتعة بأعلى جودة وبدون أي تقطيع،
+            يجب عليك تثبيت <b>BSR PLAYER</b> أولاً للمتابعة.
+        </p>
+        <button class="download-btn" id="installBtn">تثبيت المشغل الآن</button>
     </div>
+</div>
 
 <script>
-    /* =========================================
-       1. أكواد الحماية (Anti-Theft System)
-    ========================================= */
-    // تعطيل كليك يمين
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    
-    // تعطيل سحب الصور والعناصر
-    document.addEventListener('dragstart', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('dragstart', event => event.preventDefault());
 
-    // تعطيل اختصارات لوحة المفاتيح للمطورين (F12, Ctrl+U, Ctrl+Shift+I)
-    document.onkeydown = function(e) {
-        if(e.keyCode == 123) return false; // F12
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 73) return false; // I
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) return false; // J
-        if(e.ctrlKey && e.keyCode == 85) return false; // U
-        if(e.ctrlKey && e.keyCode == 67) return false; // C
-    };
+document.onkeydown = function(e) {
+    if (e.keyCode === 123) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) return false;
+    if (e.ctrlKey && e.keyCode === 85) return false;
+    if (e.ctrlKey && e.keyCode === 67) return false;
+};
 
-    /* =========================================
-       2. منطق التشغيل والتحويل الآمن (Iframe Logic)
-    ========================================= */
-    // المتغيرات (ضع روابطك هنا)
-    const _0xUrl = "{{INTENT_LINK}}"; 
-    const _0xStore = "https://play.google.com/store/apps/details?id=com.bsr.player.pro"; 
+const _0xUrl = \`${safeIntent}\`;
+const _0xStore = "https://play.google.com/store/apps/details?id=com.bsr.player.pro";
 
-    let _appState = false;
+let _appState = false;
 
-    // مراقبة ما إذا كان التطبيق قد فتح بنجاح
-    document.addEventListener("visibilitychange", () => {
-        if (document.hidden) { _appState = true; }
-    });
+document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+        _appState = true;
+    }
+});
 
-    // عند الضغط على زر التشغيل
-    document.getElementById('triggerBtn').addEventListener('click', function() {
-        _appState = false;
+window.addEventListener("pagehide", function () {
+    _appState = true;
+});
 
-        // إنشاء إطار مخفي للتشغيل الآمن بدون كشف الرابط للمتصفح
-        const _frame = document.createElement("iframe");
-        _frame.style.display = "none";
-        _frame.src = _0xUrl;
-        document.body.appendChild(_frame);
+document.getElementById("triggerBtn").addEventListener("click", function () {
+    if (!_0xUrl) {
+        return;
+    }
 
-        // الانتظار للتحقق
-        setTimeout(() => {
-            if (!_appState) {
-                // إظهار النافذة إذا لم يفتح التطبيق
-                document.getElementById("securePopup").style.display = "flex";
-            }
-            // مسح الإطار المخفي من الـ DOM لزيادة الحماية
+    _appState = false;
+
+    const _frame = document.createElement("iframe");
+    _frame.style.display = "none";
+    _frame.src = _0xUrl;
+
+    document.body.appendChild(_frame);
+
+    setTimeout(function () {
+        if (!_appState) {
+            document.getElementById("securePopup").style.display = "flex";
+        }
+
+        if (_frame.parentNode) {
             _frame.remove();
-        }, 1500); 
-    });
+        }
+    }, 1500);
+});
 
-    // عند الضغط على زر التحميل
-    document.getElementById('installBtn').addEventListener('click', function() {
-        window.location.href = _0xStore;
-    });
+document.getElementById("installBtn").addEventListener("click", function () {
+    window.location.href = _0xStore;
+});
 <\/script>
+
 </body>
 </html>`;
-            
-            document.getElementById('resultBox').style.display = "none";
-            document.getElementById('resultContent').style.display = "block";
-            
-            // تمرير الشاشة ببطء نحو النتائج
-            document.getElementById('resultContent').scrollIntoView({ behavior: 'smooth', block: 'center' });
-            toast("تم توليد الروابط بنجاح");
-        }
+}
+function generate(silent=false){
+  try{
+    const p=payload();
+    if(!p.servers.length) {
+      if(!silent) throw new Error('أضف رابط سيرفر واحد على الأقل');
+      document.getElementById('output').textContent='أضف سيرفر ليتم التوليد تلقائياً.';
+      return '';
+    }
 
-        function decode() {
-            try {
-                const val = document.getElementById('decodeIn').value.trim();
-                if(!val) return toast("يرجى لصق الرابط أولاً", "error");
+    let out='';
+    if(mode==='intent') out=makeIntent(p);
+    else if(mode==='web') out=makeWebLink(p);
+    else out=makeHtml(p);
 
-                const url = new URL(val.replace("intent://", "http://"));
-                const data = url.searchParams.get("data");
-                const obj = JSON.parse(decodeURIComponent(escape(atob(data))));
-                
-                if(obj.servers) servers = obj.servers;
-                if(obj.settings) {
-                    settingsIds.forEach(id => { 
-                        if(obj.settings[id] !== undefined) {
-                            document.getElementById(id).value = obj.settings[id]; 
-                        }
-                    });
-                }
-                render();
-                document.getElementById('decodeIn').value = "";
-                
-                // التمرير لأعلى الصفحة لمشاهدة البيانات
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                toast("تم استرجاع البيانات بنجاح");
-            } catch(e) { 
-                toast("الرابط غير صالح أو تالف", "error"); 
-            }
-        }
+    document.getElementById('output').textContent=out;
+    
 
-        function copy(id, btnElement) { 
-            const el = document.getElementById(id);
-            el.select(); 
-            document.execCommand('copy'); 
-            
-            // تغيير شكل الزر مؤقتاً
-            const originalHTML = btnElement.innerHTML;
-            btnElement.innerHTML = `<i class="fas fa-check"></i> تم النسخ`;
-            btnElement.style.background = "var(--success)";
-            
-            setTimeout(() => {
-                btnElement.innerHTML = originalHTML;
-                btnElement.style.background = "";
-            }, 2000);
+    if(mode==='html'){
+      document.getElementById('htmlPreview').innerHTML=out;
+    }
 
-            toast("تم نسخ الكود للحافظة"); 
-        }
+      document.getElementById('status').textContent='تم الإنشاء بنجاح';
+    return out;
+  }catch(e){
+    document.getElementById('status').textContent=e.message;
+    return '';
+  }
+}
 
-        function toast(msg, type="success") {
-            // إزالة أي توست سابق
-            const existing = document.querySelector('.toast');
-            if(existing) existing.remove();
 
-            const t = document.createElement("div");
-            t.className = "toast show";
-            
-            if(type === "error") {
-                t.style.borderColor = "var(--danger)";
-                t.innerHTML = `<i class="fas fa-exclamation-circle" style="color:var(--danger)"></i> ${msg}`;
-            } else {
-                t.style.borderColor = "var(--success)";
-                t.innerHTML = `<i class="fas fa-check-circle" style="color:var(--success)"></i> ${msg}`;
-            }
-            
-            document.body.appendChild(t);
-            setTimeout(() => { 
-                t.classList.remove("show"); 
-                setTimeout(() => t.remove(), 500); 
-            }, 3000);
-        }
+async function copyText(t){
+  try{await navigator.clipboard.writeText(t)}
+  catch(e){
+    const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);
+    ta.select();document.execCommand('copy');ta.remove();
+  }
+  document.getElementById('status').textContent='تم النسخ';
+}
+function copyOutput(){copyText(document.getElementById('output').textContent)}
 
-        // التهيئة الأولية
-        render();
-    </script>
+function testGenerated(){
+  const out=generate(); if(!out)return;
+  if(mode==='html'){
+    document.getElementById('status').textContent='تمت معاينة زر HTML بالأسفل';
+    return;
+  }
+  location.href=out;
+}
+
+function downloadOutput(){
+  const out=generate(); if(!out)return;
+  const ext=mode==='html'?'html':'txt';
+  const mime=mode==='html'?'text/html;charset=utf-8':'text/plain;charset=utf-8';
+  const blob=new Blob([out],{type:mime});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`bsr-player-${mode}.${ext}`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function extractEndpointFromInput(raw){
+  raw=raw.trim();
+
+  // If a web wrapper URL contains endpoint=...
+  try{
+    const u=new URL(raw);
+    const p=u.searchParams.get('intent');
+    if(p && (p.startsWith('bsrplayer://') || p.startsWith('intent://'))) raw=p;
+  }catch(_){}
+
+  let m=raw.match(/[?&]data=([^&#]+)/);
+  if(!m) throw new Error('لم أجد بيانات Endpoint داخل الرابط');
+
+  const decoded=decodeURIComponent(m[1]);
+  return JSON.parse(b64uDecode(decoded));
+}
+
+function fillFromPayload(p){
+  document.getElementById('ua').value=p.userAgent||p.headers?.userAgent||'';
+  document.getElementById('referer').value=p.referer||p.headers?.referer||'';
+  document.getElementById('origin').value=p.origin||p.headers?.origin||'';
+  document.getElementById('cookie').value=p.cookie||p.headers?.cookie||'';
+
+  const extra = p.headers && !p.headers.userAgent && !p.headers.referer ? p.headers : (p.headers?.extra||{});
+  document.getElementById('headers').value=Object.keys(extra||{}).length?JSON.stringify(extra,null,2):'';
+
+  document.getElementById('drmValue').value =
+    typeof p.drm==='string' ? p.drm : (p.drm?.value||p.drm?.licenseUrl||'');
+
+  document.getElementById('vpnProtection').checked=(p.vpnProtection !== false);
+  document.getElementById('logo').value=p.logo||p.image||'';
+
+  document.getElementById('servers').innerHTML='';
+  serverCounter=0;
+  document.getElementById('newServerName').value='';
+  document.getElementById('newServerUrl').value='';
+  (p.servers||[]).forEach(s=>addServer(s.name||'',s.url||''));
+}
+
+function decodeGenerated(){
+  try{
+    const p=extractEndpointFromInput(val('decodeInput'));
+    fillFromPayload(p);
+    
+    document.getElementById('status').textContent='تم فك الرابط وإرجاع البيانات إلى الحقول';
+  }catch(e){
+    document.getElementById('status').textContent='تعذر فك الرابط: '+e.message;
+  }
+}
+
+function webReceiverSnippet(){
+  return `<!-- BSR Player Intent Receiver -->
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const intent = params.get('intent');
+  if (!intent) return;
+
+  // فتح تطبيق البصري بلاير بواسطة رابط Intent القادم من المولد
+  window.location.href = intent;
+})();
+<\/script>`;
+}
+function showReceiverCode(){
+  document.getElementById('receiverPopupCode').textContent=webReceiverSnippet();
+  document.getElementById('receiverPopup').classList.remove('hidden');
+}
+function copyReceiverPopup(){
+  copyText(document.getElementById('receiverPopupCode').textContent);
+}
+
+function resetAll(){
+  ['ua','referer','origin','cookie','headers','drmValue','logo','decodeInput'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('vpnProtection').checked=true;
+  document.getElementById('servers').innerHTML='';
+  serverCounter=0;
+  document.getElementById('newServerName').value='';
+  document.getElementById('newServerUrl').value='';
+  document.getElementById('output').textContent='اضغط «إنشاء».';
+  
+  document.getElementById('htmlPreview').innerHTML='';
+  document.getElementById('status').textContent='';
+}
+
+
+</script>
 </body>
 </html>
