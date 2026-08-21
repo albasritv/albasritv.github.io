@@ -1,1 +1,12 @@
 
+<!-- BSR Player Intent Receiver -->
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const intent = params.get('intent');
+  if (!intent) return;
+
+  // فتح تطبيق البصري بلاير بواسطة رابط Intent القادم من المولد
+  window.location.href = intent;
+})();
+</script>
