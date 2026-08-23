@@ -6,6 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#0b1020">
   <meta name="color-scheme" content="dark">
+
+  <!-- طبقة حماية إضافية: لا تغيّر تصميم الصفحة أو وظائفها -->
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' https: data: blob:;
+    base-uri 'self';
+    object-src 'none';
+    form-action 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.plyr.io https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.plyr.io;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;
+    img-src 'self' https: data: blob:;
+    media-src 'self' https: blob:;
+    connect-src 'self' https:;
+    frame-src https:;
+  ">
   <title>افلام ومسلسلات البصري تيفي </title>
   <meta name="description" content="مسلسلات وأفلام البصري TV - تصفح المسلسلات والأفلام العربية والأجنبية والتركية والآسيوية والأنمي، وابحث عن العمل وشاهد الحلقات من واجهة مناسبة للتطبيقات.">
   <meta name="keywords" content="البصري TV, مسلسلات وأفلام البصري TV, البصري تي في, مسلسلات, أفلام, حلقات, مسلسلات عربية, مسلسلات أجنبية, مسلسلات تركية, مسلسلات آسيوية, مسلسلات أنمي, مسلسلات رمضان, أفلام عربية, أفلام أجنبية, أفلام تركية, أفلام هندية, أفلام آسيوية, أفلام أنمي, مشاهدة مسلسلات, مشاهدة أفلام, تحميل أفلام, تحميل مسلسلات, Series, Movies, TV Series, Arabic Series, Turkish Series, Asian Series, Anime Series, Arabic Movies, Foreign Movies, Indian Movies, Asian Movies, Anime Movies, Watch Series, Watch Movies, Download Movies, Download Series, Streaming Movies, Streaming Series">
@@ -132,6 +150,19 @@
       .episode-list{grid-template-columns:repeat(4,minmax(0,1fr))}
     }
   </style>
+
+  <style id="anti-copy-protection">
+    html, body, body *:not(input):not(textarea) {
+      -webkit-user-select: none !important;
+      user-select: none !important;
+      -webkit-user-drag: none !important;
+    }
+    img, video {
+      -webkit-user-drag: none !important;
+      user-drag: none !important;
+    }
+  </style>
+
 </head>
 <body>
   <div class="app-shell">
@@ -205,7 +236,7 @@
   </div>
 
   <script>
-    const API_URL = "https://series.albesriali03.workers.dev/";
+    const API_URL = "https://albas.albesriali03.workers.dev/";
 
     const CATEGORY_DATA = {
       series: [
@@ -607,5 +638,72 @@
     history.replaceState({view:'homeView'},'',location.href);
     renderCategories();
   </script>
+
+  <script id="frontend-protection">
+    (() => {
+      'use strict';
+
+      // منع قائمة الزر الأيمن والسحب والنسخ والقص خارج حقول الإدخال.
+      const isEditable = (el) => !!el && (
+        el.tagName === 'INPUT' ||
+        el.tagName === 'TEXTAREA' ||
+        el.isContentEditable
+      );
+
+      document.addEventListener('contextmenu', (e) => {
+        if (!isEditable(e.target)) e.preventDefault();
+      }, {capture:true});
+
+      document.addEventListener('copy', (e) => {
+        if (!isEditable(e.target)) e.preventDefault();
+      }, {capture:true});
+
+      document.addEventListener('cut', (e) => {
+        if (!isEditable(e.target)) e.preventDefault();
+      }, {capture:true});
+
+      document.addEventListener('dragstart', (e) => {
+        if (!isEditable(e.target)) e.preventDefault();
+      }, {capture:true});
+
+      document.addEventListener('selectstart', (e) => {
+        if (!isEditable(e.target)) e.preventDefault();
+      }, {capture:true});
+
+      // تعطيل أشهر اختصارات عرض المصدر وأدوات المطور والحفظ والطباعة.
+      document.addEventListener('keydown', (e) => {
+        const k = String(e.key || '').toLowerCase();
+        const ctrlOrMeta = e.ctrlKey || e.metaKey;
+
+        const blocked =
+          e.key === 'F12' ||
+          (ctrlOrMeta && k === 'u') ||
+          (ctrlOrMeta && k === 's') ||
+          (ctrlOrMeta && k === 'p') ||
+          (ctrlOrMeta && e.shiftKey && ['i','j','c','k'].includes(k));
+
+        if (blocked) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      }, {capture:true});
+
+      // تقليل سهولة تشغيل الصفحة داخل iframe بموقع آخر.
+      try {
+        if (window.top !== window.self) {
+          window.top.location = window.self.location.href;
+        }
+      } catch (_) {
+        try { document.documentElement.innerHTML = ''; } catch (_) {}
+      }
+
+      // منع إسقاط ملفات/روابط على الصفحة.
+      ['drop','dragover'].forEach(type => {
+        document.addEventListener(type, e => e.preventDefault(), {capture:true});
+      });
+    })();
+  </script>
+
 </body>
 </html>
