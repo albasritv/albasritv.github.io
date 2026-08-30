@@ -139,6 +139,7 @@ const CONFIG = {
   databaseURL:'',
   firebaseRoot:'bsr_player',
   packageName:'com.bsr.player.pro',
+  intentActivity:'com.bsr.player.IntentDataActivity',
   appScheme:'BSRPlayer',
   playStoreURL:'https://play.google.com/store/apps/details?id=com.bsr.player.pro',
   seriesApi:'https://albas.albesriali03.workers.dev/',
@@ -310,22 +311,60 @@ async function playEpisode(index){const eps=Array.isArray(state.mediaDetails?.ep
 function serverForIntent(s,title,index){return{name:String(s?.name||title||`Server ${index+1}`),url:String(s?.url||''),ua:String(s?.userAgent||s?.ua||''),userAgent:String(s?.userAgent||s?.ua||''),referer:String(s?.referer||''),origin:String(s?.origin||''),cookie:String(s?.cookie||''),drmKey:String(s?.drmKey||''),playerMode:String(s?.playerMode||'EXO'),drmType:String(s?.drmType||'Auto'),drmLicenseUrl:String(s?.drmLicenseUrl||''),drmLicenseHeaders:String(s?.drmLicenseHeaders||''),drmMultiSession:Boolean(s?.drmMultiSession||false),authorization:String(s?.authorization||''),accept:String(s?.accept||''),xRequestedWith:String(s?.xRequestedWith||''),authUrl:String(s?.authUrl||''),subtitleUrl:String(s?.subtitleUrl||'')}}
 function utf8Base64(text){const bytes=new TextEncoder().encode(text);let bin='';for(const b of bytes)bin+=String.fromCharCode(b);return btoa(bin)}
 function closeInstallModal(){$('installModal').classList.remove('show')}
-function showInstallModal(title,custom){state.pendingPlayerLaunch={title,custom,installClicked:false,installClickedAt:0};$('installModalText').textContent=`لتشغيل ${title||'هذا المحتوى'} تحتاج تطبيق البصري بلاير. حمّله من Google Play، وبعد التثبيت ارجع لهذه الصفحة وسيحاول فتحه تلقائيًا.`;$('installModal').classList.add('show')}
-function installPlayer(){if(state.pendingPlayerLaunch){state.pendingPlayerLaunch.installClicked=true;state.pendingPlayerLaunch.installClickedAt=Date.now()}toast('بعد التثبيت ارجع لهذه الصفحة لفتح المحتوى تلقائيًا');const w=window.open(CONFIG.playStoreURL,'_blank','noopener,noreferrer');if(!w)location.href=CONFIG.playStoreURL}
-let launchSeq=0;
-function attemptPlayerLaunch(title,custom,fromInstall=false){
-  if(!/Android/i.test(navigator.userAgent)){showInstallModal(title,custom);return}
-  closeInstallModal();const seq=++launchSeq;let leftPage=false;
-  const onVisibility=()=>{if(document.hidden){leftPage=true;cleanup();state.pendingPlayerLaunch=null;closeInstallModal()}};
-  const onPageHide=()=>{leftPage=true;cleanup();state.pendingPlayerLaunch=null;closeInstallModal()};
-  const cleanup=()=>{document.removeEventListener('visibilitychange',onVisibility,true);window.removeEventListener('pagehide',onPageHide,true)};
-  document.addEventListener('visibilitychange',onVisibility,true);window.addEventListener('pagehide',onPageHide,true);
-  toast(fromInstall?'جاري إعادة فتح البصري بلاير...':'جاري فتح مشغل البصري بلاير...');
-  try{location.href=custom}catch(_){ }
-  setTimeout(()=>{if(seq!==launchSeq)return;cleanup();if(!leftPage&&!document.hidden)showInstallModal(title,custom)},1450)
+function savePendingLaunch(title,custom,intentUrl){
+  state.pendingPlayerLaunch={title,custom,intentUrl};
+  try{sessionStorage.setItem('bsr_pending_launch',JSON.stringify(state.pendingPlayerLaunch))}catch(_){ }
 }
-function retryPendingPlayer(){const p=state.pendingPlayerLaunch;if(!p||!p.installClicked)return;if(Date.now()-p.installClickedAt<1800)return;p.installClicked=false;attemptPlayerLaunch(p.title,p.custom,true)}
-function openInBSRPlayer(title,servers){const payload=servers.map((s,i)=>serverForIntent(s,title,i)).filter(x=>cleanUrl(x.url));if(!payload.length){showModal('لا يوجد سيرفر','لا يوجد رابط تشغيل متاح حاليًا.');return}const base64=utf8Base64(JSON.stringify(payload)),data=encodeURIComponent(base64),custom=`${CONFIG.appScheme}://servers?data=${data}`;attemptPlayerLaunch(title,custom,false)}
+function loadPendingLaunch(){
+  if(state.pendingPlayerLaunch)return state.pendingPlayerLaunch;
+  try{const raw=sessionStorage.getItem('bsr_pending_launch');if(raw)state.pendingPlayerLaunch=JSON.parse(raw)}catch(_){ }
+  return state.pendingPlayerLaunch||null;
+}
+function clearPendingLaunch(){state.pendingPlayerLaunch=null;try{sessionStorage.removeItem('bsr_pending_launch')}catch(_){ }}
+function showInstallModal(title,custom,intentUrl){
+  savePendingLaunch(title,custom,intentUrl||'');
+  $('installModalText').textContent=`لتشغيل ${title||'هذا المحتوى'} تحتاج تطبيق البصري بلاير. إذا كان مثبتًا اضغط القناة مرة أخرى. وإذا لم يكن مثبتًا حمّله من Google Play.`;
+  $('installModal').classList.add('show');
+}
+function installPlayer(){
+  const p=loadPendingLaunch();
+  if(p){try{sessionStorage.setItem('bsr_retry_after_store','1')}catch(_){ }}
+  toast('بعد تثبيت التطبيق ارجع لهذه الصفحة واضغط القناة لتشغيلها');
+  location.href=CONFIG.playStoreURL;
+}
+function playerFallbackURL(){
+  const u=new URL(location.href);u.hash='bsr-player-install';return u.href;
+}
+function buildAndroidIntent(custom){
+  try{
+    const u=new URL(custom);
+    const host=u.host||'servers';
+    const query=u.search||'';
+    const fallback=encodeURIComponent(playerFallbackURL());
+    return `intent://${host}${query}#Intent;scheme=${CONFIG.appScheme};package=${CONFIG.packageName};component=${CONFIG.packageName}/${CONFIG.intentActivity};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;S.browser_fallback_url=${fallback};end`;
+  }catch(_){return custom}
+}
+function attemptPlayerLaunch(title,custom){
+  if(!/Android/i.test(navigator.userAgent)){showInstallModal(title,custom,'');return}
+  closeInstallModal();
+  const intentUrl=buildAndroidIntent(custom);
+  savePendingLaunch(title,custom,intentUrl);
+  toast('جاري فتح مشغل البصري بلاير...');
+  /* مهم: لا نستخدم مؤقتًا للحكم بأن التطبيق غير مثبت. Chrome نفسه يحسم ذلك عبر browser_fallback_url. */
+  location.href=intentUrl;
+}
+function handlePlayerFallback(){
+  if(location.hash!=='#bsr-player-install')return;
+  const p=loadPendingLaunch();
+  history.replaceState(history.state,'',location.pathname+location.search);
+  showInstallModal(p?.title||'هذا المحتوى',p?.custom||'',p?.intentUrl||'');
+}
+function retryPendingPlayer(){
+  const p=loadPendingLaunch();if(!p)return;
+  closeInstallModal();
+  attemptPlayerLaunch(p.title,p.custom);
+}
+function openInBSRPlayer(title,servers){const payload=servers.map((s,i)=>serverForIntent(s,title,i)).filter(x=>cleanUrl(x.url));if(!payload.length){showModal('لا يوجد سيرفر','لا يوجد رابط تشغيل متاح حاليًا.');return}const base64=utf8Base64(JSON.stringify(payload)),data=encodeURIComponent(base64),custom=`${CONFIG.appScheme}://servers?data=${data}`;attemptPlayerLaunch(title,custom)}
 
 /* ================= واجهة حماية إضافية ================= */
 (function hardenUI(){
@@ -337,8 +376,8 @@ function openInBSRPlayer(title,servers){const payload=servers.map((s,i)=>serverF
   document.addEventListener('selectstart',e=>{if(!isEditable(e.target))e.preventDefault()},{capture:true});
   document.addEventListener('keydown',e=>{const k=String(e.key||'').toUpperCase();const blocked=e.key==='F12'||(e.ctrlKey&&e.shiftKey&&['I','J','C','K'].includes(k))||(e.ctrlKey&&['U','S','P'].includes(k));if(blocked){e.preventDefault();e.stopPropagation()}},{capture:true});
 })();
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)setTimeout(retryPendingPlayer,450)});
-window.addEventListener('focus',()=>setTimeout(retryPendingPlayer,500));
+window.addEventListener('hashchange',handlePlayerFallback);
+document.addEventListener('DOMContentLoaded',handlePlayerFallback);
 
 window.addEventListener('DOMContentLoaded',()=>{syncFirebase(true);switchTab('live')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();closeModal();closeInstallModal()}});
