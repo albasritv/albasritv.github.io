@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' https: data: blob:; connect-src 'self' https://bsr-player-9c88b-default-rtdb.firebaseio.com https://bsr-player-9c88b-default-rtdb.europe-west1.firebasedatabase.app https://bsr-player-9c88b-default-rtdb.asia-southeast1.firebasedatabase.app https://albas.albesriali03.workers.dev https://api.albasritv1.workers.dev; media-src 'none'; frame-src 'none'; worker-src 'none';">
+  <title>البصري بلاير</title>
+  <meta name="description" content="البصري بلاير - قنوات، مباريات، مسلسلات وأفلام">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#060b13;--bg2:#091322;--surface:#0e1827;--surface2:#132033;--surface3:#182941;
+      --line:rgba(255,255,255,.075);--line2:rgba(38,201,255,.23);--text:#f8fbff;--muted:#8fa3bb;
+      --primary:#20d5ff;--primary2:#3178ff;--green:#22c55e;--red:#fb5267;--amber:#f5b942;
+      --shadow:0 20px 55px rgba(0,0,0,.34);--r:20px;--r2:16px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth}
+    body{min-height:100vh;font-family:'Tajawal',sans-serif;color:var(--text);background:
+      radial-gradient(circle at 90% -5%,rgba(49,120,255,.24),transparent 27%),
+      radial-gradient(circle at 8% 22%,rgba(32,213,255,.10),transparent 28%),
+      linear-gradient(180deg,var(--bg2),var(--bg) 48%);overflow-x:hidden;padding-bottom:max(22px,env(safe-area-inset-bottom))}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.19;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:30px 30px;mask-image:linear-gradient(#000,transparent 76%)}
+    button,input,a{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}.hidden{display:none!important}
+    html,body,body *:not(input):not(textarea){-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
+    img{user-select:none!important;-webkit-user-drag:none!important;user-drag:none!important;pointer-events:none}
+    .shell{width:min(1180px,100%);margin:auto;padding:0 14px 40px}
+
+    /* Top bar */
+    .topbar{position:sticky;top:0;z-index:500;background:rgba(6,11,19,.83);backdrop-filter:blur(20px) saturate(145%);border-bottom:1px solid var(--line);box-shadow:0 7px 24px rgba(0,0,0,.18)}
+    .topbar-inner{width:min(1180px,100%);margin:auto;padding:10px 14px 9px}
+    .brand-row{height:54px;display:flex;align-items:center;gap:11px}
+    .menu-btn,.top-action{width:42px;height:42px;flex:0 0 42px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035);color:#fff;display:grid;place-items:center}
+    .menu-btn:active,.top-action:active{transform:scale(.94)}
+    .brand-logo{width:43px;height:43px;border-radius:14px;object-fit:cover;background:#101a29;border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 22px rgba(0,0,0,.24)}
+    .brand-copy{flex:1;min-width:0}.brand-copy strong{display:block;font-size:17px;font-weight:900;white-space:nowrap}.brand-copy span{display:block;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .firebase-dot{width:8px;height:8px;border-radius:50%;background:#64748b}.firebase-dot.online{background:var(--green);box-shadow:0 0 12px rgba(34,197,94,.7)}.firebase-dot.error{background:var(--red)}
+
+    .main-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;padding-top:8px}
+    .tab-btn{height:45px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025);color:var(--muted);font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:6px;transition:.18s}
+    .tab-btn i{font-size:13px}.tab-btn.active{color:#fff;border-color:rgba(32,213,255,.29);background:linear-gradient(135deg,rgba(32,213,255,.16),rgba(49,120,255,.15));box-shadow:inset 0 0 0 1px rgba(32,213,255,.08)}.tab-btn.active i{color:var(--primary)}
+
+    /* Drawer */
+    .drawer-overlay{position:fixed;inset:0;z-index:1100;background:rgba(1,6,13,.72);backdrop-filter:blur(7px);opacity:0;pointer-events:none;transition:.2s}.drawer-overlay.show{opacity:1;pointer-events:auto}
+    .drawer{position:absolute;top:0;right:0;width:min(330px,86vw);height:100%;padding:20px 16px;background:linear-gradient(180deg,#0e1929,#08111e);border-left:1px solid var(--line);transform:translateX(102%);transition:.24s ease;box-shadow:-24px 0 55px rgba(0,0,0,.34)}
+    .drawer-overlay.show .drawer{transform:none}.drawer-head{padding:15px;border-radius:22px;background:linear-gradient(145deg,rgba(32,213,255,.10),rgba(49,120,255,.07));border:1px solid var(--line);display:flex;align-items:center;gap:12px;margin-bottom:16px}.drawer-head img{width:54px;height:54px;border-radius:17px;object-fit:cover}.drawer-head strong{font-size:17px;font-weight:900}.drawer-head span{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+    .drawer-link{width:100%;min-height:55px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);color:#fff;display:flex;align-items:center;gap:12px;padding:0 14px;margin-bottom:9px;text-align:right}.drawer-link i{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:rgba(32,213,255,.09);color:var(--primary)}.drawer-link span{font-size:13px;font-weight:900}.drawer-link small{display:block;color:var(--muted);font-size:9.5px;font-weight:600;margin-top:3px}.drawer-close{width:100%;height:46px;border:0;border-radius:14px;background:rgba(255,255,255,.035);color:var(--muted);font-weight:900;margin-top:5px}
+
+    /* Search */
+    .toolbar{display:flex;align-items:center;gap:8px;margin:12px 0}.back-btn,.refresh-btn{height:47px;min-width:47px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:#fff;padding:0 13px}.search-box{height:47px;flex:1;display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:14px;background:rgba(14,24,39,.92);padding:0 13px}.search-box i{color:var(--primary);font-size:13px}.search-box input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font-size:12px}.search-box input::placeholder{color:#687b91}
+
+    /* Shared headings */
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:15px 2px 11px}.section-title{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:900}.section-title::before{content:"";width:4px;height:20px;border-radius:10px;background:linear-gradient(var(--primary),var(--primary2))}.counter{font-size:10px;color:var(--muted);padding:5px 9px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+
+    /* Exactly 3 per row */
+    .three-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+    .category-card{min-width:0;min-height:110px;border:1px solid var(--line);border-radius:19px;background:radial-gradient(circle at 50% 0%,rgba(32,213,255,.11),transparent 48%),linear-gradient(160deg,var(--surface2),#0c1726);color:#fff;padding:12px 5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;box-shadow:0 10px 27px rgba(0,0,0,.20);transition:.16s}.category-card:active{transform:scale(.96);border-color:rgba(32,213,255,.44)}.cat-icon{width:49px;height:49px;border-radius:16px;background:linear-gradient(145deg,rgba(32,213,255,.15),rgba(49,120,255,.07));border:1px solid rgba(32,213,255,.15);color:#dffaff;display:grid;place-items:center;font-size:21px}.cat-image{width:52px;height:52px;border-radius:16px;object-fit:contain;background:rgba(255,255,255,.035);padding:5px;border:1px solid var(--line)}.category-card strong{display:block;width:100%;font-size:11.5px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}.category-card small{font-size:9px;color:var(--muted);font-weight:700}
+
+    .media-card{position:relative;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:17px;background:linear-gradient(180deg,var(--surface2),#0b1421);box-shadow:0 9px 24px rgba(0,0,0,.20);transition:.16s}.media-card:active{transform:scale(.975)}.poster{position:relative;width:100%;aspect-ratio:16/10;background:#0d1725;overflow:hidden}.poster.tall{aspect-ratio:2/3}.poster img{width:100%;height:100%;object-fit:contain;display:block}.poster.tall img{object-fit:cover}.media-copy{padding:9px 6px 10px;text-align:center}.media-title{font-size:11.5px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.media-sub{font-size:9px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.play-dot{position:absolute;left:7px;bottom:7px;width:31px;height:31px;border-radius:11px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#021019;display:grid;place-items:center;font-size:11px;box-shadow:0 7px 20px rgba(32,213,255,.22)}.server-badge{position:absolute;top:7px;right:7px;padding:4px 6px;border-radius:8px;background:rgba(2,8,15,.78);border:1px solid rgba(255,255,255,.08);font-size:8px;font-weight:900;color:#d9f8ff}
+
+    /* Match design kept as a dedicated layout */
+    .matches-list{display:grid;gap:11px}.match-card{position:relative;display:grid;grid-template-columns:1fr 112px 1fr;align-items:center;gap:6px;min-height:133px;padding:14px 8px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(150deg,rgba(17,31,50,.94),rgba(10,19,33,.90));box-shadow:0 11px 29px rgba(0,0,0,.20);overflow:hidden}.match-card:active{transform:scale(.988);border-color:rgba(32,213,255,.28)}.match-card::after{content:"";position:absolute;bottom:0;left:20%;right:20%;height:2px;background:linear-gradient(90deg,transparent,var(--primary),transparent);opacity:.42}.team{text-align:center;min-width:0;display:flex;flex-direction:column;align-items:center;gap:7px}.team-logo{width:54px;height:54px;border-radius:16px;object-fit:contain;padding:6px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.team-name{width:100%;font-size:10.5px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.match-center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}.match-status{font-size:8.5px;font-weight:900;padding:5px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap}.match-status.live{color:#ff7386;background:rgba(251,82,103,.08);border-color:rgba(251,82,103,.23)}.match-status.upcoming{color:#4ade80;background:rgba(34,197,94,.07);border-color:rgba(34,197,94,.20)}.match-status.ended{color:#a6b3c3;background:rgba(148,163,184,.06);border-color:rgba(148,163,184,.15)}.match-status.warning{color:#f7c85a;background:rgba(245,185,66,.07);border-color:rgba(245,185,66,.20)}.score-time{font-size:18px;font-weight:900;direction:ltr}.match-note{font-size:8.5px;color:var(--muted);font-weight:700}.match-meta{position:absolute;bottom:7px;left:10px;right:10px;text-align:center;font-size:7.8px;color:#697d93;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    /* Media details and episodes */
+    .details-card{border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,var(--surface2),#0b1421);padding:14px;box-shadow:var(--shadow)}.details-top{display:flex;gap:13px;align-items:center}.details-top img{width:83px;height:116px;object-fit:cover;border-radius:16px;background:#0f1724}.details-copy{min-width:0}.details-copy h2{font-size:16px;font-weight:900;line-height:1.6}.details-copy p{font-size:10.5px;color:var(--muted);line-height:1.7;margin-top:5px}.episodes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:12px}.episode-btn{min-width:0;border:1px solid var(--line);border-radius:15px;background:var(--surface2);color:#fff;overflow:hidden;text-align:center}.episode-btn:active{transform:scale(.97);border-color:rgba(32,213,255,.4)}.episode-btn img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#0b1421}.episode-btn span{display:block;padding:10px 4px;font-size:10px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.episode-btn i{color:var(--primary);margin-left:4px}
+    .load-more{width:100%;height:48px;margin-top:13px;border:1px solid rgba(32,213,255,.21);border-radius:15px;background:rgba(32,213,255,.07);color:var(--primary);font-size:11px;font-weight:900}
+
+    .state-box{grid-column:1/-1;padding:42px 16px;text-align:center;border:1px dashed var(--line2);border-radius:20px;background:rgba(11,22,37,.54);color:var(--muted);font-size:12px;font-weight:700;line-height:1.9}.spinner{width:36px;height:36px;border-radius:50%;border:3px solid rgba(255,255,255,.07);border-top-color:var(--primary);margin:0 auto 12px;animation:spin .75s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+    .toast{position:fixed;left:50%;bottom:25px;z-index:1500;transform:translate(-50%,22px);opacity:0;pointer-events:none;max-width:calc(100% - 28px);background:#101b2a;border:1px solid var(--line);border-radius:13px;color:#fff;padding:11px 14px;font-size:11px;font-weight:800;text-align:center;box-shadow:var(--shadow);transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+    .modal{position:fixed;inset:0;z-index:1600;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(1,6,13,.78);backdrop-filter:blur(10px)}.modal.show{display:flex}.modal-card{width:min(390px,100%);padding:19px;border-radius:23px;border:1px solid var(--line);background:linear-gradient(160deg,#15243a,#0b1523);box-shadow:0 30px 80px rgba(0,0,0,.5);text-align:center}.modal-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin:0 auto 12px;background:rgba(245,185,66,.09);color:var(--amber);border:1px solid rgba(245,185,66,.20);font-size:22px}.modal-card h3{font-size:17px;font-weight:900}.modal-card p{font-size:11px;color:var(--muted);line-height:1.8;margin-top:6px}.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.modal-card button{width:100%;height:45px;border:0;border-radius:13px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#03121d;font-weight:900;margin-top:0}.modal-card button.secondary{background:rgba(255,255,255,.055);color:#fff;border:1px solid var(--line)}.install-icon{background:rgba(34,197,94,.10)!important;color:#4ade80!important;border-color:rgba(34,197,94,.22)!important}
+
+    @media(min-width:760px){.topbar-inner,.shell{padding-left:22px;padding-right:22px}.category-card{min-height:128px}.cat-icon{width:58px;height:58px;font-size:24px}.category-card strong{font-size:14px}.media-title{font-size:13px}.team-logo{width:66px;height:66px}.match-card{min-height:155px}.team-name{font-size:12px}.score-time{font-size:21px}.episodes-grid{gap:13px}.three-grid{gap:13px}}
+    @media(max-width:360px){.shell{padding-left:9px;padding-right:9px}.topbar-inner{padding-left:9px;padding-right:9px}.three-grid,.episodes-grid{gap:6px}.category-card{min-height:102px;padding-inline:3px}.cat-icon{width:44px;height:44px}.category-card strong{font-size:10px}.media-title{font-size:10px}.match-card{grid-template-columns:1fr 93px 1fr;padding-inline:5px}.team-logo{width:47px;height:47px}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-row">
+      <button class="menu-btn" type="button" onclick="openDrawer()" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+      <img class="brand-logo" src="icon.png" alt="البصري بلاير" onerror="this.style.display='none'">
+      <div class="brand-copy"><strong>البصري بلاير</strong><span id="connectionText">قنوات • مباريات • مسلسلات • أفلام</span></div>
+      <span id="firebaseDot" class="firebase-dot"></span>
+      <button class="top-action" type="button" onclick="shareApp()" aria-label="مشاركة"><i class="fa-solid fa-share-nodes"></i></button>
+    </div>
+    <nav class="main-tabs">
+      <button class="tab-btn active" data-tab="live" onclick="switchTab('live')"><i class="fa-solid fa-tv"></i><span>القنوات</span></button>
+      <button class="tab-btn" data-tab="matches" onclick="switchTab('matches')"><i class="fa-solid fa-futbol"></i><span>المباريات</span></button>
+      <button class="tab-btn" data-tab="series" onclick="switchTab('series')"><i class="fa-solid fa-clapperboard"></i><span>المسلسلات</span></button>
+      <button class="tab-btn" data-tab="movies" onclick="switchTab('movies')"><i class="fa-solid fa-film"></i><span>الأفلام</span></button>
+    </nav>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="if(event.target===this)closeDrawer()">
+  <aside class="drawer">
+    <div class="drawer-head"><img src="icon.png" alt=""><div><strong>البصري بلاير</strong><span>تابعنا وشارك التطبيق</span></div></div>
+    <a class="drawer-link" href="https://t.me/albasri_tv" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i><div><span>قناتنا في التليجرام</span><small>@albasri_tv</small></div></a>
+    <a class="drawer-link" href="https://www.instagram.com/a_l__i19/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i><div><span>حسابنا في الإنستغرام</span><small>@a_l__i19</small></div></a>
+    <button class="drawer-link" type="button" onclick="shareApp();closeDrawer()"><i class="fa-solid fa-share-nodes"></i><div><span>مشاركة التطبيق</span><small>أرسل البصري بلاير لأصدقائك</small></div></button>
+    <a class="drawer-link" href="https://play.google.com/store/apps/details?id=com.bsr.player.pro" target="_blank" rel="noopener"><i class="fa-brands fa-google-play"></i><div><span>Google Play</span><small>تحميل أو تحديث التطبيق</small></div></a>
+    <button class="drawer-close" onclick="closeDrawer()">إغلاق</button>
+  </aside>
+</div>
+
+<main class="shell">
+  <div class="toolbar">
+    <button id="backBtn" class="back-btn hidden" type="button" onclick="goBack()"><i class="fa-solid fa-arrow-right"></i></button>
+    <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="searchInput" type="search" autocomplete="off" placeholder="بحث..." oninput="handleSearchInput()"></div>
+    <button class="refresh-btn" type="button" onclick="manualRefresh()"><i class="fa-solid fa-rotate"></i></button>
+  </div>
+
+  <div id="content"><div class="state-box"><div class="spinner"></div>جاري تحميل البيانات...</div></div>
+</main>
+
+<div id="toast" class="toast"></div>
+<div id="infoModal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modal-card"><div class="modal-icon"><i class="fa-solid fa-satellite-dish"></i></div><h3 id="modalTitle">لا يوجد سيرفر</h3><p id="modalText">لا يوجد سيرفر بث متاح لهذه المباراة في الوقت الحالي.</p><div class="modal-actions" style="grid-template-columns:1fr"><button type="button" onclick="closeModal()">حسنًا</button></div></div></div>
+<div id="installModal" class="modal" onclick="if(event.target===this)closeInstallModal()"><div class="modal-card"><div class="modal-icon install-icon"><i class="fa-brands fa-google-play"></i></div><h3>مشغل البصري بلاير غير موجود</h3><p id="installModalText">لتشغيل هذا المحتوى تحتاج تطبيق البصري بلاير. حمّله من Google Play، وبعد التثبيت ارجع لهذه الصفحة وسيحاول فتح المحتوى تلقائيًا.</p><div class="modal-actions"><button type="button" onclick="installPlayer()"><i class="fa-brands fa-google-play"></i> تحميل المشغل</button><button class="secondary" type="button" onclick="closeInstallModal()">إلغاء</button></div></div></div>
+
+<script>
+'use strict';
+
+/* =========================================================
+   إعدادات البصري بلاير
+   لا تضع Service Account أو Private Key في HTML.
+========================================================= */
+const CONFIG = {
+  projectId:'bsr-player-9c88b',
+  databaseURL:'',
+  firebaseRoot:'bsr_player',
+  packageName:'com.bsr.player.pro',
+  appScheme:'BSRPlayer',
+  playStoreURL:'https://play.google.com/store/apps/details?id=com.bsr.player.pro',
+  seriesApi:'https://albas.albesriali03.workers.dev/',
+  matchesApi:'https://api.albasritv1.workers.dev/',
+  defaultUserAgent:'Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 Chrome/139.0.0.0 Mobile Safari/537.36',
+  matchesRefreshMs:45000
+};
+Object.freeze(CONFIG);
+
+const SERIES_CATEGORIES=[
+  {title:'أجنبية',icon:'fa-earth-americas',url:'https://akwam.it/series?section=30'},
+  {title:'عربية',icon:'fa-language',url:'https://akwam.it/series?section=29'},
+  {title:'تركية',icon:'fa-moon',url:'https://akwam.it/series?section=32'},
+  {title:'آسيوية',icon:'fa-yin-yang',url:'https://akwam.it/series?section=33'},
+  {title:'أنمي',icon:'fa-dragon',url:'https://akwam.it/series?category=30'},
+  {title:'رمضان',icon:'fa-star-and-crescent',url:'https://akwam.it/series?category=87'}
+];
+const MOVIE_CATEGORIES=[
+  {title:'أجنبية',icon:'fa-earth-americas',url:'https://akwam.it/movies?section=30'},
+  {title:'عربية',icon:'fa-language',url:'https://akwam.it/movies?section=29'},
+  {title:'هندية',icon:'fa-gopuram',url:'https://akwam.it/movies?section=31'},
+  {title:'آسيوية',icon:'fa-yin-yang',url:'https://akwam.it/movies?section=33'},
+  {title:'تركية',icon:'fa-moon',url:'https://akwam.it/movies?section=32'},
+  {title:'أنمي',icon:'fa-dragon',url:'https://akwam.it/movies?category=30'}
+];
+
+const state={
+  tab:'live',view:'root',databaseURL:'',firebaseRaw:{},categories:[],channels:[],hiddenMatches:[],matchLinks:[],firebaseMatches:[],
+  selectedCategory:null,matches:[],matchesLoaded:false,matchesLoading:false,
+  mediaType:'series',mediaItems:[],mediaTitle:'',mediaGenreUrl:'',mediaPage:1,mediaSearching:false,mediaDetails:null,mediaPoster:'',mediaBaseTitle:'',
+  firebaseReady:false,realtime:null,pollTimer:null,matchTimer:null,searchTimer:null
+};
+const $=id=>document.getElementById(id); const content=$('content');
+
+function toArray(v){if(!v)return[];if(Array.isArray(v))return v.filter(Boolean);if(typeof v==='object')return Object.entries(v).map(([k,x])=>typeof x==='object'&&x?({_firebaseKey:k,...x}):x).filter(Boolean);return[]}
+function sortOrder(a){return [...a].sort((x,y)=>(Number(x?.order)||0)-(Number(y?.order)||0))}
+function esc(v=''){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function jsq(v=''){return String(v).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\r?\n/g,' ')}
+function cleanUrl(v){try{const s=String(v||'').trim();if(!s)return'';const u=new URL(s.startsWith('//')?'https:'+s:s,location.href);return ['http:','https:'].includes(u.protocol)?u.href:''}catch{return''}}
+function img(url,tall=false){const u=cleanUrl(url);return u?`<img src="${esc(u)}" loading="lazy" referrerpolicy="no-referrer" alt="">`:`<div style="height:100%;display:grid;place-items:center;color:#40536a;font-size:26px"><i class="fa-solid fa-photo-film"></i></div>`}
+function toast(msg,ms=2600){const el=$('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>el.classList.remove('show'),ms)}
+function showModal(title,text){$('modalTitle').textContent=title;$('modalText').textContent=text;$('infoModal').classList.add('show')}
+function closeModal(){$('infoModal').classList.remove('show')}
+function setLoading(text='جاري التحميل...'){content.innerHTML=`<div class="state-box"><div class="spinner"></div>${esc(text)}</div>`}
+function empty(text){content.innerHTML=`<div class="state-box"><i class="fa-regular fa-folder-open" style="font-size:27px;color:var(--primary)"></i><br><br>${esc(text)}</div>`}
+function query(){return $('searchInput').value.trim().toLowerCase()}
+function matchesQuery(...parts){const q=query();return !q||parts.some(x=>String(x||'').toLowerCase().includes(q))}
+
+function openDrawer(){$('drawerOverlay').classList.add('show')}
+function closeDrawer(){$('drawerOverlay').classList.remove('show')}
+async function shareApp(){
+  const data={title:'البصري بلاير',text:'حمّل تطبيق البصري بلاير لمشاهدة القنوات والمسلسلات والأفلام والمباريات.',url:CONFIG.playStoreURL};
+  try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(CONFIG.playStoreURL);toast('تم نسخ رابط التطبيق')}}catch(_){ }
+}
+
+/* ================= Firebase: channels/categories ================= */
+async function detectDatabaseURL(){
+  if(CONFIG.databaseURL)return CONFIG.databaseURL.replace(/\/$/,'');
+  const p=CONFIG.projectId;
+  const candidates=[`https://${p}-default-rtdb.firebaseio.com`,`https://${p}-default-rtdb.europe-west1.firebasedatabase.app`,`https://${p}-default-rtdb.asia-southeast1.firebasedatabase.app`];
+  for(const base of candidates){try{const r=await fetch(`${base}/${CONFIG.firebaseRoot}.json?shallow=true`,{cache:'no-store'});if(r.ok)return base}catch(_){ }}
+  throw new Error('تعذر الاتصال بـ Firebase');
+}
+async function syncFirebase(silent=false){
+  try{
+    if(!state.databaseURL)state.databaseURL=await detectDatabaseURL();
+    const r=await fetch(`${state.databaseURL}/${CONFIG.firebaseRoot}.json`,{cache:'no-store'});if(!r.ok)throw new Error('Firebase '+r.status);
+    const raw=await r.json()||{};state.firebaseRaw=raw;state.categories=sortOrder(toArray(raw.catalog_categories));state.channels=sortOrder(toArray(raw.catalog_channels));state.matchLinks=toArray(raw.match_channel_links);state.firebaseMatches=toArray(raw.published_matches);state.hiddenMatches=toArray(raw.hidden_matches).map(x=>typeof x==='string'?x:(x?.id||x?.matchId)).filter(Boolean);state.firebaseReady=true;
+    $('firebaseDot').className='firebase-dot online';$('connectionText').textContent='متصل • البيانات تتحدث تلقائيًا';
+    if(state.tab==='live')renderLive(); if(!silent)toast('تم تحديث بيانات Firebase'); ensureFirebaseRealtime();
+  }catch(e){console.error(e);$('firebaseDot').className='firebase-dot error';$('connectionText').textContent='تعذر اتصال Firebase';if(state.tab==='live'&&!state.firebaseReady)empty('تعذر جلب القنوات من Firebase');ensureFirebasePoll()}
+}
+function ensureFirebaseRealtime(){
+  if(state.realtime||!state.databaseURL||!window.EventSource)return ensureFirebasePoll();
+  try{const es=new EventSource(`${state.databaseURL}/${CONFIG.firebaseRoot}.json`);state.realtime=es;let t=null;const changed=()=>{clearTimeout(t);t=setTimeout(()=>syncFirebase(true),350)};es.addEventListener('put',changed);es.addEventListener('patch',changed);es.onerror=()=>{try{es.close()}catch{}state.realtime=null;ensureFirebasePoll()}}catch{ensureFirebasePoll()}
+}
+function ensureFirebasePoll(){if(!state.pollTimer)state.pollTimer=setInterval(()=>syncFirebase(true),10000)}
+
+/* ================= Navigation ================= */
+function switchTab(tab){
+  state.tab=tab;state.view='root';state.selectedCategory=null;state.mediaItems=[];state.mediaDetails=null;$('searchInput').value='';$('backBtn').classList.add('hidden');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  if(tab==='live')renderLive();else if(tab==='matches')loadMatches(false);else renderMediaHome(tab);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function goBack(){
+  $('searchInput').value='';
+  if(state.tab==='live'&&state.view==='category'){state.view='root';state.selectedCategory=null;renderLive();return}
+  if((state.tab==='series'||state.tab==='movies')&&state.view!=='root'){state.view='root';state.mediaItems=[];state.mediaDetails=null;renderMediaHome(state.tab);return}
+}
+function handleSearchInput(){
+  clearTimeout(state.searchTimer);
+  if(state.tab==='series'||state.tab==='movies'){
+    const q=query();if(!q){if(state.view==='root')renderMediaHome(state.tab);else renderMediaGrid();return}
+    state.searchTimer=setTimeout(()=>searchMedia(q),260);return;
+  }
+  if(state.tab==='live')renderLive();else if(state.tab==='matches')renderMatches();
+}
+function manualRefresh(){if(state.tab==='live')syncFirebase(false);else if(state.tab==='matches')loadMatches(true);else if(state.view==='grid'&&state.mediaGenreUrl)loadGenre(state.mediaGenreUrl,state.mediaTitle,1);else toast('تم تحديث الصفحة')}
+
+/* ================= Channels ================= */
+function liveCategories(){return state.categories.filter(c=>String(c.scope||'LIVE').toUpperCase()==='LIVE')}
+function renderLive(){
+  if(!state.firebaseReady){setLoading('جاري الاتصال بـ Firebase...');return}
+  if(state.view==='root'){
+    $('backBtn').classList.add('hidden');const list=liveCategories().filter(c=>matchesQuery(c.title));
+    if(!list.length)return empty('لا توجد أقسام قنوات حاليًا');
+    content.innerHTML=`<div class="section-head"><div class="section-title">أقسام القنوات</div><span class="counter">${list.length} قسم</span></div><div class="three-grid">${list.map(c=>`<button class="category-card" onclick="openLiveCategory('${jsq(c.id||c._firebaseKey)}')">${c.imageUrl?`<img class="cat-image" src="${esc(cleanUrl(c.imageUrl))}" alt="">`:`<span class="cat-icon"><i class="fa-solid fa-layer-group"></i></span>`}<strong>${esc(c.title||'قسم')}</strong></button>`).join('')}</div>`;return;
+  }
+  $('backBtn').classList.remove('hidden');const cat=state.selectedCategory;const id=cat?.id||cat?._firebaseKey;const list=state.channels.filter(c=>String(c.categoryId||'')===String(id)).filter(c=>matchesQuery(c.title));
+  content.innerHTML=`<div class="section-head"><div class="section-title">${esc(cat?.title||'القنوات')}</div><span class="counter">${list.length} قناة</span></div>${list.length?`<div class="three-grid">${list.map(channelCard).join('')}</div>`:`<div class="state-box">لا توجد قنوات داخل هذا القسم</div>`}`;
+}
+function openLiveCategory(id){state.selectedCategory=state.categories.find(c=>String(c.id||c._firebaseKey)===String(id))||null;state.view='category';$('searchInput').value='';renderLive();window.scrollTo({top:0,behavior:'smooth'})}
+function channelCard(c){const servers=sortOrder(toArray(c.servers)).filter(s=>s?.url);return `<article class="media-card" onclick="playChannel('${jsq(c.id||c._firebaseKey)}')"><div class="poster">${img(c.imageUrl)}<span class="server-badge">${servers.length} سيرفر</span><span class="play-dot"><i class="fa-solid fa-play"></i></span></div><div class="media-copy"><div class="media-title">${esc(c.title||'قناة')}</div></div></article>`}
+function playChannel(id){const c=state.channels.find(x=>String(x.id||x._firebaseKey)===String(id));if(!c)return;const servers=sortOrder(toArray(c.servers)).filter(s=>s?.url);if(!servers.length)return showModal('لا يوجد سيرفر','هذه القناة لا تحتوي على سيرفر تشغيل حاليًا.');openInBSRPlayer(c.title||'البصري بلاير',servers)}
+
+/* ================= Matches from supplied match code ================= */
+async function loadMatches(manual=false){
+  if(state.matchesLoading)return;state.matchesLoading=true;if(!state.matchesLoaded)setLoading('جاري جلب مباريات اليوم...');
+  try{const r=await fetch(CONFIG.matchesApi,{cache:'no-store',headers:{Accept:'application/json'}});if(!r.ok)throw new Error('HTTP '+r.status);const result=await r.json();if(result?.success===false)throw new Error('success=false');state.matches=Array.isArray(result?.data)?result.data:(Array.isArray(result)?result:[]);state.matchesLoaded=true;renderMatches();if(manual)toast('تم تحديث جدول المباريات')}
+  catch(e){console.error(e);if(!state.matchesLoaded)empty('تعذر جلب مباريات اليوم الآن. حاول مرة أخرى.')}
+  finally{state.matchesLoading=false;if(!state.matchTimer)state.matchTimer=setInterval(()=>{if(state.tab==='matches')loadMatches(false)},CONFIG.matchesRefreshMs)}
+}
+function latin(v){return String(v??'').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d))}
+function normalizeTime(v){let s=latin(v).replace(/⏰/g,' ').replace(/\s+/g,' ').trim();if(!s)return'';if(/^\d{10,13}$/.test(s)){const d=new Date(Number(s)*(s.length===10?1000:1));if(!Number.isNaN(d.getTime()))return new Intl.DateTimeFormat('ar-IQ',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'Asia/Baghdad'}).format(d)}if(/^\d{4}-\d{2}-\d{2}T/.test(s)){const d=new Date(s);if(!Number.isNaN(d.getTime()))return new Intl.DateTimeFormat('ar-IQ',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'Asia/Baghdad'}).format(d)}const m=s.match(/(\d{1,2})\s*:\s*(\d{2})(?:\s*([AaPp][Mm]|ص|م))?/);if(!m)return s;let h=Number(m[1]);const min=m[2],mark=(m[3]||'').toLowerCase();if(mark){const pm=mark==='pm'||mark==='م';if(h===0)h=12;if(h>12)h-=12;return `${h}:${min} ${pm?'م':'ص'}`}if(h>=0&&h<=23){const pm=h>=12;let x=h%12;if(x===0)x=12;return `${x}:${min} ${pm?'م':'ص'}`}return `${h}:${min}`}
+function goal(v){if(v===null||v===undefined||v==='')return null;const n=Number(latin(v));return Number.isFinite(n)&&n>=0?Math.trunc(n):null}
+function matchScore(m){const a=goal(m?.team1?.goals??m?.team1_score??m?.home_score??m?.score1),b=goal(m?.team2?.goals??m?.team2_score??m?.away_score??m?.score2);return a===null||b===null?null:`${a} - ${b}`}
+function matchStatus(m){const raw=latin([m.status,m.state,m.match_status,m.status_text,m.phase].filter(Boolean).join(' ')).toLowerCase();const p=Number(m.priority);if(/cancel|canceled|cancelled|ملغي|ألغيت|الغيت|إلغاء/.test(raw))return{key:'cancelled',cls:'warning',text:'ملغاة'};if(/postpon|مؤجل|تأجل|تاجل/.test(raw))return{key:'postponed',cls:'warning',text:'مؤجلة'};if(/finish|finished|ended|full.?time|ft|انته|نهاية/.test(raw)||p===3)return{key:'ended',cls:'ended',text:'انتهت'};if(/live|playing|in.?progress|جاري|الشوط|half|break/.test(raw)||p===1)return{key:'live',cls:'live',text:'جاري الآن'};return{key:'upcoming',cls:'upcoming',text:'لم تبدأ'}}
+function matchDisplay(m){const status=matchStatus(m),score=matchScore(m),time=normalizeTime(m.time??m.match_time??m.start_time??m.kickoff??'');if(status.key==='live')return{status,main:score||'0 - 0',note:'مباشر'};if(status.key==='ended')return{status,main:score||'—',note:'النتيجة النهائية'};if(status.key==='postponed'||status.key==='cancelled')return{status,main:'—',note:time?`كان الموعد ${time}`:''};return{status,main:time||'يحدد لاحقًا',note:'موعد المباراة'}}
+function matchKey(m){return String(m.id??m.match_id??m.link??`${m?.team1?.name||''}|${m?.team2?.name||''}|${m?.time||''}`)}
+function teamLogo(v){const raw=String(v||'').trim();if(!raw)return'';if(raw.startsWith('//'))return'https:'+raw;if(/^https?:\/\//i.test(raw))return cleanUrl(raw);return cleanUrl('https://koooracity.com/'+raw.replace(/^\/+/,''))}
+function renderMatches(){
+  const q=query();const list=state.matches.filter(m=>!q||[m?.team1?.name,m?.team2?.name,m.league,m.championship,m.channel,m.tv].some(v=>String(v||'').toLowerCase().includes(q)));
+  if(!list.length)return empty(state.matchesLoaded?'لا توجد مباريات مطابقة حاليًا':'جاري التحميل...');
+  content.innerHTML=`<div class="section-head"><div class="section-title">مباريات اليوم</div><span class="counter">${list.length} مباراة</span></div><div class="matches-list">${list.map(matchCard).join('')}</div>`;
+}
+function matchCard(m){const d=matchDisplay(m),t1=m.team1||{},t2=m.team2||{},meta=m.league??m.championship??m.tournament??m.channel??m.tv??'';return `<article class="match-card" onclick="openMatchByKey('${jsq(matchKey(m))}')"><div class="team">${teamLogo(t1.logo)?`<img class="team-logo" src="${esc(teamLogo(t1.logo))}" loading="lazy" referrerpolicy="no-referrer">`:`<div class="team-logo" style="display:grid;place-items:center"><i class="fa-solid fa-shield-halved"></i></div>`}<div class="team-name">${esc(t1.name||'الفريق الأول')}</div></div><div class="match-center"><div class="match-status ${d.status.cls}">${esc(d.status.text)}</div><div class="score-time">${esc(d.main)}</div><div class="match-note">${esc(d.note)}</div></div><div class="team">${teamLogo(t2.logo)?`<img class="team-logo" src="${esc(teamLogo(t2.logo))}" loading="lazy" referrerpolicy="no-referrer">`:`<div class="team-logo" style="display:grid;place-items:center"><i class="fa-solid fa-shield-halved"></i></div>`}<div class="team-name">${esc(t2.name||'الفريق الثاني')}</div></div><div class="match-meta">${esc(meta)}</div></article>`}
+async function openMatchByKey(key){const m=state.matches.find(x=>matchKey(x)===key);if(!m)return;setLoading('جاري البحث عن سيرفر المباراة...');
+  /* 1) جرّب السيرفرات الموجودة أصلاً داخل كائن المباراة */
+  const direct=sortOrder(toArray(m.servers)).filter(s=>s?.url);if(direct.length){openInBSRPlayer(`${m?.team1?.name||''} - ${m?.team2?.name||''}`,direct);renderMatches();return}
+  /* 2) جرّب Firebase إذا كانت المباراة مرتبطة بقناة */
+  const mid=String(m.id??m.match_id??'');const fm=state.firebaseMatches.find(x=>String(x.matchId||x.id||'')===mid);if(fm){const fservers=sortOrder(toArray(fm.servers)).filter(s=>s?.url);const l=state.matchLinks.find(x=>String(x.matchId||'')===String(fm.matchId||fm.id||''));const ch=state.channels.find(x=>String(x.id||x._firebaseKey)===String(fm.channelId||l?.channelId||''));const linked=sortOrder(toArray(ch?.servers)).filter(s=>s?.url);const all=[...fservers,...linked];if(all.length){openInBSRPlayer(`${m?.team1?.name||''} - ${m?.team2?.name||''}`,all);renderMatches();return}}
+  /* 3) نفس منطق كود المباريات المرسل: افتح m.link واقرأ result.servers */
+  const link=cleanUrl(m.link);if(!link){renderMatches();showModal('لا يوجد سيرفر','لا يوجد رابط بث مربوط بهذه المباراة حاليًا.');return}
+  try{const r=await fetch(link,{cache:'no-store',headers:{Accept:'application/json'}});if(!r.ok)throw new Error('HTTP '+r.status);const result=await r.json();const servers=Array.isArray(result?.servers)?result.servers.filter(s=>cleanUrl(s?.url)):[];renderMatches();if(result?.success!==false&&servers.length){const mapped=servers.map((s,i)=>({name:String(s.name||`سيرفر ${i+1}`),url:s.url,playerMode:normalizeMatchServerMode(s.type,s.url),userAgent:s.userAgent||s.ua||'',referer:s.referer||'',origin:s.origin||'',cookie:s.cookie||'',drmKey:s.drmKey||''}));openInBSRPlayer(`${m?.team1?.name||''} - ${m?.team2?.name||''}`,mapped)}else showModal('لا يوجد سيرفر','لا يوجد سيرفر بث متاح لهذه المباراة في الوقت الحالي. سيتم تحديثه عند توفر البث.')}
+  catch(e){console.error(e);renderMatches();showModal('لا يوجد سيرفر','تعذر العثور على سيرفر بث للمباراة الآن. حاول مرة أخرى عند بدء المباراة.')}
+}
+function normalizeMatchServerMode(type,url){const t=String(type||'').toLowerCase(),u=String(url||'').toLowerCase();if(t.includes('web')||t.includes('iframe'))return'WEB';if(t.includes('browser'))return'BROWSER';return /\.m3u8|\.mpd|\.mp4|\.ts/.test(u)||t.includes('m3u')?'EXO':'WEB'}
+
+/* ================= Series + Movies from supplied code ================= */
+function renderMediaHome(type){state.mediaType=type;state.view='root';$('backBtn').classList.add('hidden');const cats=type==='series'?SERIES_CATEGORIES:MOVIE_CATEGORIES;const q=query();const list=cats.filter(x=>!q||x.title.includes(q));content.innerHTML=`<div class="section-head"><div class="section-title">أقسام ${type==='series'?'المسلسلات':'الأفلام'}</div><span class="counter">${list.length} أقسام</span></div><div class="three-grid">${list.map((x,i)=>`<button class="category-card" onclick="loadGenreByIndex(${i})"><span class="cat-icon"><i class="fa-solid ${x.icon}"></i></span><strong>${esc(x.title)}</strong></button>`).join('')}</div>`}
+function loadGenreByIndex(index){const cats=state.mediaType==='series'?SERIES_CATEGORIES:MOVIE_CATEGORIES;const c=cats[index];if(c)loadGenre(c.url,`${state.mediaType==='series'?'مسلسلات':'أفلام'} ${c.title}`,1)}
+async function mediaApi(endpoint,show=true){if(show)setLoading('جاري جلب المحتوى...');try{const r=await fetch(CONFIG.seriesApi+endpoint,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);return await r.json()}catch(e){console.error(e);toast('تعذر الاتصال بمصدر المسلسلات والأفلام');return null}}
+async function loadGenre(url,title,page=1){state.view='grid';state.mediaGenreUrl=url;state.mediaTitle=title;state.mediaSearching=false;if(page===1){state.mediaItems=[];state.mediaPage=1;$('searchInput').value=''}$('backBtn').classList.remove('hidden');const data=await mediaApi(`?action=genre&genre=${encodeURIComponent(url)}&p=${page}`);if(data?.status==='success'){const incoming=Array.isArray(data.data)?data.data:[];state.mediaItems=page===1?incoming:[...state.mediaItems,...incoming];state.mediaPage=page;renderMediaGrid(incoming.length>0)}else{renderMediaGrid(false)}}
+function renderMediaGrid(hasMore=true){$('backBtn').classList.remove('hidden');let items=state.mediaItems;const q=query();if(q&&!state.mediaSearching)items=items.filter(x=>String(x.title||'').toLowerCase().includes(q));if(state.mediaSearching)items=items.filter(x=>state.mediaType==='series'?Boolean(x.is_series):!Boolean(x.is_series));content.innerHTML=`<div class="section-head"><div class="section-title">${esc(state.mediaTitle||'النتائج')}</div><span class="counter">${items.length} عنصر</span></div>${items.length?`<div class="three-grid">${items.map((item,i)=>mediaCard(item,i)).join('')}</div>${!state.mediaSearching&&hasMore?'<button class="load-more" onclick="loadMoreMedia()"><i class="fa-solid fa-rotate"></i> عرض المزيد</button>':''}`:`<div class="state-box">لا توجد نتائج حاليًا</div>`}`}
+function mediaCard(item,index){const badge=item.is_series?'مسلسل':'فيلم';return `<article class="media-card" onclick="openMediaItem(${index})"><div class="poster tall">${img(item.img)}<span class="server-badge">${badge}</span><span class="play-dot"><i class="fa-solid fa-play"></i></span></div><div class="media-copy"><div class="media-title">${esc(item.title||'بدون عنوان')}</div><div class="media-sub">${item.is_series?'عرض الحلقات':'تشغيل الفيلم'}</div></div></article>`}
+async function searchMedia(q){state.view='grid';state.mediaSearching=true;state.mediaTitle=`نتائج البحث: ${q}`;$('backBtn').classList.remove('hidden');const data=await mediaApi(`?action=search&q=${encodeURIComponent(q)}`);state.mediaItems=data?.status==='success'&&Array.isArray(data.data)?data.data:[];renderMediaGrid(false)}
+function loadMoreMedia(){if(state.mediaSearching||!state.mediaGenreUrl)return;loadGenre(state.mediaGenreUrl,state.mediaTitle,state.mediaPage+1)}
+async function openMediaItem(index){const item=state.mediaItems[index];if(!item)return;state.mediaPoster=item.img||'';state.mediaBaseTitle=item.title||'';$('backBtn').classList.remove('hidden');const data=await mediaApi(`?action=series&series=${encodeURIComponent(item.href)}`);if(!data||data.status!=='success'){renderMediaGrid(false);toast('تعذر تحميل تفاصيل المحتوى');return}
+  state.mediaDetails=data;state.view='details';const title=data.movie_title||item.title||'التفاصيل';
+  /* الفيلم أو رابط مباشر: افتح المشغل مباشرة */
+  if((data.media_src||data.is_iframe)&&!(Array.isArray(data.episodes)&&data.episodes.length)){const mode=data.is_iframe?'WEB':'EXO';openInBSRPlayer(title,[{name:'Server 1',url:data.media_src,playerMode:mode,userAgent:CONFIG.defaultUserAgent}]);renderMediaGrid(false);return}
+  renderMediaDetails(title,data);
+}
+function renderMediaDetails(title,data){const eps=Array.isArray(data.episodes)?data.episodes:[];content.innerHTML=`<div class="details-card"><div class="details-top">${state.mediaPoster?`<img src="${esc(cleanUrl(state.mediaPoster))}" alt="" referrerpolicy="no-referrer">`:''}<div class="details-copy"><h2>${esc(title)}</h2><p>${eps.length?`${eps.length} حلقة متاحة. اضغط على أي حلقة لتشغيلها مباشرة داخل تطبيق البصري بلاير.`:'اضغط تشغيل لفتح المحتوى داخل التطبيق.'}</p></div></div></div>${eps.length?`<div class="section-head"><div class="section-title">الحلقات</div><span class="counter">${eps.length} حلقة</span></div><div class="episodes-grid">${eps.map((ep,i)=>`<button class="episode-btn" onclick="playEpisode(${i})">${state.mediaPoster?`<img src="${esc(cleanUrl(state.mediaPoster))}" alt="" loading="lazy" referrerpolicy="no-referrer">`:''}<span><i class="fa-solid fa-play"></i> الحلقة ${esc(ep.num)}</span></button>`).join('')}</div>`:`<div class="state-box">لا توجد حلقات متاحة حاليًا</div>`}`}
+async function playEpisode(index){const eps=Array.isArray(state.mediaDetails?.episodes)?state.mediaDetails.episodes:[];const ep=eps[index];if(!ep)return;setLoading(`جاري تجهيز الحلقة ${ep.num}...`);const data=await mediaApi(`?action=series&series=${encodeURIComponent(ep.link)}`,false);if(!data||data.status!=='success'||!data.media_src){renderMediaDetails(state.mediaDetails?.movie_title||state.mediaBaseTitle,state.mediaDetails);showModal('الرابط غير متاح','لم يتم العثور على رابط تشغيل لهذه الحلقة حاليًا.');return}const mode=data.is_iframe?'WEB':'EXO';openInBSRPlayer(`${state.mediaBaseTitle} - الحلقة ${ep.num}`,[{name:'Server 1',url:data.media_src,playerMode:mode,userAgent:CONFIG.defaultUserAgent}]);renderMediaDetails(state.mediaDetails?.movie_title||state.mediaBaseTitle,state.mediaDetails)}
+
+/* ================= BSR Player Intent ================= */
+function serverForIntent(s,title,index){return{name:String(s?.name||title||`Server ${index+1}`),url:String(s?.url||''),ua:String(s?.userAgent||s?.ua||''),userAgent:String(s?.userAgent||s?.ua||''),referer:String(s?.referer||''),origin:String(s?.origin||''),cookie:String(s?.cookie||''),drmKey:String(s?.drmKey||''),playerMode:String(s?.playerMode||'EXO'),drmType:String(s?.drmType||'Auto'),drmLicenseUrl:String(s?.drmLicenseUrl||''),drmLicenseHeaders:String(s?.drmLicenseHeaders||''),drmMultiSession:Boolean(s?.drmMultiSession||false),authorization:String(s?.authorization||''),accept:String(s?.accept||''),xRequestedWith:String(s?.xRequestedWith||''),authUrl:String(s?.authUrl||''),subtitleUrl:String(s?.subtitleUrl||'')}}
+function utf8Base64(text){const bytes=new TextEncoder().encode(text);let bin='';for(const b of bytes)bin+=String.fromCharCode(b);return btoa(bin)}
+function closeInstallModal(){$('installModal').classList.remove('show')}
+function showInstallModal(title,custom){state.pendingPlayerLaunch={title,custom,installClicked:false,installClickedAt:0};$('installModalText').textContent=`لتشغيل ${title||'هذا المحتوى'} تحتاج تطبيق البصري بلاير. حمّله من Google Play، وبعد التثبيت ارجع لهذه الصفحة وسيحاول فتحه تلقائيًا.`;$('installModal').classList.add('show')}
+function installPlayer(){if(state.pendingPlayerLaunch){state.pendingPlayerLaunch.installClicked=true;state.pendingPlayerLaunch.installClickedAt=Date.now()}toast('بعد التثبيت ارجع لهذه الصفحة لفتح المحتوى تلقائيًا');const w=window.open(CONFIG.playStoreURL,'_blank','noopener,noreferrer');if(!w)location.href=CONFIG.playStoreURL}
+let launchSeq=0;
+function attemptPlayerLaunch(title,custom,fromInstall=false){
+  if(!/Android/i.test(navigator.userAgent)){showInstallModal(title,custom);return}
+  closeInstallModal();const seq=++launchSeq;let leftPage=false;
+  const onVisibility=()=>{if(document.hidden){leftPage=true;cleanup();state.pendingPlayerLaunch=null;closeInstallModal()}};
+  const onPageHide=()=>{leftPage=true;cleanup();state.pendingPlayerLaunch=null;closeInstallModal()};
+  const cleanup=()=>{document.removeEventListener('visibilitychange',onVisibility,true);window.removeEventListener('pagehide',onPageHide,true)};
+  document.addEventListener('visibilitychange',onVisibility,true);window.addEventListener('pagehide',onPageHide,true);
+  toast(fromInstall?'جاري إعادة فتح البصري بلاير...':'جاري فتح مشغل البصري بلاير...');
+  try{location.href=custom}catch(_){ }
+  setTimeout(()=>{if(seq!==launchSeq)return;cleanup();if(!leftPage&&!document.hidden)showInstallModal(title,custom)},1450)
+}
+function retryPendingPlayer(){const p=state.pendingPlayerLaunch;if(!p||!p.installClicked)return;if(Date.now()-p.installClickedAt<1800)return;p.installClicked=false;attemptPlayerLaunch(p.title,p.custom,true)}
+function openInBSRPlayer(title,servers){const payload=servers.map((s,i)=>serverForIntent(s,title,i)).filter(x=>cleanUrl(x.url));if(!payload.length){showModal('لا يوجد سيرفر','لا يوجد رابط تشغيل متاح حاليًا.');return}const base64=utf8Base64(JSON.stringify(payload)),data=encodeURIComponent(base64),custom=`${CONFIG.appScheme}://servers?data=${data}`;attemptPlayerLaunch(title,custom,false)}
+
+/* ================= واجهة حماية إضافية ================= */
+(function hardenUI(){
+  const isEditable=t=>t&&['INPUT','TEXTAREA'].includes(t.tagName);
+  document.addEventListener('contextmenu',e=>e.preventDefault(),{capture:true});
+  document.addEventListener('copy',e=>{if(!isEditable(e.target))e.preventDefault()},{capture:true});
+  document.addEventListener('cut',e=>{if(!isEditable(e.target))e.preventDefault()},{capture:true});
+  document.addEventListener('dragstart',e=>e.preventDefault(),{capture:true});
+  document.addEventListener('selectstart',e=>{if(!isEditable(e.target))e.preventDefault()},{capture:true});
+  document.addEventListener('keydown',e=>{const k=String(e.key||'').toUpperCase();const blocked=e.key==='F12'||(e.ctrlKey&&e.shiftKey&&['I','J','C','K'].includes(k))||(e.ctrlKey&&['U','S','P'].includes(k));if(blocked){e.preventDefault();e.stopPropagation()}},{capture:true});
+})();
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)setTimeout(retryPendingPlayer,450)});
+window.addEventListener('focus',()=>setTimeout(retryPendingPlayer,500));
+
+window.addEventListener('DOMContentLoaded',()=>{syncFirebase(true);switchTab('live')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();closeModal();closeInstallModal()}});
+</script>
+</body>
+</html>
