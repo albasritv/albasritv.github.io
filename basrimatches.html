@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="البصري تيفي للبث المباشر - مباريات اليوم ونتائج المباريات والبث المباشر.">
 <meta name="keywords" content="البصري تيفي, مباريات اليوم, بث مباشر, نتائج المباريات">
-<meta name="referrer" content="no-referrer">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="color-scheme" content="dark">
 <title>مباريات اليوم - البصري تيفي</title>
 
@@ -341,6 +341,74 @@ let activeHls = null;
 let autoRefreshTimer = null;
 let currentState = "schedule";
 
+// جلسة API مؤقتة. المفتاح السري يبقى داخل Cloudflare Worker فقط.
+let apiSessionToken = "";
+let apiSessionExpiresAt = 0;
+let apiSessionPromise = null;
+
+function apiRequestBaseOptions(extra = {}){
+  const headers = new Headers(extra.headers || {});
+  if(!headers.has("Accept")) headers.set("Accept","application/json");
+  headers.set("X-BSR-Page", location.pathname);
+
+  return {
+    ...extra,
+    method: extra.method || "GET",
+    cache: "no-store",
+    headers
+  };
+}
+
+async function ensureApiSession(force=false){
+  const now = Math.floor(Date.now()/1000);
+  if(!force && apiSessionToken && apiSessionExpiresAt > now + 12){
+    return apiSessionToken;
+  }
+
+  if(!force && apiSessionPromise) return apiSessionPromise;
+
+  apiSessionPromise = (async()=>{
+    const sessionUrl = new URL("session", API_URL).href;
+    const res = await fetch(sessionUrl, apiRequestBaseOptions());
+    if(!res.ok) throw new Error("SESSION HTTP "+res.status);
+
+    const data = await res.json();
+    if(!data?.success || !data?.token) throw new Error("تعذر إنشاء جلسة API");
+
+    apiSessionToken = String(data.token);
+    apiSessionExpiresAt = Number(data.expiresAt || 0);
+    return apiSessionToken;
+  })();
+
+  try{
+    return await apiSessionPromise;
+  }finally{
+    apiSessionPromise = null;
+  }
+}
+
+async function apiFetch(url, options={}){
+  let token = await ensureApiSession(false);
+
+  const makeRequest = async(currentToken)=>{
+    const opts = apiRequestBaseOptions(options);
+    opts.headers.set("X-BSR-Token", currentToken);
+    return fetch(url, opts);
+  };
+
+  let res = await makeRequest(token);
+
+  // إذا انتهت الجلسة أثناء الاستخدام، أنشئ جلسة جديدة وأعد الطلب مرة واحدة.
+  if(res.status === 401){
+    apiSessionToken = "";
+    apiSessionExpiresAt = 0;
+    token = await ensureApiSession(true);
+    res = await makeRequest(token);
+  }
+
+  return res;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   history.replaceState({page:"schedule"}, "", location.href);
   loadMatches(false);
@@ -387,7 +455,7 @@ function getCleanImg(url){
   if(!raw) return "https://placehold.co/130x130/111827/38bdf8?text=TEAM";
   if(raw.startsWith("//")) return "https:"+raw;
   if(/^https?:\/\//i.test(raw)) return safeUrl(raw);
-  return safeUrl("https://koooracity.com/" + raw.replace(/^\/+/,""));
+  return safeUrl("https://kooora4city.ws/" + raw.replace(/^\/+/,""));
 }
 
 /* =========================================================
@@ -529,9 +597,8 @@ async function loadMatches(manual=false, silent=false){
   }
 
   try{
-    const res = await fetch(API_URL,{
+    const res = await apiFetch(API_URL,{
       method:"GET",
-      cache:"no-store",
       headers:{"Accept":"application/json"}
     });
     if(!res.ok) throw new Error("HTTP "+res.status);
@@ -556,7 +623,7 @@ async function loadMatches(manual=false, silent=false){
     if(!matchesCache.length){
       const box = document.getElementById("main-loading-view");
       box.classList.remove("hidden");
-      box.innerHTML = `<div class="error-text"><i class="fa-solid fa-triangle-exclamation"></i><br><br>تعذر جلب المباريات الآن.<br><small>حاول التحديث بعد قليل.</small></div>`;
+      box.innerHTML = `<div class="error-text"><i class="fa-solid fa-triangle-exclamation"></i><br><br>تعذر جلب المباريات الآن.<br><small>${esc(err?.message || "خطأ غير معروف")}</small></div>`;
     }
   }finally{
     refresh?.classList.remove("spinning");
@@ -673,7 +740,7 @@ async function startLiveSetup(linkUrl, matchObj){
   }
 
   try{
-    const res = await fetch(link,{cache:"no-store",headers:{"Accept":"application/json"}});
+    const res = await apiFetch(link,{headers:{"Accept":"application/json"}});
     if(!res.ok) throw new Error("HTTP "+res.status);
     const result = await res.json();
 
