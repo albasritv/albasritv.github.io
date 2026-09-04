@@ -8,7 +8,7 @@
   <meta name="color-scheme" content="dark">
 
   <!-- طبقة حماية إضافية: لا تغيّر تصميم الصفحة أو وظائفها -->
-  <meta name="referrer" content="no-referrer">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
   <meta http-equiv="Content-Security-Policy" content="
@@ -24,7 +24,7 @@
     connect-src 'self' https:;
     frame-src https:;
   ">
-  <title>افلام ومسلسلات البصري تيفي </title>
+  <title>أفلام ومسلسلات البصري TV</title>
   <meta name="description" content="مسلسلات وأفلام البصري TV - تصفح المسلسلات والأفلام العربية والأجنبية والتركية والآسيوية والأنمي، وابحث عن العمل وشاهد الحلقات من واجهة مناسبة للتطبيقات.">
   <meta name="keywords" content="البصري TV, مسلسلات وأفلام البصري TV, البصري تي في, مسلسلات, أفلام, حلقات, مسلسلات عربية, مسلسلات أجنبية, مسلسلات تركية, مسلسلات آسيوية, مسلسلات أنمي, مسلسلات رمضان, أفلام عربية, أفلام أجنبية, أفلام تركية, أفلام هندية, أفلام آسيوية, أفلام أنمي, مشاهدة مسلسلات, مشاهدة أفلام, تحميل أفلام, تحميل مسلسلات, Series, Movies, TV Series, Arabic Series, Turkish Series, Asian Series, Anime Series, Arabic Movies, Foreign Movies, Indian Movies, Asian Movies, Anime Movies, Watch Series, Watch Movies, Download Movies, Download Series, Streaming Movies, Streaming Series">
   <meta property="og:title" content="مسلسلات وأفلام البصري TV">
@@ -41,114 +41,106 @@
 
   <style>
     :root{
-      --bg:#080d18;
-      --surface:#111827;
-      --surface-2:#172033;
-      --surface-3:#1c2940;
-      --primary:#17d9f4;
-      --primary-2:#3b82f6;
+      --bg:#070a11;
+      --bg-2:#0b1020;
+      --card:#111827;
+      --card-2:#151e31;
+      --card-3:#1b263b;
+      --primary:#38bdf8;
+      --primary-2:#2563eb;
       --text:#f8fafc;
       --muted:#94a3b8;
+      --muted-2:#64748b;
       --line:rgba(255,255,255,.075);
-      --shadow:0 14px 35px rgba(0,0,0,.28);
-      --r-xl:24px;
-      --r-lg:18px;
-      --r-md:14px;
-      --plyr-color-main:#17d9f4;
+      --line-blue:rgba(56,189,248,.24);
+      --shadow:0 18px 48px rgba(0,0,0,.28);
+      --radius:22px;
+      --plyr-color-main:#38bdf8;
       --plyr-video-background:#000;
     }
 
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Tajawal',sans-serif;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth}
     html,body{min-height:100%;background:var(--bg);color:var(--text);overflow-x:hidden}
-    body{padding-bottom:max(22px,env(safe-area-inset-bottom))}
-    button,input,a{font:inherit}
-    button,a{touch-action:manipulation}
-    a{text-decoration:none;color:inherit}
-
-    .app-shell{width:min(1180px,100%);margin:0 auto;padding:18px 16px 34px}
-
-    /* لا يوجد أي شريط علوي: البداية مباشرة بالبحث والتبويبات */
-    .search-area{position:sticky;top:0;z-index:60;padding:8px 0 12px;background:linear-gradient(to bottom,var(--bg) 70%,rgba(8,13,24,0));}
-    .search-box{height:54px;background:rgba(17,24,39,.96);border:1px solid var(--line);border-radius:18px;display:flex;align-items:center;gap:12px;padding:0 16px;box-shadow:0 8px 24px rgba(0,0,0,.18);backdrop-filter:blur(14px)}
-    .search-box:focus-within{border-color:rgba(23,217,244,.65);box-shadow:0 0 0 3px rgba(23,217,244,.09)}
-    .search-box i{color:var(--primary);font-size:18px}
-    .search-box input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font-size:15px}
-    .search-box input::placeholder{color:#718096}
-    .search-go{width:40px;height:40px;border:0;border-radius:13px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#06111b;display:grid;place-items:center;cursor:pointer;font-weight:900}
-
-    .type-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 20px;background:var(--surface);padding:6px;border:1px solid var(--line);border-radius:18px}
-    .type-tab{height:47px;border:0;border-radius:13px;background:transparent;color:var(--muted);font-weight:900;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;transition:.2s ease}
-    .type-tab.active{background:linear-gradient(135deg,rgba(23,217,244,.18),rgba(59,130,246,.18));color:#fff;box-shadow:inset 0 0 0 1px rgba(23,217,244,.35)}
-    .type-tab.active i{color:var(--primary)}
-
-    .view{display:none;animation:fadeUp .28s ease both}
-    .view.active{display:block}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
-    .hero{display:none}
-
-    .section-title{display:flex;align-items:center;justify-content:space-between;margin:8px 0 13px}
-    .section-title h2{font-size:18px;font-weight:900;display:flex;align-items:center;gap:9px}
-    .section-title h2:before{content:"";width:4px;height:22px;border-radius:10px;background:linear-gradient(var(--primary),var(--primary-2))}
-    .section-count{font-size:12px;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:5px 9px;border-radius:999px}
-
-    .category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-top:4px}
-    .category-card{min-height:112px;background:radial-gradient(circle at 50% 0%,rgba(23,217,244,.12),transparent 52%),linear-gradient(160deg,#172033,#0f1726);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:15px 8px 13px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;box-shadow:0 12px 28px rgba(0,0,0,.22);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
-    .category-card:active{transform:scale(.95);border-color:rgba(23,217,244,.55);box-shadow:0 5px 15px rgba(0,0,0,.28)}
-    .cat-icon{width:54px;height:54px;flex:0 0 54px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(23,217,244,.15),rgba(59,130,246,.08));color:#dffbff;font-size:24px;border:1px solid rgba(23,217,244,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 18px rgba(0,0,0,.2)}
-    .cat-copy{text-align:center;min-width:0}.cat-copy strong{display:block;font-size:13px;font-weight:900;white-space:nowrap}.cat-copy small{display:none}
-
-    .content-head{position:sticky;top:0;z-index:70;display:flex;align-items:center;gap:10px;margin:0 -16px 16px;padding:10px 16px;background:rgba(8,13,24,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .round-back{width:43px;height:43px;flex:0 0 43px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:#fff;display:grid;place-items:center;cursor:pointer}
-    .content-head h2{font-size:18px;font-weight:900;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-
-    .media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
-    .media-item{position:relative;overflow:hidden;border-radius:15px;background:var(--surface);border:1px solid var(--line);box-shadow:0 9px 20px rgba(0,0,0,.22);cursor:pointer;min-width:0}
-    .media-item:active{transform:scale(.98)}
-    .poster-wrap{position:relative;aspect-ratio:2/3;background:#111827;overflow:hidden}
-    .media-item img{width:100%;height:100%;display:block;object-fit:cover;background:#111827}
-    .media-badge{position:absolute;top:7px;right:7px;padding:4px 7px;border-radius:8px;background:rgba(2,6,23,.78);backdrop-filter:blur(8px);font-size:10px;font-weight:900;color:var(--primary);border:1px solid rgba(255,255,255,.08)}
-    .media-title{padding:9px 8px 10px;font-size:12px;font-weight:800;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
-
-    .load-more{width:100%;height:50px;margin-top:18px;border:1px solid rgba(23,217,244,.25);border-radius:16px;background:rgba(23,217,244,.08);color:var(--primary);font-weight:900;cursor:pointer}
-
-    .details-title{font-size:20px;font-weight:900;line-height:1.6;margin:3px 0 15px;text-align:center}
-    .player-card{background:#000;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
-    .player-card iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
-    .plyr{border-radius:18px}
-
-    .player-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:11px 0 18px}
-    .action{min-height:46px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:#fff;display:flex;align-items:center;justify-content:center;gap:7px;font-weight:800;font-size:13px;cursor:pointer}
-    .action.download{background:linear-gradient(135deg,rgba(23,217,244,.17),rgba(59,130,246,.16));color:var(--primary);border-color:rgba(23,217,244,.26)}
-
-    .episodes-card{margin-top:15px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:14px}.episodes-card .section-title{margin-top:0}.episode-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;max-height:none;overflow:visible;padding:2px}.episode{border:1px solid var(--line);border-radius:16px;background:var(--surface-2);color:#fff;cursor:pointer;overflow:hidden;text-align:right;box-shadow:0 8px 20px rgba(0,0,0,.18);min-width:0}.episode:active{transform:scale(.985)}.episode-poster{width:100%;aspect-ratio:16/9;display:block;object-fit:cover;background:#0f172a}.episode-info{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px}.episode-name{font-size:13px;font-weight:900}.episode-play{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:rgba(23,217,244,.12);color:var(--primary);flex:0 0 30px}.episode.active{border-color:rgba(23,217,244,.55);box-shadow:0 0 0 1px rgba(23,217,244,.18),0 8px 20px rgba(0,0,0,.2)}
-
-    .choice-modal{position:fixed;inset:0;z-index:10050;display:none;align-items:flex-end;justify-content:center;background:rgba(2,6,23,.76);backdrop-filter:blur(10px);padding:18px}.choice-modal.show{display:flex}.choice-sheet{width:min(460px,100%);background:linear-gradient(160deg,#172033,#0f172a);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:15px;box-shadow:0 28px 70px rgba(0,0,0,.5);animation:sheetUp .2s ease}.choice-top{display:flex;gap:12px;align-items:center;margin-bottom:14px}.choice-top img{width:76px;height:102px;object-fit:cover;border-radius:14px;background:#111827}.choice-copy{min-width:0}.choice-copy strong{display:block;font-size:16px;font-weight:900;line-height:1.5}.choice-copy span{display:block;color:var(--muted);font-size:13px;margin-top:4px}.choice-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice-btn{height:52px;border-radius:15px;border:1px solid var(--line);font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px}.choice-btn.watch{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#041018;border:0}.choice-btn.download{background:rgba(255,255,255,.055);color:#fff}.choice-close{width:100%;height:43px;margin-top:9px;border:0;border-radius:13px;background:transparent;color:var(--muted);font-weight:800}@keyframes sheetUp{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
-
-    body.cinema-mode{background:#000;overflow:hidden}.cinema-shell{position:fixed!important;inset:0!important;z-index:20000!important;background:#000!important;margin:0!important;padding:0!important;border-radius:0!important;width:100vw!important;height:100vh!important;display:flex!important;align-items:center!important;justify-content:center!important}.cinema-shell .player-card{width:100vw!important;height:100vh!important;border:0!important;border-radius:0!important;display:flex;align-items:center;justify-content:center}.cinema-shell .plyr,.cinema-shell video,.cinema-shell iframe{width:100%!important;height:100%!important;max-height:100vh!important;border-radius:0!important}.cinema-shell .player-actions{display:none!important}.plyr__control--overlaid{transform:translate(-50%,-50%) scale(1.12);background:rgba(12,20,32,.88)!important;border:1px solid rgba(255,255,255,.18)!important}.cinema-shell .plyr__controls{padding:18px max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))!important;background:linear-gradient(transparent,rgba(2,6,12,.88))!important}.cinema-shell .plyr__control{border-radius:12px!important}.cinema-shell .plyr__progress input[type=range]{height:5px}.cinema-shell video{object-fit:contain;background:#000}
-
-    .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px 12px}
-
-    .loader{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:rgba(5,9,17,.82);backdrop-filter:blur(12px)}
-    .spinner{width:48px;height:48px;border-radius:50%;border:4px solid rgba(23,217,244,.18);border-top-color:var(--primary);animation:spin .8s linear infinite}
-    .loader span{font-size:14px;font-weight:900;color:#fff}
-    @keyframes spin{to{transform:rotate(360deg)}}
-
-    .toast{position:fixed;left:50%;bottom:24px;z-index:10000;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#111827;color:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 15px;box-shadow:var(--shadow);font-size:13px;transition:.2s;max-width:calc(100% - 32px);text-align:center}
-    .toast.show{opacity:1;transform:translate(-50%,0)}
-
-    @media(max-width:360px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(min-width:560px){
-      .category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-      .media-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-      .episode-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+    body{
+      padding-bottom:max(24px,env(safe-area-inset-bottom));
+      background:
+        radial-gradient(circle at 88% -8%,rgba(37,99,235,.21),transparent 31%),
+        radial-gradient(circle at 8% 22%,rgba(56,189,248,.095),transparent 25%),
+        linear-gradient(180deg,var(--bg-2),var(--bg) 55%);
     }
-    @media(min-width:900px){
-      .app-shell{padding-left:24px;padding-right:24px}
-      .category-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-      .media-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
-      .episode-list{grid-template-columns:repeat(4,minmax(0,1fr))}
-    }
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:30px 30px;mask-image:linear-gradient(to bottom,#000,transparent 76%)}
+    button,input,a{font:inherit}button,a{touch-action:manipulation}a{text-decoration:none;color:inherit}img{display:block}
+
+    .app-shell{width:min(1120px,100%);margin:0 auto;padding:14px 14px 34px;position:relative;z-index:1}
+
+    .library-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 2px 14px}
+    .library-brand{display:flex;align-items:center;gap:11px;min-width:0}
+    .library-logo{width:45px;height:45px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,var(--primary),var(--primary-2));box-shadow:0 10px 28px rgba(37,99,235,.28),inset 0 1px 0 rgba(255,255,255,.28);font-size:19px;color:#fff;flex:0 0 45px}
+    .library-copy{min-width:0}.library-copy strong{display:block;font-size:16px;font-weight:900;line-height:1.2}.library-copy span{display:block;color:var(--muted);font-size:10.5px;font-weight:700;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .library-chip{display:flex;align-items:center;gap:7px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.032);color:#dbeafe;font-size:10.5px;font-weight:900;white-space:nowrap}.library-chip i{color:var(--primary)}
+
+    .search-area{position:sticky;top:0;z-index:60;padding:5px 0 12px;background:linear-gradient(to bottom,rgba(7,10,17,.97) 72%,rgba(7,10,17,0));backdrop-filter:blur(14px)}
+    .search-box{height:52px;background:rgba(17,24,39,.94);border:1px solid var(--line);border-radius:17px;display:flex;align-items:center;gap:11px;padding:0 13px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+    .search-box:focus-within{border-color:rgba(56,189,248,.48);box-shadow:0 0 0 3px rgba(56,189,248,.07),0 10px 30px rgba(0,0,0,.18)}
+    .search-box>i{color:var(--primary);font-size:17px}.search-box input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font-size:14px;font-weight:700}.search-box input::placeholder{color:#64748b}
+    .search-go{width:39px;height:39px;border:0;border-radius:12px;background:linear-gradient(135deg,var(--primary-2),var(--primary));color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px rgba(37,99,235,.22)}
+
+    .type-tabs{display:none!important}
+    .type-tab{display:none!important}
+    .type-tab.active{background:linear-gradient(135deg,rgba(37,99,235,.22),rgba(56,189,248,.12));color:#fff;box-shadow:inset 0 0 0 1px rgba(56,189,248,.28)}.type-tab.active i{color:var(--primary)}
+
+    .view{display:none;animation:fadeUp .28s ease both}.view.active{display:block}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+    .home-intro{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:11px 2px 12px}.home-intro h1{font-size:19px;font-weight:900;letter-spacing:-.2px}.home-intro p{color:var(--muted);font-size:10.5px;font-weight:700;margin-top:4px}.home-dot{width:9px;height:9px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 6px rgba(56,189,248,.08);margin-bottom:5px}
+
+
+    .home-library-section{margin-top:2px}
+    .movies-home-section{margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+    .category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding-top:2px}
+    .category-card{min-height:104px;background:radial-gradient(circle at 50% -5%,rgba(56,189,248,.13),transparent 50%),linear-gradient(155deg,rgba(21,30,49,.98),rgba(15,23,42,.95));border:1px solid var(--line);border-radius:19px;padding:13px 7px 11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;cursor:pointer;box-shadow:0 10px 27px rgba(0,0,0,.18);transition:.18s ease;position:relative;overflow:hidden}
+    .category-card:before{content:"";position:absolute;left:20%;right:20%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--primary),transparent);opacity:.38}
+    .category-card:active{transform:scale(.965);border-color:rgba(56,189,248,.34)}
+    .cat-icon{width:50px;height:50px;flex:0 0 50px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(56,189,248,.14),rgba(37,99,235,.09));color:#dff6ff;font-size:21px;border:1px solid rgba(56,189,248,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+    .cat-copy{text-align:center;min-width:0}.cat-copy strong{display:block;font-size:12px;font-weight:900;white-space:nowrap}.cat-copy small{display:none}
+
+    .content-head{position:sticky;top:0;z-index:70;display:flex;align-items:center;gap:10px;margin:0 -14px 13px;padding:9px 14px;background:rgba(7,10,17,.92);backdrop-filter:blur(17px);border-bottom:1px solid var(--line)}
+    .round-back{width:40px;height:40px;flex:0 0 40px;border:1px solid var(--line);border-radius:13px;background:rgba(17,24,39,.95);color:#fff;display:grid;place-items:center;cursor:pointer}.round-back:active{transform:scale(.94)}
+    .content-head h2{font-size:15px;font-weight:900;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.content-head h2:before{content:"";display:inline-block;width:4px;height:17px;border-radius:10px;background:linear-gradient(var(--primary),var(--primary-2));vertical-align:-3px;margin-left:7px}
+
+    .media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+    .media-item{position:relative;overflow:hidden;border-radius:15px;background:linear-gradient(160deg,var(--card),#0f172a);border:1px solid var(--line);box-shadow:0 9px 22px rgba(0,0,0,.18);cursor:pointer;min-width:0;transition:.18s ease}.media-item:active{transform:scale(.975)}
+    .poster-wrap{position:relative;aspect-ratio:2/3;background:#111827;overflow:hidden}.poster-wrap:after{content:"";position:absolute;inset:auto 0 0;height:31%;background:linear-gradient(transparent,rgba(7,10,17,.76));pointer-events:none}
+    .media-item img{width:100%;height:100%;object-fit:cover;background:#111827;transition:transform .35s ease}.media-item:hover img{transform:scale(1.035)}
+    .media-badge{position:absolute;z-index:2;top:6px;right:6px;padding:4px 7px;border-radius:8px;background:rgba(2,6,23,.76);backdrop-filter:blur(8px);font-size:9px;font-weight:900;color:#7dd3fc;border:1px solid rgba(255,255,255,.08)}
+    .media-title{padding:8px 7px 9px;font-size:10.5px;font-weight:900;line-height:1.45;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;color:#f1f5f9}
+
+    .load-more{width:100%;height:47px;margin-top:15px;border:1px solid rgba(56,189,248,.20);border-radius:14px;background:rgba(56,189,248,.07);color:#7dd3fc;font-weight:900;cursor:pointer}
+
+    .details-hero{position:relative;overflow:hidden;display:grid;grid-template-columns:86px 1fr;gap:13px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(17,24,39,.97),rgba(15,23,42,.84));box-shadow:var(--shadow);margin-bottom:12px}
+    .details-hero:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;left:-44px;top:-54px;background:rgba(56,189,248,.09);pointer-events:none}.details-poster{width:86px;aspect-ratio:2/3;object-fit:cover;border-radius:14px;background:#0f172a;border:1px solid var(--line);box-shadow:0 10px 25px rgba(0,0,0,.28)}
+    .details-copy{min-width:0;position:relative;z-index:1}.details-kicker{display:flex;align-items:center;gap:6px;color:#7dd3fc;font-size:10px;font-weight:900;margin-bottom:6px}.details-title{font-size:16px;font-weight:900;line-height:1.55;margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.details-sub{color:var(--muted);font-size:10px;font-weight:700;margin-top:7px;line-height:1.65}
+
+    .player-block{border:1px solid var(--line);border-radius:20px;padding:9px;background:linear-gradient(145deg,rgba(17,24,39,.95),rgba(15,23,42,.82));box-shadow:var(--shadow)}
+    .player-card{background:#000;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.055)}.player-card iframe{display:block;width:100%;aspect-ratio:16/9;border:0}.plyr{border-radius:14px}
+    .player-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:8px 0 0}.action{min-height:42px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.035);color:#fff;display:flex;align-items:center;justify-content:center;gap:6px;font-weight:900;font-size:11px;cursor:pointer}.action.download{background:linear-gradient(135deg,rgba(37,99,235,.19),rgba(56,189,248,.11));color:#7dd3fc;border-color:rgba(56,189,248,.18)}
+
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin:7px 0 12px}.section-title h2{font-size:15px;font-weight:900;display:flex;align-items:center;gap:8px}.section-title h2:before{content:"";width:4px;height:19px;border-radius:10px;background:linear-gradient(var(--primary),var(--primary-2))}.section-count{font-size:10px;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--line);padding:5px 8px;border-radius:999px}
+    .episodes-card{margin-top:12px;background:linear-gradient(145deg,rgba(17,24,39,.95),rgba(15,23,42,.82));border:1px solid var(--line);border-radius:20px;padding:12px;box-shadow:0 12px 35px rgba(0,0,0,.17)}
+    .episode-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.episode{border:1px solid var(--line);border-radius:14px;background:var(--card-2);color:#fff;cursor:pointer;overflow:hidden;text-align:right;min-width:0;box-shadow:0 7px 18px rgba(0,0,0,.14)}.episode:active{transform:scale(.985)}
+    .episode-poster{width:100%;aspect-ratio:16/9;object-fit:cover;background:#0f172a}.episode-info{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px}.episode-name{font-size:11px;font-weight:900}.episode-play{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:rgba(56,189,248,.10);color:#7dd3fc;flex:0 0 28px;font-size:10px}.episode.active{border-color:rgba(56,189,248,.44);box-shadow:0 0 0 1px rgba(56,189,248,.12),0 8px 20px rgba(0,0,0,.18)}
+
+    .choice-modal{position:fixed;inset:0;z-index:10050;display:none;align-items:flex-end;justify-content:center;background:rgba(2,6,23,.78);backdrop-filter:blur(11px);padding:14px}.choice-modal.show{display:flex}.choice-sheet{width:min(440px,100%);background:linear-gradient(160deg,var(--card-2),#0f172a);border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:13px;box-shadow:0 28px 70px rgba(0,0,0,.5);animation:sheetUp .2s ease}.choice-top{display:flex;gap:11px;align-items:center;margin-bottom:12px}.choice-top img{width:68px;height:92px;object-fit:cover;border-radius:13px;background:#111827}.choice-copy{min-width:0}.choice-copy strong{display:block;font-size:14px;font-weight:900;line-height:1.5}.choice-copy span{display:block;color:var(--muted);font-size:11px;margin-top:3px}.choice-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.choice-btn{height:48px;border-radius:13px;border:1px solid var(--line);font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px}.choice-btn.watch{background:linear-gradient(135deg,var(--primary-2),var(--primary));color:#fff;border:0}.choice-btn.download{background:rgba(255,255,255,.05);color:#fff}.choice-close{width:100%;height:40px;margin-top:7px;border:0;border-radius:12px;background:transparent;color:var(--muted);font-weight:800}@keyframes sheetUp{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+
+    body.cinema-mode{background:#000;overflow:hidden}.cinema-shell{position:fixed!important;inset:0!important;z-index:20000!important;background:#000!important;margin:0!important;padding:0!important;border-radius:0!important;width:100vw!important;height:100vh!important;display:flex!important;align-items:center!important;justify-content:center!important}.cinema-shell .player-block{padding:0!important;border:0!important;width:100vw!important;height:100vh!important}.cinema-shell .player-card{width:100vw!important;height:100vh!important;border:0!important;border-radius:0!important;display:flex;align-items:center;justify-content:center}.cinema-shell .plyr,.cinema-shell video,.cinema-shell iframe{width:100%!important;height:100%!important;max-height:100vh!important;border-radius:0!important}.cinema-shell .player-actions{display:none!important}.plyr__control--overlaid{transform:translate(-50%,-50%) scale(1.08);background:rgba(12,20,32,.88)!important;border:1px solid rgba(255,255,255,.18)!important}.cinema-shell .plyr__controls{padding:18px max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))!important;background:linear-gradient(transparent,rgba(2,6,12,.88))!important}.cinema-shell .plyr__control{border-radius:12px!important}.cinema-shell video{object-fit:contain;background:#000}
+
+    .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:48px 12px;font-size:12px}.loader{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;gap:12px;background:rgba(5,9,17,.82);backdrop-filter:blur(12px)}.spinner{width:44px;height:44px;border-radius:50%;border:4px solid rgba(56,189,248,.16);border-top-color:var(--primary);animation:spin .8s linear infinite}.loader span{font-size:12px;font-weight:900;color:#fff}@keyframes spin{to{transform:rotate(360deg)}}
+    .toast{position:fixed;left:50%;bottom:22px;z-index:10000;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#111827;color:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow);font-size:11px;transition:.2s;max-width:calc(100% - 28px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+    .blocked-page{min-height:100vh;display:grid;place-items:center;padding:24px;text-align:center}.blocked-card{width:min(420px,100%);padding:24px;border-radius:22px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}.blocked-card i{font-size:30px;color:var(--primary);margin-bottom:12px}.blocked-card h2{font-size:17px;margin-bottom:7px}.blocked-card p{font-size:12px;color:var(--muted);line-height:1.8}
+
+    @media(max-width:360px){.app-shell{padding-left:10px;padding-right:10px}.category-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.category-card{min-height:96px;border-radius:17px}.cat-icon{width:44px;height:44px;flex-basis:44px;font-size:19px}.cat-copy strong{font-size:11px}.media-grid{gap:7px}.media-title{font-size:9.5px}.details-hero{grid-template-columns:76px 1fr}.details-poster{width:76px}.details-title{font-size:14px}}
+    @media(min-width:560px){.category-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.media-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.episode-list{grid-template-columns:repeat(3,minmax(0,1fr))}.media-title{font-size:11.5px}}
+    @media(min-width:900px){.app-shell{padding-left:22px;padding-right:22px}.category-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.media-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.episode-list{grid-template-columns:repeat(4,minmax(0,1fr))}.details-hero{grid-template-columns:105px 1fr}.details-poster{width:105px}.details-title{font-size:20px}}
   </style>
 
   <style id="anti-copy-protection">
@@ -166,21 +158,47 @@
 </head>
 <body>
   <div class="app-shell">
+    <header class="library-head" id="libraryHead">
+      <div class="library-brand">
+        <div class="library-logo"><i class="fa-solid fa-clapperboard"></i></div>
+        <div class="library-copy">
+          <strong>مكتبة البصري</strong>
+          <span>أفلام ومسلسلات في مكان واحد</span>
+        </div>
+      </div>
+      <div class="library-chip"><i class="fa-solid fa-bolt"></i> تحديث تلقائي</div>
+    </header>
+
     <div class="search-area" id="searchArea">
       <div class="search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input id="searchInput" type="search" autocomplete="off" enterkeyhint="search" placeholder="ابحث في جميع المسلسلات والأفلام...">
         <button class="search-go" type="button" aria-label="بحث" onclick="executeSearch()"><i class="fa-solid fa-arrow-left"></i></button>
       </div>
-
-      <div class="type-tabs" id="typeTabs">
-        <button class="type-tab active" id="seriesTab" type="button" onclick="switchType('series')"><i class="fa-solid fa-tv"></i> مسلسلات</button>
-        <button class="type-tab" id="moviesTab" type="button" onclick="switchType('movies')"><i class="fa-solid fa-film"></i> أفلام</button>
-      </div>
     </div>
 
     <main id="homeView" class="view active">
-      <div class="category-grid" id="categoryGrid"></div>
+      <section class="home-library-section">
+        <div class="home-intro">
+          <div>
+            <h1>أقسام المسلسلات</h1>
+            <p>اختر قسم المسلسلات الذي تريد تصفحه</p>
+          </div>
+          <span class="home-dot"></span>
+        </div>
+        <div class="category-grid" id="seriesCategoryGrid"></div>
+      </section>
+
+      <section class="home-library-section movies-home-section">
+        <div class="home-intro">
+          <div>
+            <h1>أقسام الأفلام</h1>
+            <p>اختر قسم الأفلام الذي تريد تصفحه</p>
+          </div>
+          <span class="home-dot"></span>
+        </div>
+        <div class="category-grid" id="moviesCategoryGrid"></div>
+      </section>
     </main>
 
     <main id="gridView" class="view">
@@ -198,9 +216,16 @@
         <h2>التفاصيل والمشاهدة</h2>
       </div>
 
-      <h1 class="details-title" id="mediaTitle">...</h1>
+      <section class="details-hero">
+        <img class="details-poster" id="detailsPoster" src="" alt="">
+        <div class="details-copy">
+          <div class="details-kicker"><i class="fa-solid fa-circle-play"></i> التفاصيل والمشاهدة</div>
+          <h1 class="details-title" id="mediaTitle">...</h1>
+          <div class="details-sub">اختر الحلقة أو ابدأ المشاهدة من المشغل أدناه.</div>
+        </div>
+      </section>
 
-      <section id="playerSection" style="display:none">
+      <section id="playerSection" class="player-block" style="display:none">
         <div class="player-card" id="videoContainer"></div>
         <div class="player-actions">
           <button class="action" id="prevBtn" type="button" style="display:none"><i class="fa-solid fa-backward-step"></i> السابق</button>
@@ -237,27 +262,31 @@
 
   <script>
     const API_URL = "https://albas.albesriali03.workers.dev/";
+    const ALLOWED_HOST = "www.albasritv.abrdns.com";
+    const ALLOWED_PAGE = "/2026/09/movies-series.html";
+    let apiToken = "";
+    let apiTokenExpiresAt = 0;
+    let sessionPromise = null;
 
     const CATEGORY_DATA = {
       series: [
-        {title:'أجنبية', icon:'fa-earth-americas', url:'https://akwam.it/series?section=30'},
-        {title:'عربية', icon:'fa-language', url:'https://akwam.it/series?section=29'},
-        {title:'تركية', icon:'fa-moon', url:'https://akwam.it/series?section=32'},
-        {title:'آسيوية', icon:'fa-yin-yang', url:'https://akwam.it/series?section=33'},
-        {title:'أنمي', icon:'fa-dragon', url:'https://akwam.it/series?category=30'},
-        {title:'رمضان', icon:'fa-star-and-crescent', url:'https://akwam.it/series?category=87'}
+        {title:'أجنبية', icon:'fa-earth-americas', url:'https://akwam.ss/series?section=30'},
+        {title:'عربية', icon:'fa-language', url:'https://akwam.ss/series?section=29'},
+        {title:'تركية', icon:'fa-moon', url:'https://akwam.ss/series?section=32'},
+        {title:'آسيوية', icon:'fa-yin-yang', url:'https://akwam.ss/series?section=33'},
+        {title:'أنمي', icon:'fa-dragon', url:'https://akwam.ss/series?category=30'},
+        {title:'رمضان', icon:'fa-star-and-crescent', url:'https://akwam.ss/series?category=87'}
       ],
       movies: [
-        {title:'أجنبية', icon:'fa-earth-americas', url:'https://akwam.it/movies?section=30'},
-        {title:'عربية', icon:'fa-language', url:'https://akwam.it/movies?section=29'},
-        {title:'هندية', icon:'fa-gopuram', url:'https://akwam.it/movies?section=31'},
-        {title:'آسيوية', icon:'fa-yin-yang', url:'https://akwam.it/movies?section=33'},
-        {title:'تركية', icon:'fa-moon', url:'https://akwam.it/movies?section=32'},
-        {title:'أنمي', icon:'fa-dragon', url:'https://akwam.it/movies?category=30'}
+        {title:'أجنبية', icon:'fa-earth-americas', url:'https://akwam.ss/movies?section=30'},
+        {title:'عربية', icon:'fa-language', url:'https://akwam.ss/movies?section=29'},
+        {title:'هندية', icon:'fa-gopuram', url:'https://akwam.ss/movies?section=31'},
+        {title:'آسيوية', icon:'fa-yin-yang', url:'https://akwam.ss/movies?section=33'},
+        {title:'تركية', icon:'fa-moon', url:'https://akwam.ss/movies?section=32'},
+        {title:'أنمي', icon:'fa-dragon', url:'https://akwam.ss/movies?category=30'}
       ]
     };
 
-    let activeType = 'series';
     let currentGenreUrl = '';
     let currentPage = 1;
     let isSearching = false;
@@ -271,28 +300,33 @@
     let currentMediaTitle = '';
     let chosenEpisode = null;
 
-    function renderCategories(){
-      const data = CATEGORY_DATA[activeType];
-      const grid = document.getElementById('categoryGrid');
+    function enforceAllowedPage(){
+      const allowed = location.protocol === 'https:' && location.hostname === ALLOWED_HOST && location.pathname === ALLOWED_PAGE;
+      if(allowed) return true;
+      document.body.innerHTML = `<div class="blocked-page"><div class="blocked-card"><i class="fa-solid fa-shield-halved"></i><h2>الصفحة غير مصرح بها</h2><p>هذا المحتوى يعمل فقط من صفحة البصري الرسمية.</p></div></div>`;
+      return false;
+    }
+
+    function renderCategoryGroup(type, gridId){
+      const data = CATEGORY_DATA[type] || [];
+      const grid = document.getElementById(gridId);
+      if(!grid) return;
       grid.innerHTML = '';
       data.forEach(item => {
         const card = document.createElement('button');
         card.type = 'button';
         card.className = 'category-card';
         const iconHtml = `<i class="fa-solid ${item.icon}"></i>`;
+        const typeName = type === 'series' ? 'مسلسلات' : 'أفلام';
         card.innerHTML = `<span class="cat-icon">${iconHtml}</span><span class="cat-copy"><strong>${item.title}</strong></span>`;
-        card.onclick = () => loadGenre(item.url, `${activeType === 'series' ? 'مسلسلات' : 'أفلام'} ${item.title}`);
+        card.onclick = () => loadGenre(item.url, `${typeName} ${item.title}`);
         grid.appendChild(card);
       });
     }
 
-    function switchType(type){
-      activeType = type;
-      document.getElementById('seriesTab').classList.toggle('active', type === 'series');
-      document.getElementById('moviesTab').classList.toggle('active', type === 'movies');
-      if(currentView !== 'homeView') showView('homeView', false);
-      renderCategories();
-      window.scrollTo({top:0,behavior:'smooth'});
+    function renderCategories(){
+      renderCategoryGroup('series', 'seriesCategoryGrid');
+      renderCategoryGroup('movies', 'moviesCategoryGrid');
     }
 
     function showView(viewId, push = true){
@@ -300,6 +334,7 @@
       document.getElementById(viewId).classList.add('active');
       currentView = viewId;
       document.getElementById('searchArea').style.display = viewId === 'homeView' ? 'block' : 'none';
+      document.getElementById('libraryHead').style.display = viewId === 'homeView' ? 'flex' : 'none';
       if(push && history.state?.view !== viewId) history.pushState({view:viewId}, '', location.href);
       window.scrollTo({top:0,behavior:'smooth'});
     }
@@ -335,15 +370,68 @@
       showToast.t = setTimeout(()=>el.classList.remove('show'),2200);
     }
 
+    async function getApiSession(force = false){
+      const now = Math.floor(Date.now()/1000);
+      if(!force && apiToken && apiTokenExpiresAt > now + 8) return apiToken;
+      if(sessionPromise && !force) return sessionPromise;
+
+      sessionPromise = (async()=>{
+        const response = await fetch(API_URL + "session", {
+          method:"GET",
+          cache:"no-store",
+          mode:"cors",
+          credentials:"omit",
+          headers:{"Accept":"application/json"}
+        });
+        if(!response.ok){
+          let msg="";
+          try{ msg=(await response.json())?.message || ""; }catch{}
+          throw new Error("SESSION HTTP " + response.status + (msg ? " - "+msg : ""));
+        }
+        const data = await response.json();
+        if(data?.status !== "success" || !data?.token) throw new Error("SESSION FAILED");
+        apiToken = data.token;
+        apiTokenExpiresAt = Number(data.expiresAt || 0);
+        return apiToken;
+      })();
+
+      try{return await sessionPromise;}
+      finally{sessionPromise = null;}
+    }
+
+    async function apiRequest(endpoint, retry = true){
+      const token = await getApiSession(false);
+      const separator = endpoint.includes("?") ? "&" : "?";
+      const protectedEndpoint = endpoint + separator + "token=" + encodeURIComponent(token);
+      const response = await fetch(API_URL + protectedEndpoint, {
+        method:"GET",
+        cache:"no-store",
+        mode:"cors",
+        credentials:"omit",
+        headers:{"Accept":"application/json"}
+      });
+
+      if(response.status === 401 && retry){
+        apiToken = "";
+        apiTokenExpiresAt = 0;
+        await getApiSession(true);
+        return apiRequest(endpoint, false);
+      }
+      return response;
+    }
+
     async function fetchAPI(endpoint){
       toggleLoader(true);
       try{
-        const response = await fetch(API_URL + endpoint, {cache:'no-store'});
+        const response = await apiRequest(endpoint);
         if(!response.ok) throw new Error('HTTP '+response.status);
         const data = await response.json();
+        if(data?.status === 'error') throw new Error(data.message || 'API Error');
         return data;
       }catch(error){
-        showToast('تعذر الاتصال. تأكد من الإنترنت ثم أعد المحاولة.');
+        console.error('Movies API error:', error);
+        const msg = String(error?.message || 'تعذر الاتصال');
+        showToast('خطأ الجلب: ' + msg);
         return null;
       }finally{
         toggleLoader(false);
@@ -444,6 +532,11 @@
       currentEpisodeNum=-1;
       if(poster) currentPoster = poster;
       if(knownTitle) currentMediaTitle = knownTitle;
+      const detailsPoster = document.getElementById('detailsPoster');
+      if(detailsPoster){
+        detailsPoster.src = currentPoster || 'https://placehold.co/300x450/111827/38bdf8?text=BSR';
+        detailsPoster.alt = currentMediaTitle || 'poster';
+      }
 
       const data = await fetchAPI(`?action=series&series=${encodeURIComponent(url)}`);
       if(!data || data.status !== 'success'){
@@ -635,8 +728,16 @@
 
     document.addEventListener('keydown',e=>{ if(e.key==='Escape' && document.getElementById('episodeModal').classList.contains('show')) closeEpisodeModal(); });
 
-    history.replaceState({view:'homeView'},'',location.href);
-    renderCategories();
+    if(enforceAllowedPage()){
+      history.replaceState({view:'homeView'},'',location.href);
+      renderCategories();
+
+    // V9 diagnostic: confirms the deployed Worker build in DevTools without changing UI.
+    fetch(API_URL + "status", {cache:"no-store"})
+      .then(r=>r.json()).then(x=>console.log("BSR Worker:",x))
+      .catch(()=>{});
+      getApiSession(false).catch(err=>console.error('Session warmup failed:',err));
+    }
   </script>
 
   <script id="frontend-protection">
