@@ -32,6 +32,6 @@ jobs:
           fi
           git config user.name "BSR Firebase Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add app/data/sections.json app/data/categories app/data/version.json
+          git add app/data/sections.json app/data/categories app/data/channels app/data/version.json
           git commit -m "Sync Firebase catalog to static GitHub data"
           git push
