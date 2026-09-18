@@ -1,0 +1,77 @@
+{
+  "appName": "البصري بلاير",
+  "theme": {
+    "accent": "#18d4dc"
+  },
+  "player": {
+    "scheme": "bsrplayer",
+    "host": "play",
+    "package": "com.bsr.player.pro",
+    "fallback": "https://play.google.com/store/apps/details?id=com.bsr.player.pro"
+  },
+  "menu": {
+    "home": "index.html",
+    "matches": "",
+    "movies": "",
+    "sportsNews": "",
+    "telegram": "",
+    "privacy": ""
+  },
+  "sections": [
+    {
+      "id": "bein-sports",
+      "name": "BeIN Sports",
+      "image": "",
+      "enabled": true,
+      "channels": [
+        {
+          "id": "bein-1",
+          "name": "beIN SPORTS 1",
+          "image": "",
+          "stream": "",
+          "redirect": "",
+          "userAgent": "",
+          "referer": "",
+          "origin": "",
+          "cookie": "",
+          "drm": "",
+          "enabled": true
+        },
+        {
+          "id": "bein-2",
+          "name": "beIN SPORTS 2",
+          "image": "",
+          "stream": "",
+          "redirect": "",
+          "userAgent": "",
+          "referer": "",
+          "origin": "",
+          "cookie": "",
+          "drm": "",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "arabic-sports",
+      "name": "Arabic Sports",
+      "image": "",
+      "enabled": true,
+      "channels": []
+    },
+    {
+      "id": "iraq-tv",
+      "name": "IRAQ TV",
+      "image": "",
+      "enabled": true,
+      "channels": []
+    },
+    {
+      "id": "news",
+      "name": "NEWS",
+      "image": "",
+      "enabled": true,
+      "channels": []
+    }
+  ]
+}
