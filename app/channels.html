@@ -28,11 +28,50 @@
 let APP={menu:{}};const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
 function go(u){if(u)location.href=u}
 function img(c){return c.image?'<img loading="lazy" src="'+c.image+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
-function openInPlayer(c){
- const p=APP.player||{},scheme=p.scheme||"BSRPlayer",host=p.host||"play",pkg=p.package||"com.bsr.player.pro";
+function utf8Base64(value){
+ const bytes=new TextEncoder().encode(value);
+ let binary="";
+ for(const b of bytes)binary+=String.fromCharCode(b);
+ return btoa(binary);
+}
+async function openInPlayer(c){
+ const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro";
  const fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
- const link="intent://"+host+"?channel_id="+encodeURIComponent(c.id)+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallback+";end";
- location.href=link;
+ try{
+   const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
+   const ver=v.version||"1";
+   const channel=await fetch("data/channels/"+encodeURIComponent(c.id)+".json?v="+ver,{cache:"no-store"}).then(r=>{
+     if(!r.ok)throw new Error("channel");
+     return r.json();
+   });
+   const servers=(channel.servers||[]).filter(s=>s&&s.url);
+   if(!servers.length)throw new Error("no_servers");
+   const payload=servers.map((s,i)=>({
+     name:s.name||("Server "+(i+1)),
+     url:s.url||"",
+     ua:s.userAgent||s.ua||"",
+     user_agent:s.userAgent||s.user_agent||"",
+     referer:s.referer||"",
+     origin:s.origin||"",
+     cookie:s.cookie||"",
+     drmKey:s.drmKey||"",
+     drm_key:s.drmKey||s.drm_key||"",
+     playerMode:s.playerMode||"EXO",
+     player_mode:s.playerMode||s.player_mode||"EXO",
+     authorization:s.authorization||"",
+     accept:s.accept||"",
+     xRequestedWith:s.xRequestedWith||"",
+     authUrl:s.authUrl||"",
+     subtitleUrl:s.subtitleUrl||"",
+     drmLicenseUrl:s.drmLicenseUrl||"",
+     drmLicenseHeaders:s.drmLicenseHeaders||""
+   }));
+   const data=encodeURIComponent(utf8Base64(JSON.stringify(payload)));
+   const link="intent://servers?data="+data+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallback+";end";
+   location.href=link;
+ }catch(e){
+   alert("تعذر تحميل سيرفرات القناة. حاول مرة ثانية.");
+ }
 }
 function render(s){
  q("title").textContent=s.name||"القنوات";
