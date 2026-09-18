@@ -1,16 +1,22 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>القنوات</title>
 <style>
 :root{--bg:#07111d;--card:#0d1b29;--card2:#102131;--text:#fff;--muted:#8294a5;--border:#25394c;--accent:#18d4dc;--bar:rgba(7,17,29,.97)}
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:82px}.header{height:65px;position:sticky;top:0;z-index:50;display:grid;grid-template-columns:52px 1fr 52px;align-items:center;padding:7px 11px;background:var(--bar);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}.back-btn{grid-column:3;grid-row:1;width:43px;height:43px;border-radius:11px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer}.back-btn svg{width:24px;height:24px}.page-title{grid-column:2;grid-row:1;text-align:center;font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.content{max-width:900px;margin:auto;padding:13px 10px 20px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card{min-width:0;height:78px;display:flex;align-items:center;padding:8px;border-radius:11px;border:1px solid var(--border);background:linear-gradient(145deg,var(--card2),var(--card));cursor:pointer;transition:.15s}.card:active{transform:scale(.97)}.image-box{width:48px;height:48px;flex:none;padding:3px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:#07111b;border:1px solid #466078;overflow:hidden}.image-box img{width:100%;height:100%;object-fit:contain;border-radius:6px}.fallback{font-size:11px;font-weight:800;color:var(--accent)}.name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}.bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}.bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px}.bottom-btn svg{width:22px;height:22px}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);z-index:100;display:none;align-items:flex-end;justify-content:center;padding:12px}.overlay.show{display:flex}.sheet{width:min(620px,100%);max-height:72vh;overflow:auto;background:#0a1724;border:1px solid var(--border);border-radius:20px;padding:14px}.sheet-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.sheet-title{font-size:16px;font-weight:800}.close{border:1px solid var(--border);background:var(--card);color:var(--text);width:38px;height:38px;border-radius:10px}.server{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--border);background:var(--card);color:var(--text);padding:13px;margin-top:8px;border-radius:12px;text-align:right}.server small{color:var(--muted)}.loading{text-align:center;color:var(--muted);padding:18px}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:82px}
+.header{height:65px;position:sticky;top:0;z-index:50;display:grid;grid-template-columns:52px 1fr 52px;align-items:center;padding:7px 11px;background:var(--bar);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
+.back-btn{grid-column:3;width:43px;height:43px;border-radius:11px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center}.back-btn svg{width:24px;height:24px}.page-title{grid-column:2;grid-row:1;text-align:center;font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.content{max-width:900px;margin:auto;padding:12px 10px 20px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.card{height:80px;display:flex;align-items:center;padding:8px 9px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:0 5px 18px rgba(0,0,0,.12)}.card:active{transform:scale(.97)}
+.image-box{width:52px;height:52px;flex:0 0 52px;padding:5px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(4,13,22,.75);border:1px solid rgba(120,160,190,.35);overflow:hidden}.image-box img{width:100%;height:100%;object-fit:contain;border-radius:7px}.fallback{font-size:10px;font-weight:800;color:var(--accent)}
+.name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chev{font-size:20px;color:var(--muted);margin-right:5px}.empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}.bottom-btn{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px}.bottom-btn svg{width:22px;height:22px}
 </style>
 </head>
 <body>
-<header class="header"><div></div><div class="page-title" id="title">القنوات</div><button class="back-btn" id="backBtn" aria-label="رجوع"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button></header>
+<header class="header"><div></div><div class="page-title" id="title">القنوات</div><button class="back-btn" id="backBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button></header>
 <main class="content"><div class="grid" id="grid"><div class="empty">جاري تحميل القنوات...</div></div></main>
 <nav class="bottom-nav">
 <button class="bottom-btn" data-menu="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8"/><path d="M5 10v11h14V10"/></svg><span>الرئيسية</span></button>
@@ -18,64 +24,12 @@
 <button class="bottom-btn" data-menu="movies"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="m10 9 6 3-6 3z"/></svg><span>مسلسلات وأفلام</span></button>
 <button class="bottom-btn" data-menu="sportsNews"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>أخبار الرياضة</span></button>
 </nav>
-
-<div class="overlay" id="serverOverlay">
-  <div class="sheet">
-    <div class="sheet-head"><div class="sheet-title" id="sheetTitle">السيرفرات</div><button class="close" id="closeSheet">✕</button></div>
-    <div id="serversBox"></div>
-  </div>
-</div>
-
 <script>
-let APP={menu:{},sections:[]};const q=id=>document.getElementById(id),grid=q("grid");const sectionId=new URLSearchParams(location.search).get("id");
-function go(u){if(u)location.href=u}
-function img(c){return c.image?'<img src="'+c.image+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
-function buildIntent(channel,server){
- const p=APP.player||{},scheme=p.scheme||"bsrplayer",host=p.host||"play",pkg=p.package||"com.bsr.player.pro",fallback=encodeURIComponent(p.fallback||"");
- if(!server?.url)return"";
- let qs="url="+encodeURIComponent(server.url);
- qs+="&name="+encodeURIComponent(channel.name||"");
- if(channel.image)qs+="&image="+encodeURIComponent(channel.image);
- if(server.userAgent)qs+="&ua="+encodeURIComponent(server.userAgent);
- if(server.referer)qs+="&referer="+encodeURIComponent(server.referer);
- if(server.origin)qs+="&origin="+encodeURIComponent(server.origin);
- if(server.cookie)qs+="&cookie="+encodeURIComponent(server.cookie);
- if(server.drmKey)qs+="&drm="+encodeURIComponent(server.drmKey);
- if(server.authorization)qs+="&authorization="+encodeURIComponent(server.authorization);
- if(server.accept)qs+="&accept="+encodeURIComponent(server.accept);
- if(server.xRequestedWith)qs+="&xrw="+encodeURIComponent(server.xRequestedWith);
- if(server.drmLicenseUrl)qs+="&drmLicenseUrl="+encodeURIComponent(server.drmLicenseUrl);
- if(server.drmLicenseHeaders)qs+="&drmLicenseHeaders="+encodeURIComponent(server.drmLicenseHeaders);
- if(server.playerMode)qs+="&playerMode="+encodeURIComponent(server.playerMode);
- return "intent://"+host+"?"+qs+"#Intent;scheme="+scheme+";package="+pkg+(fallback?";S.browser_fallback_url="+fallback:"")+";end";
-}
-async function openChannel(c){
- const ov=q("serverOverlay"),box=q("serversBox");q("sheetTitle").textContent=c.name||"السيرفرات";box.innerHTML='<div class="loading">جاري تحميل السيرفرات...</div>';ov.classList.add("show");
- if(!APP.privateApiBase){box.innerHTML='<div class="loading">لم يتم ربط خادم السيرفرات بعد.</div>';return}
- try{
-   const r=await fetch(APP.privateApiBase.replace(/\/$/,"")+"/channel/"+encodeURIComponent(c.id),{cache:"no-store"});
-   if(!r.ok)throw new Error("HTTP "+r.status);
-   const data=await r.json(),servers=data.servers||[];
-   box.innerHTML="";
-   if(!servers.length){box.innerHTML='<div class="loading">لا توجد سيرفرات لهذه القناة.</div>';return}
-   servers.forEach((s,i)=>{
-     const b=document.createElement("button");b.className="server";
-     b.innerHTML='<span>'+(s.name||("Server "+(i+1)))+'</span><small>تشغيل</small>';
-     b.onclick=()=>{const u=buildIntent(c,s);if(u)location.href=u};
-     box.appendChild(b);
-   });
- }catch(e){box.innerHTML='<div class="loading">تعذر تحميل السيرفرات.</div>'}
-}
-function render(s){
- q("title").textContent=s.name||"القنوات";const list=(s.channels||[]).filter(x=>x.enabled!==false);grid.innerHTML="";
- if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}
- list.forEach(c=>{const el=document.createElement("div");el.className="card";el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="name">'+c.name+'</div>';el.onclick=()=>openChannel(c);grid.appendChild(el)})
-}
+let APP={menu:{},sections:[]};const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
+function go(u){if(u)location.href=u}function img(c){return c.image?'<img loading="lazy" src="'+c.image+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
+function render(s){q("title").textContent=s.name||"القنوات";const list=(s.channels||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999));grid.innerHTML="";if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}list.forEach(c=>{const el=document.createElement("div");el.className="card";el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="name">'+c.name+'</div><div class="chev">‹</div>';el.onclick=()=>go("servers.html?section="+encodeURIComponent(sectionId)+"&channel="+encodeURIComponent(c.id));grid.appendChild(el)})}
 async function load(){try{const r=await fetch("data/data.json?v="+Date.now(),{cache:"no-store"});APP=await r.json();const s=(APP.sections||[]).find(x=>x.id===sectionId&&x.enabled!==false);if(!s){grid.innerHTML='<div class="empty">القسم غير موجود</div>';return}render(s)}catch(e){grid.innerHTML='<div class="empty">تعذر تحميل البيانات</div>'}}
-q("backBtn").onclick=()=>{if(history.length>1)history.back();else go("index.html")};
-document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>go(APP.menu?.[b.dataset.menu]||""));
-q("closeSheet").onclick=()=>q("serverOverlay").classList.remove("show");q("serverOverlay").onclick=e=>{if(e.target===q("serverOverlay"))q("serverOverlay").classList.remove("show")};
-load();
+q("backBtn").onclick=()=>go("index.html");document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>go(APP.menu?.[b.dataset.menu]||""));load();
 </script>
 </body>
 </html>
