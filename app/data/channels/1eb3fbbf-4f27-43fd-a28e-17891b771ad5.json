@@ -1,0 +1,31 @@
+{
+  "id": "1eb3fbbf-4f27-43fd-a28e-17891b771ad5",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "MBC 4",
+  "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc4.png",
+  "order": 41,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "36e5ad55-98fe-4f10-bbac-1aff035cbfc8",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

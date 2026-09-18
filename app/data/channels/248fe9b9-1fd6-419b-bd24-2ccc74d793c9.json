@@ -1,0 +1,31 @@
+{
+  "id": "248fe9b9-1fd6-419b-bd24-2ccc74d793c9",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Aljazeera Mubasher",
+  "image": "https://up6.cc/2026/09/17883925674041.png",
+  "order": 55,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "87a525be-2571-4b6d-9250-2a61308db6d2",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://live-hls-apps-ajm2-fa.getaj.net/AJM2/index.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "6e776ab0-29cf-48ca-bc9a-75d873791c0a",
+  "categoryId": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+  "name": "Majestic Hindi",
+  "image": "https://up6.cc/2026/08/178714483878441.png",
+  "order": 9,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "36b7656e-6cb9-44e7-a4d5-109ed6f5e41c",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://blc2cr.linkip.org/live/90114_.m3u8?play=",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

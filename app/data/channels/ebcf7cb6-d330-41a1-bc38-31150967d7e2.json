@@ -1,0 +1,31 @@
+{
+  "id": "ebcf7cb6-d330-41a1-bc38-31150967d7e2",
+  "categoryId": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+  "name": "Majestic Aflam 1",
+  "image": "https://up6.cc/2026/08/178714483878441.png",
+  "order": 88,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "6cf637c4-87f7-4a68-a95a-972386a9c554",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://blc2cr.linkip.org/live/90109_.m3u8?play=",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

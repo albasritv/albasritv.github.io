@@ -1,0 +1,31 @@
+{
+  "id": "5c416bf5-799b-40fd-bf02-e2baee186b6f",
+  "categoryId": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+  "name": "Majestic Action",
+  "image": "https://up6.cc/2026/08/178714483878441.png",
+  "order": 8,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "a6008190-164b-4c24-991c-829a823b2626",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://blc2cr.linkip.org/live/90120_.m3u8?play=",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

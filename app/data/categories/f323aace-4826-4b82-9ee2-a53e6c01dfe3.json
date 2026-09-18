@@ -10,29 +10,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402472.webp",
       "order": 79,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "918c0f6f-f743-4931-ae2d-3db40351c016",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/cinema_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "afaa331e-75c7-403d-a020-abb4a159a694",
@@ -40,29 +18,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402537.webp",
       "order": 80,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "e4ac3878-bdc9-4028-9fa7-3ebb22f504a1",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/cinemamasr_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "7fc2492f-556b-4d63-9c8b-6857e8cf7e33",
@@ -70,29 +26,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402522.webp",
       "order": 81,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "8e3743ba-ea74-4a24-98a2-311dae92c9dc",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/comedy_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "e2fee120-3052-4737-ac92-65ea7355b12f",
@@ -100,29 +34,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402529.webp",
       "order": 82,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "5b74c83e-f022-4acd-8d30-3a773d545dda",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/classical_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "6af71ede-f916-4f64-84c0-f8b33179dabd",
@@ -130,29 +42,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402515.webp",
       "order": 83,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "4c0aefa7-b9c0-4bcb-84bb-3a8665371fdb",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/drama_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "a6371e65-3c47-4576-ade3-9ec1b8ba96ea",
@@ -160,29 +50,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402508.webp",
       "order": 84,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "643be935-aa0a-4cbe-929b-8f65b5c6c07a",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/khaleejiya_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "c9c27a25-c713-4505-8fb7-705d58100e32",
@@ -190,29 +58,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402593.webp",
       "order": 85,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "5d9bb2df-6f74-45a8-8e8d-bbae24ce5e8d",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/clip_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "7a7e68f5-cbac-4729-bb58-58f681e624fe",
@@ -220,29 +66,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402600.webp",
       "order": 86,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "27f72c7b-1b22-437e-91b4-493a8adb07dd",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "https://rotana.net/",
-          "subtitleUrl": "",
-          "url": "https://rotana.hibridcdn.net/rotananet/music_net-7Y83PP5adWixDF93/playlist.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "1a5273b7-c5b5-47a2-b68a-1e08689b4218",
@@ -250,29 +74,7 @@
       "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402579.webp",
       "order": 87,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "b100372c-a3c1-4c37-af71-da27ed091dfd",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://cdn1.iptvcdn.tv/mcnc/ROTANA_KIDS/chunks.m3u8?&token=demo",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     }
   ]
 }

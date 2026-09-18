@@ -1,0 +1,31 @@
+{
+  "id": "0d18d71f-95f1-47d1-91b3-06e37ef970ec",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "FR 24",
+  "image": "https://oneiraq.github.io/img/mix/fr-24.png",
+  "order": 72,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "2de0d195-d582-4340-b9d8-ebe8ff1ba5f6",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://live.france24.com/hls/live/2037222/F24_AR_HI_HLS/master_5000.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

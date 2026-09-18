@@ -1,0 +1,31 @@
+{
+  "id": "ac1294aa-ab79-4477-8420-b3a5d3fec762",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "MBC 1 (KSA)",
+  "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc1.png",
+  "order": 38,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "3b691d7b-39e2-4214-b9eb-cbd30894a06b",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-1-na/eec141533c90dd34722c503a296dd0d8/index.m3u8?aws.manifestfilter=video_height:144-1080;video_codec:H264&video_height=144-1080&video_codec=H264",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

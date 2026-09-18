@@ -1,0 +1,31 @@
+{
+  "id": "0966e2c6-405b-4f1d-bb05-bae53cf99db4",
+  "categoryId": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+  "name": "Majestic Crime",
+  "image": "https://up6.cc/2026/08/178714483878441.png",
+  "order": 7,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "cf804a88-6486-4d99-8bf4-a7723ca533b5",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://blc2cr.linkip.org/live/90122_.m3u8?play=",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

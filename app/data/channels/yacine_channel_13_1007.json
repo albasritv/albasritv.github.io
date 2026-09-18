@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_13_1007",
+  "categoryId": "yacine_category_13",
+  "name": "Atfal Wa Mawahib",
+  "image": "https://lyricstranslate.com/files/styles/artist/public/Screenshot_20200606-163241.jpg",
+  "order": 12,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_1007_0",
+      "name": "Auto",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "https://5a8308add0b31.streamlock.net/atfal1.com/atfal2/playlist.m3u8?t=E3HdclnaQogG8GYHXXXW-w&e=1789483049",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

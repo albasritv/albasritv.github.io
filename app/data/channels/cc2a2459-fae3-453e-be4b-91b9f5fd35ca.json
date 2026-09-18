@@ -1,0 +1,31 @@
+{
+  "id": "cc2a2459-fae3-453e-be4b-91b9f5fd35ca",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "Mbc Max",
+  "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmax.png",
+  "order": 52,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "e3ce77324a3d4fa2a913b26cc1976052:17774f82a3b9e33ea7a149596acbb20f",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "0a9ec677-8d3c-4e81-90b0-8470b2dbc265",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://gist.githubusercontent.com/iraqapps/da93e85b36c2cc345d3e3e93814f1371/raw/dhoomtv_mbcmax.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "7fad33a4-4309-45e0-91e3-5d119734f6ae",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "MBC FM",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/MBC_FM_Logo.svg/500px-MBC_FM_Logo.svg.png",
+  "order": 54,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "70132cb4-88d4-46a8-964d-2903cc141ef0",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://mbcfm-riyadh-prod-dub.shahid.net/out/v1/69c8a03f507e422f99cf5c07291c9e3a/index.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

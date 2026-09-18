@@ -1,0 +1,31 @@
+{
+  "id": "403fe597-d241-4604-94e2-5c4b45c78d12",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Sky News",
+  "image": "https://oneiraq.github.io/img/mix/sky_news.png",
+  "order": 64,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "d9b18104-4864-4ee0-8e59-441b35d8d006",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://stream.skynewsarabia.com/hls/index.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

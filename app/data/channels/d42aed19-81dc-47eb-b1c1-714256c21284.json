@@ -1,0 +1,31 @@
+{
+  "id": "d42aed19-81dc-47eb-b1c1-714256c21284",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "Mbc Masr",
+  "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmasr.png",
+  "order": 48,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "31b30cb3-b1ee-4915-9a10-398d6e1c0edc",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr-usa/cd8d40acdab28aac0582faa3bd3983f1/index.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

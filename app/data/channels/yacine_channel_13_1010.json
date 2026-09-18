@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_13_1010",
+  "categoryId": "yacine_category_13",
+  "name": "Almajd Rawda",
+  "image": "https://almajdtv.com/wp-content/uploads/2021/08/Rawda_logo.png",
+  "order": 15,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_1010_0",
+      "name": "Auto",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "http://www.elahmad.coo/tv/live/channel.php?id=almajd_rawda",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

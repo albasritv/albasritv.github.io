@@ -1,0 +1,31 @@
+{
+  "id": "6e5934d0-abd0-4bd7-9828-64ffc6439dc4",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "MBC Persia",
+  "image": "https://i0.wp.com/ksalogo.com/wp-content/uploads/2025/01/MBC-Persia.png?fit=1000%2C1000&ssl=1",
+  "order": 53,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "0548016a-21ce-4dfb-b38e-257e54578bc2",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-persia/818ee8e4b592dc497608f066d825bfb4/index.m3u8?aws.manifestfilter=video_height:144-1080;video_codec:H264&video_height=144-1080&video_codec=H264",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "d669aeec-6392-4b39-a40d-0b2645a0267c",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "Mbc Action",
+  "image": "https://up6.cc/2026/06/178144710334051.png",
+  "order": 51,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "d889ec7cb5cd8acb44f702726a56ae21:37be04cfb92f19ecd6074b976c1f3c54",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "48f204da-27c9-4864-afc8-efc1a2ba5dce",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://ev-fast-mpd.starzplayarabia.com/live/eds/MBC_Action_HD/DASH/MBC_Action_HD.mpd",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

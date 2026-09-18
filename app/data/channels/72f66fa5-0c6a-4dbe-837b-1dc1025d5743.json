@@ -1,0 +1,31 @@
+{
+  "id": "72f66fa5-0c6a-4dbe-837b-1dc1025d5743",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "I News",
+  "image": "https://iraqapps.github.io/earthlinksport/img/mixed/inew.png",
+  "order": 59,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "7deb7b6b-901b-4e9a-888f-f6fd1df28ad9",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://live.i-news.tv/hls/stream.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

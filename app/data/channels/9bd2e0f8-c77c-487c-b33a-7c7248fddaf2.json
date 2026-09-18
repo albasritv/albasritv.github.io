@@ -1,0 +1,31 @@
+{
+  "id": "9bd2e0f8-c77c-487c-b33a-7c7248fddaf2",
+  "categoryId": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+  "name": "Majestic Classic",
+  "image": "https://up6.cc/2026/08/178714483878441.png",
+  "order": 4,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "6be4b8e3-bede-4b49-b8a7-3be37a079af8",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://blc2cr.linkip.org/live/90111_.m3u8?play=",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

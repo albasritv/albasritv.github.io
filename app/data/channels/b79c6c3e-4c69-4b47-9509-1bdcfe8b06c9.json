@@ -1,0 +1,31 @@
+{
+  "id": "b79c6c3e-4c69-4b47-9509-1bdcfe8b06c9",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "Mbc Bollywood",
+  "image": "https://catsbengal.com/uploads/posts//uploads/ver5v415er4vte4v6.webp",
+  "order": 44,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "1eae5839-5647-4901-bf0c-e8dcd38813fe",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-bollywood/546eb40d7dcf9a209255dd2496903764/index.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

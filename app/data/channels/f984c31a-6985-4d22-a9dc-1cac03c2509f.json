@@ -1,0 +1,31 @@
+{
+  "id": "f984c31a-6985-4d22-a9dc-1cac03c2509f",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Al Arabiya",
+  "image": "https://oneiraq.github.io/img/mix/alarabia.png",
+  "order": 61,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "43041b79-a006-490c-bbcd-958754aaa64f",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

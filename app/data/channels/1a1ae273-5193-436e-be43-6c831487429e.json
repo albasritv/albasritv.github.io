@@ -1,0 +1,31 @@
+{
+  "id": "1a1ae273-5193-436e-be43-6c831487429e",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "CNBC",
+  "image": "https://oneiraq.github.io/img/mix/cnbc-ar.png",
+  "order": 71,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "2f656747-b511-4f39-bf07-fa1d6c3f52a6",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://cnbc-live.akamaized.net/cnbc/master.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

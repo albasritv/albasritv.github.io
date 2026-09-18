@@ -1,0 +1,31 @@
+{
+  "id": "fe5fb026-cca2-4d7b-b7b1-e4871528d03c",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Almayadeen",
+  "image": "https://cdn.almayadeen.tv/images/logo/new-logo-small.png",
+  "order": 75,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "1b811aff-cf68-4199-b223-efa9cf18dbde",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://mdnlv.cdn.octivid.com/almdn/smil:mpegts.stream.smil/chunklist.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

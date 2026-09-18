@@ -1,0 +1,31 @@
+{
+  "id": "1a5273b7-c5b5-47a2-b68a-1e08689b4218",
+  "categoryId": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
+  "name": "اطفال",
+  "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402579.webp",
+  "order": 87,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "b100372c-a3c1-4c37-af71-da27ed091dfd",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://cdn1.iptvcdn.tv/mcnc/ROTANA_KIDS/chunks.m3u8?&token=demo",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

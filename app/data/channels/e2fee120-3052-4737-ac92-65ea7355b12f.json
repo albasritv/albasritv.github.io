@@ -1,0 +1,31 @@
+{
+  "id": "e2fee120-3052-4737-ac92-65ea7355b12f",
+  "categoryId": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
+  "name": "كلاسيك",
+  "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402529.webp",
+  "order": 82,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "5b74c83e-f022-4acd-8d30-3a773d545dda",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "https://rotana.net/",
+      "subtitleUrl": "",
+      "url": "https://rotana.hibridcdn.net/rotananet/classical_net-7Y83PP5adWixDF93/playlist.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

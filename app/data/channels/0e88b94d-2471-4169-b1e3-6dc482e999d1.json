@@ -1,0 +1,31 @@
+{
+  "id": "0e88b94d-2471-4169-b1e3-6dc482e999d1",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Alsharqiya News",
+  "image": "https://iraqapps.github.io/earthlinksport/img/mixed/alsharqianews.png",
+  "order": 57,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "2cf9805a-83fd-4c81-b815-fd1e26d29529",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://5d94523502c2d.streamlock.net/alsharqiyalive/mystream/playlist.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

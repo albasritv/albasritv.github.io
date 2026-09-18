@@ -1,0 +1,31 @@
+{
+  "id": "e794fd56-2b24-48ed-a26f-bf0f1027b2b5",
+  "categoryId": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+  "name": "MBC 2",
+  "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc2.png",
+  "order": 39,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "3b08a3ac-b17e-441a-abcf-8a2947e50d1b",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://shd-mediacdn-live.edgenextcdn.net/live/bitmovin-mbc-2/51db9d7fa48a27d051f1eecb68069151/index.mpd?aws.manifestfilter=video_height:144-1080;video_codec:H264&video_height=144-1080&video_codec=H264",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Win64; x64) AppleWebKit/ (KHTML, like Gecko) Chrome/",
+      "xRequestedWith": ""
+    }
+  ]
+}

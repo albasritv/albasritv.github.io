@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_13_1011",
+  "categoryId": "yacine_category_13",
+  "name": "Majids Kids",
+  "image": "https://i.imgur.com/cnRR0fQ.png",
+  "order": 16,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_1011_0",
+      "name": "Auto",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "https://admdn5.cdn.mgmlcdn.com/majid/smil:majid.stream.smil/playlist.m3u8?t=eg9Ag7ocE20w_xcP2amFug&e=1789483049",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

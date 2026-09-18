@@ -1,0 +1,31 @@
+{
+  "id": "f569f63d-c505-4786-a9e8-4f5c79b4f76a",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Iraqia News",
+  "image": "https://oneiraq.github.io/img/mix/iraqi_news.png",
+  "order": 58,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "04789baf-45e9-45e8-932f-528a2077e24d",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://cdn.catiacast.video/abr/78054972db7708422595bc96c6e024ac/playlist.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

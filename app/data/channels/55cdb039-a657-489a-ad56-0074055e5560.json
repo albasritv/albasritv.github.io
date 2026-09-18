@@ -1,0 +1,31 @@
+{
+  "id": "55cdb039-a657-489a-ad56-0074055e5560",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Al Aoula",
+  "image": "https://oneiraq.github.io/img/mix/aloula.png",
+  "order": 66,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "a0ba3e41-dc89-4861-8094-076912792525",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "https://livemedia.ma/",
+      "subtitleUrl": "",
+      "url": "https://stream-lb.livemedia.ma/alaoula/hls/stream_21/playlist.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

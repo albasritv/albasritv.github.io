@@ -1,0 +1,31 @@
+{
+  "id": "7fc2492f-556b-4d63-9c8b-6857e8cf7e33",
+  "categoryId": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
+  "name": "كوميدي",
+  "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402522.webp",
+  "order": 81,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "8e3743ba-ea74-4a24-98a2-311dae92c9dc",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "https://rotana.net/",
+      "subtitleUrl": "",
+      "url": "https://rotana.hibridcdn.net/rotananet/comedy_net-7Y83PP5adWixDF93/playlist.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

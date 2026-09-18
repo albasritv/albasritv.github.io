@@ -1,0 +1,52 @@
+{
+  "id": "6b6cf2d5-64aa-4084-81f0-6961304b3e1b",
+  "categoryId": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+  "name": "Majestic Masrah",
+  "image": "https://up6.cc/2026/08/178714483878441.png",
+  "order": 2,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "37e089c6-b9f7-451f-9c54-313d62955d8f",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://blc2cr.linkip.org/live/90113_.m3u8?play=",
+      "userAgent": "",
+      "xRequestedWith": ""
+    },
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "e1d3bd25-8771-4410-a878-8bfdca383be6",
+      "name": "Auto",
+      "order": 1,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "http://ar.ycncdn.online/live/070/index.m3u8?t=BqOhQ--OgEew1enl94-AIg&e=1789434889",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

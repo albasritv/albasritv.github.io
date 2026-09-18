@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_13_173",
+  "categoryId": "yacine_category_13",
+  "name": "Spacetoon",
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/2b/Spacetoon_logo.png",
+  "order": 3,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_173_1",
+      "name": "جودة 2",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://live-uae-next.spacetoongo.com/ST_MENA_NEXT/hls/r9p2hjipmw2kl.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

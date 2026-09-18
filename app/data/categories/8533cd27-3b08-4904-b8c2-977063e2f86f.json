@@ -10,50 +10,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc1.png",
       "order": 37,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "72dfaf61-c3f9-4321-a325-06aa21f82c5b",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-1-usa/fdac3a4fc0473f1f56e07ec1d63a4b7b/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        },
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "8ef7525c-dde6-44c5-aa8b-29d01af95162",
-          "name": "111",
-          "order": 1,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-1-usa/fdac3a4fc0473f1f56e07ec1d63a4b7b/index.m3u8",
-          "userAgent": "",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 2
     },
     {
       "id": "ac1294aa-ab79-4477-8420-b3a5d3fec762",
@@ -61,29 +18,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc1.png",
       "order": 38,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "3b691d7b-39e2-4214-b9eb-cbd30894a06b",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-1-na/eec141533c90dd34722c503a296dd0d8/index.m3u8?aws.manifestfilter=video_height:144-1080;video_codec:H264&video_height=144-1080&video_codec=H264",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "e794fd56-2b24-48ed-a26f-bf0f1027b2b5",
@@ -91,29 +26,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc2.png",
       "order": 39,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "3b08a3ac-b17e-441a-abcf-8a2947e50d1b",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-mediacdn-live.edgenextcdn.net/live/bitmovin-mbc-2/51db9d7fa48a27d051f1eecb68069151/index.mpd?aws.manifestfilter=video_height:144-1080;video_codec:H264&video_height=144-1080&video_codec=H264",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Win64; x64) AppleWebKit/ (KHTML, like Gecko) Chrome/",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "7167ba9e-74f1-45db-a2d9-39a530d03279",
@@ -121,29 +34,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc3.png",
       "order": 40,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "f00dddb7-453a-4eed-a7b2-618f0bef4dfb",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-3-usa/5d58265a862a476dc7f97694addb5ded/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "1eb3fbbf-4f27-43fd-a28e-17891b771ad5",
@@ -151,29 +42,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc4.png",
       "order": 41,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "36e5ad55-98fe-4f10-bbac-1aff035cbfc8",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "3c21caa8-9a62-43fa-b18d-ab11854ee816",
@@ -181,29 +50,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc5.png",
       "order": 42,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "cc1df14c-7a49-4f6c-a0c7-5200cb913e98",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-5/ee6b000cee0629411b666ab26cb13e9b/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "2923c7d0-fbdb-4d11-9d43-4a0121cab5c1",
@@ -211,29 +58,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbciraq.png",
       "order": 43,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "7ed2941c-5375-4f4b-b84a-122393f8edda",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-iraq/e38c44b1b43474e1c39cb5b90203691e/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "b79c6c3e-4c69-4b47-9509-1bdcfe8b06c9",
@@ -241,29 +66,7 @@
       "image": "https://catsbengal.com/uploads/posts//uploads/ver5v415er4vte4v6.webp",
       "order": 44,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "1eae5839-5647-4901-bf0c-e8dcd38813fe",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-bollywood/546eb40d7dcf9a209255dd2496903764/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "26b0a71d-85bf-4fd2-b9de-55b7d9f97ba5",
@@ -271,29 +74,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcdrama.png",
       "order": 45,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "04c9c795-2b35-4154-94c4-43d96a36d75d",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama/2c28a458e2f3253e678b07ac7d13fe71/index.m3u8?aws.manifestfilter=video_height:144-1080;video_codec:H264&video_height=144-1080&video_codec=H264",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "d245d393-f330-4d49-871e-bf90aa9b5eb7",
@@ -301,29 +82,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcdrama.png",
       "order": 46,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "35c9494a-ed41-4074-82c3-e8837b4cd91b",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama-usa/ea2f5db904aff224b7066e59c7f585a2/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "5b813765-80cb-492f-87b2-a72d52c26e1b",
@@ -331,29 +90,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcplusdrama.png",
       "order": 47,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "1ca9f2c4-5dd3-46e5-81c3-5e1934603374",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-plus-drama/e37251ec2aac8f6c98f75cd0fa37cd28/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "d42aed19-81dc-47eb-b1c1-714256c21284",
@@ -361,29 +98,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmasr.png",
       "order": 48,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "31b30cb3-b1ee-4915-9a10-398d6e1c0edc",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr-usa/cd8d40acdab28aac0582faa3bd3983f1/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "45cb07c3-b00a-46b7-899e-9e5866361d2b",
@@ -391,29 +106,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmasr2.png",
       "order": 49,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "471374f9-2cc9-4c08-bf94-fbd5c4ca0bde",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr-2/754931856515075b0aabf0e583495c68/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "ea1c3df1-caa6-4a44-8cdd-dfb18f55aa8d",
@@ -421,29 +114,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmasrdrama.png",
       "order": 50,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "577de99b-539a-4036-bb21-5656882750a3",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shls-live-enc.edgenextcdn.net/out/v1/08eca926a78a41339b8010c882410307/index.m3u8\"",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "d669aeec-6392-4b39-a40d-0b2645a0267c",
@@ -451,29 +122,7 @@
       "image": "https://up6.cc/2026/06/178144710334051.png",
       "order": 51,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "d889ec7cb5cd8acb44f702726a56ae21:37be04cfb92f19ecd6074b976c1f3c54",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "48f204da-27c9-4864-afc8-efc1a2ba5dce",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://ev-fast-mpd.starzplayarabia.com/live/eds/MBC_Action_HD/DASH/MBC_Action_HD.mpd",
-          "userAgent": "",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "cc2a2459-fae3-453e-be4b-91b9f5fd35ca",
@@ -481,29 +130,7 @@
       "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmax.png",
       "order": 52,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "e3ce77324a3d4fa2a913b26cc1976052:17774f82a3b9e33ea7a149596acbb20f",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "0a9ec677-8d3c-4e81-90b0-8470b2dbc265",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://gist.githubusercontent.com/iraqapps/da93e85b36c2cc345d3e3e93814f1371/raw/dhoomtv_mbcmax.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "6e5934d0-abd0-4bd7-9828-64ffc6439dc4",
@@ -511,29 +138,7 @@
       "image": "https://i0.wp.com/ksalogo.com/wp-content/uploads/2025/01/MBC-Persia.png?fit=1000%2C1000&ssl=1",
       "order": 53,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "0548016a-21ce-4dfb-b38e-257e54578bc2",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-persia/818ee8e4b592dc497608f066d825bfb4/index.m3u8?aws.manifestfilter=video_height:144-1080;video_codec:H264&video_height=144-1080&video_codec=H264",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "7fad33a4-4309-45e0-91e3-5d119734f6ae",
@@ -541,29 +146,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/MBC_FM_Logo.svg/500px-MBC_FM_Logo.svg.png",
       "order": 54,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "None",
-          "id": "70132cb4-88d4-46a8-964d-2903cc141ef0",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://mbcfm-riyadh-prod-dub.shahid.net/out/v1/69c8a03f507e422f99cf5c07291c9e3a/index.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     }
   ]
 }

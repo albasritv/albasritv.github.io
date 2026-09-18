@@ -1,0 +1,31 @@
+{
+  "id": "04e68ec7-4677-4a79-9da8-d3c1852ff71e",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Alaraby",
+  "image": "https://oneiraq.github.io/img/mix/alaraby.png",
+  "order": 63,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "39e635f3-1dbe-4315-aed3-41f44bf26b22",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/alaraby1publish/alaraby1_source/chunks.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

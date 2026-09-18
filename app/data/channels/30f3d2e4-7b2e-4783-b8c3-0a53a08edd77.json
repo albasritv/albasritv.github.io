@@ -1,0 +1,31 @@
+{
+  "id": "30f3d2e4-7b2e-4783-b8c3-0a53a08edd77",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "BBC news",
+  "image": "https://oneiraq.github.io/img/mix/bbc_news.png",
+  "order": 65,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "2e713db6-a0e1-4249-8f37-9315b2781836",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/t=3840/v=pv5/b=437056/main.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

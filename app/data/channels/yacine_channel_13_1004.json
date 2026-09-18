@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_13_1004",
+  "categoryId": "yacine_category_13",
+  "name": "Toyor Aljanah",
+  "image": "https://static.wikia.nocookie.net/logopedia/images/f/f5/Toyor_Aljanah.png/revision/latest?cb=20190914133539",
+  "order": 9,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_1004_0",
+      "name": "Auto",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "https://www.youtube.com/embed/live_stream?channel=UCZbpK_Lgctew3YNELlG2ecw",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

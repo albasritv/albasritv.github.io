@@ -1,0 +1,31 @@
+{
+  "id": "a6371e65-3c47-4576-ade3-9ec1b8ba96ea",
+  "categoryId": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
+  "name": "خليجية",
+  "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402508.webp",
+  "order": 84,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "643be935-aa0a-4cbe-929b-8f65b5c6c07a",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "https://rotana.net/",
+      "subtitleUrl": "",
+      "url": "https://rotana.hibridcdn.net/rotananet/khaleejiya_net-7Y83PP5adWixDF93/playlist.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

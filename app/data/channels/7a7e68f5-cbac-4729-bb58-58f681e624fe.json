@@ -1,0 +1,31 @@
+{
+  "id": "7a7e68f5-cbac-4729-bb58-58f681e624fe",
+  "categoryId": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
+  "name": "موسيقى",
+  "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402600.webp",
+  "order": 86,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "None",
+      "id": "27f72c7b-1b22-437e-91b4-493a8adb07dd",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "https://rotana.net/",
+      "subtitleUrl": "",
+      "url": "https://rotana.hibridcdn.net/rotananet/music_net-7Y83PP5adWixDF93/playlist.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "xRequestedWith": ""
+    }
+  ]
+}

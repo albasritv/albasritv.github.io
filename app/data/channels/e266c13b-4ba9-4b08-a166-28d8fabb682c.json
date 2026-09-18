@@ -1,0 +1,31 @@
+{
+  "id": "e266c13b-4ba9-4b08-a166-28d8fabb682c",
+  "categoryId": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "Alqanat 9",
+  "image": "https://oneiraq.github.io/img/mix/alqnaa9.png",
+  "order": 67,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "eebee017-5f8d-4836-b01f-86611c46a089",
+      "name": "Server 1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://cdn.bestream.io:19360/alqanat9/alqanat9.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}
