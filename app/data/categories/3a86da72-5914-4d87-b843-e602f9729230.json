@@ -1,0 +1,638 @@
+{
+  "id": "3a86da72-5914-4d87-b843-e602f9729230",
+  "name": "NEWS",
+  "image": "https://up6.cc/2024/09/172561206372761.jpg",
+  "order": 11,
+  "channels": [
+    {
+      "id": "248fe9b9-1fd6-419b-bd24-2ccc74d793c9",
+      "name": "Aljazeera Mubasher",
+      "image": "https://up6.cc/2026/09/17883925674041.png",
+      "order": 55,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "87a525be-2571-4b6d-9250-2a61308db6d2",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live-hls-apps-ajm2-fa.getaj.net/AJM2/index.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "a6fe3815-f149-4cc5-b3b6-122264ed3055",
+      "name": "Al Jazeera Arabic",
+      "image": "https://up6.cc/2026/09/17883925674041.png",
+      "order": 56,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "8c9c6086-3bdf-427c-a9c3-e4912c0fd92e",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live-hls-web-aja.getaj.net/AJA/index.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "0e88b94d-2471-4169-b1e3-6dc482e999d1",
+      "name": "Alsharqiya News",
+      "image": "https://iraqapps.github.io/earthlinksport/img/mixed/alsharqianews.png",
+      "order": 57,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "2cf9805a-83fd-4c81-b815-fd1e26d29529",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://5d94523502c2d.streamlock.net/alsharqiyalive/mystream/playlist.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "f569f63d-c505-4786-a9e8-4f5c79b4f76a",
+      "name": "Iraqia News",
+      "image": "https://oneiraq.github.io/img/mix/iraqi_news.png",
+      "order": 58,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "04789baf-45e9-45e8-932f-528a2077e24d",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://cdn.catiacast.video/abr/78054972db7708422595bc96c6e024ac/playlist.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "72f66fa5-0c6a-4dbe-837b-1dc1025d5743",
+      "name": "I News",
+      "image": "https://iraqapps.github.io/earthlinksport/img/mixed/inew.png",
+      "order": 59,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "7deb7b6b-901b-4e9a-888f-f6fd1df28ad9",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live.i-news.tv/hls/stream.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "24f8cab0-1dbb-40bf-8227-324a3e1c84e5",
+      "name": "Asharq News",
+      "image": "https://iraqapps.github.io/earthlinksport/img/mixed/alsharqnews.png",
+      "order": 60,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "3820ecd3-2ba3-43cd-b275-ebf647df5eb6",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://bcovlive-a.akamaihd.net/0b75ef0a49e24704a4ca023d3a82c2df/ap-south-1/6203311941001/profile_0/chunklist.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "f984c31a-6985-4d22-a9dc-1cac03c2509f",
+      "name": "Al Arabiya",
+      "image": "https://oneiraq.github.io/img/mix/alarabia.png",
+      "order": 61,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "43041b79-a006-490c-bbcd-958754aaa64f",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "def78c44-85c2-4fb9-b96a-78f237d897d7",
+      "name": "Al Arabiya Al Hadath",
+      "image": "https://oneiraq.github.io/img/mix/alhadath.png",
+      "order": 62,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "e56d43e5-c4c9-4eee-a6aa-b4a528b30297",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "04e68ec7-4677-4a79-9da8-d3c1852ff71e",
+      "name": "Alaraby",
+      "image": "https://oneiraq.github.io/img/mix/alaraby.png",
+      "order": 63,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "39e635f3-1dbe-4315-aed3-41f44bf26b22",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/alaraby1publish/alaraby1_source/chunks.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "403fe597-d241-4604-94e2-5c4b45c78d12",
+      "name": "Sky News",
+      "image": "https://oneiraq.github.io/img/mix/sky_news.png",
+      "order": 64,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "d9b18104-4864-4ee0-8e59-441b35d8d006",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://stream.skynewsarabia.com/hls/index.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "30f3d2e4-7b2e-4783-b8c3-0a53a08edd77",
+      "name": "BBC news",
+      "image": "https://oneiraq.github.io/img/mix/bbc_news.png",
+      "order": 65,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "2e713db6-a0e1-4249-8f37-9315b2781836",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/t=3840/v=pv5/b=437056/main.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "55cdb039-a657-489a-ad56-0074055e5560",
+      "name": "Al Aoula",
+      "image": "https://oneiraq.github.io/img/mix/aloula.png",
+      "order": 66,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "a0ba3e41-dc89-4861-8094-076912792525",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "https://livemedia.ma/",
+          "subtitleUrl": "",
+          "url": "https://stream-lb.livemedia.ma/alaoula/hls/stream_21/playlist.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "e266c13b-4ba9-4b08-a166-28d8fabb682c",
+      "name": "Alqanat 9",
+      "image": "https://oneiraq.github.io/img/mix/alqnaa9.png",
+      "order": 67,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "eebee017-5f8d-4836-b01f-86611c46a089",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://cdn.bestream.io:19360/alqanat9/alqanat9.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "8f8935c1-bf1a-4a40-aeb4-381272460b80",
+      "name": "Al Masra",
+      "image": "https://oneiraq.github.io/img/mix/al-masra.png",
+      "order": 68,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "06575671-a97b-473f-b095-95a99c6799a7",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live.bradosti.net/live/Almasra_playlist.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "c0088ce4-944e-4d62-888e-c0f2642f74dc",
+      "name": "Al Hiwar",
+      "image": "https://oneiraq.github.io/img/mix/al-hiwar.png",
+      "order": 69,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "47eb9928-364c-4835-a2cc-a589d882edbe",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://mn-nl.mncdn.com/alhiwar_live/smil:alhiwar.smil/playlist.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "2c07c5ab-8a53-44de-80cf-58a7de1119e1",
+      "name": "RT",
+      "image": "https://oneiraq.github.io/img/mix/rt.png",
+      "order": 70,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "023f7e70-27f8-4732-bcef-60ec8b7f3e89",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://rt-arb.rttv.com/live/rtarab/playlist.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "1a1ae273-5193-436e-be43-6c831487429e",
+      "name": "CNBC",
+      "image": "https://oneiraq.github.io/img/mix/cnbc-ar.png",
+      "order": 71,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "2f656747-b511-4f39-bf07-fa1d6c3f52a6",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://cnbc-live.akamaized.net/cnbc/master.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "0d18d71f-95f1-47d1-91b3-06e37ef970ec",
+      "name": "FR 24",
+      "image": "https://oneiraq.github.io/img/mix/fr-24.png",
+      "order": 72,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "2de0d195-d582-4340-b9d8-ebe8ff1ba5f6",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live.france24.com/hls/live/2037222/F24_AR_HI_HLS/master_5000.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "ef19af26-ddc4-4198-b170-2e1a41291838",
+      "name": "TRT Arabic",
+      "image": "https://oneiraq.github.io/img/mix/trt_arabic.png",
+      "order": 73,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "26289166-1fc0-482a-b88d-34626c24234a",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://tv-trtarabi.medya.trt.com.tr/master.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "3b68544f-59e6-4207-9e92-8600265355af",
+      "name": "CGTN Arabic",
+      "image": "https://oneiraq.github.io/img/mix/cgtn-ar.png",
+      "order": 74,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "b2132b40-edb4-4ee4-96a8-2b437e7fb6dc",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://global.cgtn.cicc.media.caton.cloud/master/cgtn-arabic.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "fe5fb026-cca2-4d7b-b7b1-e4871528d03c",
+      "name": "Almayadeen",
+      "image": "https://cdn.almayadeen.tv/images/logo/new-logo-small.png",
+      "order": 75,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "1b811aff-cf68-4199-b223-efa9cf18dbde",
+          "name": "Server 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://mdnlv.cdn.octivid.com/almdn/smil:mpegts.stream.smil/chunklist.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    }
+  ]
+}

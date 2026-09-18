@@ -1,29 +1,23 @@
-# BSR App Web Control
+# BSR static delivery architecture
 
-تم نقل الكتالوج الحالي للقنوات الحية من Firebase إلى بنية جديدة:
+User pages read only GitHub Pages static files.
 
-- GitHub Pages: الأقسام + أسماء القنوات + الصور + الترتيب.
-- Cloudflare Worker + KV: روابط السيرفرات والهيدرز وDRM.
-- AppCreator24: يفتح الصفحة الرئيسية ثم صفحة القنوات.
-- عند اختيار القناة، صفحة القنوات تجلب السيرفرات من Worker ثم ترسل السيرفر المختار إلى البصري بلاير.
+- Home: app/data/sections.json
+- Section: app/data/categories/<section-id>.json
+- Servers are embedded inside the selected category JSON.
+- No user-side request goes to Firebase.
+- No user-side request goes to Cloudflare Worker.
 
-## الروابط
-- الرئيسية: https://albasritv.github.io/app/
-- القنوات: https://albasritv.github.io/app/channels.html?id=SECTION_ID
-- الأدمن: https://albasritv.github.io/app/admin.html
-- البيانات العامة: https://albasritv.github.io/app/data/data.json
-- Worker template: app/worker.js
+Firebase remains the admin source only. GitHub Actions mirrors the current LIVE catalog every 5 minutes.
 
-## إعداد Cloudflare Worker
-1. أنشئ Worker جديد.
-2. الصق محتوى app/worker.js.
-3. أنشئ KV Namespace باسم BSR_DATA واربطه بالـWorker باسم Binding: BSR_DATA.
-4. أضف Secret باسم ADMIN_KEY.
-5. أضف Variable اختياري باسم ALLOWED_ORIGIN وقيمته https://albasritv.github.io
-6. Deploy.
-7. افتح admin.html، ضع Worker URL وAdmin Key.
-8. اختر ملف bsr-private-servers-import.json ثم اضغط رفع السيرفرات.
-9. بعد نجاح الرفع، ضع نفس Worker URL في Private API Base واضغط حفظ البيانات العامة.
+Required repository secrets:
+- FIREBASE_DATABASE_URL
+- FIREBASE_AUTH_TOKEN (optional if Firebase read rules allow public reads)
 
-## ملاحظة
-Origin/Referer gate يقلل الوصول المباشر لكنه ليس حماية مطلقة؛ أي عميل يحتاج تشغيل البث سيحتاج في النهاية بيانات تشغيل قابلة للاستخدام.
+The sync reads only:
+- /bsr_player/catalog_categories
+- /bsr_player/catalog_channels
+
+It does not read bsr_backups.
+
+Important: this repository is public. Server URLs, headers, cookies and DRM fields in generated files are public.

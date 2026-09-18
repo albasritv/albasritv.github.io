@@ -1,0 +1,17 @@
+{
+  "appName": "البصري بلاير",
+  "player": {
+    "scheme": "bsrplayer",
+    "host": "play",
+    "package": "com.bsr.player.pro",
+    "fallback": "https://play.google.com/store/apps/details?id=com.bsr.player.pro"
+  },
+  "menu": {
+    "home": "index.html",
+    "matches": "",
+    "movies": "",
+    "sportsNews": "",
+    "telegram": "https://t.me/albasri_tv",
+    "privacy": ""
+  }
+}

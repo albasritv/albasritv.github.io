@@ -1,0 +1,419 @@
+{
+  "id": "yacine_category_8",
+  "name": "beIN ENTERTAINMENT",
+  "image": "https://up6.cc/2026/09/178948747622911.png",
+  "order": 4,
+  "channels": [
+    {
+      "id": "yacine_channel_8_60",
+      "name": "beIN Boomerang",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/0000_Boomerang_tv_logo.png",
+      "order": 0,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_60_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/082/index.m3u8?t=boMv3SSfLZ7ShNNQuMeRuA&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_61",
+      "name": "beIN Jeem",
+      "image": "https://assets.bein.com/mena/sites/3/2020/06/Jeem-HD-1-01.png",
+      "order": 1,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_61_0",
+          "name": "جودة 1",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/075/index.m3u8?t=xkADF1yyqyH_dZYbBqvPOw&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        },
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_61_1",
+          "name": "جودة 2",
+          "order": 1,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://www.elahmad.coo/tv/radiant.php?id=jscc1",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_62",
+      "name": "beIN Baraem",
+      "image": "https://www.bein.com/en/wp-content/uploads/sites/3/2020/06/Bara3em-1.png",
+      "order": 2,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_62_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/070/index.m3u8?t=cE0tPulF-HnyMpjjl2dZmA&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_63",
+      "name": "beIN Fatafeat",
+      "image": "https://www.bein.com/en/wp-content/uploads/sites/3/2020/06/FATAFEAT-1.png",
+      "order": 3,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_63_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/073/index.m3u8?t=ccyYOTiTk0urjV81dKX8WA&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_64",
+      "name": "beIN Drama",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/DRAMA_DIGITAL_Mono.png",
+      "order": 4,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_64_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/072/index.m3u8?t=3RPtN6lIMn9YZFa6UuPKjQ&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_65",
+      "name": "beIN Gourmet",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/GOURMET_DIGITAL_Mono.png",
+      "order": 5,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_65_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/074/index.m3u8?t=GGTIiAe8t_8G2z7UbubC0w&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_66",
+      "name": "beIN Series 1",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/SERIES1_DIGITAL_Mono.png",
+      "order": 6,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_66_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/080/index.m3u8?t=qxWmRSZYBn4x_viUo0UzdA&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_67",
+      "name": "beIN Series 2",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/SERIES2_DIGITAL_Mono.png",
+      "order": 7,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_67_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/081/index.m3u8?t=t6yWYVIuhlv_CyezZ-2HmA&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_68",
+      "name": "beIN Movies 1",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES1_PREMIERE_DIGITAL_Mono.png",
+      "order": 8,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_68_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/076/index.m3u8?t=7MHSVsftcieNCif3gaRM_w&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_69",
+      "name": "beIN Movies 2",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES2_ACTION_DIGITAL_Mono.png",
+      "order": 9,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_69_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/077/index.m3u8?t=KSIlH6s44DAM-FzDaUNitg&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_70",
+      "name": "beIN Movies 3",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES3_DRAMA_DIGITAL_Mono.png",
+      "order": 10,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_70_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/078/index.m3u8?t=pbpxEgrTAFALIklcgeTJGA&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_71",
+      "name": "beIN Movies 4",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES4_FAMILY_DIGITAL_Mono.png",
+      "order": 11,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_71_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/079/index.m3u8?t=60jeMQ5XyC8UwKPRCx0RgQ&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_8_1420",
+      "name": "beIN BOX OFFICE",
+      "image": "https://assets.bein.com/mena/sites/3/2015/06/BoxOffice1_DIGITAL_Mono.png",
+      "order": 12,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1420_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/801/index.m3u8?t=aKbCEYYJE82MSZsQGRwQ6Q&e=1789505499",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    }
+  ]
+}

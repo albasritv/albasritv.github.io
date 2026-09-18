@@ -1,0 +1,299 @@
+{
+  "id": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+  "name": "Majestic",
+  "image": "https://up6.cc/2026/08/178714483878441.png",
+  "order": 13,
+  "channels": [
+    {
+      "id": "6b6cf2d5-64aa-4084-81f0-6961304b3e1b",
+      "name": "Majestic Masrah",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 2,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "37e089c6-b9f7-451f-9c54-313d62955d8f",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90113_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        },
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "e1d3bd25-8771-4410-a878-8bfdca383be6",
+          "name": "Auto",
+          "order": 1,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/070/index.m3u8?t=BqOhQ--OgEew1enl94-AIg&e=1789434889",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "3b7fe02a-61a8-44bb-820b-efc4030de14d",
+      "name": "Majestic Zaman",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 3,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "436fa796-487f-4bc2-b9c3-353e3644147a",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90112_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "9bd2e0f8-c77c-487c-b33a-7c7248fddaf2",
+      "name": "Majestic Classic",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 4,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "6be4b8e3-bede-4b49-b8a7-3be37a079af8",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90111_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "ee491acf-b841-4a4c-bfa4-2b2e948a10a4",
+      "name": "Majestic Aflam 2",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 5,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "5de293ff-8920-464b-aaa5-3c23fb9f27d4",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90110_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "cf1c6f34-5d91-48e8-9411-d2f6d54c20fc",
+      "name": "Majestic Fantasy",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 6,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "18124769-d5b5-481b-b923-48c97c18a491",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90121_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "0966e2c6-405b-4f1d-bb05-bae53cf99db4",
+      "name": "Majestic Crime",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 7,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "cf804a88-6486-4d99-8bf4-a7723ca533b5",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90122_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "5c416bf5-799b-40fd-bf02-e2baee186b6f",
+      "name": "Majestic Action",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 8,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "a6008190-164b-4c24-991c-829a823b2626",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90120_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "6e776ab0-29cf-48ca-bc9a-75d873791c0a",
+      "name": "Majestic Hindi",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 9,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "36b7656e-6cb9-44e7-a4d5-109ed6f5e41c",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90114_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "ebcf7cb6-d330-41a1-bc38-31150967d7e2",
+      "name": "Majestic Aflam 1",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 88,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "None",
+          "id": "6cf637c4-87f7-4a68-a95a-972386a9c554",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://blc2cr.linkip.org/live/90109_.m3u8?play=",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    }
+  ]
+}

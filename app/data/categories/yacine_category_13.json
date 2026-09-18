@@ -1,0 +1,620 @@
+{
+  "id": "yacine_category_13",
+  "name": "KIDS CHANNELS",
+  "image": "https://i.ibb.co/wF0S0r76/file-00000000f1fc82118b0ea15698a0db71.png",
+  "order": 14,
+  "channels": [
+    {
+      "id": "yacine_channel_13_171",
+      "name": "Boomerang AR",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/280px-Boomerang_2014_logo.svg.png",
+      "order": 2,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_171_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/082/index.m3u8?t=ebaGGJ1_UpCbqy_eQ3Cqhw&e=1789483048",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_173",
+      "name": "Spacetoon",
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/2b/Spacetoon_logo.png",
+      "order": 3,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_173_1",
+          "name": "جودة 2",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://live-uae-next.spacetoongo.com/ST_MENA_NEXT/hls/r9p2hjipmw2kl.m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_987",
+      "name": "beIN Jeem",
+      "image": "https://assets.bein.com/mena/sites/3/2020/06/Jeem-HD-1-01.png",
+      "order": 4,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_987_0",
+          "name": "جودة 1",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/075/index.m3u8?t=lDXQXF5sc1wcdQFj7C-ndw&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        },
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_987_1",
+          "name": "جودة 2",
+          "order": 1,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://www.elahmad.coo/tv/radiant.php?id=jscc1",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_988",
+      "name": "beIN Baraem",
+      "image": "https://www.bein.com/en/wp-content/uploads/sites/3/2020/06/Bara3em-1.png",
+      "order": 5,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_988_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/070/index.m3u8?t=oWVW1U6ojr4XVZdcZuC2oQ&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_989",
+      "name": "OSN Kids",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5w0X1fgeN8OXfTjhXfjfRpGukdaZxMmvCdIxKHSLewSXzvgnNyU6iAQtwNYtLUUqiHMh48dUkHosVZlIysSeN9eQFPP4PY8sFpKGDY1TUtj-Mqip1bnk7GXPTiu6sAJgzRfxsbLUf4Ysmb2vDdKUJfaJZKHCmnVH1T8B7TNicZlNx4Q5sYRu9lcu4/s1600/1232_1.png",
+      "order": 6,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_989_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/045/index.m3u8?t=7Y7P4AzZ2VHWa2MopXXYrA&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_990",
+      "name": "MBC 3",
+      "image": "https://i.imgur.com/cvnDXs8.png",
+      "order": 7,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_990_0",
+          "name": "جودة 1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-3-usa/5d58265a862a476dc7f97694addb5ded/index.m3u8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1002",
+      "name": "Rotana Kids",
+      "image": "https://i.imgur.com/93iaml1.png",
+      "order": 8,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1002_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "https://shls-rotanakids-prod-dub.shahid.net/out/v1/df6e0eb3cdc4410b98209aafc8677cef/index.m3u8?t=WAZpfyKQvuYFEnnD-Fuj8g&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1004",
+      "name": "Toyor Aljanah",
+      "image": "https://static.wikia.nocookie.net/logopedia/images/f/f5/Toyor_Aljanah.png/revision/latest?cb=20190914133539",
+      "order": 9,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1004_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "https://www.youtube.com/embed/live_stream?channel=UCZbpK_Lgctew3YNELlG2ecw",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1005",
+      "name": "Karameesh",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D8%B4.jpg",
+      "order": 10,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1005_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/085/index.m3u8?t=fQnRCQeMdNK2TbYJxiCG9Q&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1006",
+      "name": "Taha Kids",
+      "image": "https://i.imgur.com/k5a8vHU.png",
+      "order": 11,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1006_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "https://media2.livaat.com/TAHA-TV/index.m3u8?t=2v3UX9nPU0ZUdd83bT7avQ&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1007",
+      "name": "Atfal Wa Mawahib",
+      "image": "https://lyricstranslate.com/files/styles/artist/public/Screenshot_20200606-163241.jpg",
+      "order": 12,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1007_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "https://5a8308add0b31.streamlock.net/atfal1.com/atfal2/playlist.m3u8?t=E3HdclnaQogG8GYHXXXW-w&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1008",
+      "name": "Almajd Kids",
+      "image": "https://static.wikia.nocookie.net/logopedia/images/7/7a/%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D9%85%D8%AC%D8%AF_%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84.jpg/revision/latest?cb=20190621093107",
+      "order": 13,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1008_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "https://tv.taghtia.com/api/embed/almajd-kids",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1009",
+      "name": "Almajd Bassma",
+      "image": "https://static.wikia.nocookie.net/tvpedia/images/2/21/Basma_Channel.png/revision/latest/thumbnail/width/360/height/360?cb=20210618181946&path-prefix=ru",
+      "order": 14,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1009_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://www.elahmad.coo/tv/live/channel.php?id=almajd_bassma",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1010",
+      "name": "Almajd Rawda",
+      "image": "https://almajdtv.com/wp-content/uploads/2021/08/Rawda_logo.png",
+      "order": 15,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1010_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://www.elahmad.coo/tv/live/channel.php?id=almajd_rawda",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1011",
+      "name": "Majids Kids",
+      "image": "https://i.imgur.com/cnRR0fQ.png",
+      "order": 16,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1011_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "https://admdn5.cdn.mgmlcdn.com/majid/smil:majid.stream.smil/playlist.m3u8?t=eg9Ag7ocE20w_xcP2amFug&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1012",
+      "name": "CANAL J",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Canal_J_Logo_2019.svg/1200px-Canal_J_Logo_2019.svg.png",
+      "order": 17,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1012_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/110/index.m3u8?t=OUH2IO5xGbPswRNMNb1-9g&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1013",
+      "name": "Gulli",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Gulli_2017_nouveau_logo.jpg",
+      "order": 18,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1013_0",
+          "name": "جودة 1",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://57.bangiroua.xyz/yacinetv/gulli/playlist.m3u8",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        },
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1013_1",
+          "name": "جودة 2",
+          "order": 1,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/129/index.m3u8?t=7RLy30eMccP_i-y-dHrxtw&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1014",
+      "name": "Disney XD",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Disney_XD_-_2015.svg/1200px-Disney_XD_-_2015.svg.png",
+      "order": 19,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1014_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/122/index.m3u8?t=NV-jp_pJttnCMqwJUhaXTQ&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "yacine_channel_13_1016",
+      "name": "Disney JR",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQmGQIsgzsWTdPvHjHB5E2VLM_DVoYqx83pt3aww-l&s",
+      "order": 21,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "yacine_server_1016_0",
+          "name": "Auto",
+          "order": 0,
+          "origin": "http://ver3.yacinelive.com",
+          "playerMode": "EXO",
+          "referer": "http://ver3.yacinelive.com/",
+          "subtitleUrl": "",
+          "url": "http://ar.ycncdn.online/live/121/index.m3u8?t=oWj_YjFLB_iekIuy286r7A&e=1789483049",
+          "userAgent": "okhttp/4.12.0",
+          "xRequestedWith": ""
+        }
+      ]
+    }
+  ]
+}

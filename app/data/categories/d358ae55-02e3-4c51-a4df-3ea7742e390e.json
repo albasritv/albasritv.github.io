@@ -1,0 +1,91 @@
+{
+  "id": "d358ae55-02e3-4c51-a4df-3ea7742e390e",
+  "name": "Fajer TV",
+  "image": "https://up6.cc/2024/11/173263752464681.png",
+  "order": 9,
+  "channels": [
+    {
+      "id": "e9317557-d15d-4047-b63a-20f1e7ff8468",
+      "name": "ALFAJER 1",
+      "image": "https://up6.cc/2026/02/177015688236991.png",
+      "order": 24,
+      "enabled": true,
+      "servers": [
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "dd3db77f-3b94-4365-9089-00f591bb1020",
+          "name": "S1",
+          "order": 0,
+          "origin": "",
+          "playerMode": "EXO",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "https://cdnfest.com/ftv1-720p-castx/playlist.mpd",
+          "userAgent": "",
+          "xRequestedWith": ""
+        },
+        {
+          "accept": "",
+          "authUrl": "",
+          "authorization": "",
+          "cookie": "",
+          "drmKey": "",
+          "drmLicenseHeaders": "",
+          "drmLicenseUrl": "",
+          "drmMultiSession": false,
+          "drmType": "Auto",
+          "id": "aee0d678-5f37-4bab-852e-421de71a53bf",
+          "name": "ذS2",
+          "order": 1,
+          "origin": "",
+          "playerMode": "WEB",
+          "referer": "",
+          "subtitleUrl": "",
+          "url": "http://nexusconnects.org/play/live.php?mac=00:1A:79:A2:B8:2E&stream=1744949&extension=m3u8",
+          "userAgent": "",
+          "xRequestedWith": ""
+        }
+      ]
+    },
+    {
+      "id": "6d922e23-b52f-4bd5-8310-67592d7b7b06",
+      "name": "ALFAJER 2",
+      "image": "https://up6.cc/2026/02/177015694026791.png",
+      "order": 25,
+      "enabled": true,
+      "servers": []
+    },
+    {
+      "id": "1fb2d340-20d7-441d-9be4-42848ea1cacc",
+      "name": "ALFAJER 3",
+      "image": "https://up6.cc/2026/02/177015694031382.png",
+      "order": 26,
+      "enabled": true,
+      "servers": []
+    },
+    {
+      "id": "da654dc4-fb01-41ee-b61d-3e8101052534",
+      "name": "ALFAJER 4",
+      "image": "https://up6.cc/2026/02/177015697039331.png",
+      "order": 27,
+      "enabled": true,
+      "servers": []
+    },
+    {
+      "id": "cd15de01-06d4-41fb-b51d-27b17ae8af28",
+      "name": "ALFAJER 5",
+      "image": "https://up6.cc/2026/02/177015703056251.png",
+      "order": 28,
+      "enabled": true,
+      "servers": []
+    }
+  ]
+}
