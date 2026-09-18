@@ -16,11 +16,10 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 .content{max-width:900px;margin:auto;padding:12px 10px 20px}.sections-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
 .section-card{min-width:0;height:80px;display:flex;align-items:center;padding:8px 9px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(145deg,var(--card2),var(--card));cursor:pointer;transition:.15s;box-shadow:0 5px 18px rgba(0,0,0,.12);overflow:hidden}
 .section-card:active{transform:scale(.97)}
-.image-box{width:52px;height:52px;flex:0 0 52px;padding:5px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(4,13,22,.75);border:1px solid rgba(120,160,190,.35);overflow:hidden}
-.image-box img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain!important;object-position:center;border-radius:7px}
+.image-box{width:52px;height:52px;flex:0 0 52px;padding:5px;border-radius:11px;display:flex;align-items:center;justify-content:center;background-color:rgba(4,13,22,.75);background-repeat:no-repeat;background-position:center;background-size:contain;border:1px solid rgba(120,160,190,.35);overflow:hidden}
 .image-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:7px;background:linear-gradient(145deg,#0b3144,#0b1f2d);font-size:10px;font-weight:800;color:var(--accent)}
-.section-name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.section-play{width:24px;flex:0 0 24px;margin-right:auto;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;line-height:1}
+.section-name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;z-index:2}
+.section-play{width:24px;flex:0 0 24px;margin-right:auto;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;line-height:1;position:relative;z-index:2}
 .empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
 .bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}
 .bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;cursor:pointer}.bottom-btn svg{width:22px;height:22px}.bottom-btn.active{color:var(--accent);background:rgba(24,212,220,.08)}
@@ -63,9 +62,25 @@ let APP={menu:{},sections:[]};
 const q=id=>document.getElementById(id),grid=q("sectionsGrid"),searchInput=q("searchInput");
 function go(url){if(url)location.href=url}
 function fallback(name){return '<span class="image-fallback">'+(name||"TV").slice(0,3)+'</span>'}
-function cardImage(s){return s.image?'<img loading="lazy" decoding="async" src="'+s.image+'" alt="" onerror="this.outerHTML=\''+fallback(s.name).replace(/'/g,"&#39;")+'\'">':fallback(s.name)}
 function sortedSections(){return (APP.sections||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999))}
-function render(list){grid.innerHTML="";if(!list.length){grid.innerHTML='<div class="empty">لا توجد نتائج</div>';return}list.forEach(s=>{const el=document.createElement("div");el.className="section-card";el.innerHTML='<div class="image-box">'+cardImage(s)+'</div><div class="section-name">'+s.name+'</div><div class="section-play">▶</div>';el.onclick=()=>go("channels.html?id="+encodeURIComponent(s.id));grid.appendChild(el)})}
+function render(list){
+ grid.innerHTML="";
+ if(!list.length){grid.innerHTML='<div class="empty">لا توجد نتائج</div>';return}
+ list.forEach(s=>{
+   const el=document.createElement("div");el.className="section-card";
+   const pic=document.createElement("div");pic.className="image-box";
+   if(s.image){
+     pic.style.backgroundImage='url("'+String(s.image).replace(/"/g,'%22')+'")';
+   }else{
+     pic.innerHTML=fallback(s.name);
+   }
+   const name=document.createElement("div");name.className="section-name";name.textContent=s.name||"";
+   const play=document.createElement("div");play.className="section-play";play.textContent="▶";
+   el.append(pic,name,play);
+   el.onclick=()=>go("channels.html?id="+encodeURIComponent(s.id));
+   grid.appendChild(el);
+ })
+}
 async function load(){try{const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));const ver=v.version||"1";const [cfg,sections]=await Promise.all([fetch("data/config.json?v="+ver).then(r=>r.json()),fetch("data/sections.json?v="+ver).then(r=>r.json())]);APP=cfg||{};APP.sections=sections||[];q("appName").textContent=APP.appName||"البصري بلاير";render(sortedSections())}catch(e){grid.innerHTML='<div class="empty">تعذر تحميل البيانات، حاول مرة ثانية.</div>'}}
 q("searchBtn").onclick=()=>{q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),120)};
 searchInput.oninput=()=>{const t=searchInput.value.trim().toLowerCase(),all=sortedSections();if(!t)return render(all);render(all.filter(s=>(s.name||"").toLowerCase().includes(t)))};
