@@ -1,8 +1,7 @@
 {
+  "version": 2,
   "appName": "البصري بلاير",
-  "theme": {
-    "accent": "#18d4dc"
-  },
+  "privateApiBase": "",
   "player": {
     "scheme": "bsrplayer",
     "host": "play",
@@ -14,64 +13,1240 @@
     "matches": "",
     "movies": "",
     "sportsNews": "",
-    "telegram": "",
+    "telegram": "https://t.me/albasri_tv",
     "privacy": ""
   },
   "sections": [
     {
-      "id": "bein-sports",
-      "name": "BeIN Sports",
-      "image": "",
+      "id": "80e84539-a8a9-47ef-832a-535d8b9e3747",
+      "name": "BEIN",
+      "image": "https://i.ibb.co/mF5B8XbK/Chat-GPT-Image-14-2026-01-24-25.png",
+      "order": 0,
       "enabled": true,
       "channels": [
         {
-          "id": "bein-1",
-          "name": "beIN SPORTS 1",
-          "image": "",
-          "stream": "",
-          "redirect": "",
-          "userAgent": "",
-          "referer": "",
-          "origin": "",
-          "cookie": "",
-          "drm": "",
-          "enabled": true
+          "id": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+          "name": "BEIN 1",
+          "image": "https://up6.cc/2026/02/177014433638242.png",
+          "order": 0,
+          "enabled": true,
+          "serverCount": 5
         },
         {
-          "id": "bein-2",
-          "name": "beIN SPORTS 2",
-          "image": "",
-          "stream": "",
-          "redirect": "",
-          "userAgent": "",
-          "referer": "",
-          "origin": "",
-          "cookie": "",
-          "drm": "",
-          "enabled": true
+          "id": "b1951781-784d-44b9-bc35-4d1f5232ddca",
+          "name": "BEIN 2",
+          "image": "https://up6.cc/2026/02/177014438967321.png",
+          "order": 1,
+          "enabled": true,
+          "serverCount": 9
+        },
+        {
+          "id": "6070876d-b628-4ec6-ad11-bf2ab1d9def3",
+          "name": "BEIN 3",
+          "image": "https://up6.cc/2026/02/177014438973872.png",
+          "order": 2,
+          "enabled": true,
+          "serverCount": 3
+        },
+        {
+          "id": "a31c00da-68d2-413d-8d1f-7b5ca27fd7cf",
+          "name": "BEIN 4",
+          "image": "https://up6.cc/2026/02/177014433631121.png",
+          "order": 3,
+          "enabled": true,
+          "serverCount": 3
+        },
+        {
+          "id": "bcadec99-f2aa-4e7c-9d60-1098194b3cca",
+          "name": "BEIN 5",
+          "image": "https://up6.cc/2026/02/177014452541092.png",
+          "order": 4,
+          "enabled": true,
+          "serverCount": 3
+        },
+        {
+          "id": "ae6a7554-4c5f-4fd9-98a0-c6ba71b957fd",
+          "name": "BEIN 6",
+          "image": "https://up6.cc/2026/02/177014452533561.png",
+          "order": 5,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "642159bb-702b-4885-ac1e-707e632e1400",
+          "name": "BEIN 7",
+          "image": "https://up6.cc/2026/02/177014457060771.png",
+          "order": 6,
+          "enabled": true,
+          "serverCount": 1
         }
       ]
     },
     {
-      "id": "arabic-sports",
-      "name": "Arabic Sports",
-      "image": "",
+      "id": "d510123a-5551-4c85-b8a7-b1072ea8a777",
+      "name": "BEIN SPORT",
+      "image": "https://i.ibb.co/tMnBVLSG/Chat-GPT-Image-14-2026-02-09-39.png",
+      "order": 1,
       "enabled": true,
-      "channels": []
+      "channels": [
+        {
+          "id": "c879446c-e2a2-4256-975f-d1b7b2b7e439",
+          "name": "BEIN SPORT 1",
+          "image": "https://up6.cc/2026/02/177014433638242.png",
+          "order": 0,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "b84b3b6b-b797-4699-85d0-15c554d4ee9b",
+          "name": "BEIN SPORT 2",
+          "image": "https://up6.cc/2026/02/177014438967321.png",
+          "order": 1,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "07c48669-9ebe-4e32-bb44-ebd5cca6e1c4",
+          "name": "BEIN SPORT 3",
+          "image": "https://up6.cc/2026/02/177014438973872.png",
+          "order": 2,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "2b28a188-47e6-4a66-97cd-057b342667bf",
+          "name": "BEIN SPORT 4",
+          "image": "https://up6.cc/2026/02/177014433631121.png",
+          "order": 3,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "c601c222-7d98-442d-b1fb-725c801bc0c7",
+          "name": "BEIN SPORT 5",
+          "image": "https://up6.cc/2026/02/177014452541092.png",
+          "order": 4,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "57f7528a-8b37-4a30-a3cf-b8c3a6583e93",
+          "name": "BEIN SPORT 6",
+          "image": "https://up6.cc/2026/02/177014452533561.png",
+          "order": 5,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "31db9407-0a3e-4302-b60d-db1c09ea549a",
+          "name": "BEIN SPORT 7",
+          "image": "https://up6.cc/2026/02/177014457060771.png",
+          "order": 6,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "30979e24-2ee6-481e-8d1b-b8839c64c0c6",
+          "name": "BEIN SPORT 8",
+          "image": "",
+          "order": 7,
+          "enabled": true,
+          "serverCount": 3
+        },
+        {
+          "id": "98a51875-f660-4aae-9000-c6bf864f97b7",
+          "name": "BEIN SPORT 9",
+          "image": "",
+          "order": 8,
+          "enabled": true,
+          "serverCount": 4
+        }
+      ]
     },
     {
-      "id": "iraq-tv",
-      "name": "IRAQ TV",
-      "image": "",
+      "id": "b6c25bfb-ce83-42e5-b22b-be175a6cc57f",
+      "name": "ALWAN SPORT",
+      "image": "https://up6.cc/2026/05/177810287688341.png",
+      "order": 2,
       "enabled": true,
-      "channels": []
+      "channels": [
+        {
+          "id": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+          "name": "Alwan Sport 1",
+          "image": "https://up6.cc/2026/05/177810287688341.png",
+          "order": 0,
+          "enabled": true,
+          "serverCount": 4
+        },
+        {
+          "id": "17cc02cf-fb33-488d-8461-9464d5aabbe5",
+          "name": "Alwan Sport 2",
+          "image": "https://up6.cc/2026/05/177810287688341.png",
+          "order": 1,
+          "enabled": true,
+          "serverCount": 5
+        },
+        {
+          "id": "271dda36-d6b9-40c8-b9d9-4cc55c36dd4c",
+          "name": "Alwan Sport 3",
+          "image": "https://up6.cc/2026/05/177810287688341.png",
+          "order": 2,
+          "enabled": true,
+          "serverCount": 5
+        },
+        {
+          "id": "8404dbe2-41ea-4c50-88bb-7f3ee2d15cd0",
+          "name": "Alwan Sport 4",
+          "image": "https://up6.cc/2026/05/177810287688341.png",
+          "order": 3,
+          "enabled": true,
+          "serverCount": 5
+        },
+        {
+          "id": "3a401a77-a117-4e53-8b41-bbd90447c5d4",
+          "name": "Alwan Sport 5",
+          "image": "https://up6.cc/2026/05/177810287688341.png",
+          "order": 4,
+          "enabled": true,
+          "serverCount": 5
+        },
+        {
+          "id": "53717e94-fdda-4849-9379-b4a33f41bc25",
+          "name": "Alwan Sport 6",
+          "image": "https://up6.cc/2026/05/177810287688341.png",
+          "order": 5,
+          "enabled": true,
+          "serverCount": 4
+        }
+      ]
     },
     {
-      "id": "news",
+      "id": "9ec8a24a-1991-4b38-acb8-4ca315341b82",
+      "name": "الثامنة",
+      "image": "https://up6.cc/2026/05/177810269886721.png",
+      "order": 3,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "5084ffd6-17a8-49be-8dd0-0ebdc74ba0ee",
+          "name": "الثامنة 1",
+          "image": "https://up6.cc/2026/02/177011517681281.png",
+          "order": 7,
+          "enabled": true,
+          "serverCount": 2
+        },
+        {
+          "id": "b4692fb9-6a50-44af-b494-ff503c80fb1b",
+          "name": "الثامنة 2",
+          "image": "https://up6.cc/2026/02/177011517681281.png",
+          "order": 8,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "b6eeaa64-ac7c-432b-b3c3-66433f526aa2",
+          "name": "الثامنة 3",
+          "image": "https://up6.cc/2026/02/177011517681281.png",
+          "order": 9,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "yacine_category_8",
+      "name": "beIN ENTERTAINMENT",
+      "image": "https://up6.cc/2026/09/178948747622911.png",
+      "order": 4,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "yacine_channel_8_60",
+          "name": "beIN Boomerang",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/0000_Boomerang_tv_logo.png",
+          "order": 0,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_61",
+          "name": "beIN Jeem",
+          "image": "https://assets.bein.com/mena/sites/3/2020/06/Jeem-HD-1-01.png",
+          "order": 1,
+          "enabled": true,
+          "serverCount": 2
+        },
+        {
+          "id": "yacine_channel_8_62",
+          "name": "beIN Baraem",
+          "image": "https://www.bein.com/en/wp-content/uploads/sites/3/2020/06/Bara3em-1.png",
+          "order": 2,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_63",
+          "name": "beIN Fatafeat",
+          "image": "https://www.bein.com/en/wp-content/uploads/sites/3/2020/06/FATAFEAT-1.png",
+          "order": 3,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_64",
+          "name": "beIN Drama",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/DRAMA_DIGITAL_Mono.png",
+          "order": 4,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_65",
+          "name": "beIN Gourmet",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/GOURMET_DIGITAL_Mono.png",
+          "order": 5,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_66",
+          "name": "beIN Series 1",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/SERIES1_DIGITAL_Mono.png",
+          "order": 6,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_67",
+          "name": "beIN Series 2",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/SERIES2_DIGITAL_Mono.png",
+          "order": 7,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_68",
+          "name": "beIN Movies 1",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES1_PREMIERE_DIGITAL_Mono.png",
+          "order": 8,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_69",
+          "name": "beIN Movies 2",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES2_ACTION_DIGITAL_Mono.png",
+          "order": 9,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_70",
+          "name": "beIN Movies 3",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES3_DRAMA_DIGITAL_Mono.png",
+          "order": 10,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_71",
+          "name": "beIN Movies 4",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES4_FAMILY_DIGITAL_Mono.png",
+          "order": 11,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_8_1420",
+          "name": "beIN BOX OFFICE",
+          "image": "https://assets.bein.com/mena/sites/3/2015/06/BoxOffice1_DIGITAL_Mono.png",
+          "order": 12,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "ecdce106-3a4d-403b-8765-1a6fc908cfe6",
+      "name": "Starz Sport",
+      "image": "https://up6.cc/2026/05/177810294471261.png",
+      "order": 5,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "5724b8b3-ee31-4fd1-b9f1-1b5a7500c92c",
+          "name": "Starz Sport 1",
+          "image": "https://up6.cc/2026/02/177015117211671.png",
+          "order": 10,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "f11a8f40-1078-420e-889f-0e2cb563ce35",
+          "name": "Starz Sport 2",
+          "image": "https://up6.cc/2026/02/177015117219472.png",
+          "order": 11,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "738f345e-64dc-4d7a-8c9d-a2bd45288320",
+          "name": "Starz Sport 3",
+          "image": "https://up6.cc/2026/02/177015117223663.png",
+          "order": 12,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "d2f758f2-ce31-46da-9ed3-ac7260dc1d74",
+      "name": "SHAHID SPORT",
+      "image": "https://up6.cc/2026/05/177810311327231.png",
+      "order": 6,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "68606fa1-e0d0-4358-bbf0-f634bb78e63e",
+          "name": "شاهد 1",
+          "image": "https://up6.cc/2026/02/177013235251811.png",
+          "order": 13,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "dbed766a-da4a-4b2d-85a6-f55e5b068e54",
+          "name": "شاهد 2",
+          "image": "https://up6.cc/2026/02/177013235256942.png",
+          "order": 14,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "179b3a4d-2cf4-4933-94ad-a3b4fb2993a1",
+          "name": "شاهد 3",
+          "image": "https://up6.cc/2026/02/177013235261723.png",
+          "order": 15,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "c782622c-f4a4-4ad0-b65c-c9cfbfc02e79",
+          "name": "شاهد 4",
+          "image": "https://up6.cc/2026/02/177013235266684.png",
+          "order": 16,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "ea7d4f04-79f0-4456-8e03-500d56db9687",
+          "name": "شاهد 5",
+          "image": "https://up6.cc/2026/02/17701323527175.png",
+          "order": 17,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "c645b1d0-0d63-4c08-a795-5be8e6422da2",
+      "name": "ALKASS",
+      "image": "https://up6.cc/2026/05/177810351646581.png",
+      "order": 7,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "027c60d4-658c-4984-a0bc-2f0f87691c27",
+          "name": "1 الكاس",
+          "image": "https://up6.cc/2024/09/172561217701881.jpg",
+          "order": 29,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "4d68be52-4392-44d9-8b58-9cbb9c3d129b",
+          "name": "2 الكاس",
+          "image": "https://up6.cc/2024/09/172561217701881.jpg",
+          "order": 30,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "8e7a09d5-6bcf-420e-ab8d-bfd67b5b45c1",
+          "name": "3 الكاس",
+          "image": "https://up6.cc/2024/09/172561217701881.jpg",
+          "order": 31,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "9a48c2f0-af9b-462b-999c-daaef9351f97",
+          "name": "4 الكاس",
+          "image": "https://up6.cc/2024/09/172561217701881.jpg",
+          "order": 32,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "8eda669b-ffe6-47d8-a0d7-e6bbff84f5c6",
+          "name": "5 الكاس",
+          "image": "https://up6.cc/2024/09/172561217701881.jpg",
+          "order": 33,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "5b8306e5-f978-4be3-a340-0d66434a4c18",
+          "name": "6 الكاس",
+          "image": "https://up6.cc/2024/09/172561217701881.jpg",
+          "order": 34,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "a5cf6541-3663-4b43-89b7-982571e21fbd",
+          "name": "1 شوف",
+          "image": "https://up6.cc/2026/02/177012136447481.png",
+          "order": 35,
+          "enabled": true,
+          "serverCount": 0
+        },
+        {
+          "id": "67746d91-f7c0-4bdd-a8cb-d93a577ac1dd",
+          "name": "2 شوف",
+          "image": "https://up6.cc/2026/02/177012136447481.png",
+          "order": 36,
+          "enabled": true,
+          "serverCount": 0
+        }
+      ]
+    },
+    {
+      "id": "cd91b6bc-2140-405d-8ba8-5b51ac9f4182",
+      "name": "Abu Dhabi Sports",
+      "image": "https://up6.cc/2026/08/178788106553291.png",
+      "order": 8,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "438cb9c8-9771-4e07-bde3-ac7576321566",
+          "name": "Abu Dhabi 2",
+          "image": "https://up6.cc/2026/08/178791716213491.png",
+          "order": 1,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "b85ac486-6844-4cec-8179-6a21cd41992a",
+          "name": "Abu Dhabi 1",
+          "image": "https://up6.cc/2026/08/178791705973351.png",
+          "order": 90,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "d358ae55-02e3-4c51-a4df-3ea7742e390e",
+      "name": "Fajer TV",
+      "image": "https://up6.cc/2024/11/173263752464681.png",
+      "order": 9,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "e9317557-d15d-4047-b63a-20f1e7ff8468",
+          "name": "ALFAJER 1",
+          "image": "https://up6.cc/2026/02/177015688236991.png",
+          "order": 24,
+          "enabled": true,
+          "serverCount": 2
+        },
+        {
+          "id": "6d922e23-b52f-4bd5-8310-67592d7b7b06",
+          "name": "ALFAJER 2",
+          "image": "https://up6.cc/2026/02/177015694026791.png",
+          "order": 25,
+          "enabled": true,
+          "serverCount": 0
+        },
+        {
+          "id": "1fb2d340-20d7-441d-9be4-42848ea1cacc",
+          "name": "ALFAJER 3",
+          "image": "https://up6.cc/2026/02/177015694031382.png",
+          "order": 26,
+          "enabled": true,
+          "serverCount": 0
+        },
+        {
+          "id": "da654dc4-fb01-41ee-b61d-3e8101052534",
+          "name": "ALFAJER 4",
+          "image": "https://up6.cc/2026/02/177015697039331.png",
+          "order": 27,
+          "enabled": true,
+          "serverCount": 0
+        },
+        {
+          "id": "cd15de01-06d4-41fb-b51d-27b17ae8af28",
+          "name": "ALFAJER 5",
+          "image": "https://up6.cc/2026/02/177015703056251.png",
+          "order": 28,
+          "enabled": true,
+          "serverCount": 0
+        }
+      ]
+    },
+    {
+      "id": "8533cd27-3b08-4904-b8c2-977063e2f86f",
+      "name": "MBC GROUP",
+      "image": "https://up6.cc/2026/05/177810331590721.png",
+      "order": 10,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "eaf41678-b5fb-4c7c-b86e-d149c54b5b9c",
+          "name": "MBC 1 (USA)",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc1.png",
+          "order": 37,
+          "enabled": true,
+          "serverCount": 2
+        },
+        {
+          "id": "ac1294aa-ab79-4477-8420-b3a5d3fec762",
+          "name": "MBC 1 (KSA)",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc1.png",
+          "order": 38,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "e794fd56-2b24-48ed-a26f-bf0f1027b2b5",
+          "name": "MBC 2",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc2.png",
+          "order": 39,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "7167ba9e-74f1-45db-a2d9-39a530d03279",
+          "name": "MBC 3",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc3.png",
+          "order": 40,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "1eb3fbbf-4f27-43fd-a28e-17891b771ad5",
+          "name": "MBC 4",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc4.png",
+          "order": 41,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "3c21caa8-9a62-43fa-b18d-ab11854ee816",
+          "name": "MBC 5",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbc5.png",
+          "order": 42,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "2923c7d0-fbdb-4d11-9d43-4a0121cab5c1",
+          "name": "MBC IRAQ",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbciraq.png",
+          "order": 43,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "b79c6c3e-4c69-4b47-9509-1bdcfe8b06c9",
+          "name": "Mbc Bollywood",
+          "image": "https://catsbengal.com/uploads/posts//uploads/ver5v415er4vte4v6.webp",
+          "order": 44,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "26b0a71d-85bf-4fd2-b9de-55b7d9f97ba5",
+          "name": "Mbc Drama (KSA)",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcdrama.png",
+          "order": 45,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "d245d393-f330-4d49-871e-bf90aa9b5eb7",
+          "name": "Mbc Drama (USA)",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcdrama.png",
+          "order": 46,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "5b813765-80cb-492f-87b2-a72d52c26e1b",
+          "name": "Mbc+ Drama",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcplusdrama.png",
+          "order": 47,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "d42aed19-81dc-47eb-b1c1-714256c21284",
+          "name": "Mbc Masr",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmasr.png",
+          "order": 48,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "45cb07c3-b00a-46b7-899e-9e5866361d2b",
+          "name": "Mbc Masr 2",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmasr2.png",
+          "order": 49,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "ea1c3df1-caa6-4a44-8cdd-dfb18f55aa8d",
+          "name": "Mbc Masr Drama",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmasrdrama.png",
+          "order": 50,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "d669aeec-6392-4b39-a40d-0b2645a0267c",
+          "name": "Mbc Action",
+          "image": "https://up6.cc/2026/06/178144710334051.png",
+          "order": 51,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "cc2a2459-fae3-453e-be4b-91b9f5fd35ca",
+          "name": "Mbc Max",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/mbcmax.png",
+          "order": 52,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "6e5934d0-abd0-4bd7-9828-64ffc6439dc4",
+          "name": "MBC Persia",
+          "image": "https://i0.wp.com/ksalogo.com/wp-content/uploads/2025/01/MBC-Persia.png?fit=1000%2C1000&ssl=1",
+          "order": 53,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "7fad33a4-4309-45e0-91e3-5d119734f6ae",
+          "name": "MBC FM",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/MBC_FM_Logo.svg/500px-MBC_FM_Logo.svg.png",
+          "order": 54,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "3a86da72-5914-4d87-b843-e602f9729230",
       "name": "NEWS",
-      "image": "",
+      "image": "https://up6.cc/2024/09/172561206372761.jpg",
+      "order": 11,
       "enabled": true,
-      "channels": []
+      "channels": [
+        {
+          "id": "248fe9b9-1fd6-419b-bd24-2ccc74d793c9",
+          "name": "Aljazeera Mubasher",
+          "image": "https://up6.cc/2026/09/17883925674041.png",
+          "order": 55,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "a6fe3815-f149-4cc5-b3b6-122264ed3055",
+          "name": "Al Jazeera Arabic",
+          "image": "https://up6.cc/2026/09/17883925674041.png",
+          "order": 56,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "0e88b94d-2471-4169-b1e3-6dc482e999d1",
+          "name": "Alsharqiya News",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/alsharqianews.png",
+          "order": 57,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "f569f63d-c505-4786-a9e8-4f5c79b4f76a",
+          "name": "Iraqia News",
+          "image": "https://oneiraq.github.io/img/mix/iraqi_news.png",
+          "order": 58,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "72f66fa5-0c6a-4dbe-837b-1dc1025d5743",
+          "name": "I News",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/inew.png",
+          "order": 59,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "24f8cab0-1dbb-40bf-8227-324a3e1c84e5",
+          "name": "Asharq News",
+          "image": "https://iraqapps.github.io/earthlinksport/img/mixed/alsharqnews.png",
+          "order": 60,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "f984c31a-6985-4d22-a9dc-1cac03c2509f",
+          "name": "Al Arabiya",
+          "image": "https://oneiraq.github.io/img/mix/alarabia.png",
+          "order": 61,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "def78c44-85c2-4fb9-b96a-78f237d897d7",
+          "name": "Al Arabiya Al Hadath",
+          "image": "https://oneiraq.github.io/img/mix/alhadath.png",
+          "order": 62,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "04e68ec7-4677-4a79-9da8-d3c1852ff71e",
+          "name": "Alaraby",
+          "image": "https://oneiraq.github.io/img/mix/alaraby.png",
+          "order": 63,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "403fe597-d241-4604-94e2-5c4b45c78d12",
+          "name": "Sky News",
+          "image": "https://oneiraq.github.io/img/mix/sky_news.png",
+          "order": 64,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "30f3d2e4-7b2e-4783-b8c3-0a53a08edd77",
+          "name": "BBC news",
+          "image": "https://oneiraq.github.io/img/mix/bbc_news.png",
+          "order": 65,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "55cdb039-a657-489a-ad56-0074055e5560",
+          "name": "Al Aoula",
+          "image": "https://oneiraq.github.io/img/mix/aloula.png",
+          "order": 66,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "e266c13b-4ba9-4b08-a166-28d8fabb682c",
+          "name": "Alqanat 9",
+          "image": "https://oneiraq.github.io/img/mix/alqnaa9.png",
+          "order": 67,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "8f8935c1-bf1a-4a40-aeb4-381272460b80",
+          "name": "Al Masra",
+          "image": "https://oneiraq.github.io/img/mix/al-masra.png",
+          "order": 68,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "c0088ce4-944e-4d62-888e-c0f2642f74dc",
+          "name": "Al Hiwar",
+          "image": "https://oneiraq.github.io/img/mix/al-hiwar.png",
+          "order": 69,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "2c07c5ab-8a53-44de-80cf-58a7de1119e1",
+          "name": "RT",
+          "image": "https://oneiraq.github.io/img/mix/rt.png",
+          "order": 70,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "1a1ae273-5193-436e-be43-6c831487429e",
+          "name": "CNBC",
+          "image": "https://oneiraq.github.io/img/mix/cnbc-ar.png",
+          "order": 71,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "0d18d71f-95f1-47d1-91b3-06e37ef970ec",
+          "name": "FR 24",
+          "image": "https://oneiraq.github.io/img/mix/fr-24.png",
+          "order": 72,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "ef19af26-ddc4-4198-b170-2e1a41291838",
+          "name": "TRT Arabic",
+          "image": "https://oneiraq.github.io/img/mix/trt_arabic.png",
+          "order": 73,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "3b68544f-59e6-4207-9e92-8600265355af",
+          "name": "CGTN Arabic",
+          "image": "https://oneiraq.github.io/img/mix/cgtn-ar.png",
+          "order": 74,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "fe5fb026-cca2-4d7b-b7b1-e4871528d03c",
+          "name": "Almayadeen",
+          "image": "https://cdn.almayadeen.tv/images/logo/new-logo-small.png",
+          "order": 75,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
+      "name": "Rotana",
+      "image": "https://up6.cc/2026/05/177810340677912.png",
+      "order": 12,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "c570224b-2068-4adb-a566-5ffa7c34bf95",
+          "name": "سينما",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402472.webp",
+          "order": 79,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "afaa331e-75c7-403d-a020-abb4a159a694",
+          "name": "سينما مصر",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402537.webp",
+          "order": 80,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "7fc2492f-556b-4d63-9c8b-6857e8cf7e33",
+          "name": "كوميدي",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402522.webp",
+          "order": 81,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "e2fee120-3052-4737-ac92-65ea7355b12f",
+          "name": "كلاسيك",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402529.webp",
+          "order": 82,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "6af71ede-f916-4f64-84c0-f8b33179dabd",
+          "name": "دراما",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402515.webp",
+          "order": 83,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "a6371e65-3c47-4576-ade3-9ec1b8ba96ea",
+          "name": "خليجية",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402508.webp",
+          "order": 84,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "c9c27a25-c713-4505-8fb7-705d58100e32",
+          "name": "كليب",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402593.webp",
+          "order": 85,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "7a7e68f5-cbac-4729-bb58-58f681e624fe",
+          "name": "موسيقى",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402600.webp",
+          "order": 86,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "1a5273b7-c5b5-47a2-b68a-1e08689b4218",
+          "name": "اطفال",
+          "image": "https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402579.webp",
+          "order": 87,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
+      "name": "Majestic",
+      "image": "https://up6.cc/2026/08/178714483878441.png",
+      "order": 13,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "6b6cf2d5-64aa-4084-81f0-6961304b3e1b",
+          "name": "Majestic Masrah",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 2,
+          "enabled": true,
+          "serverCount": 2
+        },
+        {
+          "id": "3b7fe02a-61a8-44bb-820b-efc4030de14d",
+          "name": "Majestic Zaman",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 3,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "9bd2e0f8-c77c-487c-b33a-7c7248fddaf2",
+          "name": "Majestic Classic",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 4,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "ee491acf-b841-4a4c-bfa4-2b2e948a10a4",
+          "name": "Majestic Aflam 2",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 5,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "cf1c6f34-5d91-48e8-9411-d2f6d54c20fc",
+          "name": "Majestic Fantasy",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 6,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "0966e2c6-405b-4f1d-bb05-bae53cf99db4",
+          "name": "Majestic Crime",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 7,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "5c416bf5-799b-40fd-bf02-e2baee186b6f",
+          "name": "Majestic Action",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 8,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "6e776ab0-29cf-48ca-bc9a-75d873791c0a",
+          "name": "Majestic Hindi",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 9,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "ebcf7cb6-d330-41a1-bc38-31150967d7e2",
+          "name": "Majestic Aflam 1",
+          "image": "https://up6.cc/2026/08/178714483878441.png",
+          "order": 88,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
+    },
+    {
+      "id": "yacine_category_13",
+      "name": "KIDS CHANNELS",
+      "image": "https://i.ibb.co/wF0S0r76/file-00000000f1fc82118b0ea15698a0db71.png",
+      "order": 14,
+      "enabled": true,
+      "channels": [
+        {
+          "id": "yacine_channel_13_171",
+          "name": "Boomerang AR",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/280px-Boomerang_2014_logo.svg.png",
+          "order": 2,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_173",
+          "name": "Spacetoon",
+          "image": "https://upload.wikimedia.org/wikipedia/en/2/2b/Spacetoon_logo.png",
+          "order": 3,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_987",
+          "name": "beIN Jeem",
+          "image": "https://assets.bein.com/mena/sites/3/2020/06/Jeem-HD-1-01.png",
+          "order": 4,
+          "enabled": true,
+          "serverCount": 2
+        },
+        {
+          "id": "yacine_channel_13_988",
+          "name": "beIN Baraem",
+          "image": "https://www.bein.com/en/wp-content/uploads/sites/3/2020/06/Bara3em-1.png",
+          "order": 5,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_989",
+          "name": "OSN Kids",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5w0X1fgeN8OXfTjhXfjfRpGukdaZxMmvCdIxKHSLewSXzvgnNyU6iAQtwNYtLUUqiHMh48dUkHosVZlIysSeN9eQFPP4PY8sFpKGDY1TUtj-Mqip1bnk7GXPTiu6sAJgzRfxsbLUf4Ysmb2vDdKUJfaJZKHCmnVH1T8B7TNicZlNx4Q5sYRu9lcu4/s1600/1232_1.png",
+          "order": 6,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_990",
+          "name": "MBC 3",
+          "image": "https://i.imgur.com/cvnDXs8.png",
+          "order": 7,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1002",
+          "name": "Rotana Kids",
+          "image": "https://i.imgur.com/93iaml1.png",
+          "order": 8,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1004",
+          "name": "Toyor Aljanah",
+          "image": "https://static.wikia.nocookie.net/logopedia/images/f/f5/Toyor_Aljanah.png/revision/latest?cb=20190914133539",
+          "order": 9,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1005",
+          "name": "Karameesh",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D8%B4.jpg",
+          "order": 10,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1006",
+          "name": "Taha Kids",
+          "image": "https://i.imgur.com/k5a8vHU.png",
+          "order": 11,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1007",
+          "name": "Atfal Wa Mawahib",
+          "image": "https://lyricstranslate.com/files/styles/artist/public/Screenshot_20200606-163241.jpg",
+          "order": 12,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1008",
+          "name": "Almajd Kids",
+          "image": "https://static.wikia.nocookie.net/logopedia/images/7/7a/%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D9%85%D8%AC%D8%AF_%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84.jpg/revision/latest?cb=20190621093107",
+          "order": 13,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1009",
+          "name": "Almajd Bassma",
+          "image": "https://static.wikia.nocookie.net/tvpedia/images/2/21/Basma_Channel.png/revision/latest/thumbnail/width/360/height/360?cb=20210618181946&path-prefix=ru",
+          "order": 14,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1010",
+          "name": "Almajd Rawda",
+          "image": "https://almajdtv.com/wp-content/uploads/2021/08/Rawda_logo.png",
+          "order": 15,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1011",
+          "name": "Majids Kids",
+          "image": "https://i.imgur.com/cnRR0fQ.png",
+          "order": 16,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1012",
+          "name": "CANAL J",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Canal_J_Logo_2019.svg/1200px-Canal_J_Logo_2019.svg.png",
+          "order": 17,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1013",
+          "name": "Gulli",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Gulli_2017_nouveau_logo.jpg",
+          "order": 18,
+          "enabled": true,
+          "serverCount": 2
+        },
+        {
+          "id": "yacine_channel_13_1014",
+          "name": "Disney XD",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Disney_XD_-_2015.svg/1200px-Disney_XD_-_2015.svg.png",
+          "order": 19,
+          "enabled": true,
+          "serverCount": 1
+        },
+        {
+          "id": "yacine_channel_13_1016",
+          "name": "Disney JR",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQmGQIsgzsWTdPvHjHB5E2VLM_DVoYqx83pt3aww-l&s",
+          "order": 21,
+          "enabled": true,
+          "serverCount": 1
+        }
+      ]
     }
   ]
 }
