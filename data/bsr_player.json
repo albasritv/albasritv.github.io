@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "catalog_categories": [],
+  "catalog_channels": [],
+  "published_matches": [],
+  "public_matches": [],
+  "match_channel_links": [],
+  "hidden_matches": [],
+  "portal_code": "",
+  "scraping_domain": "",
+  "notification_backend_url": "",
+  "maintenance_config": {
+    "enabled": false,
+    "message": "",
+    "until": 0
+  },
+  "update_settings": {
+    "forceUpdate": false,
+    "minimumRequiredVersionCode": 0,
+    "message": ""
+  },
+  "ad_config": {
+    "global_enabled": false,
+    "app_open_enabled": false,
+    "banner_enabled": false,
+    "navigation_ads_enabled": false,
+    "navigation_ads_interval": 0,
+    "playback_ads_enabled": false,
+    "playback_ads_interval": 0
+  },
+  "yacine_settings": {},
+  "source_matches_cache": [],
+  "matches_source": ""
+}
