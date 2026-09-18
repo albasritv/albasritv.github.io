@@ -1,0 +1,31 @@
+{
+  "id": "b85ac486-6844-4cec-8179-6a21cd41992a",
+  "categoryId": "cd91b6bc-2140-405d-8ba8-5b51ac9f4182",
+  "name": "Abu Dhabi 1",
+  "image": "https://up6.cc/2026/08/178791705973351.png",
+  "order": 90,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "1bec6ac7cd9a02dd75da2278ba3183ef:029edcf6b6c737595445a1a3a390edb3",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "512534d8-5a92-4a62-85a4-6420457ed5a5",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://ev-tcn-dxb-cdn.aws.playco.com/live/eds/Abu_Dhabi_Sports_1_HD/DASH/Abu_Dhabi_Sports_1_HD.mpd",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

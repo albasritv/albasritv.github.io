@@ -1,0 +1,31 @@
+{
+  "id": "5724b8b3-ee31-4fd1-b9f1-1b5a7500c92c",
+  "categoryId": "ecdce106-3a4d-403b-8765-1a6fc908cfe6",
+  "name": "Starz Sport 1",
+  "image": "https://up6.cc/2026/02/177015117211671.png",
+  "order": 10,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "eb5a3a48f3e191a00e3ac1e2d470c491:2c8b7198563527e524d66628c092ef1f",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "22811c4f-60e5-40d7-8639-81e2839993f4",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/ADSP1/wv-pr/manifest.mpd",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

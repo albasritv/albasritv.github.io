@@ -1,0 +1,31 @@
+{
+  "id": "8e7a09d5-6bcf-420e-ab8d-bfd67b5b45c1",
+  "categoryId": "c645b1d0-0d63-4c08-a795-5be8e6422da2",
+  "name": "3 الكاس",
+  "image": "https://up6.cc/2024/09/172561217701881.jpg",
+  "order": 31,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "93eea49d-97eb-427b-89e4-5cc590e67317",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://liveeu-gcp.alkassdigital.net/alkass3-p/main.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

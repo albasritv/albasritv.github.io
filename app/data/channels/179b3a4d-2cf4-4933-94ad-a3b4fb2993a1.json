@@ -1,0 +1,31 @@
+{
+  "id": "179b3a4d-2cf4-4933-94ad-a3b4fb2993a1",
+  "categoryId": "d2f758f2-ce31-46da-9ed3-ac7260dc1d74",
+  "name": "شاهد 3",
+  "image": "https://up6.cc/2026/02/177013235261723.png",
+  "order": 15,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "6477160076644679af1028534f03f67e:1267f99705113a62c7782c4d5281a7eb",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "fbc727eb-8a49-49ab-82ea-a6bacb54c693",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://shahid-sports-4-enc.edgenextcdn.net/out/v1/f813ab47644d4c41a99285513f6c7409/index.mpd",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

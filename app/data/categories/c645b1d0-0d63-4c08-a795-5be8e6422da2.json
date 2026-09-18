@@ -10,29 +10,7 @@
       "image": "https://up6.cc/2024/09/172561217701881.jpg",
       "order": 29,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "904af92a-9da6-4a18-94ee-a8589ae4ab06",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "4d68be52-4392-44d9-8b58-9cbb9c3d129b",
@@ -40,29 +18,7 @@
       "image": "https://up6.cc/2024/09/172561217701881.jpg",
       "order": 30,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "41cbe578-84b4-419d-a733-602a4e6e5d80",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://liveeu-gcp.alkassdigital.net/alkass2-p/main.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "8e7a09d5-6bcf-420e-ab8d-bfd67b5b45c1",
@@ -70,29 +26,7 @@
       "image": "https://up6.cc/2024/09/172561217701881.jpg",
       "order": 31,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "93eea49d-97eb-427b-89e4-5cc590e67317",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://liveeu-gcp.alkassdigital.net/alkass3-p/main.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "9a48c2f0-af9b-462b-999c-daaef9351f97",
@@ -100,29 +34,7 @@
       "image": "https://up6.cc/2024/09/172561217701881.jpg",
       "order": 32,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "b6872b72-afa5-4a9e-b9ac-6c7e1e06bc34",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://liveeu-gcp.alkassdigital.net/alkass4-p/main.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "8eda669b-ffe6-47d8-a0d7-e6bbff84f5c6",
@@ -130,29 +42,7 @@
       "image": "https://up6.cc/2024/09/172561217701881.jpg",
       "order": 33,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "cc560a55-8e2b-436a-9f8e-5e9f9f6ee167",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://liveeu-gcp.alkassdigital.net/alkass5-p/main.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "5b8306e5-f978-4be3-a340-0d66434a4c18",
@@ -160,29 +50,7 @@
       "image": "https://up6.cc/2024/09/172561217701881.jpg",
       "order": 34,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "0b76eb6f-92a6-4505-ada2-6d32642ba36c",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://liveeu-gcp.alkassdigital.net/alkass6-p/main.m3u8",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "a5cf6541-3663-4b43-89b7-982571e21fbd",
@@ -190,7 +58,7 @@
       "image": "https://up6.cc/2026/02/177012136447481.png",
       "order": 35,
       "enabled": true,
-      "servers": []
+      "serverCount": 0
     },
     {
       "id": "67746d91-f7c0-4bdd-a8cb-d93a577ac1dd",
@@ -198,7 +66,7 @@
       "image": "https://up6.cc/2026/02/177012136447481.png",
       "order": 36,
       "enabled": true,
-      "servers": []
+      "serverCount": 0
     }
   ]
 }

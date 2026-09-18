@@ -1,0 +1,31 @@
+{
+  "id": "9a48c2f0-af9b-462b-999c-daaef9351f97",
+  "categoryId": "c645b1d0-0d63-4c08-a795-5be8e6422da2",
+  "name": "4 الكاس",
+  "image": "https://up6.cc/2024/09/172561217701881.jpg",
+  "order": 32,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "b6872b72-afa5-4a9e-b9ac-6c7e1e06bc34",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://liveeu-gcp.alkassdigital.net/alkass4-p/main.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

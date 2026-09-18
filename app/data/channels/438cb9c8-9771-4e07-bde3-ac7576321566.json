@@ -1,0 +1,31 @@
+{
+  "id": "438cb9c8-9771-4e07-bde3-ac7576321566",
+  "categoryId": "cd91b6bc-2140-405d-8ba8-5b51ac9f4182",
+  "name": "Abu Dhabi 2",
+  "image": "https://up6.cc/2026/08/178791716213491.png",
+  "order": 1,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "528afb1be8ef0e74a8fe703e37e493de:1f58c055fe8028ca00226301d6161729",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "130b0219-1273-4c79-8bb4-03f4051aa836",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://ev-tcn-dxb-cdn.aws.playco.com/live/eds/Abu_Dhabi_Sports_2_HD/DASH/Abu_Dhabi_Sports_2_HD.mpd",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

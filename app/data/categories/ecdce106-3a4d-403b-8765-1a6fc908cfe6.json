@@ -10,29 +10,7 @@
       "image": "https://up6.cc/2026/02/177015117211671.png",
       "order": 10,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "eb5a3a48f3e191a00e3ac1e2d470c491:2c8b7198563527e524d66628c092ef1f",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "22811c4f-60e5-40d7-8639-81e2839993f4",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/ADSP1/wv-pr/manifest.mpd",
-          "userAgent": "",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "f11a8f40-1078-420e-889f-0e2cb563ce35",
@@ -40,29 +18,7 @@
       "image": "https://up6.cc/2026/02/177015117219472.png",
       "order": 11,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "efca93272b9d34f5cf9d8598f43be5ea:55e5fe489e9c18f6c979c3126d4bcfed",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "e204d09e-dab6-4da8-ab7b-2259f9d45201",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/ADSP2/wv-pr/manifest.mpd",
-          "userAgent": "",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "738f345e-64dc-4d7a-8c9d-a2bd45288320",
@@ -70,29 +26,7 @@
       "image": "https://up6.cc/2026/02/177015117223663.png",
       "order": 12,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "42d7a462640c6748371d39f23e4a18c3:f4bef9f080f4a3a52dd55d5c3b8b81e2",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "ce5f147e-a8da-4eb3-9c91-1978f4a4edf5",
-          "name": "S1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/SPZ/wv-pr/manifest.mpd",
-          "userAgent": "",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     }
   ]
 }

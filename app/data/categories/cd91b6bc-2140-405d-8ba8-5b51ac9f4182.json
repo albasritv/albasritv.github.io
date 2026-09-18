@@ -10,29 +10,7 @@
       "image": "https://up6.cc/2026/08/178791716213491.png",
       "order": 1,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "528afb1be8ef0e74a8fe703e37e493de:1f58c055fe8028ca00226301d6161729",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "130b0219-1273-4c79-8bb4-03f4051aa836",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://ev-tcn-dxb-cdn.aws.playco.com/live/eds/Abu_Dhabi_Sports_2_HD/DASH/Abu_Dhabi_Sports_2_HD.mpd",
-          "userAgent": "",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     },
     {
       "id": "b85ac486-6844-4cec-8179-6a21cd41992a",
@@ -40,29 +18,7 @@
       "image": "https://up6.cc/2026/08/178791705973351.png",
       "order": 90,
       "enabled": true,
-      "servers": [
-        {
-          "accept": "",
-          "authUrl": "",
-          "authorization": "",
-          "cookie": "",
-          "drmKey": "1bec6ac7cd9a02dd75da2278ba3183ef:029edcf6b6c737595445a1a3a390edb3",
-          "drmLicenseHeaders": "",
-          "drmLicenseUrl": "",
-          "drmMultiSession": false,
-          "drmType": "Auto",
-          "id": "512534d8-5a92-4a62-85a4-6420457ed5a5",
-          "name": "1",
-          "order": 0,
-          "origin": "",
-          "playerMode": "EXO",
-          "referer": "",
-          "subtitleUrl": "",
-          "url": "https://ev-tcn-dxb-cdn.aws.playco.com/live/eds/Abu_Dhabi_Sports_1_HD/DASH/Abu_Dhabi_Sports_1_HD.mpd",
-          "userAgent": "",
-          "xRequestedWith": ""
-        }
-      ]
+      "serverCount": 1
     }
   ]
 }

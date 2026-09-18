@@ -1,0 +1,31 @@
+{
+  "id": "8eda669b-ffe6-47d8-a0d7-e6bbff84f5c6",
+  "categoryId": "c645b1d0-0d63-4c08-a795-5be8e6422da2",
+  "name": "5 الكاس",
+  "image": "https://up6.cc/2024/09/172561217701881.jpg",
+  "order": 33,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "cc560a55-8e2b-436a-9f8e-5e9f9f6ee167",
+      "name": "S1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://liveeu-gcp.alkassdigital.net/alkass5-p/main.m3u8",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
+      "xRequestedWith": ""
+    }
+  ]
+}
