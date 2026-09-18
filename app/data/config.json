@@ -1,10 +1,11 @@
 {
   "appName": "البصري بلاير",
   "player": {
-    "scheme": "bsrplayer",
+    "scheme": "BSRPlayer",
     "host": "play",
     "package": "com.bsr.player.pro",
-    "fallback": "https://play.google.com/store/apps/details?id=com.bsr.player.pro"
+    "fallback": "https://play.google.com/store/apps/details?id=com.bsr.player.pro",
+    "channelBase": "https://albasritv.github.io/app/data/channels"
   },
   "menu": {
     "home": "index.html",
