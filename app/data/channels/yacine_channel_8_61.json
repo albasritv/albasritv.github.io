@@ -1,0 +1,52 @@
+{
+  "id": "yacine_channel_8_61",
+  "categoryId": "yacine_category_8",
+  "name": "beIN Jeem",
+  "image": "https://assets.bein.com/mena/sites/3/2020/06/Jeem-HD-1-01.png",
+  "order": 1,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_61_0",
+      "name": "جودة 1",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "http://ar.ycncdn.online/live/075/index.m3u8?t=xkADF1yyqyH_dZYbBqvPOw&e=1789505499",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    },
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_61_1",
+      "name": "جودة 2",
+      "order": 1,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "http://www.elahmad.coo/tv/radiant.php?id=jscc1",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "5084ffd6-17a8-49be-8dd0-0ebdc74ba0ee",
+  "categoryId": "9ec8a24a-1991-4b38-acb8-4ca315341b82",
+  "name": "الثامنة 1",
+  "image": "https://up6.cc/2026/02/177011517681281.png",
+  "order": 7,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "714c789c76686632652eefc19f18c3db:962cee49ee9422b44a6c60a7999854ad",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "8bfce22b-bb12-4b35-8f89-425e01910a6b",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/STCT1/wv-pr/manifest.mpd",
+      "userAgent": "",
+      "xRequestedWith": ""
+    },
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "827e265e-dca4-4e83-b5ca-b43f6dab7dfc",
+      "name": "SN",
+      "order": 1,
+      "origin": "",
+      "playerMode": "WEB",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://live-tv-116849026166.europe-west1.run.app/api/stream-proxy?url=http%3A%2F%2Fmain.light-ott.net%2Fplay%2Flive.php%3Fmac%3DA0%3ABB%3A3E%3A02%3A40%3A2B%26stream%3D1264554%26extension%3Dm3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

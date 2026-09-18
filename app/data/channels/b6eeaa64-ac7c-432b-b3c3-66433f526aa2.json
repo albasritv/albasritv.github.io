@@ -1,0 +1,31 @@
+{
+  "id": "b6eeaa64-ac7c-432b-b3c3-66433f526aa2",
+  "categoryId": "9ec8a24a-1991-4b38-acb8-4ca315341b82",
+  "name": "الثامنة 3",
+  "image": "https://up6.cc/2026/02/177011517681281.png",
+  "order": 9,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "4bc8e4e871589a45e7c0c7d245c243c6:4c5e8108e0f3cea4b588f5727d3de482",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "9610b71b-325b-4080-9bbf-91d2e09aad56",
+      "name": "1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/STCT3/wv-pr/manifest.mpd",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

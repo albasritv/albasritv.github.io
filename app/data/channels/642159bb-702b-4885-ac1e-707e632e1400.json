@@ -1,0 +1,31 @@
+{
+  "id": "642159bb-702b-4885-ac1e-707e632e1400",
+  "categoryId": "80e84539-a8a9-47ef-832a-535d8b9e3747",
+  "name": "BEIN 7",
+  "image": "https://up6.cc/2026/02/177014457060771.png",
+  "order": 6,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "a02bc14d-624a-47a9-91d0-da68ab0a1505",
+      "name": "x1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://www.manar2.shop/x1/65.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

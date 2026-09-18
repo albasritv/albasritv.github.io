@@ -1,0 +1,31 @@
+{
+  "id": "ae6a7554-4c5f-4fd9-98a0-c6ba71b957fd",
+  "categoryId": "80e84539-a8a9-47ef-832a-535d8b9e3747",
+  "name": "BEIN 6",
+  "image": "https://up6.cc/2026/02/177014452533561.png",
+  "order": 5,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "df4f0869-c1ce-43ad-8109-02795164b3eb",
+      "name": "x1",
+      "order": 0,
+      "origin": "",
+      "playerMode": "EXO",
+      "referer": "",
+      "subtitleUrl": "",
+      "url": "https://www.manar2.shop/x1/64.m3u8",
+      "userAgent": "",
+      "xRequestedWith": ""
+    }
+  ]
+}

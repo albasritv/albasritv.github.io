@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_8_67",
+  "categoryId": "yacine_category_8",
+  "name": "beIN Series 2",
+  "image": "https://assets.bein.com/mena/sites/3/2015/06/SERIES2_DIGITAL_Mono.png",
+  "order": 7,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_67_0",
+      "name": "Auto",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "http://ar.ycncdn.online/live/081/index.m3u8?t=t6yWYVIuhlv_CyezZ-2HmA&e=1789505499",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

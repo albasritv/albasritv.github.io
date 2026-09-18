@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_8_68",
+  "categoryId": "yacine_category_8",
+  "name": "beIN Movies 1",
+  "image": "https://assets.bein.com/mena/sites/3/2015/06/MOVIES1_PREMIERE_DIGITAL_Mono.png",
+  "order": 8,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_68_0",
+      "name": "Auto",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "http://ar.ycncdn.online/live/076/index.m3u8?t=7MHSVsftcieNCif3gaRM_w&e=1789505499",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "yacine_channel_8_62",
+  "categoryId": "yacine_category_8",
+  "name": "beIN Baraem",
+  "image": "https://www.bein.com/en/wp-content/uploads/sites/3/2020/06/Bara3em-1.png",
+  "order": 2,
+  "enabled": true,
+  "servers": [
+    {
+      "accept": "",
+      "authUrl": "",
+      "authorization": "",
+      "cookie": "",
+      "drmKey": "",
+      "drmLicenseHeaders": "",
+      "drmLicenseUrl": "",
+      "drmMultiSession": false,
+      "drmType": "Auto",
+      "id": "yacine_server_62_0",
+      "name": "Auto",
+      "order": 0,
+      "origin": "http://ver3.yacinelive.com",
+      "playerMode": "EXO",
+      "referer": "http://ver3.yacinelive.com/",
+      "subtitleUrl": "",
+      "url": "http://ar.ycncdn.online/live/070/index.m3u8?t=cE0tPulF-HnyMpjjl2dZmA&e=1789505499",
+      "userAgent": "okhttp/4.12.0",
+      "xRequestedWith": ""
+    }
+  ]
+}
