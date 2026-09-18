@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>لوحة تحكم البصري بلاير</title>
+<style>
+:root{--bg:#07111d;--panel:#0d1b29;--panel2:#102131;--text:#fff;--muted:#8ba0b2;--border:#263d51;--accent:#18d4dc;--danger:#ff5a66;--ok:#36d58d}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,textarea{font:inherit}.wrap{max-width:980px;margin:auto;padding:14px}.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.title{font-size:20px;font-weight:800}.sub{color:var(--muted);font-size:12px;margin-top:4px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--border);border-radius:16px;padding:13px;margin-bottom:12px}.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.field{min-width:0}.field label{display:block;font-size:12px;color:var(--muted);margin:0 3px 6px}.field input,.field textarea{width:100%;border:1px solid var(--border);border-radius:11px;background:#081521;color:var(--text);padding:11px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--accent)}.field textarea{min-height:78px;resize:vertical}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.btn{border:1px solid var(--border);border-radius:11px;background:#0c2130;color:var(--text);padding:10px 13px;cursor:pointer}.btn.primary{background:var(--accent);border-color:var(--accent);color:#041318;font-weight:800}.btn.danger{border-color:#71323a;color:#ff9ba3}.btn.small{padding:7px 10px;font-size:12px}.status{font-size:12px;color:var(--muted);margin-top:8px;min-height:18px}.status.ok{color:var(--ok)}.status.err{color:#ff9ba3}.section-head{display:flex;align-items:center;gap:8px}.section-head input{flex:1}.section{border:1px solid var(--border);border-radius:14px;padding:10px;margin-top:9px;background:rgba(255,255,255,.02)}.section-title{font-size:14px;font-weight:700;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.channel-list{margin-top:9px;padding-top:9px;border-top:1px dashed var(--border)}.channel{border:1px solid var(--border);border-radius:12px;padding:10px;margin-top:8px;background:#091824}.switchline{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}.switchline input{width:18px;height:18px}.hint{font-size:11px;color:var(--muted);line-height:1.7}.badge{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 8px;color:var(--muted);font-size:11px}.sticky{position:sticky;top:0;z-index:10;background:rgba(7,17,29,.95);backdrop-filter:blur(12px);padding:10px 0 8px}.divider{height:1px;background:var(--border);margin:12px 0}@media(max-width:650px){.row{grid-template-columns:1fr}.wrap{padding:10px}.title{font-size:18px}.btn{flex:1}.section-head{align-items:flex-start;flex-wrap:wrap}.section-head .section-title{width:100%;flex-basis:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="sticky">
+<div class="top"><div><div class="title">لوحة تحكم البصري بلاير</div><div class="sub">إدارة الأقسام والقنوات وروابط التطبيق من الجوال</div></div><span class="badge">GitHub</span></div>
+<div class="actions"><button class="btn" id="reloadBtn">تحديث البيانات</button><button class="btn primary" id="saveBtn">حفظ على GitHub</button><button class="btn" id="addSectionBtn">+ إضافة قسم</button></div>
+<div class="status" id="status"></div>
+</div>
+
+<div class="card">
+<div class="title" style="font-size:15px">اتصال GitHub</div>
+<div class="hint" style="margin:6px 0 10px">استخدم Fine-grained token بصلاحية Contents: Read and write لهذا المستودع فقط. التوكن يبقى في الذاكرة ولا يتم حفظه في المتصفح.</div>
+<div class="row">
+<div class="field"><label>GitHub Token</label><input id="token" type="password" autocomplete="off" placeholder="github_pat_..."></div>
+<div class="field"><label>المستودع</label><input id="repo" value="albasritv/albasritv.github.io"></div>
+<div class="field"><label>الفرع</label><input id="branch" value="main"></div>
+<div class="field"><label>ملف البيانات</label><input id="path" value="app/data/data.json"></div>
+</div>
+</div>
+
+<div class="card">
+<div class="title" style="font-size:15px">إعدادات التطبيق</div>
+<div class="row" style="margin-top:10px">
+<div class="field"><label>اسم التطبيق</label><input id="appName"></div>
+<div class="field"><label>Package البصري بلاير</label><input id="playerPackage"></div>
+<div class="field"><label>Scheme</label><input id="playerScheme"></div>
+<div class="field"><label>Host</label><input id="playerHost"></div>
+<div class="field"><label>رابط Google Play الاحتياطي</label><input id="playerFallback"></div>
+<div class="field"><label>قناة Telegram</label><input id="telegram"></div>
+<div class="field"><label>سياسة الخصوصية</label><input id="privacy"></div>
+<div class="field"><label>رابط المباريات</label><input id="matches"></div>
+<div class="field"><label>رابط المسلسلات والأفلام</label><input id="movies"></div>
+<div class="field"><label>رابط أخبار الرياضة</label><input id="sportsNews"></div>
+</div>
+</div>
+
+<div class="card">
+<div class="title" style="font-size:15px">الأقسام والقنوات</div>
+<div id="sections"></div>
+</div>
+</div>
+
+<script>
+let DATA=null,currentSha=null;
+const $=id=>document.getElementById(id), esc=s=>(s??"").toString().replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+function status(t,type=""){$("status").textContent=t;$("status").className="status "+type}
+function uid(prefix){return prefix+"-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,6)}
+function auth(){const t=$("token").value.trim();return t?{"Authorization":"Bearer "+t,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"}:{"Accept":"application/vnd.github+json"}}
+function bytesToB64(str){const bytes=new TextEncoder().encode(str);let bin="";bytes.forEach(b=>bin+=String.fromCharCode(b));return btoa(bin)}
+function b64ToText(b64){const clean=b64.replace(/\s/g,"");const bin=atob(clean);const bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}
+function apiUrl(){return "https://api.github.com/repos/"+$("repo").value.trim()+"/contents/"+$("path").value.trim()+"?ref="+encodeURIComponent($("branch").value.trim())}
+async function loadRemote(){
+ status("جاري تحميل البيانات...");
+ try{const r=await fetch(apiUrl(),{headers:auth(),cache:"no-store"});if(!r.ok)throw new Error("GitHub "+r.status);const j=await r.json();currentSha=j.sha;DATA=JSON.parse(b64ToText(j.content));bindSettings();renderSections();status("تم تحميل البيانات بنجاح","ok")}catch(e){status("فشل التحميل: "+e.message,"err")}
+}
+function bindSettings(){
+ $("appName").value=DATA.appName||"";$("playerPackage").value=DATA.player?.package||"";$("playerScheme").value=DATA.player?.scheme||"";$("playerHost").value=DATA.player?.host||"";$("playerFallback").value=DATA.player?.fallback||"";$("telegram").value=DATA.menu?.telegram||"";$("privacy").value=DATA.menu?.privacy||"";$("matches").value=DATA.menu?.matches||"";$("movies").value=DATA.menu?.movies||"";$("sportsNews").value=DATA.menu?.sportsNews||"";
+}
+function collectSettings(){
+ DATA.appName=$("appName").value.trim();DATA.player=DATA.player||{};DATA.player.package=$("playerPackage").value.trim();DATA.player.scheme=$("playerScheme").value.trim();DATA.player.host=$("playerHost").value.trim();DATA.player.fallback=$("playerFallback").value.trim();DATA.menu=DATA.menu||{};DATA.menu.home="index.html";DATA.menu.telegram=$("telegram").value.trim();DATA.menu.privacy=$("privacy").value.trim();DATA.menu.matches=$("matches").value.trim();DATA.menu.movies=$("movies").value.trim();DATA.menu.sportsNews=$("sportsNews").value.trim();
+}
+function renderSections(){
+ const box=$("sections");box.innerHTML="";(DATA.sections||[]).forEach((s,si)=>{const d=document.createElement("div");d.className="section";d.innerHTML=`
+ <div class="section-head"><div class="section-title">${esc(s.name||"قسم جديد")}</div><button class="btn small" data-up>↑</button><button class="btn small" data-down>↓</button><button class="btn small danger" data-del>حذف</button></div>
+ <div class="row" style="margin-top:9px">
+ <div class="field"><label>اسم القسم</label><input data-k="name" value="${esc(s.name)}"></div>
+ <div class="field"><label>ID القسم</label><input data-k="id" value="${esc(s.id)}"></div>
+ <div class="field"><label>رابط الصورة</label><input data-k="image" value="${esc(s.image)}"></div>
+ <div class="field"><label>الحالة</label><label class="switchline"><input type="checkbox" data-enabled ${s.enabled!==false?"checked":""}> إظهار القسم</label></div>
+ </div>
+ <div class="channel-list"><div class="actions" style="margin-top:0"><button class="btn small" data-add-channel>+ إضافة قناة</button><span class="badge">${(s.channels||[]).length} قناة</span></div><div data-channels></div></div>`;
+ const sync=()=>{d.querySelectorAll("[data-k]").forEach(i=>s[i.dataset.k]=i.value);s.enabled=d.querySelector("[data-enabled]").checked;d.querySelector(".section-title").textContent=s.name||"قسم جديد"};
+ d.querySelectorAll("[data-k],[data-enabled]").forEach(i=>i.addEventListener("input",sync));
+ d.querySelector("[data-del]").onclick=()=>{if(confirm("حذف القسم وكل قنواته؟")){DATA.sections.splice(si,1);renderSections()}};
+ d.querySelector("[data-up]").onclick=()=>{if(si>0){[DATA.sections[si-1],DATA.sections[si]]=[DATA.sections[si],DATA.sections[si-1]];renderSections()}};
+ d.querySelector("[data-down]").onclick=()=>{if(si<DATA.sections.length-1){[DATA.sections[si+1],DATA.sections[si]]=[DATA.sections[si],DATA.sections[si+1]];renderSections()}};
+ d.querySelector("[data-add-channel]").onclick=()=>{s.channels=s.channels||[];s.channels.push({id:uid("channel"),name:"قناة جديدة",image:"",stream:"",redirect:"",userAgent:"",referer:"",origin:"",cookie:"",drm:"",enabled:true});renderSections()};
+ renderChannels(d.querySelector("[data-channels]"),s);box.appendChild(d)
+ })}
+function renderChannels(box,s){
+ box.innerHTML="";(s.channels||[]).forEach((c,ci)=>{const d=document.createElement("div");d.className="channel";d.innerHTML=`
+ <div class="section-head"><div class="section-title">${esc(c.name||"قناة جديدة")}</div><button class="btn small" data-up>↑</button><button class="btn small" data-down>↓</button><button class="btn small danger" data-del>حذف</button></div>
+ <div class="row" style="margin-top:9px">
+ <div class="field"><label>اسم القناة</label><input data-k="name" value="${esc(c.name)}"></div>
+ <div class="field"><label>ID القناة</label><input data-k="id" value="${esc(c.id)}"></div>
+ <div class="field"><label>رابط الصورة</label><input data-k="image" value="${esc(c.image)}"></div>
+ <div class="field"><label>رابط البث</label><input data-k="stream" value="${esc(c.stream)}"></div>
+ <div class="field"><label>إعادة توجيه مباشرة (اختياري)</label><input data-k="redirect" value="${esc(c.redirect)}"></div>
+ <div class="field"><label>User-Agent</label><input data-k="userAgent" value="${esc(c.userAgent)}"></div>
+ <div class="field"><label>Referer</label><input data-k="referer" value="${esc(c.referer)}"></div>
+ <div class="field"><label>Origin</label><input data-k="origin" value="${esc(c.origin)}"></div>
+ <div class="field"><label>Cookie</label><input data-k="cookie" value="${esc(c.cookie)}"></div>
+ <div class="field"><label>DRM KID:KEY</label><input data-k="drm" value="${esc(c.drm)}"></div>
+ </div>
+ <label class="switchline" style="margin-top:9px"><input type="checkbox" data-enabled ${c.enabled!==false?"checked":""}> إظهار القناة</label>`;
+ const sync=()=>{d.querySelectorAll("[data-k]").forEach(i=>c[i.dataset.k]=i.value);c.enabled=d.querySelector("[data-enabled]").checked;d.querySelector(".section-title").textContent=c.name||"قناة جديدة"};
+ d.querySelectorAll("[data-k],[data-enabled]").forEach(i=>i.addEventListener("input",sync));
+ d.querySelector("[data-del]").onclick=()=>{if(confirm("حذف القناة؟")){s.channels.splice(ci,1);renderSections()}};
+ d.querySelector("[data-up]").onclick=()=>{if(ci>0){[s.channels[ci-1],s.channels[ci]]=[s.channels[ci],s.channels[ci-1]];renderSections()}};
+ d.querySelector("[data-down]").onclick=()=>{if(ci<s.channels.length-1){[s.channels[ci+1],s.channels[ci]]=[s.channels[ci],s.channels[ci+1]];renderSections()}};
+ box.appendChild(d)
+ })}
+$("addSectionBtn").onclick=()=>{if(!DATA)return;DATA.sections=DATA.sections||[];DATA.sections.push({id:uid("section"),name:"قسم جديد",image:"",enabled:true,channels:[]});renderSections()};
+$("reloadBtn").onclick=loadRemote;
+$("saveBtn").onclick=async()=>{if(!DATA)return status("حمّل البيانات أولاً","err");if(!$("token").value.trim())return status("أدخل GitHub Token للحفظ","err");collectSettings();status("جاري الحفظ على GitHub...");try{if(!currentSha){await loadRemote();if(!currentSha)throw new Error("تعذر معرفة نسخة الملف الحالية");collectSettings()}const body={message:"Update app data from mobile admin",content:bytesToB64(JSON.stringify(DATA,null,2)),sha:currentSha,branch:$("branch").value.trim()};const url=apiUrl().split("?")[0];const r=await fetch(url,{method:"PUT",headers:{...auth(),"Content-Type":"application/json"},body:JSON.stringify(body)});if(!r.ok)throw new Error("GitHub "+r.status);const j=await r.json();currentSha=j.content?.sha||currentSha;status("تم الحفظ بنجاح. التغييرات ستظهر في التطبيق.","ok")}catch(e){status("فشل الحفظ: "+e.message,"err")}};
+loadRemote();
+</script>
+</body>
+</html>
