@@ -1,45 +1,29 @@
-# Albasri App Web Control
+# BSR App Web Control
 
-المجلد `/app` يحتوي على واجهة الويب المستخدمة مع AppCreator24.
+تم نقل الكتالوج الحالي للقنوات الحية من Firebase إلى بنية جديدة:
+
+- GitHub Pages: الأقسام + أسماء القنوات + الصور + الترتيب.
+- Cloudflare Worker + KV: روابط السيرفرات والهيدرز وDRM.
+- AppCreator24: يفتح الصفحة الرئيسية ثم صفحة القنوات.
+- عند اختيار القناة، صفحة القنوات تجلب السيرفرات من Worker ثم ترسل السيرفر المختار إلى البصري بلاير.
 
 ## الروابط
+- الرئيسية: https://albasritv.github.io/app/
+- القنوات: https://albasritv.github.io/app/channels.html?id=SECTION_ID
+- الأدمن: https://albasritv.github.io/app/admin.html
+- البيانات العامة: https://albasritv.github.io/app/data/data.json
+- Worker template: app/worker.js
 
-- الصفحة الرئيسية: https://albasritv.github.io/app/
-- صفحة القنوات: https://albasritv.github.io/app/channels.html?id=bein-sports
-- لوحة الأدمن: https://albasritv.github.io/app/admin.html
-- البيانات: https://albasritv.github.io/app/data/data.json
+## إعداد Cloudflare Worker
+1. أنشئ Worker جديد.
+2. الصق محتوى app/worker.js.
+3. أنشئ KV Namespace باسم BSR_DATA واربطه بالـWorker باسم Binding: BSR_DATA.
+4. أضف Secret باسم ADMIN_KEY.
+5. أضف Variable اختياري باسم ALLOWED_ORIGIN وقيمته https://albasritv.github.io
+6. Deploy.
+7. افتح admin.html، ضع Worker URL وAdmin Key.
+8. اختر ملف bsr-private-servers-import.json ثم اضغط رفع السيرفرات.
+9. بعد نجاح الرفع، ضع نفس Worker URL في Private API Base واضغط حفظ البيانات العامة.
 
-## طريقة العمل
-
-1. افتح `admin.html` من الجوال.
-2. أنشئ GitHub Fine-grained personal access token لمستودع `albasritv/albasritv.github.io` فقط.
-3. امنحه صلاحية Contents: Read and write.
-4. الصق التوكن في لوحة الأدمن. لا يتم حفظه في Local Storage.
-5. أضف/عدّل الأقسام والقنوات.
-6. اضغط "حفظ على GitHub".
-7. الصفحة الرئيسية والقنوات تقرأ `data/data.json` تلقائياً.
-
-## AppCreator24
-
-ضع رابط الصفحة الرئيسية داخل قسم HTML/Web في AppCreator24:
-
-`https://albasritv.github.io/app/`
-
-الأقسام لا تحتاج صفحات منفصلة. الصفحة الرئيسية تحول تلقائياً إلى:
-
-`channels.html?id=SECTION_ID`
-
-## تشغيل البصري بلاير
-
-صفحة القنوات تبني Intent من إعدادات `player` داخل `data.json`.
-الافتراضي:
-
-- scheme: `bsrplayer`
-- host: `play`
-- package: `com.bsr.player.pro`
-
-إذا مشروع البصري بلاير يستخدم Scheme أو Host مختلفاً، غيّره من لوحة الأدمن.
-
-## ملاحظة أمنية مهمة
-
-GitHub Pages ومستودع البيانات هنا عامّان. لا تضع روابط بث أو Cookies أو مفاتيح DRM سرية إذا كنت لا تريد أن تكون قابلة للقراءة من ملف JSON العام. للروابط الحساسة استخدم Worker/API محمي وأرسل للتطبيق رابط الـAPI بدلاً من السر نفسه.
+## ملاحظة
+Origin/Referer gate يقلل الوصول المباشر لكنه ليس حماية مطلقة؛ أي عميل يحتاج تشغيل البث سيحتاج في النهاية بيانات تشغيل قابلة للاستخدام.
