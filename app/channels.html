@@ -12,17 +12,17 @@
 .card{height:80px;display:flex;align-items:center;padding:8px 9px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:0 5px 18px rgba(0,0,0,.12);cursor:pointer}.card:active{transform:scale(.97)}
 .image-box{width:52px;height:52px;flex:0 0 52px;padding:5px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(4,13,22,.75);border:1px solid rgba(120,160,190,.35);overflow:hidden}.image-box img{width:100%;height:100%;object-fit:contain;border-radius:7px}.fallback{font-size:10px;font-weight:800;color:var(--accent)}
 .name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.play{font-size:18px;color:var(--accent);margin-right:5px}.empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
-.bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}.bottom-btn{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px}.bottom-btn svg{width:22px;height:22px}
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}.bottom-btn{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px}.bottom-btn svg{width:22px;height:22px}.bottom-btn .nav-icon{width:22px;height:22px;display:block;object-fit:contain}
 </style>
 </head>
 <body>
 <header class="header"><div></div><div class="page-title" id="title">القنوات</div><button class="back-btn" id="backBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button></header>
 <main class="content"><div class="grid" id="grid"><div class="empty">جاري تحميل القنوات...</div></div></main>
 <nav class="bottom-nav">
-<button class="bottom-btn" data-menu="home"><span>⌂</span><span>الرئيسية</span></button>
-<button class="bottom-btn" data-menu="matches"><span>⚽</span><span>المباريات</span></button>
-<button class="bottom-btn" data-menu="movies"><span>▶</span><span>مسلسلات وأفلام</span></button>
-<button class="bottom-btn" data-menu="sportsNews"><span>▤</span><span>أخبار الرياضة</span></button>
+<button class="bottom-btn active" data-menu="home" id="navHome"><img class="nav-icon" src="assets/nav/live_tv.svg" alt=""><span>القنوات</span></button>
+<button class="bottom-btn" data-menu="matches"><img class="nav-icon" src="assets/nav/sports_soccer.svg" alt=""><span>المباريات</span></button>
+<button class="bottom-btn" data-menu="movies"><img class="nav-icon" src="assets/nav/movie.svg" alt=""><span>مسلسلات وأفلام</span></button>
+<button class="bottom-btn" data-menu="sportsNews"><img class="nav-icon" src="assets/nav/newspaper.svg" alt=""><span>أخبار الرياضة</span></button>
 </nav>
 <script>
 let APP={menu:{}};const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
@@ -98,6 +98,6 @@ async function load(){
 }
 q("backBtn").onclick=()=>go("index.html");
 document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>go(APP.menu?.[b.dataset.menu]||""));
-load();
+load();setTimeout(()=>{const h=document.getElementById("navHome");if(h){h.tabIndex=0;h.focus({preventScroll:true})}},120);
 </script>
 </body></html>
