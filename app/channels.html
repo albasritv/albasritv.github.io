@@ -9,9 +9,9 @@
 .header{height:65px;position:sticky;top:0;z-index:50;display:grid;grid-template-columns:52px 1fr 52px;align-items:center;padding:7px 11px;background:var(--bar);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
 .back-btn{grid-column:3;width:43px;height:43px;border-radius:11px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center}.back-btn svg{width:24px;height:24px}.page-title{grid-column:2;grid-row:1;text-align:center;font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .content{max-width:900px;margin:auto;padding:12px 10px 20px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.card{height:80px;display:flex;align-items:center;padding:8px 9px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:0 5px 18px rgba(0,0,0,.12)}.card:active{transform:scale(.97)}
+.card{height:80px;display:flex;align-items:center;padding:8px 9px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:0 5px 18px rgba(0,0,0,.12);cursor:pointer}.card:active{transform:scale(.97)}
 .image-box{width:52px;height:52px;flex:0 0 52px;padding:5px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(4,13,22,.75);border:1px solid rgba(120,160,190,.35);overflow:hidden}.image-box img{width:100%;height:100%;object-fit:contain;border-radius:7px}.fallback{font-size:10px;font-weight:800;color:var(--accent)}
-.name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chev{font-size:20px;color:var(--muted);margin-right:5px}.empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
+.name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.play{font-size:18px;color:var(--accent);margin-right:5px}.empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
 .bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}.bottom-btn{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px}.bottom-btn svg{width:22px;height:22px}
 </style>
 </head>
@@ -19,17 +19,46 @@
 <header class="header"><div></div><div class="page-title" id="title">القنوات</div><button class="back-btn" id="backBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button></header>
 <main class="content"><div class="grid" id="grid"><div class="empty">جاري تحميل القنوات...</div></div></main>
 <nav class="bottom-nav">
-<button class="bottom-btn" data-menu="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8"/><path d="M5 10v11h14V10"/></svg><span>الرئيسية</span></button>
-<button class="bottom-btn" data-menu="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span>المباريات</span></button>
-<button class="bottom-btn" data-menu="movies"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="m10 9 6 3-6 3z"/></svg><span>مسلسلات وأفلام</span></button>
-<button class="bottom-btn" data-menu="sportsNews"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>أخبار الرياضة</span></button>
+<button class="bottom-btn" data-menu="home"><span>⌂</span><span>الرئيسية</span></button>
+<button class="bottom-btn" data-menu="matches"><span>⚽</span><span>المباريات</span></button>
+<button class="bottom-btn" data-menu="movies"><span>▶</span><span>مسلسلات وأفلام</span></button>
+<button class="bottom-btn" data-menu="sportsNews"><span>▤</span><span>أخبار الرياضة</span></button>
 </nav>
 <script>
-let APP={menu:{},sections:[]};const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
-function go(u){if(u)location.href=u}function img(c){return c.image?'<img loading="lazy" src="'+c.image+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
-function render(s){q("title").textContent=s.name||"القنوات";const list=(s.channels||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999));grid.innerHTML="";if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}list.forEach(c=>{const el=document.createElement("div");el.className="card";el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="name">'+c.name+'</div><div class="chev">‹</div>';el.onclick=()=>go("servers.html?section="+encodeURIComponent(sectionId)+"&channel="+encodeURIComponent(c.id));grid.appendChild(el)})}
-async function load(){try{const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));const ver=v.version||"1";const [cfg,s]=await Promise.all([fetch("data/config.json?v="+ver).then(r=>r.json()),fetch("data/categories/"+encodeURIComponent(sectionId)+".json?v="+ver).then(r=>{if(!r.ok)throw new Error("category");return r.json()})]);APP=cfg||{};render(s)}catch(e){grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>'}}
-q("backBtn").onclick=()=>go("index.html");document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>go(APP.menu?.[b.dataset.menu]||""));load();
+let APP={menu:{}};const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
+function go(u){if(u)location.href=u}
+function img(c){return c.image?'<img loading="lazy" src="'+c.image+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
+function openInPlayer(c){
+ const p=APP.player||{},scheme=p.scheme||"BSRPlayer",host=p.host||"play",pkg=p.package||"com.bsr.player.pro";
+ const fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
+ const link="intent://"+host+"?channel_id="+encodeURIComponent(c.id)+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallback+";end";
+ location.href=link;
+}
+function render(s){
+ q("title").textContent=s.name||"القنوات";
+ const list=(s.channels||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999));
+ grid.innerHTML="";
+ if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}
+ list.forEach(c=>{
+   const el=document.createElement("div");el.className="card";
+   el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="name">'+c.name+'</div><div class="play">▶</div>';
+   el.onclick=()=>openInPlayer(c);
+   grid.appendChild(el);
+ });
+}
+async function load(){
+ try{
+   const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
+   const ver=v.version||"1";
+   const [cfg,s]=await Promise.all([
+     fetch("data/config.json?v="+ver).then(r=>r.json()),
+     fetch("data/categories/"+encodeURIComponent(sectionId)+".json?v="+ver).then(r=>{if(!r.ok)throw new Error("category");return r.json()})
+   ]);
+   APP=cfg||{};render(s);
+ }catch(e){grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>'}
+}
+q("backBtn").onclick=()=>go("index.html");
+document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>go(APP.menu?.[b.dataset.menu]||""));
+load();
 </script>
-</body>
-</html>
+</body></html>
