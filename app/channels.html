@@ -63,7 +63,8 @@ function utf8Base64(value){const bytes=new TextEncoder().encode(value);let binar
 async function openInPlayer(c){
  const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro",fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
  try{
-   const channel=await fetch(RAW+"data/channels/"+encodeURIComponent(c.id)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("channel");return r.json()});
+   let channel=c;
+   if(!Array.isArray(channel?.servers)||!channel.servers.length)channel=await fetch(RAW+"data/channels/"+encodeURIComponent(c.id)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("channel");return r.json()});
    const servers=(channel.servers||[]).filter(s=>s&&s.url);if(!servers.length)throw new Error("no_servers");
    const payload=servers.map((s,i)=>({name:s.name||("Server "+(i+1)),url:s.url||"",ua:s.userAgent||s.ua||"",user_agent:s.userAgent||s.user_agent||"",referer:s.referer||"",origin:s.origin||"",cookie:s.cookie||"",drmKey:s.drmKey||"",drm_key:s.drmKey||s.drm_key||"",playerMode:s.playerMode||"EXO",player_mode:s.playerMode||s.player_mode||"EXO",authorization:s.authorization||"",accept:s.accept||"",xRequestedWith:s.xRequestedWith||"",authUrl:s.authUrl||"",subtitleUrl:s.subtitleUrl||"",drmLicenseUrl:s.drmLicenseUrl||"",drmLicenseHeaders:s.drmLicenseHeaders||""}));
    const data=encodeURIComponent(utf8Base64(JSON.stringify(payload)));location.href="intent://servers?data="+data+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallback+";end";
@@ -76,11 +77,14 @@ function render(list){
 function currentChannels(){return (CURRENT_SECTION?.channels||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999))}
 async function load(){
  try{
-   const [cfg,s]=await Promise.all([
+   const [cfg,liveCatalog]=await Promise.all([
      fetch(RAW+"data/config.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()),
-     fetch(RAW+"data/categories/"+encodeURIComponent(sectionId)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("category");return r.json()})
+     fetch(RAW+"data/catalog-live.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)
    ]);
-   APP=cfg||{};CURRENT_SECTION=s;q("title").textContent=s.name||"القنوات";render(currentChannels())
+   APP=cfg||{};
+   let s=liveCatalog?.sections?.find(x=>String(x.id)===String(sectionId))||null;
+   if(!s)s=await fetch(RAW+"data/categories/"+encodeURIComponent(sectionId)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("category");return r.json()});
+   CURRENT_SECTION=s;q("title").textContent=s.name||"القنوات";render(currentChannels())
  }catch(e){grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>'}
 }
 q("searchBtn").onclick=()=>{q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),120)};
