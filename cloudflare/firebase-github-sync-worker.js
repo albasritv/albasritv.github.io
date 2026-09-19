@@ -18,7 +18,7 @@ export default {
         fb("/bsr_player/catalog_categories"),fb("/bsr_player/catalog_channels"),
         fb("/bsr_player/public_matches"),fb("/bsr_player/match_channel_links")
       ]);
-      const cats=values(categories).filter(c=>c&&c.scope==="LIVE").sort((a,b)=>(a.order??999999)-(b.order??999999)||String(a.title||"").localeCompare(String(b.title||"")));
+      const cats=values(categories).filter(c=>c&&String(c.scope||"LIVE").toUpperCase()==="LIVE").sort((a,b)=>(a.order??999999)-(b.order??999999)||String(a.title||"").localeCompare(String(b.title||"")));
       const allChannels=values(channels).filter(Boolean);
       const sections=cats.map(c=>{
         const list=allChannels.filter(ch=>String(ch.categoryId||"")===String(c.id||"")).sort((a,b)=>(a.order??999999)-(b.order??999999)||String(a.title||"").localeCompare(String(b.title||""))).map(ch=>({
