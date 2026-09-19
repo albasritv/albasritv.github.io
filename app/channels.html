@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="ltr">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -8,111 +8,87 @@
 <title>القنوات</title>
 <style>
 :root{--bg:#07111d;--card:#0d1b29;--card2:#102131;--text:#fff;--muted:#8294a5;--border:#25394c;--accent:#18d4dc;--bar:rgba(7,17,29,.97)}
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:82px}
+body.light{--bg:#f4f6f8;--card:#fff;--card2:#f5f7f9;--text:#17212b;--muted:#71808d;--border:#d9e0e6;--accent:#078d9b;--bar:rgba(255,255,255,.97)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:82px;direction:ltr}
 .header{height:65px;position:sticky;top:0;z-index:50;display:grid;grid-template-columns:52px 1fr 52px;align-items:center;padding:7px 11px;background:var(--bar);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
-.back-btn{grid-column:3;width:43px;height:43px;border-radius:11px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center}.back-btn svg{width:24px;height:24px}.page-title{grid-column:2;grid-row:1;text-align:center;font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.content{max-width:900px;margin:auto;padding:12px 10px 20px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.card{height:80px;display:flex;align-items:center;padding:8px 9px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:0 5px 18px rgba(0,0,0,.12);cursor:pointer}.card:active{transform:scale(.97)}
+.menu-btn{grid-column:1;grid-row:1}.page-title{grid-column:2;grid-row:1;text-align:center;direction:rtl;font-size:18px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.search-btn{grid-column:3;grid-row:1}
+.header-btn{width:43px;height:43px;border-radius:11px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer}.header-btn svg{width:23px;height:23px}
+.search-area{max-height:0;overflow:hidden;background:var(--bg);transition:.25s;direction:rtl}.search-area.show{max-height:75px;padding:9px 11px}.search-input{width:100%;height:46px;border-radius:12px;border:1px solid var(--border);outline:none;background:var(--card);color:var(--text);padding:0 15px;font-size:15px}.search-input:focus{border-color:var(--accent)}
+.content{max-width:900px;margin:auto;padding:12px 10px 20px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;direction:ltr}
+.card{height:80px;display:flex;align-items:center;direction:ltr;padding:8px 9px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:0 5px 18px rgba(0,0,0,.12);cursor:pointer;overflow:hidden}.card:active{transform:scale(.97)}
 .image-box{width:52px;height:52px;flex:0 0 52px;padding:5px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(4,13,22,.75);border:1px solid rgba(120,160,190,.35);overflow:hidden}.image-box img{width:100%;height:100%;object-fit:contain;border-radius:7px}.fallback{font-size:10px;font-weight:800;color:var(--accent)}
-.name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.play{font-size:18px;color:var(--accent);margin-right:5px}.empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
-.bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}.bottom-btn{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:rgba(24,212,220,.10);outline:2px solid rgba(24,212,220,.45);outline-offset:-2px}.bottom-btn svg{width:22px;height:22px}.nav-svg{width:22px;height:22px;display:block;fill:currentColor;flex:none}.bottom-btn:focus .nav-svg,.bottom-btn.active .nav-svg{transform:scale(1.08)}
+.name{flex:1;min-width:0;margin-left:10px;margin-right:0;font-size:13px;font-weight:700;direction:rtl;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.play{font-size:18px;color:var(--accent);margin-left:auto;margin-right:0}.empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px;direction:rtl}
+.bottom-nav{direction:ltr;position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}
+.bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;cursor:pointer}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:rgba(24,212,220,.10);outline:2px solid rgba(24,212,220,.45);outline-offset:-2px}.nav-svg{width:22px;height:22px;display:block;fill:currentColor;flex:none}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99;opacity:0;visibility:hidden;transition:.22s}.overlay.show{opacity:1;visibility:visible}
+.side-menu{direction:rtl;position:fixed;top:0;left:-310px;bottom:0;width:min(295px,87%);z-index:100;background:var(--bg);border-right:1px solid var(--border);padding:0 12px 20px;transition:.28s;overflow-y:auto}.side-menu.show{left:0}
+.side-header{text-align:center;padding:25px 5px 20px;border-bottom:1px solid var(--border);margin-bottom:10px}.logo-circle{width:58px;height:58px;margin:0 auto 10px;border-radius:17px;display:flex;justify-content:center;align-items:center;background:linear-gradient(145deg,#10d6dc,#056a83);color:#fff}.logo-circle svg{width:30px;height:30px}.side-title{font-size:18px;font-weight:800}.side-title span{color:var(--accent)}
+.menu-item{width:100%;min-height:55px;display:flex;align-items:center;gap:11px;padding:7px 9px;margin:4px 0;border:0;border-radius:12px;background:transparent;color:var(--text);font-size:14px;text-align:right;cursor:pointer}.menu-item:active{background:var(--card)}.menu-icon{width:38px;height:38px;flex:none;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--card);color:var(--accent);border:1px solid var(--border)}.menu-name{flex:1}
+.switch{position:relative;width:44px;height:25px;flex:none}.switch input{display:none}.slider{position:absolute;inset:0;border-radius:30px;background:#364757;transition:.2s}.slider:before{content:"";width:19px;height:19px;position:absolute;top:3px;right:3px;border-radius:50%;background:#fff;transition:.2s}.switch input:checked+.slider{background:var(--accent)}.switch input:checked+.slider:before{transform:translateX(-19px)}
+@media(max-width:370px){.card{height:74px;padding:7px}.image-box{width:46px;height:46px;flex-basis:46px}.name{font-size:12px;margin-left:8px}}
 </style>
 </head>
 <body>
-<header class="header"><div></div><div class="page-title" id="title">القنوات</div><button class="back-btn" id="backBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button></header>
+<header class="header">
+<button class="header-btn menu-btn" id="menuBtn" aria-label="القائمة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<div class="page-title" id="title">القنوات</div>
+<button class="header-btn search-btn" id="searchBtn" aria-label="بحث"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+</header>
+<div class="search-area" id="searchArea"><input id="searchInput" class="search-input" type="search" placeholder="ابحث عن قناة..." autocomplete="off"></div>
 <main class="content"><div class="grid" id="grid"><div class="empty">جاري تحميل القنوات...</div></div></main>
+
 <nav class="bottom-nav">
-<button class="bottom-btn active" data-menu="home" id="navHome">
-<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"/></svg>
-<span>القنوات</span>
-</button>
-<button class="bottom-btn" data-menu="matches">
-<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z"/></svg>
-<span>المباريات</span>
-</button>
-<button class="bottom-btn" data-menu="movies">
-<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
-<span>مسلسلات وأفلام</span>
-</button>
-<button class="bottom-btn" data-menu="sportsNews">
-<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M160-120q-33 0-56.5-23.5T80-200v-640l67 67 66-67 67 67 67-67 66 67 67-67 67 67 66-67 67 67 67-67 66 67 67-67v640q0 33-23.5 56.5T800-120H160Zm0-80h280v-240H160v240Zm360 0h280v-80H520v80Zm0-160h280v-80H520v80ZM160-520h640v-120H160v120Z"/></svg>
-<span>أخبار الرياضة</span>
-</button>
+<button class="bottom-btn active" data-menu="home" id="navHome"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320Z"/></svg><span>القنوات</span></button>
+<button class="bottom-btn" data-menu="matches"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg><span>المباريات</span></button>
+<button class="bottom-btn" data-menu="movies"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Z"/></svg><span>مسلسلات وأفلام</span></button>
+<button class="bottom-btn" data-menu="sportsNews"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="M160-120q-33 0-56.5-23.5T80-200v-640l67 67 66-67 67 67 67-67 66 67 67-67 67 67 66-67 67 67 67-67 66 67 67-67v640q0 33-23.5 56.5T800-120H160Z"/></svg><span>أخبار الرياضة</span></button>
 </nav>
+
+<div class="overlay" id="overlay"></div>
+<aside class="side-menu" id="sideMenu">
+<div class="side-header"><div class="logo-circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><div class="side-title"><span>البصري</span> بلاير</div></div>
+<button class="menu-item" id="backSections"><span class="menu-icon">↩</span><span class="menu-name">رجوع للأقسام</span></button>
+<button class="menu-item" data-menu="home"><span class="menu-icon">⌂</span><span class="menu-name">الرئيسية</span></button>
+<button class="menu-item" data-menu="telegram"><span class="menu-icon">✈</span><span class="menu-name">قناة التليجرام</span></button>
+<button class="menu-item" data-menu="privacy"><span class="menu-icon">✓</span><span class="menu-name">سياسة الخصوصية</span></button>
+<label class="menu-item"><span class="menu-icon">☾</span><span class="menu-name">الوضع الليلي</span><span class="switch"><input type="checkbox" id="themeSwitch" checked><span class="slider"></span></span></label>
+</aside>
+
 <script>
-let APP={menu:{}};const RAW="https://raw.githubusercontent.com/albasritv/albasritv.github.io/main/app/";const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
+let APP={menu:{}},CURRENT_SECTION=null;const RAW="https://raw.githubusercontent.com/albasritv/albasritv.github.io/main/app/";const q=id=>document.getElementById(id),grid=q("grid"),searchInput=q("searchInput"),sectionId=new URLSearchParams(location.search).get("id");
 function go(u){if(u)location.href=u}
 function img(c){return c.image?'<img loading="lazy" src="'+c.image+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
-function utf8Base64(value){
- const bytes=new TextEncoder().encode(value);
- let binary="";
- for(const b of bytes)binary+=String.fromCharCode(b);
- return btoa(binary);
-}
+function utf8Base64(value){const bytes=new TextEncoder().encode(value);let binary="";for(const b of bytes)binary+=String.fromCharCode(b);return btoa(binary)}
 async function openInPlayer(c){
- const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro";
- const fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
+ const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro",fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
  try{
-   const v=await fetch(RAW+"data/version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
-   const ver=v.version||"1";
-   const channel=await fetch(RAW+"data/channels/"+encodeURIComponent(c.id)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{
-     if(!r.ok)throw new Error("channel");
-     return r.json();
-   });
-   const servers=(channel.servers||[]).filter(s=>s&&s.url);
-   if(!servers.length)throw new Error("no_servers");
-   const payload=servers.map((s,i)=>({
-     name:s.name||("Server "+(i+1)),
-     url:s.url||"",
-     ua:s.userAgent||s.ua||"",
-     user_agent:s.userAgent||s.user_agent||"",
-     referer:s.referer||"",
-     origin:s.origin||"",
-     cookie:s.cookie||"",
-     drmKey:s.drmKey||"",
-     drm_key:s.drmKey||s.drm_key||"",
-     playerMode:s.playerMode||"EXO",
-     player_mode:s.playerMode||s.player_mode||"EXO",
-     authorization:s.authorization||"",
-     accept:s.accept||"",
-     xRequestedWith:s.xRequestedWith||"",
-     authUrl:s.authUrl||"",
-     subtitleUrl:s.subtitleUrl||"",
-     drmLicenseUrl:s.drmLicenseUrl||"",
-     drmLicenseHeaders:s.drmLicenseHeaders||""
-   }));
-   const data=encodeURIComponent(utf8Base64(JSON.stringify(payload)));
-   const link="intent://servers?data="+data+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallback+";end";
-   location.href=link;
- }catch(e){
-   alert("تعذر تحميل سيرفرات القناة. حاول مرة ثانية.");
- }
+   const channel=await fetch(RAW+"data/channels/"+encodeURIComponent(c.id)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("channel");return r.json()});
+   const servers=(channel.servers||[]).filter(s=>s&&s.url);if(!servers.length)throw new Error("no_servers");
+   const payload=servers.map((s,i)=>({name:s.name||("Server "+(i+1)),url:s.url||"",ua:s.userAgent||s.ua||"",user_agent:s.userAgent||s.user_agent||"",referer:s.referer||"",origin:s.origin||"",cookie:s.cookie||"",drmKey:s.drmKey||"",drm_key:s.drmKey||s.drm_key||"",playerMode:s.playerMode||"EXO",player_mode:s.playerMode||s.player_mode||"EXO",authorization:s.authorization||"",accept:s.accept||"",xRequestedWith:s.xRequestedWith||"",authUrl:s.authUrl||"",subtitleUrl:s.subtitleUrl||"",drmLicenseUrl:s.drmLicenseUrl||"",drmLicenseHeaders:s.drmLicenseHeaders||""}));
+   const data=encodeURIComponent(utf8Base64(JSON.stringify(payload)));location.href="intent://servers?data="+data+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallback+";end";
+ }catch(e){alert("تعذر تحميل سيرفرات القناة. حاول مرة ثانية.")}
 }
-function render(s){
- q("title").textContent=s.name||"القنوات";
- const list=(s.channels||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999));
- grid.innerHTML="";
- if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}
- list.forEach(c=>{
-   const el=document.createElement("div");el.className="card";
-   el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="name">'+c.name+'</div><div class="play">▶</div>';
-   el.onclick=()=>openInPlayer(c);
-   grid.appendChild(el);
- });
+function render(list){
+ grid.innerHTML="";if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}
+ list.forEach(c=>{const el=document.createElement("div");el.className="card";el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="name">'+(c.name||"")+'</div><div class="play">▶</div>';el.onclick=()=>openInPlayer(c);grid.appendChild(el)})
 }
+function currentChannels(){return (CURRENT_SECTION?.channels||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999))}
 async function load(){
  try{
-   const v=await fetch(RAW+"data/version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
-   const ver=v.version||"1";
    const [cfg,s]=await Promise.all([
      fetch(RAW+"data/config.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()),
      fetch(RAW+"data/categories/"+encodeURIComponent(sectionId)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("category");return r.json()})
    ]);
-   APP=cfg||{};render(s);
+   APP=cfg||{};CURRENT_SECTION=s;q("title").textContent=s.name||"القنوات";render(currentChannels())
  }catch(e){grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>'}
 }
-q("backBtn").onclick=()=>go("index.html");
+q("searchBtn").onclick=()=>{q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),120)};
+searchInput.oninput=()=>{const t=searchInput.value.trim().toLowerCase(),all=currentChannels();render(!t?all:all.filter(c=>(c.name||"").toLowerCase().includes(t)))};
+q("menuBtn").onclick=()=>{q("sideMenu").classList.add("show");q("overlay").classList.add("show")};q("overlay").onclick=()=>{q("sideMenu").classList.remove("show");q("overlay").classList.remove("show")};
+q("backSections").onclick=()=>go("index.html?v=20260919-ltr");
 document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>go(APP.menu?.[b.dataset.menu]||""));
-load();setTimeout(()=>{const h=document.getElementById("navHome");if(h){h.tabIndex=0;h.focus({preventScroll:true})}},120);
+const theme=q("themeSwitch"),saved=localStorage.getItem("bsr-theme");if(saved==="light"){document.body.classList.add("light");theme.checked=false}theme.onchange=()=>{document.body.classList.toggle("light",!theme.checked);localStorage.setItem("bsr-theme",theme.checked?"dark":"light")};
+load();setTimeout(()=>q("navHome")?.focus({preventScroll:true}),120);
 </script>
 </body></html>
