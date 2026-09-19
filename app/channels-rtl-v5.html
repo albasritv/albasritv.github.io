@@ -73,9 +73,14 @@ function currentChannels(){return (CURRENT_SECTION?.channels||[]).filter(x=>x&&x
 function render(list){
   grid.innerHTML="";
   if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}
-  list.forEach(c=>{const el=document.createElement("article");el.className="card";el.tabIndex=0;
+  list.forEach(c=>{
+    const el=document.createElement("article");el.className="card";el.tabIndex=0;
     el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="info"><div class="name">'+esc(c.name||"")+'</div></div>';
-    const open=()=>openInPlayer(c);el.onclick=open;el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}};grid.appendChild(el)})
+    const open=()=>openInPlayer(c);
+    el.onclick=open;
+    el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}};
+    grid.appendChild(el);
+  });
 }
 async function openInPlayer(c){
  const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro",fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
