@@ -45,3 +45,24 @@ exports.onCatalogChannelChanged = onValueWritten(
     await triggerGitHubSync();
   }
 );
+
+
+exports.onPublicMatchesChanged = onValueWritten(
+  {
+    ref: "/bsr_player/public_matches",
+    secrets: [GITHUB_DISPATCH_TOKEN]
+  },
+  async () => {
+    await triggerGitHubSync();
+  }
+);
+
+exports.onMatchChannelLinksChanged = onValueWritten(
+  {
+    ref: "/bsr_player/match_channel_links",
+    secrets: [GITHUB_DISPATCH_TOKEN]
+  },
+  async () => {
+    await triggerGitHubSync();
+  }
+);
