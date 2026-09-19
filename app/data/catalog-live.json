@@ -1,6 +1,6 @@
 {
-  "version": 1789788961377,
-  "updatedAt": "2026-09-19T03:36:01.377Z",
+  "version": 1789788974272,
+  "updatedAt": "2026-09-19T03:36:14.272Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -5800,15 +5800,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "ddd9c10e-9d01-4ecf-9e99-23e9526b2441",
-      "name": "سششش",
-      "image": "",
-      "order": 15,
-      "enabled": true,
-      "channelCount": 0,
-      "channels": []
     }
   ]
 }
