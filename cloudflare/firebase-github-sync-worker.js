@@ -3,13 +3,11 @@
  *
  * Required Cloudflare Worker secrets:
  *   GITHUB_TOKEN : Fine-grained GitHub token with access to albasritv/albasritv.github.io
- *   SYNC_KEY     : Long random secret used only by the admin app
  *
  * POST /sync
- * Header: X-Sync-Key: <SYNC_KEY>
  *
  * This worker is called only after the ADMIN successfully saves data to Firebase.
- * End users never call this worker.
+ * End users never call this worker. The GitHub token remains encrypted in Cloudflare.
  */
 export default {
   async fetch(request, env) {
@@ -21,11 +19,6 @@ export default {
 
     if (request.method !== "POST" || url.pathname !== "/sync") {
       return json({ ok: false, error: "not_found" }, 404);
-    }
-
-    const suppliedKey = request.headers.get("X-Sync-Key") || "";
-    if (!suppliedKey || suppliedKey !== env.SYNC_KEY) {
-      return json({ ok: false, error: "unauthorized" }, 401);
     }
 
     if (!env.GITHUB_TOKEN) {
