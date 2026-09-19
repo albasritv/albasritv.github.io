@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>القنوات - البصري بلاير</title>
+<style>
+:root{--bg:#07111d;--bg2:#091724;--card:#0d1b29;--card2:#102131;--text:#fff;--muted:#8294a5;--border:#25394c;--accent:#18d4dc;--accent-soft:rgba(24,212,220,.12);--bar:rgba(7,17,29,.94);--shadow:0 12px 32px rgba(0,0,0,.20)}
+body.light{--bg:#f4f6f8;--bg2:#eef2f5;--card:#fff;--card2:#f5f7f9;--text:#17212b;--muted:#71808d;--border:#d9e0e6;--accent:#078d9b;--accent-soft:rgba(7,141,155,.10);--bar:rgba(255,255,255,.95);--shadow:0 10px 28px rgba(23,33,43,.09)}
+*{box-sizing:border-box;margin:0;padding:0}html,body{direction:rtl}
+body{font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at 85% -10%,rgba(24,212,220,.08),transparent 28%),linear-gradient(180deg,var(--bg2),var(--bg));color:var(--text);min-height:100vh;padding-bottom:88px;overflow-x:hidden}
+body:not(.allow-select),body:not(.allow-select) *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input{-webkit-user-select:text!important;user-select:text!important}
+.header{height:68px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:8px 66px;background:var(--bar);border-bottom:1px solid rgba(120,160,190,.18);backdrop-filter:blur(18px)}
+.page-title{font-size:18px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.header-btn{position:absolute;top:11px;width:44px;height:44px;border-radius:13px;border:1px solid var(--border);background:linear-gradient(145deg,var(--card2),var(--card));color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer}.menu-btn{right:11px}.search-btn{left:11px}.header-btn svg{width:22px;height:22px}
+.search-area{max-height:0;overflow:hidden;background:var(--bg);transition:.24s}.search-area.show{max-height:76px;padding:10px 11px;border-bottom:1px solid rgba(120,160,190,.12)}.search-shell{position:relative;max-width:920px;margin:auto}.search-input{width:100%;height:46px;border-radius:14px;border:1px solid var(--border);outline:none;background:var(--card);color:var(--text);padding:0 15px 0 44px;font-size:14px;direction:rtl;text-align:right}.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.content{max-width:920px;margin:auto;padding:14px 10px 22px;direction:rtl}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;direction:rtl}
+.card{position:relative;height:84px;display:flex;align-items:center;direction:rtl;gap:10px;padding:9px;border:1px solid rgba(120,160,190,.24);border-radius:16px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:var(--shadow);cursor:pointer;overflow:hidden;transition:.16s}.card:before{content:"";position:absolute;right:0;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,transparent,var(--accent),transparent);opacity:.7}.card:active{transform:scale(.975)}
+.image-box{width:56px;height:56px;flex:0 0 56px;padding:6px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(4,13,22,.68);border:1px solid rgba(120,160,190,.28);overflow:hidden}.image-box img{width:100%;height:100%;object-fit:contain;border-radius:9px}.fallback{font-size:10px;font-weight:900;color:var(--accent)}
+.info{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:5px}.name{width:100%;font-size:13px;font-weight:900;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.empty{grid-column:1/-1;padding:48px 10px;text-align:center;color:var(--muted);font-size:13px}
+.bottom-nav{direction:rtl;position:fixed;left:0;right:0;bottom:0;height:76px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:6px 7px 8px;background:var(--bar);border-top:1px solid rgba(120,160,190,.18);backdrop-filter:blur(18px)}
+.bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;font-weight:700;cursor:pointer}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:var(--accent-soft);outline:1px solid rgba(24,212,220,.24)}.nav-svg{width:22px;height:22px;display:block;fill:currentColor}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);z-index:99;opacity:0;visibility:hidden;transition:.22s;backdrop-filter:blur(2px)}.overlay.show{opacity:1;visibility:visible}
+.side-menu{direction:rtl;position:fixed;top:0;right:-330px;left:auto;bottom:0;width:min(310px,88%);z-index:100;background:linear-gradient(180deg,#091826,var(--bg));border-left:1px solid var(--border);padding:0 13px 18px;transition:right .28s ease;overflow-y:auto;box-shadow:-18px 0 42px rgba(0,0,0,.30)}.side-menu.show{right:0}
+.side-header{padding:28px 8px 20px;margin-bottom:12px;border-bottom:1px solid rgba(120,160,190,.16);text-align:center}.logo-circle{width:62px;height:62px;margin:0 auto 11px;border-radius:19px;display:flex;justify-content:center;align-items:center;background:linear-gradient(145deg,#10d6dc,#056a83);color:#fff;box-shadow:0 10px 28px rgba(24,212,220,.18)}.logo-circle svg{width:31px;height:31px}.side-title{font-size:18px;font-weight:900}.side-title span{color:var(--accent)}.side-sub{font-size:10px;color:var(--muted);margin-top:5px}
+.menu-group{display:grid;gap:5px}.menu-item{width:100%;min-height:54px;display:flex;align-items:center;gap:11px;padding:7px 9px;border:1px solid transparent;border-radius:13px;background:transparent;color:var(--text);font-size:13px;font-weight:800;text-align:right;cursor:pointer}.menu-item:active,.menu-item:focus{background:var(--card);border-color:var(--border);outline:none}.menu-icon{width:39px;height:39px;flex:none;border-radius:11px;display:flex;align-items:center;justify-content:center;background:var(--card);color:var(--accent);border:1px solid var(--border)}.menu-icon svg{width:20px;height:20px}.menu-name{flex:1}
+.switch{position:relative;width:44px;height:25px;flex:none}.switch input{display:none}.slider{position:absolute;inset:0;border-radius:30px;background:#364757}.slider:before{content:"";width:19px;height:19px;position:absolute;top:3px;right:3px;border-radius:50%;background:#fff;transition:.2s}.switch input:checked+.slider{background:var(--accent)}.switch input:checked+.slider:before{transform:translateX(-19px)}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:370px){.card{height:78px;padding:7px}.image-box{width:49px;height:49px;flex-basis:49px}.name{font-size:12px}}
+</style>
+</head>
+<body>
+<header class="header">
+<button class="header-btn menu-btn" id="menuBtn" aria-label="القائمة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<div class="page-title" id="title">القنوات</div>
+<button class="header-btn search-btn" id="searchBtn" aria-label="بحث"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+</header>
+<div class="search-area" id="searchArea"><div class="search-shell"><input id="searchInput" class="search-input" type="search" placeholder="ابحث عن قناة..." autocomplete="off"></div></div>
+<main class="content"><div class="grid" id="grid"><div class="empty">جاري تحميل القنوات...</div></div></main>
+
+<nav class="bottom-nav">
+<button class="bottom-btn active" data-menu="home" id="navHome"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320Z"/></svg><span>القنوات</span></button>
+<button class="bottom-btn" data-menu="matches"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg><span>المباريات</span></button>
+<button class="bottom-btn" data-menu="movies"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Z"/></svg><span>مسلسلات وأفلام</span></button>
+<button class="bottom-btn" data-menu="sportsNews"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="M160-120q-33 0-56.5-23.5T80-200v-640l67 67 66-67 67 67 67-67 66 67 67-67 67 67 66-67 67 67 67-67 66 67 67-67v640q0 33-23.5 56.5T800-120H160Z"/></svg><span>أخبار الرياضة</span></button>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+<aside class="side-menu" id="sideMenu">
+<div class="side-header"><div class="logo-circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><div class="side-title"><span>البصري</span> بلاير</div><div class="side-sub">LIVE • SPORTS • ENTERTAINMENT</div></div>
+<div class="menu-group">
+<button class="menu-item" id="backSections"><span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11H7l5-5"/><path d="m7 11 5 5"/></svg></span><span class="menu-name">رجوع للأقسام</span></button>
+<button class="menu-item" data-menu="home"><span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><span class="menu-name">الرئيسية</span></button>
+<button class="menu-item" data-menu="matches"><span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></span><span class="menu-name">المباريات</span></button>
+<button class="menu-item" data-menu="telegram"><span class="menu-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3 3.8 9.6c-1.2.5-1.2 1.2-.2 1.5l4.4 1.4 1.7 5.1c.2.6.1.8.8.8.5 0 .8-.2 1-.4l2.1-2 4.4 3.2c.8.5 1.4.3 1.6-.8L22.4 5c.3-1.4-.5-2-1.4-1.6z"/></svg></span><span class="menu-name">قناة التليجرام</span></button>
+<label class="menu-item"><span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg></span><span class="menu-name">الوضع الليلي</span><span class="switch"><input type="checkbox" id="themeSwitch" checked><span class="slider"></span></span></label>
+</div>
+</aside>
+
+<script>
+const RAW_MAIN="https://raw.githubusercontent.com/albasritv/albasritv.github.io/main/app/data/";
+const RAW_LIVE="https://raw.githubusercontent.com/albasritv/albasritv.github.io/live-data/app/data/";
+let APP={menu:{}},CURRENT_SECTION=null,LAST_VERSION=0;
+const q=id=>document.getElementById(id),grid=q("grid"),searchInput=q("searchInput"),sectionId=new URLSearchParams(location.search).get("id");
+function go(u){if(u)location.href=u}
+function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]))}
+function img(c){return c.image?'<img draggable="false" loading="lazy" src="'+esc(c.image)+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
+function utf8Base64(value){const bytes=new TextEncoder().encode(value);let binary="";for(const b of bytes)binary+=String.fromCharCode(b);return btoa(binary)}
+function currentChannels(){return (CURRENT_SECTION?.channels||[]).filter(x=>x&&x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999))}
+function render(list){
+  grid.innerHTML="";
+  if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}
+  list.forEach(c=>{
+    const el=document.createElement("article");el.className="card";el.tabIndex=0;
+    el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="info"><div class="name">'+esc(c.name||"")+'</div></div>';
+    const open=()=>openInPlayer(c);
+    el.onclick=open;
+    el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}};
+    grid.appendChild(el);
+  });
+}
+async function openInPlayer(c){
+ const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro",fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
+ try{
+   let channel=c;if(!Array.isArray(channel?.servers)||!channel.servers.length)channel=await fetch(RAW_MAIN+"channels/"+encodeURIComponent(c.id)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error();return r.json()});
+   const servers=(channel.servers||[]).filter(s=>s&&s.url);if(!servers.length)throw new Error();
+   const payload=servers.map((s,i)=>({name:s.name||("Server "+(i+1)),url:s.url||"",ua:s.userAgent||s.ua||"",user_agent:s.userAgent||s.user_agent||"",referer:s.referer||"",origin:s.origin||"",cookie:s.cookie||"",drmKey:s.drmKey||"",drm_key:s.drmKey||s.drm_key||"",playerMode:s.playerMode||"EXO",player_mode:s.playerMode||s.player_mode||"EXO",authorization:s.authorization||"",accept:s.accept||"",xRequestedWith:s.xRequestedWith||"",authUrl:s.authUrl||"",subtitleUrl:s.subtitleUrl||"",drmLicenseUrl:s.drmLicenseUrl||"",drmLicenseHeaders:s.drmLicenseHeaders||""}));
+   const data=encodeURIComponent(utf8Base64(JSON.stringify(payload)));location.href="intent://servers?data="+data+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallback+";end";
+ }catch(e){alert("تعذر تحميل سيرفرات القناة. حاول مرة ثانية.")}
+}
+async function getJson(url,fallback=null){try{const r=await fetch(url+(url.includes("?")?"&":"?")+"t="+Date.now(),{cache:"no-store"});if(!r.ok)return fallback;return await r.json()}catch(e){return fallback}}
+async function refresh(first=false){
+  const [cfg,liveCatalog]=await Promise.all([first?getJson(RAW_MAIN+"config.json",{}):Promise.resolve(APP),getJson(RAW_LIVE+"catalog-live.json",null)]);
+  if(first)APP=cfg||{};
+  let section=liveCatalog?.sections?.find(x=>String(x.id)===String(sectionId))||null;
+  if(liveCatalog?.version)LAST_VERSION=Number(liveCatalog.version);
+  if(!section&&first)section=await getJson(RAW_MAIN+"categories/"+encodeURIComponent(sectionId)+".json",null);
+  if(section){
+    const changed=!CURRENT_SECTION||Number(liveCatalog?.version||0)!==LAST_VERSION||JSON.stringify(section)!==JSON.stringify(CURRENT_SECTION);
+    CURRENT_SECTION=section;q("title").textContent=section.name||"القنوات";if(changed||first)render(currentChannels());
+  }else if(first)grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>';
+}
+q("searchBtn").onclick=()=>{q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),100)};
+searchInput.oninput=()=>{const t=searchInput.value.trim().toLowerCase(),all=currentChannels();render(!t?all:all.filter(c=>(c.name||"").toLowerCase().includes(t)))};
+const closeMenu=()=>{q("sideMenu").classList.remove("show");q("overlay").classList.remove("show")};
+q("menuBtn").onclick=()=>{q("sideMenu").classList.add("show");q("overlay").classList.add("show")};q("overlay").onclick=closeMenu;
+q("backSections").onclick=()=>go("home-v6.html?v=6");document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>{const m=b.dataset.menu;if(m==="home")return go("home-v6.html?v=6");if(m==="matches")return go("home-v6.html?v=6#matches");go(APP.menu?.[m]||"")});
+const theme=q("themeSwitch"),saved=localStorage.getItem("bsr-theme");if(saved==="light"){document.body.classList.add("light");theme.checked=false}theme.onchange=()=>{document.body.classList.toggle("light",!theme.checked);localStorage.setItem("bsr-theme",theme.checked?"dark":"light")};
+function protectPage(){const editable=e=>e.target&&/^(INPUT|TEXTAREA)$/i.test(e.target.tagName);["contextmenu","dragstart"].forEach(ev=>document.addEventListener(ev,e=>e.preventDefault(),{passive:false}));["copy","cut","selectstart"].forEach(ev=>document.addEventListener(ev,e=>{if(!editable(e))e.preventDefault()},{passive:false}));document.addEventListener("keydown",e=>{const k=String(e.key||"").toLowerCase();if(e.key==="F12"||(e.ctrlKey&&["u","s"].includes(k))||(e.ctrlKey&&e.shiftKey&&["i","j","c"].includes(k))){e.preventDefault();e.stopPropagation()}},true)}
+protectPage();refresh(true);setInterval(()=>{if(!document.hidden)refresh(false)},4000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh(false)});
+</script>
+</body>
+</html>
