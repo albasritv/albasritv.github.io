@@ -25,7 +25,7 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 .section-play{width:24px;flex:0 0 24px;margin-right:auto;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;line-height:1;position:relative;z-index:2}
 .empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
 .bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}
-.bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;cursor:pointer}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:rgba(24,212,220,.10);outline:2px solid rgba(24,212,220,.45);outline-offset:-2px}.bottom-btn:focus .nav-icon{transform:scale(1.08)}.bottom-btn svg{width:22px;height:22px}.bottom-btn .nav-icon{width:22px;height:22px;display:block;object-fit:contain}.bottom-btn.active{color:var(--accent);background:rgba(24,212,220,.08)}
+.bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;cursor:pointer}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:rgba(24,212,220,.10);outline:2px solid rgba(24,212,220,.45);outline-offset:-2px}.bottom-btn svg{width:22px;height:22px}.nav-svg{width:22px;height:22px;display:block;fill:currentColor;flex:none}.bottom-btn:focus .nav-svg,.bottom-btn.active .nav-svg{transform:scale(1.08)}.bottom-btn.active{color:var(--accent);background:rgba(24,212,220,.08)}
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99;opacity:0;visibility:hidden;transition:.22s}.overlay.show{opacity:1;visibility:visible}
 .side-menu{position:fixed;top:0;left:-310px;bottom:0;width:min(295px,87%);z-index:100;background:var(--bg);border-right:1px solid var(--border);padding:0 12px 20px;transition:.28s;overflow-y:auto}.side-menu.show{left:0}
 .side-header{text-align:center;padding:25px 5px 20px;border-bottom:1px solid var(--border);margin-bottom:10px}.logo-circle{width:58px;height:58px;margin:0 auto 10px;border-radius:17px;display:flex;justify-content:center;align-items:center;background:linear-gradient(145deg,#10d6dc,#056a83);color:#fff}.logo-circle svg{width:30px;height:30px}.side-title{font-size:18px;font-weight:800}.side-title span{color:var(--accent)}
@@ -45,10 +45,22 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 <main class="content"><div class="sections-grid" id="sectionsGrid"><div class="empty">جاري تحميل الأقسام...</div></div></main>
 
 <nav class="bottom-nav">
-<button class="bottom-btn active" data-menu="home" id="navHome"><img class="nav-icon" src="assets/nav/live_tv.svg?v=4" alt=""><span>القنوات</span></button>
-<button class="bottom-btn" data-menu="matches"><img class="nav-icon" src="assets/nav/sports_soccer.svg?v=4" alt=""><span>المباريات</span></button>
-<button class="bottom-btn" data-menu="movies"><img class="nav-icon" src="assets/nav/movie.svg?v=4" alt=""><span>مسلسلات وأفلام</span></button>
-<button class="bottom-btn" data-menu="sportsNews"><img class="nav-icon" src="assets/nav/newspaper.svg?v=4" alt=""><span>أخبار الرياضة</span></button>
+<button class="bottom-btn active" data-menu="home" id="navHome">
+<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"/></svg>
+<span>القنوات</span>
+</button>
+<button class="bottom-btn" data-menu="matches">
+<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm200-500 54-18 16-54q-32-48-77-82.5T574-786l-54 38v56l160 112Zm-400 0 160-112v-56l-54-38q-54 17-99 51.5T210-652l16 54 54 18Zm-42 308 46-4 30-54-58-174-56-20-40 30q0 65 18 118.5T238-272Zm293 108q25-4 49-12l28-60-26-44H378l-26 44 28 60q24 8 49 12t51 4q26 0 51-4ZM390-360h180l56-160-146-102-144 102 54 160Zm332 88q42-50 60-103.5T800-494l-40-28-56 18-58 174 30 54 46 4Z"/></svg>
+<span>المباريات</span>
+</button>
+<button class="bottom-btn" data-menu="movies">
+<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+<span>مسلسلات وأفلام</span>
+</button>
+<button class="bottom-btn" data-menu="sportsNews">
+<svg class="nav-svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M160-120q-33 0-56.5-23.5T80-200v-640l67 67 66-67 67 67 67-67 66 67 67-67 67 67 66-67 67 67 67-67 66 67 67-67v640q0 33-23.5 56.5T800-120H160Zm0-80h280v-240H160v240Zm360 0h280v-80H520v80Zm0-160h280v-80H520v80ZM160-520h640v-120H160v120Z"/></svg>
+<span>أخبار الرياضة</span>
+</button>
 </nav>
 
 <div class="overlay" id="overlay"></div>
