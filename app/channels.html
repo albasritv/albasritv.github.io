@@ -40,7 +40,7 @@
 </button>
 </nav>
 <script>
-let APP={menu:{}};const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
+let APP={menu:{}};const RAW="https://raw.githubusercontent.com/albasritv/albasritv.github.io/main/app/";const q=id=>document.getElementById(id),grid=q("grid"),sectionId=new URLSearchParams(location.search).get("id");
 function go(u){if(u)location.href=u}
 function img(c){return c.image?'<img loading="lazy" src="'+c.image+'" alt="" onerror="this.outerHTML=\'<span class=&quot;fallback&quot;>TV</span>\'">':'<span class="fallback">TV</span>'}
 function utf8Base64(value){
@@ -53,9 +53,9 @@ async function openInPlayer(c){
  const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro";
  const fallback=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
  try{
-   const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
+   const v=await fetch(RAW+"data/version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
    const ver=v.version||"1";
-   const channel=await fetch("data/channels/"+encodeURIComponent(c.id)+".json?v="+ver,{cache:"no-store"}).then(r=>{
+   const channel=await fetch(RAW+"data/channels/"+encodeURIComponent(c.id)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{
      if(!r.ok)throw new Error("channel");
      return r.json();
    });
@@ -102,11 +102,11 @@ function render(s){
 }
 async function load(){
  try{
-   const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
+   const v=await fetch(RAW+"data/version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
    const ver=v.version||"1";
    const [cfg,s]=await Promise.all([
-     fetch("data/config.json?v="+ver).then(r=>r.json()),
-     fetch("data/categories/"+encodeURIComponent(sectionId)+".json?v="+ver).then(r=>{if(!r.ok)throw new Error("category");return r.json()})
+     fetch(RAW+"data/config.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()),
+     fetch(RAW+"data/categories/"+encodeURIComponent(sectionId)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("category");return r.json()})
    ]);
    APP=cfg||{};render(s);
  }catch(e){grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>'}
