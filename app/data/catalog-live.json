@@ -1,6 +1,6 @@
 {
-  "version": 1789794274228,
-  "updatedAt": "2026-09-19T05:04:34.228Z",
+  "version": 1789794279009,
+  "updatedAt": "2026-09-19T05:04:39.009Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -5807,8 +5807,536 @@
       "image": "",
       "order": 15,
       "enabled": true,
-      "channelCount": 0,
-      "channels": []
+      "channelCount": 17,
+      "channels": [
+        {
+          "id": "yalla_live_channel_9d0cb023527e631aca39",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "بانوراما إف إم",
+          "image": "https://www.yallatv.online/img/menu/radio/panoramafm.webp",
+          "order": 0,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/radio/panoramafm",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_9c65dc1a3d3544f9c783",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي اف ام",
+          "image": "https://www.yallatv.online/img/menu/radio/mbcfm.webp",
+          "order": 1,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/radio/mbcfm",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_79b11cfbe541e6ffee40",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي بلاس دراما",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbcsd.webp",
+          "order": 2,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbcsd",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_62c1a39a70d018b0460d",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي العراق",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbci.webp",
+          "order": 3,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbci",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_8e7df589bcd3283910cb",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي فور",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbc4.webp",
+          "order": 4,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbc4",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_317981a88e193d4392e7",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي مصر دراما",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbc_masr_drama.webp",
+          "order": 5,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbc_masr_drama",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_676ea8d1435e6b5a2327",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي فايف",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbc5.webp",
+          "order": 6,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbc5",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_31e4c91cdd16b77cd323",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي ثري",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbc3.webp",
+          "order": 7,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbc3",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_09c759d984fe8918b4ac",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي وان",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbc1.webp",
+          "order": 8,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbc1",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_ba370f1c87dc156f33dd",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي اكشن",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbca.webp",
+          "order": 9,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbca",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_d5f444f94d01d5bec251",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي بوليود",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbcb.webp",
+          "order": 10,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbcb",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_8a02dc028ce6feb527fd",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي مصر الاولى",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbcm1.webp",
+          "order": 11,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbcm1",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_3c4af3eb07e2cbe75dcf",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "وناسا",
+          "image": "https://www.yallatv.online/img/menu/mbc/wnasa.webp",
+          "order": 12,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/wnasa",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_a7e85204d442f0035f3e",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي تو",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbc2.webp",
+          "order": 13,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbc2",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_e74ff7f3b2e8f877b2b5",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي ماكس",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbcmax.webp",
+          "order": 14,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbcmax",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_103ef0c6de690b498beb",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي دراما",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbcd.webp",
+          "order": 15,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbcd",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        },
+        {
+          "id": "yalla_live_channel_a4622f15b8b41f5d4e8b",
+          "categoryId": "yalla_live_category_864c9f889ab0e75fe8c1",
+          "name": "ام بي سي مصر الثانية",
+          "image": "https://www.yallatv.online/img/menu/mbc/mbcm2.webp",
+          "order": 16,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "*/*",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "yalla_server_380de8a210aa158d5e4f",
+              "name": "سيرفر 1",
+              "order": 0,
+              "origin": "https://www.yallatv.online",
+              "playerMode": "WEB2EXO",
+              "referer": "https://www.yallatv.online/mbc/mbcm2",
+              "subtitleUrl": "",
+              "url": "https://www.yallatv.online/pl/files/ch/json/all_channels_by_category.json",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+              "xRequestedWith": "XMLHttpRequest"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
