@@ -1,8 +1,9 @@
 name: Sync Firebase to GitHub Static Data
+
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/5 * * * *"
+  repository_dispatch:
+    types: [firebase_catalog_changed]
 
 permissions:
   contents: write
