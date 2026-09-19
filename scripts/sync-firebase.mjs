@@ -11,9 +11,11 @@ async function get(p){
   return await r.json();
 }
 
-const [categories,channels]=await Promise.all([
+const [categories,channels,publicMatches,matchLinks]=await Promise.all([
   get("/bsr_player/catalog_categories"),
-  get("/bsr_player/catalog_channels")
+  get("/bsr_player/catalog_channels"),
+  get("/bsr_player/public_matches"),
+  get("/bsr_player/match_channel_links")
 ]);
 
 const cats=(Array.isArray(categories)?categories:Object.values(categories||{}))
@@ -58,9 +60,58 @@ for(const c of cats){
 }
 
 await writeFile("app/data/sections.json",JSON.stringify(sections,null,2));
+
+const matches=(Array.isArray(publicMatches)?publicMatches:Object.values(publicMatches||{}))
+  .filter(Boolean)
+  .filter(m=>m.important!==false)
+  .map(m=>{
+    const links=(Array.isArray(matchLinks)?matchLinks:Object.values(matchLinks||{}))
+      .flatMap(x=>Array.isArray(x)?x:[x])
+      .filter(Boolean)
+      .filter(l=>
+        (m.matchId&&l.matchId&&String(l.matchId)===String(m.matchId)) ||
+        (m.matchKey&&l.matchKey&&String(l.matchKey)===String(m.matchKey))
+      )
+      .map(l=>({channelId:l.channelId||"",channelTitle:l.channelTitle||""}))
+      .filter(l=>l.channelId);
+
+    if(m.channelId && !links.some(l=>l.channelId===m.channelId)){
+      links.unshift({channelId:m.channelId,channelTitle:m.channelTitle||""});
+    }
+
+    const unique=[];
+    const seen=new Set();
+    for(const l of links){
+      if(seen.has(l.channelId)) continue;
+      seen.add(l.channelId);
+      unique.push(l);
+    }
+
+    return {
+      id:m.id||"",
+      matchId:m.matchId||"",
+      matchKey:m.matchKey||"",
+      homeName:m.homeName||"",
+      awayName:m.awayName||"",
+      homeLogo:m.homeLogo||"",
+      awayLogo:m.awayLogo||"",
+      baghdadTime:m.baghdadTime||m.meccaTime||"",
+      meccaTime:m.meccaTime||m.baghdadTime||"",
+      sourceDate:m.sourceDate||"",
+      status:m.status||"",
+      score:m.score||"",
+      tournament:m.tournament||"",
+      important:m.important!==false,
+      channels:unique
+    };
+  })
+  .sort((a,b)=>String(a.sourceDate||"").localeCompare(String(b.sourceDate||"")) || String(a.baghdadTime||"").localeCompare(String(b.baghdadTime||"")));
+
+await writeFile("app/data/matches.json",JSON.stringify(matches,null,2));
+
 await writeFile("app/data/version.json",JSON.stringify({
   version:Date.now(),updatedAt:new Date().toISOString(),source:"firebase",
-  sections:sections.length,channels:channelCount,servers:serverCount
+  sections:sections.length,channels:channelCount,servers:serverCount,matches:matches.length
 },null,2));
 
-console.log({sections:sections.length,channels:channelCount,servers:serverCount});
+console.log({sections:sections.length,channels:channelCount,servers:serverCount,matches:matches.length});
