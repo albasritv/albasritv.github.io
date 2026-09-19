@@ -16,11 +16,11 @@ body:not(.allow-select),body:not(.allow-select) *{-webkit-user-select:none;user-
 .header{height:68px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:8px 66px;background:var(--bar);border-bottom:1px solid rgba(120,160,190,.18);backdrop-filter:blur(18px)}
 .page-title{font-size:18px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.header-btn{position:absolute;top:11px;width:44px;height:44px;border-radius:13px;border:1px solid var(--border);background:linear-gradient(145deg,var(--card2),var(--card));color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer}.menu-btn{right:11px}.search-btn{left:11px}.header-btn svg{width:22px;height:22px}
 .search-area{max-height:0;overflow:hidden;background:var(--bg);transition:.24s}.search-area.show{max-height:76px;padding:10px 11px;border-bottom:1px solid rgba(120,160,190,.12)}.search-shell{position:relative;max-width:920px;margin:auto}.search-input{width:100%;height:46px;border-radius:14px;border:1px solid var(--border);outline:none;background:var(--card);color:var(--text);padding:0 15px 0 44px;font-size:14px;direction:rtl;text-align:right}.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
-.content{max-width:920px;margin:auto;padding:14px 10px 22px;direction:rtl}.title-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:1px 2px 11px}.mini{font-size:10px;color:var(--muted)}
+.content{max-width:920px;margin:auto;padding:14px 10px 22px;direction:rtl}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;direction:rtl}
 .card{position:relative;height:84px;display:flex;align-items:center;direction:rtl;gap:10px;padding:9px;border:1px solid rgba(120,160,190,.24);border-radius:16px;background:linear-gradient(145deg,var(--card2),var(--card));box-shadow:var(--shadow);cursor:pointer;overflow:hidden;transition:.16s}.card:before{content:"";position:absolute;right:0;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,transparent,var(--accent),transparent);opacity:.7}.card:active{transform:scale(.975)}
 .image-box{width:56px;height:56px;flex:0 0 56px;padding:6px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(4,13,22,.68);border:1px solid rgba(120,160,190,.28);overflow:hidden}.image-box img{width:100%;height:100%;object-fit:contain;border-radius:9px}.fallback{font-size:10px;font-weight:900;color:var(--accent)}
-.info{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:5px}.name{width:100%;font-size:13px;font-weight:900;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.server-count{font-size:10px;color:var(--muted);padding:3px 7px;border:1px solid rgba(120,160,190,.20);border-radius:999px;background:rgba(255,255,255,.02)}
+.info{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:5px}.name{width:100%;font-size:13px;font-weight:900;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .empty{grid-column:1/-1;padding:48px 10px;text-align:center;color:var(--muted);font-size:13px}
 .bottom-nav{direction:rtl;position:fixed;left:0;right:0;bottom:0;height:76px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:6px 7px 8px;background:var(--bar);border-top:1px solid rgba(120,160,190,.18);backdrop-filter:blur(18px)}
 .bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;font-weight:700;cursor:pointer}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:var(--accent-soft);outline:1px solid rgba(24,212,220,.24)}.nav-svg{width:22px;height:22px;display:block;fill:currentColor}
@@ -39,7 +39,7 @@ body:not(.allow-select),body:not(.allow-select) *{-webkit-user-select:none;user-
 <button class="header-btn search-btn" id="searchBtn" aria-label="بحث"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
 </header>
 <div class="search-area" id="searchArea"><div class="search-shell"><input id="searchInput" class="search-input" type="search" placeholder="ابحث عن قناة..." autocomplete="off"></div></div>
-<main class="content"><div class="title-row"><strong id="sectionLabel">القنوات</strong><span class="mini" id="countLabel"></span></div><div class="grid" id="grid"><div class="empty">جاري تحميل القنوات...</div></div></main>
+<main class="content"><div class="grid" id="grid"><div class="empty">جاري تحميل القنوات...</div></div></main>
 
 <nav class="bottom-nav">
 <button class="bottom-btn active" data-menu="home" id="navHome"><svg class="nav-svg" viewBox="0 -960 960 960"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320Z"/></svg><span>القنوات</span></button>
@@ -71,10 +71,10 @@ function img(c){return c.image?'<img draggable="false" loading="lazy" src="'+esc
 function utf8Base64(value){const bytes=new TextEncoder().encode(value);let binary="";for(const b of bytes)binary+=String.fromCharCode(b);return btoa(binary)}
 function currentChannels(){return (CURRENT_SECTION?.channels||[]).filter(x=>x&&x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999))}
 function render(list){
-  grid.innerHTML="";q("countLabel").textContent=list.length?list.length+" قناة":"";
+  grid.innerHTML="";
   if(!list.length){grid.innerHTML='<div class="empty">لا توجد قنوات حالياً</div>';return}
-  list.forEach(c=>{const el=document.createElement("article");el.className="card";el.tabIndex=0;const sc=(c.servers||[]).filter(Boolean).length;
-    el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="info"><div class="name">'+esc(c.name||"")+'</div><div class="server-count">'+(sc?sc+" سيرفر":"فتح القناة")+'</div></div>';
+  list.forEach(c=>{const el=document.createElement("article");el.className="card";el.tabIndex=0;
+    el.innerHTML='<div class="image-box">'+img(c)+'</div><div class="info"><div class="name">'+esc(c.name||"")+'</div></div>';
     const open=()=>openInPlayer(c);el.onclick=open;el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}};grid.appendChild(el)})
 }
 async function openInPlayer(c){
@@ -95,7 +95,7 @@ async function refresh(first=false){
   if(!section&&first)section=await getJson(RAW_MAIN+"categories/"+encodeURIComponent(sectionId)+".json",null);
   if(section){
     const changed=!CURRENT_SECTION||Number(liveCatalog?.version||0)!==LAST_VERSION||JSON.stringify(section)!==JSON.stringify(CURRENT_SECTION);
-    CURRENT_SECTION=section;q("title").textContent=section.name||"القنوات";q("sectionLabel").textContent=section.name||"القنوات";if(changed||first)render(currentChannels());
+    CURRENT_SECTION=section;q("title").textContent=section.name||"القنوات";if(changed||first)render(currentChannels());
   }else if(first)grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>';
 }
 q("searchBtn").onclick=()=>{q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),100)};
