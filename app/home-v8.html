@@ -227,20 +227,17 @@ async function getJson(url,fallback=null){
 async function refreshData(first=false){
   const [cfg,instantSections,instantMatches,liveCatalog,liveMatches,staticSections,staticMatches]=await Promise.all([
     first?getJson(RAW_MAIN+"config.json",{}):Promise.resolve(APP),
-    getJson(LIVE_API+"/sections",null),
-    CURRENT_VIEW==="matches"||first?getJson(LIVE_API+"/matches",null):Promise.resolve(null),
-    first?getJson(RAW_LIVE+"catalog-live.json",null):Promise.resolve(null),
-    first?getJson(RAW_LIVE+"matches-live.json",null):Promise.resolve(null),
+    Promise.resolve(null),
+    Promise.resolve(null),
+    getJson(RAW_LIVE+"catalog-live.json",null),
+    CURRENT_VIEW==="matches"||first?getJson(RAW_LIVE+"matches-live.json",null):Promise.resolve(null),
     first?getJson(RAW_MAIN+"sections.json",[]):Promise.resolve(APP.sections||[]),
     first?getJson(RAW_MAIN+"matches.json",[]):Promise.resolve(APP.matches||[])
   ]);
   if(first)APP=cfg||{};
 
   let nextSections=null, nextVersion=0;
-  if(instantSections&&Array.isArray(instantSections.sections)){
-    nextSections=instantSections.sections;
-    nextVersion=Number(instantSections.version||Date.now());
-  }else if(liveCatalog&&Array.isArray(liveCatalog.sections)){
+  if(liveCatalog&&Array.isArray(liveCatalog.sections)){
     APP.liveCatalog=liveCatalog;
     nextSections=liveCatalog.sections;
     nextVersion=Number(liveCatalog.version||0);
@@ -259,8 +256,7 @@ async function refreshData(first=false){
     }
   }
 
-  if(Array.isArray(instantMatches))APP.matches=instantMatches;
-  else if(Array.isArray(liveMatches))APP.matches=liveMatches;
+  if(Array.isArray(liveMatches))APP.matches=liveMatches;
   else if(first)APP.matches=Array.isArray(staticMatches)?staticMatches:[];
 
   if(CURRENT_VIEW==="matches")renderMatches(APP.matches||[]);
