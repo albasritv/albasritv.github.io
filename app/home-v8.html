@@ -155,7 +155,7 @@ function renderSections(list){
     const info=document.createElement("div");info.className="section-info";
     const name=document.createElement("div");name.className="section-name";name.textContent=s.name||"";
     info.append(name);el.append(pic,info);
-    const open=()=>go("channels-v8.html?id="+encodeURIComponent(s.id)+"&v=9");
+    const open=()=>go("channels-v9.html?id="+encodeURIComponent(s.id)+"&v=10");
     el.onclick=open;el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}};
     grid.appendChild(el);
   });
@@ -227,8 +227,8 @@ async function getJson(url,fallback=null){
 async function refreshData(first=false){
   const [cfg,instantSections,instantMatches,liveCatalog,liveMatches,staticSections,staticMatches]=await Promise.all([
     first?getJson(RAW_MAIN+"config.json",{}):Promise.resolve(APP),
-    getJson(LIVE_API+"/sections",null),
-    CURRENT_VIEW==="matches"||first?getJson(LIVE_API+"/matches",null):Promise.resolve(null),
+    Promise.resolve(null),
+    Promise.resolve(null),
     getJson(RAW_LIVE+"catalog-live.json",null),
     CURRENT_VIEW==="matches"||first?getJson(RAW_LIVE+"matches-live.json",null):Promise.resolve(null),
     first?getJson(RAW_MAIN+"sections.json",[]):Promise.resolve(APP.sections||[]),
@@ -237,10 +237,7 @@ async function refreshData(first=false){
   if(first)APP=cfg||{};
 
   let nextSections=null, nextVersion=0;
-  if(instantSections&&Array.isArray(instantSections.sections)){
-    nextSections=instantSections.sections;
-    nextVersion=Number(instantSections.version||Date.now());
-  }else if(liveCatalog&&Array.isArray(liveCatalog.sections)){
+  if(liveCatalog&&Array.isArray(liveCatalog.sections)){
     APP.liveCatalog=liveCatalog;
     nextSections=liveCatalog.sections;
     nextVersion=Number(liveCatalog.version||0);
@@ -259,8 +256,7 @@ async function refreshData(first=false){
     }
   }
 
-  if(Array.isArray(instantMatches))APP.matches=instantMatches;
-  else if(Array.isArray(liveMatches))APP.matches=liveMatches;
+  if(Array.isArray(liveMatches))APP.matches=liveMatches;
   else if(first)APP.matches=Array.isArray(staticMatches)?staticMatches:[];
 
   if(CURRENT_VIEW==="matches")renderMatches(APP.matches||[]);
@@ -286,7 +282,7 @@ function protectPage(){
 }
 protectPage();
 refreshData(true);
-setInterval(()=>{if(!document.hidden)refreshData(false)},1000);
+setInterval(()=>{if(!document.hidden)refreshData(false)},60000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)refreshData(false)});
 </script>
 </body>
