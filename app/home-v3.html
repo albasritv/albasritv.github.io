@@ -136,6 +136,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important}
 <script>
 const RAW_MAIN="https://raw.githubusercontent.com/albasritv/albasritv.github.io/main/app/data/";
 const RAW_LIVE="https://raw.githubusercontent.com/albasritv/albasritv.github.io/live-data/app/data/";
+const LIVE_API="https://bsr-sync.malikalbasri250.workers.dev";
 let APP={menu:{},sections:[],matches:[],liveCatalog:null},CURRENT_VIEW="home",LAST_VERSION=0;
 const q=id=>document.getElementById(id),grid=q("sectionsGrid"),matchesList=q("matchesList"),searchInput=q("searchInput");
 
@@ -154,7 +155,7 @@ function renderSections(list){
     const info=document.createElement("div");info.className="section-info";
     const name=document.createElement("div");name.className="section-name";name.textContent=s.name||"";
     info.append(name);el.append(pic,info);
-    const open=()=>go("channels-v7.html?id="+encodeURIComponent(s.id)+"&v=7");
+    const open=()=>go("channels-v8.html?id="+encodeURIComponent(s.id)+"&v=8");
     el.onclick=open;el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}};
     grid.appendChild(el);
   });
@@ -224,19 +225,44 @@ async function getJson(url,fallback=null){
   try{const r=await fetch(url+(url.includes("?")?"&":"?")+"t="+Date.now(),{cache:"no-store"});if(!r.ok)return fallback;return await r.json()}catch(e){return fallback}
 }
 async function refreshData(first=false){
-  const [cfg,liveCatalog,liveMatches,staticSections,staticMatches]=await Promise.all([
+  const [cfg,instantSections,instantMatches,liveCatalog,liveMatches,staticSections,staticMatches]=await Promise.all([
     first?getJson(RAW_MAIN+"config.json",{}):Promise.resolve(APP),
-    getJson(RAW_LIVE+"catalog-live.json",null),
-    getJson(RAW_LIVE+"matches-live.json",null),
+    getJson(LIVE_API+"/sections",null),
+    CURRENT_VIEW==="matches"||first?getJson(LIVE_API+"/matches",null):Promise.resolve(null),
+    first?getJson(RAW_LIVE+"catalog-live.json",null):Promise.resolve(null),
+    first?getJson(RAW_LIVE+"matches-live.json",null):Promise.resolve(null),
     first?getJson(RAW_MAIN+"sections.json",[]):Promise.resolve(APP.sections||[]),
     first?getJson(RAW_MAIN+"matches.json",[]):Promise.resolve(APP.matches||[])
   ]);
   if(first)APP=cfg||{};
-  if(liveCatalog&&Array.isArray(liveCatalog.sections)){
-    APP.liveCatalog=liveCatalog;APP.sections=liveCatalog.sections;
-    const v=Number(liveCatalog.version||0);if(v!==LAST_VERSION){LAST_VERSION=v;renderSections(sortedSections())}
-  }else if(first){APP.sections=Array.isArray(staticSections)?staticSections:[];renderSections(sortedSections())}
-  if(Array.isArray(liveMatches))APP.matches=liveMatches;else if(first)APP.matches=Array.isArray(staticMatches)?staticMatches:[];
+
+  let nextSections=null, nextVersion=0;
+  if(instantSections&&Array.isArray(instantSections.sections)){
+    nextSections=instantSections.sections;
+    nextVersion=Number(instantSections.version||Date.now());
+  }else if(liveCatalog&&Array.isArray(liveCatalog.sections)){
+    APP.liveCatalog=liveCatalog;
+    nextSections=liveCatalog.sections;
+    nextVersion=Number(liveCatalog.version||0);
+  }else if(first){
+    nextSections=Array.isArray(staticSections)?staticSections:[];
+    nextVersion=1;
+  }
+
+  if(nextSections){
+    const signature=JSON.stringify(nextSections.map(s=>[s.id,s.name,s.image,s.order,s.enabled]));
+    if(signature!==APP._sectionsSignature){
+      APP._sectionsSignature=signature;
+      APP.sections=nextSections;
+      LAST_VERSION=nextVersion;
+      renderSections(sortedSections());
+    }
+  }
+
+  if(Array.isArray(instantMatches))APP.matches=instantMatches;
+  else if(Array.isArray(liveMatches))APP.matches=liveMatches;
+  else if(first)APP.matches=Array.isArray(staticMatches)?staticMatches:[];
+
   if(CURRENT_VIEW==="matches")renderMatches(APP.matches||[]);
   if(first)showView(location.hash==="#matches"?"matches":"home",false);
 }
@@ -260,7 +286,7 @@ function protectPage(){
 }
 protectPage();
 refreshData(true);
-setInterval(()=>{if(!document.hidden)refreshData(false)},4000);
+setInterval(()=>{if(!document.hidden)refreshData(false)},1000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)refreshData(false)});
 </script>
 </body>
