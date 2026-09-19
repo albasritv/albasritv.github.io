@@ -24,6 +24,31 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 .section-name{flex:1;min-width:0;margin-right:10px;font-size:13px;font-weight:700;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;z-index:2}
 .section-play{width:24px;flex:0 0 24px;margin-right:auto;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;line-height:1;position:relative;z-index:2}
 .empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
+.view{display:none}.view.active{display:block}
+.matches-list{display:grid;gap:12px}
+.match-card{position:relative;border:1px solid var(--border);border-radius:17px;background:linear-gradient(145deg,var(--card2),var(--card));overflow:hidden;box-shadow:0 7px 22px rgba(0,0,0,.15)}
+.match-card:before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.55}
+.match-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px 6px;color:var(--muted);font-size:11px}
+.match-tournament{font-weight:800;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.match-date{flex:none;font-size:10px}
+.match-body{display:grid;grid-template-columns:minmax(0,1fr) 104px minmax(0,1fr);align-items:center;gap:8px;padding:10px 12px 13px}
+.match-team{text-align:center;min-width:0}
+.match-logo{width:58px;height:58px;margin:0 auto 7px;display:flex;align-items:center;justify-content:center;border-radius:15px;background:rgba(3,12,21,.28);padding:5px}
+.match-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.match-team-name{font-size:13px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.match-center{text-align:center;min-width:0}
+.match-main{font-size:18px;font-weight:900;color:var(--text);line-height:1.2;min-height:24px;display:flex;align-items:center;justify-content:center}
+.match-main.live-score{font-size:22px;color:#ff5d63;letter-spacing:.5px}
+.match-status{display:inline-flex;align-items:center;justify-content:center;min-width:82px;margin-top:7px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:900;border:1px solid transparent}
+.match-status.upcoming{color:#35db73;background:rgba(53,219,115,.10);border-color:rgba(53,219,115,.28)}
+.match-status.live{color:#ff5d63;background:rgba(255,93,99,.11);border-color:rgba(255,93,99,.30);animation:pulseLive 1.5s infinite}
+.match-status.finished{color:#a4afb9;background:rgba(164,175,185,.10);border-color:rgba(164,175,185,.22)}
+@keyframes pulseLive{0%,100%{box-shadow:0 0 0 0 rgba(255,93,99,.0)}50%{box-shadow:0 0 0 5px rgba(255,93,99,.08)}}
+.match-watch{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;padding:0 12px 12px}
+.match-watch-btn{border:1px solid var(--border);background:#081522;color:var(--text);border-radius:10px;padding:8px 12px;font-size:11px;font-weight:900;cursor:pointer}
+.match-watch-btn:focus,.match-watch-btn:active{outline:2px solid rgba(24,212,220,.45);color:var(--accent)}
+.match-no-stream{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 12px}
+@media(max-width:420px){.match-body{grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr);gap:5px;padding-inline:8px}.match-logo{width:49px;height:49px}.match-team-name{font-size:12px}.match-main{font-size:15px}.match-main.live-score{font-size:19px}.match-status{min-width:72px;padding:5px 7px;font-size:10px}}
 .bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}
 .bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;cursor:pointer}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:rgba(24,212,220,.10);outline:2px solid rgba(24,212,220,.45);outline-offset:-2px}.bottom-btn svg{width:22px;height:22px}.nav-svg{width:22px;height:22px;display:block;fill:currentColor;flex:none}.bottom-btn:focus .nav-svg,.bottom-btn.active .nav-svg{transform:scale(1.08)}.bottom-btn.active{color:var(--accent);background:rgba(24,212,220,.08)}
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99;opacity:0;visibility:hidden;transition:.22s}.overlay.show{opacity:1;visibility:visible}
@@ -42,7 +67,14 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 <button class="header-btn search-btn" id="searchBtn" aria-label="بحث"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
 </header>
 <div class="search-area" id="searchArea"><input id="searchInput" class="search-input" type="search" placeholder="ابحث عن قسم أو قناة..." autocomplete="off"></div>
-<main class="content"><div class="sections-grid" id="sectionsGrid"><div class="empty">جاري تحميل الأقسام...</div></div></main>
+<main class="content">
+  <section class="view active" id="channelsView">
+    <div class="sections-grid" id="sectionsGrid"><div class="empty">جاري تحميل الأقسام...</div></div>
+  </section>
+  <section class="view" id="matchesView">
+    <div class="matches-list" id="matchesList"><div class="empty">جاري تحميل المباريات...</div></div>
+  </section>
+</main>
 
 <nav class="bottom-nav">
 <button class="bottom-btn active" data-menu="home" id="navHome">
@@ -73,10 +105,11 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 </aside>
 
 <script>
-let APP={menu:{},sections:[]};
-const q=id=>document.getElementById(id),grid=q("sectionsGrid"),searchInput=q("searchInput");
+let APP={menu:{},sections:[],matches:[]},CURRENT_VIEW="home";
+const q=id=>document.getElementById(id),grid=q("sectionsGrid"),matchesList=q("matchesList"),searchInput=q("searchInput");
 function go(url){if(url)location.href=url}
 function fallback(name){return '<span class="image-fallback">'+(name||"TV").slice(0,3)+'</span>'}
+function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]))}
 function sortedSections(){return (APP.sections||[]).filter(x=>x.enabled!==false).slice().sort((a,b)=>(a.order??9999)-(b.order??9999))}
 function render(list){
  grid.innerHTML="";
@@ -84,11 +117,7 @@ function render(list){
  list.forEach(s=>{
    const el=document.createElement("div");el.className="section-card";
    const pic=document.createElement("div");pic.className="image-box";
-   if(s.image){
-     pic.style.backgroundImage='url("'+String(s.image).replace(/"/g,'%22')+'")';
-   }else{
-     pic.innerHTML=fallback(s.name);
-   }
+   if(s.image){pic.style.backgroundImage='url("'+String(s.image).replace(/"/g,'%22')+'")'}else{pic.innerHTML=fallback(s.name)}
    const name=document.createElement("div");name.className="section-name";name.textContent=s.name||"";
    const play=document.createElement("div");play.className="section-play";play.textContent="▶";
    el.append(pic,name,play);
@@ -96,13 +125,99 @@ function render(list){
    grid.appendChild(el);
  })
 }
-async function load(){try{const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));const ver=v.version||"1";const [cfg,sections]=await Promise.all([fetch("data/config.json?v="+ver).then(r=>r.json()),fetch("data/sections.json?v="+ver).then(r=>r.json())]);APP=cfg||{};APP.sections=sections||[];q("appName").textContent=APP.appName||"البصري بلاير";render(sortedSections())}catch(e){grid.innerHTML='<div class="empty">تعذر تحميل البيانات، حاول مرة ثانية.</div>'}}
-q("searchBtn").onclick=()=>{q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),120)};
+function normalizeStatus(raw){
+ const s=String(raw||"").trim();
+ if(/جارية|مباشر|live|playing|in progress/i.test(s))return{key:"live",label:"جارية الآن"};
+ if(/انتهت|finished|final|ended/i.test(s))return{key:"finished",label:"انتهت"};
+ return{key:"upcoming",label:"لم تبدأ"};
+}
+function utf8Base64(value){const bytes=new TextEncoder().encode(value);let binary="";for(const b of bytes)binary+=String.fromCharCode(b);return btoa(binary)}
+async function openChannel(channelId){
+ const p=APP.player||{},scheme=p.scheme||"BSRPlayer",pkg=p.package||"com.bsr.player.pro";
+ const fallbackUrl=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
+ try{
+   const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
+   const channel=await fetch("data/channels/"+encodeURIComponent(channelId)+".json?v="+(v.version||"1"),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error();return r.json()});
+   const servers=(channel.servers||[]).filter(s=>s&&s.url);
+   if(!servers.length)throw new Error();
+   const payload=servers.map((s,i)=>({
+     name:s.name||("Server "+(i+1)),url:s.url||"",ua:s.userAgent||s.ua||"",user_agent:s.userAgent||s.user_agent||"",
+     referer:s.referer||"",origin:s.origin||"",cookie:s.cookie||"",drmKey:s.drmKey||"",drm_key:s.drmKey||s.drm_key||"",
+     playerMode:s.playerMode||"EXO",player_mode:s.playerMode||s.player_mode||"EXO",authorization:s.authorization||"",
+     accept:s.accept||"",xRequestedWith:s.xRequestedWith||"",authUrl:s.authUrl||"",subtitleUrl:s.subtitleUrl||"",
+     drmLicenseUrl:s.drmLicenseUrl||"",drmLicenseHeaders:s.drmLicenseHeaders||""
+   }));
+   const data=encodeURIComponent(utf8Base64(JSON.stringify(payload)));
+   location.href="intent://servers?data="+data+"#Intent;scheme="+scheme+";package="+pkg+";S.browser_fallback_url="+fallbackUrl+";end";
+ }catch(e){alert("تعذر فتح بث المباراة حالياً.")}
+}
+function renderMatches(list){
+ matchesList.innerHTML="";
+ if(!Array.isArray(list)||!list.length){matchesList.innerHTML='<div class="empty">لا توجد مباريات حالياً</div>';return}
+ list.forEach(m=>{
+   const st=normalizeStatus(m.status);
+   const mainValue=st.key==="live"?(m.score||"0 - 0"):(m.baghdadTime||m.meccaTime||"--:--");
+   const channels=(m.channels||[]).filter(x=>x&&x.channelId);
+   const card=document.createElement("article");card.className="match-card";
+   card.innerHTML=
+     '<div class="match-meta"><span class="match-tournament">'+esc(m.tournament||"مباريات اليوم")+'</span><span class="match-date">'+esc(m.sourceDate||"")+'</span></div>'+
+     '<div class="match-body">'+
+       '<div class="match-team"><div class="match-logo">'+(m.homeLogo?'<img src="'+esc(m.homeLogo)+'" alt="">':'')+'</div><div class="match-team-name">'+esc(m.homeName||"")+'</div></div>'+
+       '<div class="match-center"><div class="match-main '+(st.key==="live"?"live-score":"")+'">'+esc(mainValue)+'</div><div class="match-status '+st.key+'">'+st.label+'</div></div>'+
+       '<div class="match-team"><div class="match-logo">'+(m.awayLogo?'<img src="'+esc(m.awayLogo)+'" alt="">':'')+'</div><div class="match-team-name">'+esc(m.awayName||"")+'</div></div>'+
+     '</div>'+
+     (channels.length?'<div class="match-watch">'+channels.map((x,i)=>'<button class="match-watch-btn" data-channel="'+esc(x.channelId)+'">'+esc(x.channelTitle||("مشاهدة "+(i+1)))+'</button>').join("")+'</div>':'<div class="match-no-stream">لم يتم ربط بث لهذه المباراة بعد</div>');
+   card.querySelectorAll("[data-channel]").forEach(b=>b.onclick=()=>openChannel(b.dataset.channel));
+   matchesList.appendChild(card);
+ })
+}
+function setActiveNav(menu){
+ document.querySelectorAll(".bottom-btn").forEach(b=>b.classList.toggle("active",b.dataset.menu===menu));
+}
+function showView(menu,pushHash=true){
+ if(menu==="matches"){
+   CURRENT_VIEW="matches";
+   q("channelsView").classList.remove("active");q("matchesView").classList.add("active");
+   q("appName").textContent="المباريات";
+   q("searchArea").classList.remove("show");q("searchBtn").style.visibility="hidden";
+   setActiveNav("matches");
+   renderMatches(APP.matches||[]);
+   if(pushHash&&location.hash!=="#matches")history.pushState({view:"matches"},"","#matches");
+   setTimeout(()=>document.querySelector('.bottom-btn[data-menu="matches"]')?.focus({preventScroll:true}),50);
+   return;
+ }
+ CURRENT_VIEW="home";
+ q("matchesView").classList.remove("active");q("channelsView").classList.add("active");
+ q("appName").textContent=APP.appName||"البصري بلاير";
+ q("searchBtn").style.visibility="";
+ setActiveNav("home");
+ if(pushHash&&location.hash)history.pushState({view:"home"},"#",location.pathname+location.search);
+ setTimeout(()=>q("navHome")?.focus({preventScroll:true}),50);
+}
+async function load(){
+ try{
+   const v=await fetch("data/version.json",{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));const ver=v.version||"1";
+   const [cfg,sections,matches]=await Promise.all([
+     fetch("data/config.json?v="+ver,{cache:"no-store"}).then(r=>r.json()),
+     fetch("data/sections.json?v="+ver,{cache:"no-store"}).then(r=>r.json()),
+     fetch("data/matches.json?v="+ver,{cache:"no-store"}).then(r=>r.ok?r.json():[])
+   ]);
+   APP=cfg||{};APP.sections=sections||[];APP.matches=Array.isArray(matches)?matches:[];
+   render(sortedSections());renderMatches(APP.matches);
+   showView(location.hash==="#matches"?"matches":"home",false);
+ }catch(e){grid.innerHTML='<div class="empty">تعذر تحميل البيانات، حاول مرة ثانية.</div>';matchesList.innerHTML='<div class="empty">تعذر تحميل المباريات.</div>'}
+}
+q("searchBtn").onclick=()=>{if(CURRENT_VIEW!=="home")return;q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),120)};
 searchInput.oninput=()=>{const t=searchInput.value.trim().toLowerCase(),all=sortedSections();if(!t)return render(all);render(all.filter(s=>(s.name||"").toLowerCase().includes(t)))};
 q("menuBtn").onclick=()=>{q("sideMenu").classList.add("show");q("overlay").classList.add("show")};q("overlay").onclick=()=>{q("sideMenu").classList.remove("show");q("overlay").classList.remove("show")};
-document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>go(APP.menu?.[b.dataset.menu]||""));
+document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>{
+ const menu=b.dataset.menu;
+ if(menu==="home"||menu==="matches"){showView(menu);q("sideMenu").classList.remove("show");q("overlay").classList.remove("show");return}
+ go(APP.menu?.[menu]||"")
+});
+window.addEventListener("popstate",()=>showView(location.hash==="#matches"?"matches":"home",false));
 const theme=q("themeSwitch"),saved=localStorage.getItem("bsr-theme");if(saved==="light"){document.body.classList.add("light");theme.checked=false}theme.onchange=()=>{document.body.classList.toggle("light",!theme.checked);localStorage.setItem("bsr-theme",theme.checked?"dark":"light")};
-load();setTimeout(()=>{const h=document.getElementById("navHome");if(h){h.tabIndex=0;h.focus({preventScroll:true})}},120);
+load();
 </script>
 </body>
 </html>
