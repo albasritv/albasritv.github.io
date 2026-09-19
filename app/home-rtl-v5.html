@@ -154,7 +154,7 @@ function renderSections(list){
     const info=document.createElement("div");info.className="section-info";
     const name=document.createElement("div");name.className="section-name";name.textContent=s.name||"";
     info.append(name);el.append(pic,info);
-    const open=()=>go("channels-v6.html?id="+encodeURIComponent(s.id)+"&v=6");
+    const open=()=>go("channels-v7.html?id="+encodeURIComponent(s.id)+"&v=7");
     el.onclick=open;el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}};
     grid.appendChild(el);
   });
