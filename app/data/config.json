@@ -8,8 +8,8 @@
     "channelBase": "https://albasritv.github.io/app/data/channels"
   },
   "menu": {
-    "home": "home-v6.html?v=6",
-    "matches": "home-v6.html?v=6#matches",
+    "home": "home-v7.html?v=7",
+    "matches": "home-v7.html?v=7#matches",
     "movies": "",
     "sportsNews": "",
     "telegram": "https://t.me/albasri_tv",
