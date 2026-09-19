@@ -63,6 +63,7 @@ body:not(.allow-select),body:not(.allow-select) *{-webkit-user-select:none;user-
 <script>
 const RAW_MAIN="https://raw.githubusercontent.com/albasritv/albasritv.github.io/main/app/data/";
 const RAW_LIVE="https://raw.githubusercontent.com/albasritv/albasritv.github.io/live-data/app/data/";
+const LIVE_API="https://bsr-sync.malikalbasri250.workers.dev";
 let APP={menu:{}},CURRENT_SECTION=null,LAST_VERSION=0;
 const q=id=>document.getElementById(id),grid=q("grid"),searchInput=q("searchInput"),sectionId=new URLSearchParams(location.search).get("id");
 function go(u){if(u)location.href=u}
@@ -93,24 +94,36 @@ async function openInPlayer(c){
 }
 async function getJson(url,fallback=null){try{const r=await fetch(url+(url.includes("?")?"&":"?")+"t="+Date.now(),{cache:"no-store"});if(!r.ok)return fallback;return await r.json()}catch(e){return fallback}}
 async function refresh(first=false){
-  const [cfg,liveCatalog]=await Promise.all([first?getJson(RAW_MAIN+"config.json",{}):Promise.resolve(APP),getJson(RAW_LIVE+"catalog-live.json",null)]);
+  const [cfg,instantSection,liveCatalog]=await Promise.all([
+    first?getJson(RAW_MAIN+"config.json",{}):Promise.resolve(APP),
+    getJson(LIVE_API+"/category?id="+encodeURIComponent(sectionId),null),
+    first?getJson(RAW_LIVE+"catalog-live.json",null):Promise.resolve(null)
+  ]);
   if(first)APP=cfg||{};
-  let section=liveCatalog?.sections?.find(x=>String(x.id)===String(sectionId))||null;
-  if(liveCatalog?.version)LAST_VERSION=Number(liveCatalog.version);
+
+  let section=instantSection?.section||null;
+  if(!section)section=liveCatalog?.sections?.find(x=>String(x.id)===String(sectionId))||null;
   if(!section&&first)section=await getJson(RAW_MAIN+"categories/"+encodeURIComponent(sectionId)+".json",null);
+
   if(section){
-    const changed=!CURRENT_SECTION||Number(liveCatalog?.version||0)!==LAST_VERSION||JSON.stringify(section)!==JSON.stringify(CURRENT_SECTION);
-    CURRENT_SECTION=section;q("title").textContent=section.name||"القنوات";if(changed||first)render(currentChannels());
-  }else if(first)grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>';
+    const signature=JSON.stringify(section);
+    const changed=signature!==APP._sectionSignature;
+    APP._sectionSignature=signature;
+    CURRENT_SECTION=section;
+    q("title").textContent=section.name||"القنوات";
+    if(changed||first)render(currentChannels());
+  }else if(first){
+    grid.innerHTML='<div class="empty">تعذر تحميل القنوات.</div>';
+  }
 }
 q("searchBtn").onclick=()=>{q("searchArea").classList.toggle("show");if(q("searchArea").classList.contains("show"))setTimeout(()=>searchInput.focus(),100)};
 searchInput.oninput=()=>{const t=searchInput.value.trim().toLowerCase(),all=currentChannels();render(!t?all:all.filter(c=>(c.name||"").toLowerCase().includes(t)))};
 const closeMenu=()=>{q("sideMenu").classList.remove("show");q("overlay").classList.remove("show")};
 q("menuBtn").onclick=()=>{q("sideMenu").classList.add("show");q("overlay").classList.add("show")};q("overlay").onclick=closeMenu;
-q("backSections").onclick=()=>go("home-v6.html?v=6");document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>{const m=b.dataset.menu;if(m==="home")return go("home-v6.html?v=6");if(m==="matches")return go("home-v6.html?v=6#matches");go(APP.menu?.[m]||"")});
+q("backSections").onclick=()=>go("home-v8.html?v=8");document.querySelectorAll("[data-menu]").forEach(b=>b.onclick=()=>{const m=b.dataset.menu;if(m==="home")return go("home-v8.html?v=8");if(m==="matches")return go("home-v8.html?v=8#matches");go(APP.menu?.[m]||"")});
 const theme=q("themeSwitch"),saved=localStorage.getItem("bsr-theme");if(saved==="light"){document.body.classList.add("light");theme.checked=false}theme.onchange=()=>{document.body.classList.toggle("light",!theme.checked);localStorage.setItem("bsr-theme",theme.checked?"dark":"light")};
 function protectPage(){const editable=e=>e.target&&/^(INPUT|TEXTAREA)$/i.test(e.target.tagName);["contextmenu","dragstart"].forEach(ev=>document.addEventListener(ev,e=>e.preventDefault(),{passive:false}));["copy","cut","selectstart"].forEach(ev=>document.addEventListener(ev,e=>{if(!editable(e))e.preventDefault()},{passive:false}));document.addEventListener("keydown",e=>{const k=String(e.key||"").toLowerCase();if(e.key==="F12"||(e.ctrlKey&&["u","s"].includes(k))||(e.ctrlKey&&e.shiftKey&&["i","j","c"].includes(k))){e.preventDefault();e.stopPropagation()}},true)}
-protectPage();refresh(true);setInterval(()=>{if(!document.hidden)refresh(false)},4000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh(false)});
+protectPage();refresh(true);setInterval(()=>{if(!document.hidden)refresh(false)},1000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh(false)});
 </script>
 </body>
 </html>
