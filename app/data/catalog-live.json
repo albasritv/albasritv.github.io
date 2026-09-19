@@ -1,6 +1,6 @@
 {
-  "version": 1789787494137,
-  "updatedAt": "2026-09-19T03:11:34.137Z",
+  "version": 1789787671721,
+  "updatedAt": "2026-09-19T03:14:31.721Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -5806,6 +5806,15 @@
       "name": "ali",
       "image": "",
       "order": 15,
+      "enabled": true,
+      "channelCount": 0,
+      "channels": []
+    },
+    {
+      "id": "a475cb65-90d6-431b-93f9-1cefb0a201cb",
+      "name": "ali123",
+      "image": "",
+      "order": 16,
       "enabled": true,
       "channelCount": 0,
       "channels": []
