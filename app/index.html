@@ -105,7 +105,7 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 </aside>
 
 <script>
-let APP={menu:{},sections:[],matches:[]},CURRENT_VIEW="home";
+let APP={menu:{},sections:[],matches:[],liveCatalog:null},CURRENT_VIEW="home";
 const RAW="https://raw.githubusercontent.com/albasritv/albasritv.github.io/main/app/";
 const q=id=>document.getElementById(id),grid=q("sectionsGrid"),matchesList=q("matchesList"),searchInput=q("searchInput");
 function go(url){if(url)location.href=url}
@@ -138,7 +138,11 @@ async function openChannel(channelId){
  const fallbackUrl=encodeURIComponent(p.fallback||("https://play.google.com/store/apps/details?id="+pkg));
  try{
    const v=await fetch(RAW+"data/version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));
-   const channel=await fetch(RAW+"data/channels/"+encodeURIComponent(channelId)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error();return r.json()});
+   let channel=null;
+   if(APP.liveCatalog?.sections){
+     for(const s of APP.liveCatalog.sections){const found=(s.channels||[]).find(x=>String(x.id)===String(channelId));if(found){channel=found;break}}
+   }
+   if(!channel)channel=await fetch(RAW+"data/channels/"+encodeURIComponent(channelId)+".json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error();return r.json()});
    const servers=(channel.servers||[]).filter(s=>s&&s.url);
    if(!servers.length)throw new Error();
    const payload=servers.map((s,i)=>({
@@ -197,13 +201,17 @@ function showView(menu,pushHash=true){
 }
 async function load(){
  try{
-   const v=await fetch(RAW+"data/version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).catch(()=>({version:"1"}));const ver=v.version||"1";
-   const [cfg,sections,matches]=await Promise.all([
+   const [cfg,liveCatalog,liveMatches,sectionsFallback,matchesFallback]=await Promise.all([
      fetch(RAW+"data/config.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()),
-     fetch(RAW+"data/sections.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()),
-     fetch(RAW+"data/matches.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():[])
+     fetch(RAW+"data/catalog-live.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null),
+     fetch(RAW+"data/matches-live.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null),
+     fetch(RAW+"data/sections.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():[]).catch(()=>[]),
+     fetch(RAW+"data/matches.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():[]).catch(()=>[])
    ]);
-   APP=cfg||{};APP.sections=sections||[];APP.matches=Array.isArray(matches)?matches:[];
+   APP=cfg||{};
+   APP.liveCatalog=liveCatalog&&Array.isArray(liveCatalog.sections)?liveCatalog:null;
+   APP.sections=APP.liveCatalog?APP.liveCatalog.sections:(Array.isArray(sectionsFallback)?sectionsFallback:[]);
+   APP.matches=Array.isArray(liveMatches)?liveMatches:(Array.isArray(matchesFallback)?matchesFallback:[]);
    render(sortedSections());renderMatches(APP.matches);
    showView(location.hash==="#matches"?"matches":"home",false);
  }catch(e){grid.innerHTML='<div class="empty">تعذر تحميل البيانات، حاول مرة ثانية.</div>';matchesList.innerHTML='<div class="empty">تعذر تحميل المباريات.</div>'}
