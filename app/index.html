@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>البصري بلاير</title>
 <style>
 :root{--bg:#07111d;--card:#0d1b29;--card2:#102131;--text:#fff;--muted:#8294a5;--border:#25394c;--accent:#18d4dc;--bar:rgba(7,17,29,.97)}
@@ -22,7 +25,7 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 .section-play{width:24px;flex:0 0 24px;margin-right:auto;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;line-height:1;position:relative;z-index:2}
 .empty{grid-column:1/-1;padding:45px 10px;text-align:center;color:var(--muted);font-size:14px}
 .bottom-nav{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:80;display:grid;grid-template-columns:repeat(4,1fr);padding:5px 6px 7px;background:var(--bar);border-top:1px solid var(--border);backdrop-filter:blur(14px)}
-.bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;cursor:pointer}.bottom-btn svg{width:22px;height:22px}.bottom-btn .nav-icon{width:22px;height:22px;display:block;object-fit:contain}.bottom-btn.active{color:var(--accent);background:rgba(24,212,220,.08)}
+.bottom-btn{border:0;background:transparent;color:var(--muted);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;cursor:pointer}.bottom-btn.active,.bottom-btn:focus{color:var(--accent);background:rgba(24,212,220,.10);outline:2px solid rgba(24,212,220,.45);outline-offset:-2px}.bottom-btn:focus .nav-icon{transform:scale(1.08)}.bottom-btn svg{width:22px;height:22px}.bottom-btn .nav-icon{width:22px;height:22px;display:block;object-fit:contain}.bottom-btn.active{color:var(--accent);background:rgba(24,212,220,.08)}
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99;opacity:0;visibility:hidden;transition:.22s}.overlay.show{opacity:1;visibility:visible}
 .side-menu{position:fixed;top:0;left:-310px;bottom:0;width:min(295px,87%);z-index:100;background:var(--bg);border-right:1px solid var(--border);padding:0 12px 20px;transition:.28s;overflow-y:auto}.side-menu.show{left:0}
 .side-header{text-align:center;padding:25px 5px 20px;border-bottom:1px solid var(--border);margin-bottom:10px}.logo-circle{width:58px;height:58px;margin:0 auto 10px;border-radius:17px;display:flex;justify-content:center;align-items:center;background:linear-gradient(145deg,#10d6dc,#056a83);color:#fff}.logo-circle svg{width:30px;height:30px}.side-title{font-size:18px;font-weight:800}.side-title span{color:var(--accent)}
@@ -42,10 +45,10 @@ body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);
 <main class="content"><div class="sections-grid" id="sectionsGrid"><div class="empty">جاري تحميل الأقسام...</div></div></main>
 
 <nav class="bottom-nav">
-<button class="bottom-btn active" data-menu="home" id="navHome"><img class="nav-icon" src="assets/nav/live_tv.svg" alt=""><span>القنوات</span></button>
-<button class="bottom-btn" data-menu="matches"><img class="nav-icon" src="assets/nav/sports_soccer.svg" alt=""><span>المباريات</span></button>
-<button class="bottom-btn" data-menu="movies"><img class="nav-icon" src="assets/nav/movie.svg" alt=""><span>مسلسلات وأفلام</span></button>
-<button class="bottom-btn" data-menu="sportsNews"><img class="nav-icon" src="assets/nav/newspaper.svg" alt=""><span>أخبار الرياضة</span></button>
+<button class="bottom-btn active" data-menu="home" id="navHome"><img class="nav-icon" src="assets/nav/live_tv.svg?v=4" alt=""><span>القنوات</span></button>
+<button class="bottom-btn" data-menu="matches"><img class="nav-icon" src="assets/nav/sports_soccer.svg?v=4" alt=""><span>المباريات</span></button>
+<button class="bottom-btn" data-menu="movies"><img class="nav-icon" src="assets/nav/movie.svg?v=4" alt=""><span>مسلسلات وأفلام</span></button>
+<button class="bottom-btn" data-menu="sportsNews"><img class="nav-icon" src="assets/nav/newspaper.svg?v=4" alt=""><span>أخبار الرياضة</span></button>
 </nav>
 
 <div class="overlay" id="overlay"></div>
