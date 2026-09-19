@@ -1,6 +1,6 @@
 {
-  "version": 1789793619408,
-  "updatedAt": "2026-09-19T04:53:39.408Z",
+  "version": 1789794269080,
+  "updatedAt": "2026-09-19T05:04:29.080Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -5800,6 +5800,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "yalla_live_category_864c9f889ab0e75fe8c1",
+      "name": "ام بي سي",
+      "image": "",
+      "order": 15,
+      "enabled": true,
+      "channelCount": 0,
+      "channels": []
     }
   ]
 }
