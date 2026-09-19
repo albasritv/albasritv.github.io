@@ -49,8 +49,10 @@ function values(v){return Array.isArray(v)?v:Object.values(v||{})}
 async function fb(path){const r=await fetch(FIREBASE+path+".json?ts="+Date.now(),{headers:{"Cache-Control":"no-cache"}});if(!r.ok)throw new Error("firebase "+path+" HTTP "+r.status);return r.json()}
 function ghHeaders(token){return{"Accept":"application/vnd.github+json","Authorization":"Bearer "+token,"X-GitHub-Api-Version":"2022-11-28","User-Agent":"BSR-Instant-Sync","Content-Type":"application/json"}}
 async function commitFiles(token,files){
-  const headers=ghHeaders(token),refUrl=`https://api.github.com/repos/${OWNER}/${REPO}/git/ref/heads/${BRANCH}`;
-  const ref=await fetch(refUrl,{headers}).then(checkJson),parent=ref.object.sha;
+  const headers=ghHeaders(token);
+  const getRefUrl=`https://api.github.com/repos/${OWNER}/${REPO}/git/ref/heads/${BRANCH}`;
+  const updateRefUrl=`https://api.github.com/repos/${OWNER}/${REPO}/git/refs/heads/${BRANCH}`;
+  const ref=await fetch(getRefUrl,{headers}).then(checkJson),parent=ref.object.sha;
   const commit=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/commits/${parent}`,{headers}).then(checkJson);
   const treeEntries=[];
   for(const [path,content] of Object.entries(files)){
@@ -60,7 +62,7 @@ async function commitFiles(token,files){
   const tree=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees`,{method:"POST",headers,body:JSON.stringify({base_tree:commit.tree.sha,tree:treeEntries})}).then(checkJson);
   if(String(tree.sha)===String(commit.tree.sha))return false;
   const newCommit=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/commits`,{method:"POST",headers,body:JSON.stringify({message:"Instant Firebase live data sync",tree:tree.sha,parents:[parent]})}).then(checkJson);
-  const update=await fetch(refUrl,{method:"PATCH",headers,body:JSON.stringify({sha:newCommit.sha,force:false})});
+  const update=await fetch(updateRefUrl,{method:"PATCH",headers,body:JSON.stringify({sha:newCommit.sha,force:false})});
   if(!update.ok)throw new Error("github ref update HTTP "+update.status+" "+await update.text());
   return true;
 }
