@@ -36,7 +36,16 @@
     "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
+      },
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      }
+    ]
   },
   {
     "id": "41c3b5ba-3286-425e-92dd-c7b6b7a40b9f",
@@ -53,7 +62,16 @@
     "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "a31c00da-68d2-413d-8d1f-7b5ca27fd7cf",
+        "channelTitle": "BEIN 4"
+      },
+      {
+        "channelId": "8404dbe2-41ea-4c50-88bb-7f3ee2d15cd0",
+        "channelTitle": "Alwan Sport 4"
+      }
+    ]
   },
   {
     "id": "5e78f097-2bcd-41bf-a3ea-4bd7b448da76",
@@ -70,7 +88,16 @@
     "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
+      },
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      }
+    ]
   },
   {
     "id": "5d775b88-4fac-498f-8a98-502ddaf56b0a",
@@ -87,7 +114,16 @@
     "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
+        "channelTitle": "BEIN 2"
+      },
+      {
+        "channelId": "17cc02cf-fb33-488d-8461-9464d5aabbe5",
+        "channelTitle": "Alwan Sport 2"
+      }
+    ]
   },
   {
     "id": "691bdba6-af10-40f9-b2c2-05142101b54e",
@@ -165,7 +201,16 @@
     "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
+      },
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      }
+    ]
   },
   {
     "id": "5192a942-6e51-43bb-ab18-21de4e3078a4",

@@ -1,6 +1,6 @@
 {
-  "version": 1789905071386,
-  "updatedAt": "2026-09-20T11:51:11.386Z",
+  "version": 1789911703137,
+  "updatedAt": "2026-09-20T13:41:43.137Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -100,6 +100,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "http://eg2.kimoiptv.pro:8080/live/svmz2wf5eb/ortv8uxcg9/1121789.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "e049a673-d82c-4419-9729-e71d23a715c8",
+              "name": "1080p",
+              "order": 4,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://black-flower-154e.abdallasaed98.workers.dev/?id=63&go=171&file=.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
@@ -3065,10 +3086,19 @@
       ]
     },
     {
+      "id": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+      "name": "Arab Sports",
+      "image": "https://up6.cc/2026/09/178990872766931.png",
+      "order": 9,
+      "enabled": true,
+      "channelCount": 0,
+      "channels": []
+    },
+    {
       "id": "d358ae55-02e3-4c51-a4df-3ea7742e390e",
       "name": "Fajer TV",
       "image": "https://up6.cc/2024/11/173263752464681.png",
-      "order": 9,
+      "order": 10,
       "enabled": true,
       "channelCount": 5,
       "channels": [
@@ -3166,7 +3196,7 @@
       "id": "8533cd27-3b08-4904-b8c2-977063e2f86f",
       "name": "MBC GROUP",
       "image": "https://up6.cc/2026/05/177810331590721.png",
-      "order": 10,
+      "order": 11,
       "enabled": true,
       "channelCount": 18,
       "channels": [
@@ -3755,7 +3785,7 @@
       "id": "3a86da72-5914-4d87-b843-e602f9729230",
       "name": "NEWS",
       "image": "https://up6.cc/2024/09/172561206372761.jpg",
-      "order": 11,
+      "order": 12,
       "enabled": true,
       "channelCount": 21,
       "channels": [
@@ -4416,7 +4446,7 @@
       "id": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
       "name": "Rotana",
       "image": "https://up6.cc/2026/05/177810340677912.png",
-      "order": 12,
+      "order": 13,
       "enabled": true,
       "channelCount": 9,
       "channels": [
@@ -4705,7 +4735,7 @@
       "id": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
       "name": "Majestic",
       "image": "https://up6.cc/2026/08/178714483878441.png",
-      "order": 13,
+      "order": 14,
       "enabled": true,
       "channelCount": 9,
       "channels": [
@@ -5015,7 +5045,7 @@
       "id": "yacine_category_13",
       "name": "KIDS CHANNELS",
       "image": "https://i.ibb.co/wF0S0r76/file-00000000f1fc82118b0ea15698a0db71.png",
-      "order": 14,
+      "order": 15,
       "enabled": true,
       "channelCount": 19,
       "channels": [
