@@ -1,6 +1,6 @@
 {
-  "version": 1789911703137,
-  "updatedAt": "2026-09-20T13:41:43.137Z",
+  "version": 1789911708058,
+  "updatedAt": "2026-09-20T13:41:48.058Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -92,14 +92,14 @@
               "drmLicenseUrl": "",
               "drmMultiSession": false,
               "drmType": "Auto",
-              "id": "71909dc7-8c08-4871-bcdc-a8cfbc7aae15",
-              "name": "S3",
+              "id": "e049a673-d82c-4419-9729-e71d23a715c8",
+              "name": "1080p",
               "order": 3,
               "origin": "",
               "playerMode": "EXO",
               "referer": "",
               "subtitleUrl": "",
-              "url": "http://eg2.kimoiptv.pro:8080/live/svmz2wf5eb/ortv8uxcg9/1121789.m3u8",
+              "url": "https://black-flower-154e.abdallasaed98.workers.dev/?id=63&go=171&file=.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             },
@@ -113,14 +113,14 @@
               "drmLicenseUrl": "",
               "drmMultiSession": false,
               "drmType": "Auto",
-              "id": "e049a673-d82c-4419-9729-e71d23a715c8",
-              "name": "1080p",
+              "id": "71909dc7-8c08-4871-bcdc-a8cfbc7aae15",
+              "name": "S3",
               "order": 4,
               "origin": "",
               "playerMode": "EXO",
               "referer": "",
               "subtitleUrl": "",
-              "url": "https://black-flower-154e.abdallasaed98.workers.dev/?id=63&go=171&file=.m3u8",
+              "url": "http://eg2.kimoiptv.pro:8080/live/svmz2wf5eb/ortv8uxcg9/1121789.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
