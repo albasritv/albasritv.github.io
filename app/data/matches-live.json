@@ -104,7 +104,12 @@
     "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "5724b8b3-ee31-4fd1-b9f1-1b5a7500c92c",
+        "channelTitle": "Starz Sport 1"
+      }
+    ]
   },
   {
     "id": "fa6e50ac-c6b0-4361-910f-9c7226791e9b",
