@@ -1,6 +1,6 @@
 {
-  "version": 1789911730720,
-  "updatedAt": "2026-09-20T13:42:10.720Z",
+  "version": 1789911751325,
+  "updatedAt": "2026-09-20T13:42:31.325Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -142,6 +142,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "http://eg2.kimoiptv.pro:8080/live/svmz2wf5eb/ortv8uxcg9/1121789.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "8c81893f-7222-4907-a8ee-fdd8bb99da76",
+              "name": "480p",
+              "order": 6,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://black-flower-154e.abdallasaed98.workers.dev/?id=63&go=526&file=.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
