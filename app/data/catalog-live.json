@@ -1,6 +1,6 @@
 {
-  "version": 1789905058279,
-  "updatedAt": "2026-09-20T11:50:58.279Z",
+  "version": 1789905062547,
+  "updatedAt": "2026-09-20T11:51:02.547Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -446,29 +446,7 @@
           "image": "https://up6.cc/2026/02/177014452533561.png",
           "order": 5,
           "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "df4f0869-c1ce-43ad-8109-02795164b3eb",
-              "name": "x1",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://www.manar2.shop/x1/64.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
+          "servers": []
         },
         {
           "id": "642159bb-702b-4885-ac1e-707e632e1400",
