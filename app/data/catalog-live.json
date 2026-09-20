@@ -1,6 +1,6 @@
 {
-  "version": 1789905050099,
-  "updatedAt": "2026-09-20T11:50:50.099Z",
+  "version": 1789905054227,
+  "updatedAt": "2026-09-20T11:50:54.227Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -382,27 +382,6 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://prime-fast.sytes.net/prime-tv/stream/46.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            },
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "33836e1f-f4c0-4be2-8b94-491be120d429",
-              "name": "x1",
-              "order": 2,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://www.manar2.shop/x1/62.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
