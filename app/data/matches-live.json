@@ -11,7 +11,7 @@
     "meccaTime": "01:30 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": [
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "id": "4673f465-0fef-4cf7-9e01-f649f084382b",
+    "id": "ca0b85bc-494a-45c1-8641-724d501eae18",
     "matchId": "5795455",
     "matchKey": "بورنموث|ليفربول|٢٠٢٦-٠٩-٢٠|16:00",
     "homeName": "بورنموث",
@@ -33,13 +33,13 @@
     "meccaTime": "04:00 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "977d0333-2a1d-4126-84e8-41950ec0da03",
+    "id": "41c3b5ba-3286-425e-92dd-c7b6b7a40b9f",
     "matchId": "5795461",
     "matchKey": "سندرلاند|مانسيتي|٢٠٢٦-٠٩-٢٠|16:00",
     "homeName": "مان سيتي",
@@ -50,13 +50,13 @@
     "meccaTime": "04:00 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "cf86b349-485e-4519-981a-51354f2b34eb",
+    "id": "5e78f097-2bcd-41bf-a3ea-4bd7b448da76",
     "matchId": "5868072",
     "matchKey": "اتلتيكومدريد|ريالمدريد|٢٠٢٦-٠٩-٢٠|17:15",
     "homeName": "أتلتيكو مدريد",
@@ -67,13 +67,13 @@
     "meccaTime": "05:15 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "c08bb11d-8a04-4ec9-bb1c-52974bddc731",
+    "id": "5d775b88-4fac-498f-8a98-502ddaf56b0a",
     "matchId": "5795459",
     "matchKey": "فولهام|مانيونايتد|٢٠٢٦-٠٩-٢٠|18:30",
     "homeName": "فولهام",
@@ -84,13 +84,13 @@
     "meccaTime": "06:30 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "5fb83064-03fa-4531-89e1-19b6036c8276",
+    "id": "691bdba6-af10-40f9-b2c2-05142101b54e",
     "matchId": "5749685",
     "matchKey": "اتالانتا|يوفنتوس|٢٠٢٦-٠٩-٢٠|19:00",
     "homeName": "يوفنتوس",
@@ -101,13 +101,13 @@
     "meccaTime": "07:00 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "f0454567-b063-4be6-998b-21b3e41f6b6e",
+    "id": "fa6e50ac-c6b0-4361-910f-9c7226791e9b",
     "matchId": "98236996",
     "matchKey": "البقعه|الفيصلي|٢٠٢٦-٠٩-٢٠|19:00",
     "homeName": "البقعة",
@@ -118,13 +118,13 @@
     "meccaTime": "07:00 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "33551522-c678-49b4-8ce9-518e5e383854",
+    "id": "cedbeef4-9bbe-4949-b83c-ef2958b455d2",
     "matchId": "5749680",
     "matchKey": "ليتشي|ميلان|٢٠٢٦-٠٩-٢٠|21:45",
     "homeName": "ميلان",
@@ -135,13 +135,13 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "91929624-3184-49d3-bedf-6912e4002f39",
+    "id": "0d1397c2-e21a-4afc-959a-3423ad9fb0f7",
     "matchId": "5802945",
     "matchKey": "باريس|مارسيليا|٢٠٢٦-٠٩-٢٠|21:45",
     "homeName": "مارسيليا",
@@ -152,13 +152,13 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "0b303bf4-2796-4a9e-aa6d-b213b3ab5e5f",
+    "id": "5192a942-6e51-43bb-ab18-21de4e3078a4",
     "matchId": "5103637",
     "matchKey": "فلومينينسي|كورينثيانز|٢٠٢٦-٠٩-٢٠|22:00",
     "homeName": "كورينثيانز",
@@ -169,13 +169,13 @@
     "meccaTime": "10:00 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
   },
   {
-    "id": "bc5cc119-aa09-4204-b639-f8778c3562bd",
+    "id": "85b28c11-841d-4c7e-973f-56c12312fb54",
     "matchId": "5887641",
     "matchKey": "بنفيكا|بورتو|٢٠٢٦-٠٩-٢٠|22:30",
     "homeName": "بورتو",
@@ -186,7 +186,7 @@
     "meccaTime": "10:30 م",
     "sourceDate": "2026-09-20",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأحد",
     "important": true,
     "channels": []
