@@ -1,6 +1,6 @@
 {
-  "version": 1789962582308,
-  "updatedAt": "2026-09-21T03:49:42.308Z",
+  "version": 1789962600065,
+  "updatedAt": "2026-09-21T03:50:00.065Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 7,
+      "channelCount": 8,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6366,6 +6366,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "f6071c97-8fe8-4395-b02d-745229cdeb5a",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "العراقية الاخبارية",
+          "image": "",
+          "order": 7,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
