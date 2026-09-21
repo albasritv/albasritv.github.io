@@ -1,6 +1,6 @@
 {
-  "version": 1789962338886,
-  "updatedAt": "2026-09-21T03:45:38.886Z",
+  "version": 1789962361004,
+  "updatedAt": "2026-09-21T03:46:01.004Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6157,7 +6157,29 @@
           "image": "",
           "order": 0,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "d2735445-cf1e-41d9-902c-822aaad1985e",
+              "name": "الشرقية",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5d94523502c2d.streamlock.net/home/mystream/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
