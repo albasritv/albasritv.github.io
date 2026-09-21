@@ -1,6 +1,6 @@
 {
-  "version": 1789966921890,
-  "updatedAt": "2026-09-21T05:02:01.890Z",
+  "version": 1789967221523,
+  "updatedAt": "2026-09-21T05:07:01.523Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3411,7 +3411,7 @@
           "id": "106118e7-8a48-4aea-a81b-97ae384bb56c",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الشارقة الرياضية",
-          "image": "https://www.yallatv.online/img/imarat/shariqasport.webp",
+          "image": "https://up6.cc/2026/09/178996720714171.png",
           "order": 4,
           "enabled": true,
           "servers": [
