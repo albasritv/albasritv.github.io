@@ -1,6 +1,6 @@
 {
-  "version": 1789962979858,
-  "updatedAt": "2026-09-21T03:56:19.858Z",
+  "version": 1789964450249,
+  "updatedAt": "2026-09-21T04:20:50.249Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6154,7 +6154,7 @@
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "الشرقية",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996436976451.png",
           "order": 0,
           "enabled": true,
           "servers": [
