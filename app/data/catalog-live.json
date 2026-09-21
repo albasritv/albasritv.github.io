@@ -1,6 +1,6 @@
 {
-  "version": 1789962933722,
-  "updatedAt": "2026-09-21T03:55:33.722Z",
+  "version": 1789962979858,
+  "updatedAt": "2026-09-21T03:56:19.858Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6145,7 +6145,7 @@
     {
       "id": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
       "name": "قنوات العراق",
-      "image": "",
+      "image": "https://up6.cc/2026/09/178996296469311.png",
       "order": 16,
       "enabled": true,
       "channelCount": 13,
