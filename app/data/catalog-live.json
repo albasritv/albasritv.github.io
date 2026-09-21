@@ -1,6 +1,6 @@
 {
-  "version": 1789980682800,
-  "updatedAt": "2026-09-21T08:51:22.800Z",
+  "version": 1789982520143,
+  "updatedAt": "2026-09-21T09:22:00.143Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6561,7 +6561,7 @@
       "image": "https://up6.cc/2026/09/178997903006761.png",
       "order": 18,
       "enabled": true,
-      "channelCount": 7,
+      "channelCount": 6,
       "channels": [
         {
           "id": "2f7bfe3c-d7ae-49aa-a51f-f5482929d590",
@@ -6686,15 +6686,6 @@
               "xRequestedWith": ""
             }
           ]
-        },
-        {
-          "id": "2ea5dc0c-01b0-4521-ad3a-d875aaa43865",
-          "categoryId": "97402a04-3e2f-4792-8b5f-a92e5d94c833",
-          "name": "ناشيونال جيوغرافيك",
-          "image": "",
-          "order": 4,
-          "enabled": true,
-          "servers": []
         },
         {
           "id": "3d57c0ad-9d60-4507-baa2-fb7e85d4d62e",
