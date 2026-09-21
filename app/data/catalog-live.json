@@ -1,6 +1,6 @@
 {
-  "version": 1789962481813,
-  "updatedAt": "2026-09-21T03:48:01.813Z",
+  "version": 1789962497622,
+  "updatedAt": "2026-09-21T03:48:17.622Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 4,
+      "channelCount": 5,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6273,6 +6273,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "d484ddfd-5529-4e0f-9bdc-efe61203c17a",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "UTV",
+          "image": "",
+          "order": 4,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
