@@ -1,6 +1,6 @@
 {
-  "version": 1789962553441,
-  "updatedAt": "2026-09-21T03:49:13.441Z",
+  "version": 1789962574549,
+  "updatedAt": "2026-09-21T03:49:34.549Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 6,
+      "channelCount": 7,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6335,6 +6335,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "368206a9-01d2-4d0f-a19a-3e2ef530a174",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "دجلة",
+          "image": "",
+          "order": 6,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
