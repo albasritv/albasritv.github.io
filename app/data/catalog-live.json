@@ -1,6 +1,6 @@
 {
-  "version": 1789964658831,
-  "updatedAt": "2026-09-21T04:24:18.831Z",
+  "version": 1789964713550,
+  "updatedAt": "2026-09-21T04:25:13.550Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6308,7 +6308,7 @@
         {
           "id": "ccda8b44-e4a5-4210-ae79-0b4ceb080115",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
-          "name": "الشرقية الاخبارية",
+          "name": "الشرقية نيوز",
           "image": "",
           "order": 5,
           "enabled": true,
