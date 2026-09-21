@@ -1,6 +1,6 @@
 {
-  "version": 1789962361004,
-  "updatedAt": "2026-09-21T03:46:01.004Z",
+  "version": 1789962405367,
+  "updatedAt": "2026-09-21T03:46:45.367Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 1,
+      "channelCount": 2,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6180,6 +6180,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "25c3ca95-8e8f-449a-a31a-72916a9bf0db",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "اي نيوز",
+          "image": "",
+          "order": 1,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
