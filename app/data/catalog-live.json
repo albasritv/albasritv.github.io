@@ -1,6 +1,6 @@
 {
-  "version": 1789962574549,
-  "updatedAt": "2026-09-21T03:49:34.549Z",
+  "version": 1789962582308,
+  "updatedAt": "2026-09-21T03:49:42.308Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6343,7 +6343,29 @@
           "image": "",
           "order": 6,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "4e356a3a-4b87-4921-b58d-9c1ddafe271a",
+              "name": "دجلة",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://ghaasiflu.online/Dijlah/index.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
