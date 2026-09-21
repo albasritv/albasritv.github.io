@@ -1,6 +1,6 @@
 {
-  "version": 1789965606658,
-  "updatedAt": "2026-09-21T04:40:06.658Z",
+  "version": 1789965715650,
+  "updatedAt": "2026-09-21T04:41:55.650Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6495,7 +6495,7 @@
           "id": "7868275a-fbc9-4529-9948-39ee28607a23",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "الاولى العراقية",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996569849651.png",
           "order": 11,
           "enabled": true,
           "servers": [
