@@ -1,6 +1,6 @@
 {
-  "version": 1789962405367,
-  "updatedAt": "2026-09-21T03:46:45.367Z",
+  "version": 1789962411373,
+  "updatedAt": "2026-09-21T03:46:51.373Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6188,7 +6188,29 @@
           "image": "",
           "order": 1,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "40821d5d-409c-4d27-9166-35c3ef1d1a90",
+              "name": "اي نيوز",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live.i-news.tv/hls/2/stream.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
