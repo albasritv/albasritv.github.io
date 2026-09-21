@@ -1,6 +1,6 @@
 {
-  "version": 1789962782545,
-  "updatedAt": "2026-09-21T03:53:02.545Z",
+  "version": 1789962798547,
+  "updatedAt": "2026-09-21T03:53:18.547Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 11,
+      "channelCount": 12,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6468,6 +6468,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "7868275a-fbc9-4529-9948-39ee28607a23",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "الاولى العراقية",
+          "image": "",
+          "order": 11,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
