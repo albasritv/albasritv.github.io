@@ -1,6 +1,6 @@
 {
-  "version": 1789962815146,
-  "updatedAt": "2026-09-21T03:53:35.146Z",
+  "version": 1789962862429,
+  "updatedAt": "2026-09-21T03:54:22.429Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 12,
+      "channelCount": 13,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6499,6 +6499,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "4d9bd36d-c43d-48ce-9167-2a8fa9b025b5",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "شمس",
+          "image": "",
+          "order": 12,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
