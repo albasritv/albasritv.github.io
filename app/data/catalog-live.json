@@ -1,6 +1,6 @@
 {
-  "version": 1789982529677,
-  "updatedAt": "2026-09-21T09:22:09.677Z",
+  "version": 1789982768587,
+  "updatedAt": "2026-09-21T09:26:08.587Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6691,7 +6691,7 @@
           "id": "3d57c0ad-9d60-4507-baa2-fb7e85d4d62e",
           "categoryId": "97402a04-3e2f-4792-8b5f-a92e5d94c833",
           "name": "العربي الوثائقية الكويتية",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178998273959341.png",
           "order": 5,
           "enabled": true,
           "servers": [
