@@ -1,6 +1,6 @@
 {
-  "version": 1789982782358,
-  "updatedAt": "2026-09-21T09:26:22.358Z",
+  "version": 1789982963028,
+  "updatedAt": "2026-09-21T09:29:23.028Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6722,7 +6722,7 @@
           "id": "e8f39662-1a8c-40bc-bb7a-31b9a3f5754f",
           "categoryId": "97402a04-3e2f-4792-8b5f-a92e5d94c833",
           "name": "الثقافية المغربية",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178998294962241.png",
           "order": 6,
           "enabled": true,
           "servers": [
