@@ -1,6 +1,6 @@
 {
-  "version": 1789961397425,
-  "updatedAt": "2026-09-21T03:29:57.425Z",
+  "version": 1789961413169,
+  "updatedAt": "2026-09-21T03:30:13.169Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -383,6 +383,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://black-flower-154e.abdallasaed98.workers.dev/?id=65&go=113&file=.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "25b39761-5b74-4a41-bc1d-db93ac9bd386",
+              "name": "SY",
+              "order": 8,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://16soso.s3.us-east-1.amazonaws.com/bein2/master.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
