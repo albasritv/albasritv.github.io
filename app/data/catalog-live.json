@@ -1,6 +1,6 @@
 {
-  "version": 1789962862429,
-  "updatedAt": "2026-09-21T03:54:22.429Z",
+  "version": 1789962875213,
+  "updatedAt": "2026-09-21T03:54:35.213Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6507,7 +6507,29 @@
           "image": "",
           "order": 12,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "499109d4-c36b-4564-b4b7-c5359848e4c0",
+              "name": "شمس",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://stream.shams.tv/hls/stream.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
