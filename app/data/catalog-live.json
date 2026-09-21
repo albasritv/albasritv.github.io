@@ -1,6 +1,6 @@
 {
-  "version": 1789962749987,
-  "updatedAt": "2026-09-21T03:52:29.987Z",
+  "version": 1789962763511,
+  "updatedAt": "2026-09-21T03:52:43.511Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 10,
+      "channelCount": 11,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6437,6 +6437,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "300efaeb-0727-4781-bca0-7da289481dc9",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "الرشيد",
+          "image": "",
+          "order": 10,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
