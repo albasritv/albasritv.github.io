@@ -1,6 +1,6 @@
 {
-  "version": 1789964476165,
-  "updatedAt": "2026-09-21T04:21:16.165Z",
+  "version": 1789964593900,
+  "updatedAt": "2026-09-21T04:23:13.900Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6185,7 +6185,7 @@
           "id": "25c3ca95-8e8f-449a-a31a-72916a9bf0db",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "اي نيوز",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996457190321.png",
           "order": 1,
           "enabled": true,
           "servers": [
