@@ -1,6 +1,6 @@
 {
-  "version": 1789965887581,
-  "updatedAt": "2026-09-21T04:44:47.581Z",
+  "version": 1789966245775,
+  "updatedAt": "2026-09-21T04:50:45.775Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3287,7 +3287,7 @@
           "id": "d52723c6-939b-40b1-ac32-840d0717434c",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الاردن الرياضية",
-          "image": "https://www.yallatv.online/img/jordan/jorsport.webp",
+          "image": "https://up6.cc/2026/09/178996623062551.png",
           "order": 0,
           "enabled": true,
           "servers": [
