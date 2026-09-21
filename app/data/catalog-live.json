@@ -1,6 +1,6 @@
 {
-  "version": 1789967226250,
-  "updatedAt": "2026-09-21T05:07:06.250Z",
+  "version": 1789967478868,
+  "updatedAt": "2026-09-21T05:11:18.868Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3463,7 +3463,7 @@
           "id": "714308ab-53cd-41de-8f90-20a2030e7ccb",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الرياضية المغربية",
-          "image": "https://www.yallatv.online/img/fas/fassport.webp",
+          "image": "https://up6.cc/2026/09/178996746339821.png",
           "order": 5,
           "enabled": true,
           "servers": [
