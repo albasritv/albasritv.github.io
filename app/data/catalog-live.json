@@ -1,6 +1,6 @@
 {
-  "version": 1789967835112,
-  "updatedAt": "2026-09-21T05:17:15.112Z",
+  "version": 1789967935656,
+  "updatedAt": "2026-09-21T05:18:55.656Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3525,7 +3525,7 @@
           "id": "f0f66d70-c4d9-4634-8406-9c425926ab45",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الكويت الثانية",
-          "image": "https://www.yallatv.online/img/kwit/kwitsport2.webp",
+          "image": "https://up6.cc/2026/09/178996791955341.png",
           "order": 7,
           "enabled": true,
           "servers": [
