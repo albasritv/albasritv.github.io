@@ -1,6 +1,6 @@
 {
-  "version": 1789962798547,
-  "updatedAt": "2026-09-21T03:53:18.547Z",
+  "version": 1789962815146,
+  "updatedAt": "2026-09-21T03:53:35.146Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6476,7 +6476,29 @@
           "image": "",
           "order": 11,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "12cdeec7-eb7d-48f1-8a31-d494f8e230fb",
+              "name": "الاولى العراقية",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live.alawla.tv/hls/stream.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
