@@ -1,6 +1,6 @@
 {
-  "version": 1789965160557,
-  "updatedAt": "2026-09-21T04:32:40.557Z",
+  "version": 1789965379786,
+  "updatedAt": "2026-09-21T04:36:19.786Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6402,7 +6402,7 @@
           "id": "5daf5454-77b9-4b57-9cdc-b0e9b975dcb5",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "العراقية",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996535675871.png",
           "order": 8,
           "enabled": true,
           "servers": [
