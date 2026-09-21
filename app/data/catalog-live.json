@@ -1,6 +1,6 @@
 {
-  "version": 1789962875213,
-  "updatedAt": "2026-09-21T03:54:35.213Z",
+  "version": 1789962933722,
+  "updatedAt": "2026-09-21T03:55:33.722Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6405,7 +6405,29 @@
           "image": "",
           "order": 8,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "c9e4079e-e315-43c0-8787-10a448988e74",
+              "name": "العراقية",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://imn-live.esite-lab.com/hls/iraqia-general.m3u8?sid=rdmcy5e6mok2j3ab",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         },
         {
           "id": "c6f3ec96-5bdb-47dd-8a75-de2435fec635",
