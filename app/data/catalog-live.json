@@ -1,6 +1,6 @@
 {
-  "version": 1789965379786,
-  "updatedAt": "2026-09-21T04:36:19.786Z",
+  "version": 1789965440788,
+  "updatedAt": "2026-09-21T04:37:20.788Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6433,7 +6433,7 @@
           "id": "c6f3ec96-5bdb-47dd-8a75-de2435fec635",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "السومرية",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996542546731.png",
           "order": 9,
           "enabled": true,
           "servers": [
