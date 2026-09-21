@@ -1,6 +1,6 @@
 {
-  "version": 1789962763511,
-  "updatedAt": "2026-09-21T03:52:43.511Z",
+  "version": 1789962782545,
+  "updatedAt": "2026-09-21T03:53:02.545Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6445,7 +6445,29 @@
           "image": "",
           "order": 10,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "13cdc87e-31af-4e34-b4f5-7e4b1df7f73e",
+              "name": "الرشيد",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://media1.livaat.com/static/AL-RASHEED-HD/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
