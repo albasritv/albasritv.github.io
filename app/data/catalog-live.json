@@ -1,6 +1,6 @@
 {
-  "version": 1789962538980,
-  "updatedAt": "2026-09-21T03:48:58.980Z",
+  "version": 1789962553441,
+  "updatedAt": "2026-09-21T03:49:13.441Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6312,7 +6312,29 @@
           "image": "",
           "order": 5,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "2fa89f5f-f2a6-442d-a5dd-757539ba3270",
+              "name": "الشرقية الاخبارية",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5d94523502c2d.streamlock.net/home/mystream/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
