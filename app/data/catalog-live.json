@@ -1,6 +1,6 @@
 {
-  "version": 1789962450476,
-  "updatedAt": "2026-09-21T03:47:30.476Z",
+  "version": 1789962467420,
+  "updatedAt": "2026-09-21T03:47:47.420Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 3,
+      "channelCount": 4,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6242,6 +6242,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "938d121e-a5a8-42d0-a49c-92a148dcbeb5",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "زاغروس",
+          "image": "",
+          "order": 3,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
