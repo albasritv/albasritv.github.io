@@ -1,6 +1,6 @@
 {
-  "version": 1789962604976,
-  "updatedAt": "2026-09-21T03:50:04.976Z",
+  "version": 1789962636039,
+  "updatedAt": "2026-09-21T03:50:36.039Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6374,7 +6374,29 @@
           "image": "",
           "order": 7,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "af7bdfe4-0f2f-4c2d-b06c-cf79e8fa01fd",
+              "name": "العراقية الاخبارية",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://imn-live.esite-lab.com/hls/iraqia-news.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
