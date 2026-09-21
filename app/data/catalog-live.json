@@ -1,6 +1,6 @@
 {
-  "version": 1789962636039,
-  "updatedAt": "2026-09-21T03:50:36.039Z",
+  "version": 1789962652767,
+  "updatedAt": "2026-09-21T03:50:52.767Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 8,
+      "channelCount": 9,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6397,6 +6397,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "5daf5454-77b9-4b57-9cdc-b0e9b975dcb5",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "العراقية",
+          "image": "",
+          "order": 8,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
