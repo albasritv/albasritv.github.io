@@ -1,6 +1,6 @@
 {
-  "version": 1789962497622,
-  "updatedAt": "2026-09-21T03:48:17.622Z",
+  "version": 1789962516420,
+  "updatedAt": "2026-09-21T03:48:36.420Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6281,7 +6281,29 @@
           "image": "",
           "order": 4,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "c8c2437a-c6d1-4835-8241-fa79b93c97c1",
+              "name": "UTV",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://utviraqi-live.lg.mncdn.com/utviraqi2/64c80359/index.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
