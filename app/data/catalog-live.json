@@ -1,6 +1,6 @@
 {
-  "version": 1789965519552,
-  "updatedAt": "2026-09-21T04:38:39.552Z",
+  "version": 1789965606658,
+  "updatedAt": "2026-09-21T04:40:06.658Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6464,7 +6464,7 @@
           "id": "300efaeb-0727-4781-bca0-7da289481dc9",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "الرشيد",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996558560451.png",
           "order": 10,
           "enabled": true,
           "servers": [
