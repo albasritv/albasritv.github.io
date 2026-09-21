@@ -1,6 +1,6 @@
 {
-  "version": 1789966868909,
-  "updatedAt": "2026-09-21T05:01:08.909Z",
+  "version": 1789966873220,
+  "updatedAt": "2026-09-21T05:01:13.220Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3315,42 +3315,11 @@
           ]
         },
         {
-          "id": "2c797832-e22f-4c94-a48b-b5835853fa72",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "البحرين الرياضية الاولى",
-          "image": "https://www.yallatv.online/img/bahren/bahrensport.webp",
-          "order": 1,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "afa9d871-43b0-4061-8942-692b859d46f3",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
           "id": "cb31cc3a-61e9-4791-aca4-9a990c11dd14",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "عمان الرياضية",
           "image": "https://up6.cc/2026/09/178996656726081.png",
-          "order": 2,
+          "order": 1,
           "enabled": true,
           "servers": [
             {
@@ -3371,6 +3340,37 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "2c797832-e22f-4c94-a48b-b5835853fa72",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "البحرين الرياضية الاولى",
+          "image": "https://www.yallatv.online/img/bahren/bahrensport.webp",
+          "order": 2,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "afa9d871-43b0-4061-8942-692b859d46f3",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
