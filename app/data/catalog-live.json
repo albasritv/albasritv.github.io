@@ -1,6 +1,6 @@
 {
-  "version": 1789961367835,
-  "updatedAt": "2026-09-21T03:29:27.835Z",
+  "version": 1789961397425,
+  "updatedAt": "2026-09-21T03:29:57.425Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -184,6 +184,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "http://eg2.kimoiptv.pro:8080/live/svmz2wf5eb/ortv8uxcg9/1121789.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "1a62b36b-7c70-4845-9afe-dbd1eda982da",
+              "name": "SY",
+              "order": 8,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://16soso.s3.us-east-1.amazonaws.com/bein1/master.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
