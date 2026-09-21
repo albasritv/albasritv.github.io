@@ -1,6 +1,6 @@
 {
-  "version": 1789962652767,
-  "updatedAt": "2026-09-21T03:50:52.767Z",
+  "version": 1789962712241,
+  "updatedAt": "2026-09-21T03:51:52.241Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 9,
+      "channelCount": 10,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6404,6 +6404,15 @@
           "name": "العراقية",
           "image": "",
           "order": 8,
+          "enabled": true,
+          "servers": []
+        },
+        {
+          "id": "c6f3ec96-5bdb-47dd-8a75-de2435fec635",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "السومرية",
+          "image": "",
+          "order": 9,
           "enabled": true,
           "servers": []
         }
