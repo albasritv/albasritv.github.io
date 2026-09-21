@@ -1,6 +1,6 @@
 {
-  "version": 1789964752479,
-  "updatedAt": "2026-09-21T04:25:52.479Z",
+  "version": 1789964816999,
+  "updatedAt": "2026-09-21T04:26:56.999Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6278,7 +6278,7 @@
           "id": "d484ddfd-5529-4e0f-9bdc-efe61203c17a",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "UTV",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996479920581.png",
           "order": 4,
           "enabled": true,
           "servers": [
