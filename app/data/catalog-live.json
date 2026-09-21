@@ -1,6 +1,6 @@
 {
-  "version": 1789966877492,
-  "updatedAt": "2026-09-21T05:01:17.492Z",
+  "version": 1789966921890,
+  "updatedAt": "2026-09-21T05:02:01.890Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3380,7 +3380,7 @@
           "id": "27af97d9-d7d7-4e95-92ce-559e17965a45",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "البحرين الرياضية الثانية",
-          "image": "https://www.yallatv.online/img/bahren/bahrensport2.webp",
+          "image": "https://up6.cc/2026/09/178996690788421.png",
           "order": 3,
           "enabled": true,
           "servers": [
