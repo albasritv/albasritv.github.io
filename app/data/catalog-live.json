@@ -1,6 +1,6 @@
 {
-  "version": 1789967478868,
-  "updatedAt": "2026-09-21T05:11:18.868Z",
+  "version": 1789967835112,
+  "updatedAt": "2026-09-21T05:17:15.112Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3494,7 +3494,7 @@
           "id": "d71a8697-5d28-4bfe-872a-4fb91057ebf9",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الكويت الاولى",
-          "image": "https://www.yallatv.online/img/kwit/kwitsport1.webp",
+          "image": "https://up6.cc/2026/09/178996781679111.png",
           "order": 6,
           "enabled": true,
           "servers": [
