@@ -1,6 +1,6 @@
 {
-  "version": 1789962331596,
-  "updatedAt": "2026-09-21T03:45:31.596Z",
+  "version": 1789962338886,
+  "updatedAt": "2026-09-21T03:45:38.886Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,8 +6148,18 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 0,
-      "channels": []
+      "channelCount": 1,
+      "channels": [
+        {
+          "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "الشرقية",
+          "image": "",
+          "order": 0,
+          "enabled": true,
+          "servers": []
+        }
+      ]
     }
   ]
 }
