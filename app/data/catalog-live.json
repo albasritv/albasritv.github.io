@@ -1,6 +1,6 @@
 {
-  "version": 1789961462476,
-  "updatedAt": "2026-09-21T03:31:02.476Z",
+  "version": 1789961518007,
+  "updatedAt": "2026-09-21T03:31:58.007Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -635,7 +635,29 @@
           "image": "https://up6.cc/2026/02/177014452533561.png",
           "order": 5,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "49d1b62e-bc38-4f54-a6c3-04c297061e42",
+              "name": "SY",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://16soso.s3.us-east-1.amazonaws.com/bein6/master.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         },
         {
           "id": "642159bb-702b-4885-ac1e-707e632e1400",
