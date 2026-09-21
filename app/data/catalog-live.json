@@ -1,6 +1,6 @@
 {
-  "version": 1789961413169,
-  "updatedAt": "2026-09-21T03:30:13.169Z",
+  "version": 1789961433037,
+  "updatedAt": "2026-09-21T03:30:33.037Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -456,6 +456,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://prime-fast.sytes.net/prime-tv/stream/45.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "fbb45b8b-1fb4-43c7-8174-ecd4cadfdbb2",
+              "name": "SY",
+              "order": 2,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://16soso.s3.us-east-1.amazonaws.com/bein3/master.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
