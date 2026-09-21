@@ -1,6 +1,6 @@
 {
-  "version": 1789962516420,
-  "updatedAt": "2026-09-21T03:48:36.420Z",
+  "version": 1789962538980,
+  "updatedAt": "2026-09-21T03:48:58.980Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 5,
+      "channelCount": 6,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6304,6 +6304,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "ccda8b44-e4a5-4210-ae79-0b4ceb080115",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "الشرقية الاخبارية",
+          "image": "",
+          "order": 5,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
