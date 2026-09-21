@@ -1,6 +1,6 @@
 {
-  "version": 1789964593900,
-  "updatedAt": "2026-09-21T04:23:13.900Z",
+  "version": 1789964658831,
+  "updatedAt": "2026-09-21T04:24:18.831Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6216,7 +6216,7 @@
           "id": "1bff3cf6-7dec-45da-8759-ac6f680d247f",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "ام بي سي",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996464231191.png",
           "order": 2,
           "enabled": true,
           "servers": [
