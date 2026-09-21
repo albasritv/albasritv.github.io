@@ -1,6 +1,6 @@
 {
-  "version": 1789962467420,
-  "updatedAt": "2026-09-21T03:47:47.420Z",
+  "version": 1789962481813,
+  "updatedAt": "2026-09-21T03:48:01.813Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6250,7 +6250,29 @@
           "image": "",
           "order": 3,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "370093ba-4cb9-403e-93f7-535bc3fc3185",
+              "name": "زاغروس",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5a3ed7a72ed4b.streamlock.net/zagrostv/SMIL:myStream.smil/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
