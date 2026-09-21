@@ -1,6 +1,6 @@
 {
-  "version": 1789962411373,
-  "updatedAt": "2026-09-21T03:46:51.373Z",
+  "version": 1789962431430,
+  "updatedAt": "2026-09-21T03:47:11.430Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6148,7 +6148,7 @@
       "image": "",
       "order": 16,
       "enabled": true,
-      "channelCount": 2,
+      "channelCount": 3,
       "channels": [
         {
           "id": "018a17a5-9814-458e-a3e0-592d7c67224d",
@@ -6211,6 +6211,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "1bff3cf6-7dec-45da-8759-ac6f680d247f",
+          "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
+          "name": "ام بي سي",
+          "image": "",
+          "order": 2,
+          "enabled": true,
+          "servers": []
         }
       ]
     }
