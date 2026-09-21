@@ -1,6 +1,6 @@
 {
-  "version": 1789962712241,
-  "updatedAt": "2026-09-21T03:51:52.241Z",
+  "version": 1789962749987,
+  "updatedAt": "2026-09-21T03:52:29.987Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6414,7 +6414,29 @@
           "image": "",
           "order": 9,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "83b0b9aa-f5d5-430f-a800-2a7912f455c6",
+              "name": "السومرية",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live.kwikmotion.com/alsumariatvlive/sumariamob.smil/playlist.m3u8?hdnts=exp=1789962731~acl=/alsumariatvlive/sumariamob.smil/*~hmac=c164382ef5bc3eab1a36fabf70969279ef4eec78b074139d7253a0363d0bc898",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
