@@ -1,6 +1,6 @@
 {
-  "version": 1789965440788,
-  "updatedAt": "2026-09-21T04:37:20.788Z",
+  "version": 1789965453841,
+  "updatedAt": "2026-09-21T04:37:33.841Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6371,7 +6371,7 @@
           "id": "f6071c97-8fe8-4395-b02d-745229cdeb5a",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "العراقية الاخبارية",
-          "image": "https://up6.cc/2026/09/178996514847361.png",
+          "image": "https://up6.cc/2026/09/178996542546731.png",
           "order": 7,
           "enabled": true,
           "servers": [
