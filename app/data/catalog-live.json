@@ -1,6 +1,6 @@
 {
-  "version": 1789962431430,
-  "updatedAt": "2026-09-21T03:47:11.430Z",
+  "version": 1789962450476,
+  "updatedAt": "2026-09-21T03:47:30.476Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6219,7 +6219,29 @@
           "image": "",
           "order": 2,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "bd257775-66df-4f73-81c4-d77dfa1c8505",
+              "name": "ام بي سي",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-iraq/e38c44b1b43474e1c39cb5b90203691e/index.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     }
