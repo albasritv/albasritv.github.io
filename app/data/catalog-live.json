@@ -1,6 +1,6 @@
 {
-  "version": 1789965715650,
-  "updatedAt": "2026-09-21T04:41:55.650Z",
+  "version": 1789965887581,
+  "updatedAt": "2026-09-21T04:44:47.581Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6526,7 +6526,7 @@
           "id": "4d9bd36d-c43d-48ce-9167-2a8fa9b025b5",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "شمس",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996587274371.png",
           "order": 12,
           "enabled": true,
           "servers": [
