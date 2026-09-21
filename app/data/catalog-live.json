@@ -1,6 +1,6 @@
 {
-  "version": 1789964713550,
-  "updatedAt": "2026-09-21T04:25:13.550Z",
+  "version": 1789964752479,
+  "updatedAt": "2026-09-21T04:25:52.479Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6247,7 +6247,7 @@
           "id": "938d121e-a5a8-42d0-a49c-92a148dcbeb5",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "زاغروس",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996473912091.png",
           "order": 3,
           "enabled": true,
           "servers": [
