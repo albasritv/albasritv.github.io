@@ -1,6 +1,6 @@
 {
-  "version": 1789964455222,
-  "updatedAt": "2026-09-21T04:20:55.222Z",
+  "version": 1789964476165,
+  "updatedAt": "2026-09-21T04:21:16.165Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6340,7 +6340,7 @@
           "id": "368206a9-01d2-4d0f-a19a-3e2ef530a174",
           "categoryId": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
           "name": "دجلة",
-          "image": "",
+          "image": "https://up6.cc/2026/09/178996445798191.png",
           "order": 6,
           "enabled": true,
           "servers": [
