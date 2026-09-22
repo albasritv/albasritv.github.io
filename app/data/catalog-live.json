@@ -1,6 +1,6 @@
 {
-  "version": 1790083834753,
-  "updatedAt": "2026-09-22T13:30:34.753Z",
+  "version": 1790083925596,
+  "updatedAt": "2026-09-22T13:32:05.596Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3001,7 +3001,7 @@
     {
       "id": "c645b1d0-0d63-4c08-a795-5be8e6422da2",
       "name": "ALKASS",
-      "image": "https://up6.cc/2026/05/177810351646581.png",
+      "image": "https://up6.cc/2026/09/17900838411531.png",
       "order": 8,
       "enabled": true,
       "channelCount": 8,
