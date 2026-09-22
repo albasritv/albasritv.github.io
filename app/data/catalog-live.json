@@ -1,6 +1,6 @@
 {
-  "version": 1790084053945,
-  "updatedAt": "2026-09-22T13:34:13.945Z",
+  "version": 1790086354005,
+  "updatedAt": "2026-09-22T14:12:34.005Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3103,7 +3103,7 @@
           "id": "9a48c2f0-af9b-462b-999c-daaef9351f97",
           "categoryId": "c645b1d0-0d63-4c08-a795-5be8e6422da2",
           "name": "4 الكاس",
-          "image": "https://up6.cc/2024/09/172561217701881.jpg",
+          "image": "https://up6.cc/2026/09/179008633024111.png",
           "order": 32,
           "enabled": true,
           "servers": [
