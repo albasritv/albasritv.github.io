@@ -1,6 +1,6 @@
 {
-  "version": 1789983131009,
-  "updatedAt": "2026-09-21T09:32:11.009Z",
+  "version": 1790083433735,
+  "updatedAt": "2026-09-22T13:23:53.735Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -6554,6 +6554,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
+      "name": "خليجي 2027",
+      "image": "https://up6.cc/2026/09/179008341454451.png",
+      "order": 18,
+      "enabled": true,
+      "channelCount": 0,
+      "channels": []
     },
     {
       "id": "97402a04-3e2f-4792-8b5f-a92e5d94c833",
