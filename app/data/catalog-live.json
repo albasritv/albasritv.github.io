@@ -1,13 +1,22 @@
 {
-  "version": 1790083433735,
-  "updatedAt": "2026-09-22T13:23:53.735Z",
+  "version": 1790083438979,
+  "updatedAt": "2026-09-22T13:23:58.979Z",
   "source": "firebase-direct-worker",
   "sections": [
+    {
+      "id": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
+      "name": "خليجي 2027",
+      "image": "https://up6.cc/2026/09/179008341454451.png",
+      "order": 0,
+      "enabled": true,
+      "channelCount": 0,
+      "channels": []
+    },
     {
       "id": "80e84539-a8a9-47ef-832a-535d8b9e3747",
       "name": "BEIN",
       "image": "https://i.ibb.co/mF5B8XbK/Chat-GPT-Image-14-2026-01-24-25.png",
-      "order": 0,
+      "order": 1,
       "enabled": true,
       "channelCount": 7,
       "channels": [
@@ -674,7 +683,7 @@
       "id": "d510123a-5551-4c85-b8a7-b1072ea8a777",
       "name": "BEIN SPORT",
       "image": "https://i.ibb.co/tMnBVLSG/Chat-GPT-Image-14-2026-02-09-39.png",
-      "order": 1,
+      "order": 2,
       "enabled": true,
       "channelCount": 9,
       "channels": [
@@ -1509,7 +1518,7 @@
       "id": "b6c25bfb-ce83-42e5-b22b-be175a6cc57f",
       "name": "ALWAN SPORT",
       "image": "https://up6.cc/2026/05/177810287688341.png",
-      "order": 2,
+      "order": 3,
       "enabled": true,
       "channelCount": 6,
       "channels": [
@@ -2167,7 +2176,7 @@
       "id": "9ec8a24a-1991-4b38-acb8-4ca315341b82",
       "name": "الثامنة",
       "image": "https://up6.cc/2026/05/177810269886721.png",
-      "order": 3,
+      "order": 4,
       "enabled": true,
       "channelCount": 3,
       "channels": [
@@ -2291,7 +2300,7 @@
       "id": "yacine_category_8",
       "name": "beIN ENTERTAINMENT",
       "image": "https://up6.cc/2026/09/178948747622911.png",
-      "order": 4,
+      "order": 5,
       "enabled": true,
       "channelCount": 13,
       "channels": [
@@ -2725,7 +2734,7 @@
       "id": "ecdce106-3a4d-403b-8765-1a6fc908cfe6",
       "name": "Starz Sport",
       "image": "https://up6.cc/2026/05/177810294471261.png",
-      "order": 5,
+      "order": 6,
       "enabled": true,
       "channelCount": 3,
       "channels": [
@@ -2828,7 +2837,7 @@
       "id": "d2f758f2-ce31-46da-9ed3-ac7260dc1d74",
       "name": "SHAHID SPORT",
       "image": "https://up6.cc/2026/05/177810311327231.png",
-      "order": 6,
+      "order": 7,
       "enabled": true,
       "channelCount": 5,
       "channels": [
@@ -2993,7 +3002,7 @@
       "id": "c645b1d0-0d63-4c08-a795-5be8e6422da2",
       "name": "ALKASS",
       "image": "https://up6.cc/2026/05/177810351646581.png",
-      "order": 7,
+      "order": 8,
       "enabled": true,
       "channelCount": 8,
       "channels": [
@@ -3207,7 +3216,7 @@
       "id": "cd91b6bc-2140-405d-8ba8-5b51ac9f4182",
       "name": "Abu Dhabi Sports",
       "image": "https://up6.cc/2026/08/178788106553291.png",
-      "order": 8,
+      "order": 9,
       "enabled": true,
       "channelCount": 2,
       "channels": [
@@ -3279,7 +3288,7 @@
       "id": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
       "name": "Arab Sports",
       "image": "https://up6.cc/2026/09/178990872766931.png",
-      "order": 9,
+      "order": 10,
       "enabled": true,
       "channelCount": 8,
       "channels": [
@@ -3558,7 +3567,7 @@
       "id": "d358ae55-02e3-4c51-a4df-3ea7742e390e",
       "name": "Fajer TV",
       "image": "https://up6.cc/2024/11/173263752464681.png",
-      "order": 10,
+      "order": 11,
       "enabled": true,
       "channelCount": 5,
       "channels": [
@@ -3656,7 +3665,7 @@
       "id": "8533cd27-3b08-4904-b8c2-977063e2f86f",
       "name": "MBC GROUP",
       "image": "https://up6.cc/2026/05/177810331590721.png",
-      "order": 11,
+      "order": 12,
       "enabled": true,
       "channelCount": 17,
       "channels": [
@@ -4214,7 +4223,7 @@
       "id": "3a86da72-5914-4d87-b843-e602f9729230",
       "name": "NEWS",
       "image": "https://up6.cc/2024/09/172561206372761.jpg",
-      "order": 12,
+      "order": 13,
       "enabled": true,
       "channelCount": 21,
       "channels": [
@@ -4875,7 +4884,7 @@
       "id": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
       "name": "Rotana",
       "image": "https://up6.cc/2026/05/177810340677912.png",
-      "order": 13,
+      "order": 14,
       "enabled": true,
       "channelCount": 10,
       "channels": [
@@ -5195,7 +5204,7 @@
       "id": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
       "name": "Majestic",
       "image": "https://up6.cc/2026/08/178714483878441.png",
-      "order": 14,
+      "order": 15,
       "enabled": true,
       "channelCount": 9,
       "channels": [
@@ -5505,7 +5514,7 @@
       "id": "yacine_category_13",
       "name": "KIDS CHANNELS",
       "image": "https://i.ibb.co/wF0S0r76/file-00000000f1fc82118b0ea15698a0db71.png",
-      "order": 15,
+      "order": 16,
       "enabled": true,
       "channelCount": 19,
       "channels": [
@@ -6146,7 +6155,7 @@
       "id": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
       "name": "قنوات العراق",
       "image": "https://up6.cc/2026/09/178998311337621.png",
-      "order": 16,
+      "order": 17,
       "enabled": true,
       "channelCount": 13,
       "channels": [
@@ -6554,15 +6563,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
-      "name": "خليجي 2027",
-      "image": "https://up6.cc/2026/09/179008341454451.png",
-      "order": 18,
-      "enabled": true,
-      "channelCount": 0,
-      "channels": []
     },
     {
       "id": "97402a04-3e2f-4792-8b5f-a92e5d94c833",
