@@ -1,6 +1,6 @@
 {
-  "version": 1790167064205,
-  "updatedAt": "2026-09-23T12:37:44.205Z",
+  "version": 1790167073709,
+  "updatedAt": "2026-09-23T12:37:53.709Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3415,7 +3415,7 @@
               "playerMode": "EXO",
               "referer": "",
               "subtitleUrl": "",
-              "url": "https://liveeu-gcps.alkassdigital.net:443/alkass3-p/20260911T175828Z/mux_video_1080p_ts/hdntl=exp=1790171445~acl=%2f*~data=hdntl~hmac=9c7c03dc51a80be109f5a7e8389e719b2fbee92c65279203ddaa733e57d4d216/index-1.m3u8",
+              "url": "https://storage.googleapis.com/livealkass-eu/alkass3-p/main.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
