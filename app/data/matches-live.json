@@ -10,8 +10,8 @@
     "baghdadTime": "05:30 م",
     "meccaTime": "05:30 م",
     "sourceDate": "2026-09-23",
-    "status": "لم تبدأ",
-    "score": "0 - 0",
+    "status": "انتهت",
+    "score": "1 - 1",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": [
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "id": "fc26292c-6d2c-48af-a5cc-921caf2c950a",
+    "id": "5570626d-926b-4a42-b2af-15d3c9612c26",
     "matchId": "55244654",
     "matchKey": "السعوديه|الكويت|٢٠٢٦-٠٩-٢٣|21:00",
     "homeName": "السعودية",
