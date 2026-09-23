@@ -1,6 +1,6 @@
 {
-  "version": 1790149629339,
-  "updatedAt": "2026-09-23T07:47:09.339Z",
+  "version": 1790149648159,
+  "updatedAt": "2026-09-23T07:47:28.159Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -147,7 +147,29 @@
           "image": "",
           "order": 8,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "9bc0e721-e354-4396-a950-137bf6dd9d22",
+              "name": ".",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         },
         {
           "id": "75f063f2-e625-4755-8c6a-371d139a90e2",
