@@ -1,6 +1,6 @@
 {
-  "version": 1790149349376,
-  "updatedAt": "2026-09-23T07:42:29.376Z",
+  "version": 1790149358062,
+  "updatedAt": "2026-09-23T07:42:38.062Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 4,
+      "channelCount": 5,
       "channels": [
         {
           "id": "6f0816a8-884f-4d59-a71d-7732c43afd74",
@@ -44,6 +44,15 @@
           "name": "الكاس 4",
           "image": "",
           "order": 3,
+          "enabled": true,
+          "servers": []
+        },
+        {
+          "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
+          "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
+          "name": "الشارقه",
+          "image": "",
+          "order": 4,
           "enabled": true,
           "servers": []
         }
