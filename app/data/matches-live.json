@@ -7,8 +7,8 @@
     "awayName": "عُمان",
     "homeLogo": "https://imgs.ysscores.com/teams/64/8191763081021.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/7281763084559.png",
-    "baghdadTime": "05:30 م",
-    "meccaTime": "05:30 م",
+    "baghdadTime": "",
+    "meccaTime": "",
     "sourceDate": "2026-09-23",
     "status": "انتهت",
     "score": "1 - 1",
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "id": "5570626d-926b-4a42-b2af-15d3c9612c26",
+    "id": "0faf542b-f5e2-4154-9dcd-e7be39b81584",
     "matchId": "55244654",
     "matchKey": "السعوديه|الكويت|٢٠٢٦-٠٩-٢٣|21:00",
     "homeName": "السعودية",
@@ -45,7 +45,7 @@
     "meccaTime": "09:00 م",
     "sourceDate": "2026-09-23",
     "status": "لم تبدأ",
-    "score": "0 - 0",
+    "score": "",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
