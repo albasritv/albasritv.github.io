@@ -1,6 +1,6 @@
 {
-  "version": 1790149738174,
-  "updatedAt": "2026-09-23T07:48:58.174Z",
+  "version": 1790149842928,
+  "updatedAt": "2026-09-23T07:50:42.928Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 10,
+      "channelCount": 9,
       "channels": [
         {
           "id": "6f0816a8-884f-4d59-a71d-7732c43afd74",
@@ -48,42 +48,11 @@
           "servers": []
         },
         {
-          "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
-          "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
-          "name": "الشارقه",
-          "image": "",
-          "order": 4,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "12d37f04317d5c2e5f044a79f967c67e:75deea8e41e389997f34d0ebca3f1fb7",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "582b7749-83d1-4839-800c-2d7123289f59",
-              "name": "الشارقه",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/SHS/wv-pr/manifest.mpd",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
           "id": "85f98b89-64dd-4aaa-a760-37600824de5d",
           "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
           "name": "عمان الرياضية",
           "image": "",
-          "order": 6,
+          "order": 4,
           "enabled": true,
           "servers": [
             {
@@ -114,7 +83,7 @@
           "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
           "name": "الكويت الرياضية 1",
           "image": "",
-          "order": 7,
+          "order": 5,
           "enabled": true,
           "servers": [
             {
@@ -141,42 +110,11 @@
           ]
         },
         {
-          "id": "f8c648d5-e3e0-4135-a541-9698948d8d35",
-          "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
-          "name": "البحرين الرياضيه 1",
-          "image": "",
-          "order": 8,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "9bc0e721-e354-4396-a950-137bf6dd9d22",
-              "name": "البحرين الرياضيه 1",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
           "id": "75f063f2-e625-4755-8c6a-371d139a90e2",
           "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
           "name": "الكويت الرياضية 2",
           "image": "",
-          "order": 8,
+          "order": 6,
           "enabled": true,
           "servers": [
             {
@@ -203,11 +141,42 @@
           ]
         },
         {
+          "id": "f8c648d5-e3e0-4135-a541-9698948d8d35",
+          "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
+          "name": "البحرين الرياضيه 1",
+          "image": "",
+          "order": 7,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "9bc0e721-e354-4396-a950-137bf6dd9d22",
+              "name": "البحرين الرياضيه 1",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
           "id": "6d1fc03a-9983-4a6f-88cb-8accec9d6532",
           "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
           "name": "البحرين الرياضيه 2",
           "image": "",
-          "order": 9,
+          "order": 8,
           "enabled": true,
           "servers": [
             {
@@ -3513,7 +3482,7 @@
       "image": "https://up6.cc/2026/09/178990872766931.png",
       "order": 10,
       "enabled": true,
-      "channelCount": 8,
+      "channelCount": 9,
       "channels": [
         {
           "id": "d52723c6-939b-40b1-ac32-840d0717434c",
@@ -3779,6 +3748,37 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الشارقه",
+          "image": "",
+          "order": 8,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "12d37f04317d5c2e5f044a79f967c67e:75deea8e41e389997f34d0ebca3f1fb7",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "582b7749-83d1-4839-800c-2d7123289f59",
+              "name": "الشارقه",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/SHS/wv-pr/manifest.mpd",
               "userAgent": "",
               "xRequestedWith": ""
             }
