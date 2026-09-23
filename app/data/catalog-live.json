@@ -1,6 +1,6 @@
 {
-  "version": 1790150121273,
-  "updatedAt": "2026-09-23T07:55:21.273Z",
+  "version": 1790150167796,
+  "updatedAt": "2026-09-23T07:56:07.796Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -12,11 +12,20 @@
       "channelCount": 10,
       "channels": [
         {
+          "id": "6ad02884-dea9-47ac-8728-082eb23955cb",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "متنوع",
+          "image": "https://up6.cc/2026/09/179008341454451.png",
+          "order": 0,
+          "enabled": true,
+          "servers": []
+        },
+        {
           "id": "d52723c6-939b-40b1-ac32-840d0717434c",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الاردن الرياضية",
           "image": "https://up6.cc/2026/09/178996623062551.png",
-          "order": 0,
+          "order": 1,
           "enabled": true,
           "servers": [
             {
@@ -47,7 +56,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "عمان الرياضية",
           "image": "https://up6.cc/2026/09/178996656726081.png",
-          "order": 1,
+          "order": 2,
           "enabled": true,
           "servers": [
             {
@@ -78,7 +87,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "البحرين الرياضية الاولى",
           "image": "https://up6.cc/2026/09/178996685048021.png",
-          "order": 2,
+          "order": 3,
           "enabled": true,
           "servers": [
             {
@@ -109,7 +118,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "البحرين الرياضية الثانية",
           "image": "https://up6.cc/2026/09/178996690788421.png",
-          "order": 3,
+          "order": 4,
           "enabled": true,
           "servers": [
             {
@@ -140,7 +149,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الشارقة الرياضية",
           "image": "https://up6.cc/2026/09/178996720714171.png",
-          "order": 4,
+          "order": 5,
           "enabled": true,
           "servers": [
             {
@@ -192,7 +201,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الرياضية المغربية",
           "image": "https://up6.cc/2026/09/178996746339821.png",
-          "order": 5,
+          "order": 6,
           "enabled": true,
           "servers": [
             {
@@ -223,7 +232,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الكويت الاولى",
           "image": "https://up6.cc/2026/09/178996781679111.png",
-          "order": 6,
+          "order": 7,
           "enabled": true,
           "servers": [
             {
@@ -254,7 +263,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الكويت الثانية",
           "image": "https://up6.cc/2026/09/178996791955341.png",
-          "order": 7,
+          "order": 8,
           "enabled": true,
           "servers": [
             {
@@ -285,7 +294,7 @@
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الشارقه",
           "image": "https://up6.cc/2026/09/178996720714171.png",
-          "order": 8,
+          "order": 9,
           "enabled": true,
           "servers": [
             {
@@ -310,15 +319,6 @@
               "xRequestedWith": ""
             }
           ]
-        },
-        {
-          "id": "6ad02884-dea9-47ac-8728-082eb23955cb",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "متنوع",
-          "image": "https://up6.cc/2026/09/179008341454451.png",
-          "order": 9,
-          "enabled": true,
-          "servers": []
         }
       ]
     },
