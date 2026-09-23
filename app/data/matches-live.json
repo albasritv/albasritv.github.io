@@ -1,248 +1,35 @@
 [
   {
-    "id": "46e8aeb7-4c35-42b1-bb6f-715262766064",
-    "matchId": "5749683",
-    "matchKey": "فيورنتينا|نابولي|٢٠٢٦-٠٩-٢٠|13:30",
-    "homeName": "فيورنتينا",
-    "awayName": "نابولي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/1231690283002.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/9521720636634.png",
-    "baghdadTime": "",
-    "meccaTime": "",
-    "sourceDate": "2026-09-20",
-    "status": "انتهت",
-    "score": "1 - 1",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "5724b8b3-ee31-4fd1-b9f1-1b5a7500c92c",
-        "channelTitle": "Starz Sport 1"
-      }
-    ]
-  },
-  {
-    "id": "b6b4b700-fa9e-497a-9824-55ecda9640cf",
-    "matchId": "5795455",
-    "matchKey": "بورنموث|ليفربول|٢٠٢٦-٠٩-٢٠",
-    "homeName": "بورنموث",
-    "awayName": "ليفربول",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/7651690118769.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/4081724601375.png",
-    "baghdadTime": "",
-    "meccaTime": "",
-    "sourceDate": "2026-09-20",
+    "id": "fd192715-aa25-48d4-965b-4174a618e6b7",
+    "matchId": "60460564",
+    "matchKey": "العراق|عمان|٢٠٢٦-٠٩-٢٣|17:30",
+    "homeName": "العراق",
+    "awayName": "عُمان",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/8191763081021.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7281763084559.png",
+    "baghdadTime": "05:30 م",
+    "meccaTime": "05:30 م",
+    "sourceDate": "2026-09-23",
     "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      },
-      {
-        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
-        "channelTitle": "Alwan Sport 1"
-      }
-    ]
-  },
-  {
-    "id": "df326d77-bbfd-4a2a-8a74-ef5ae11c3b09",
-    "matchId": "5795461",
-    "matchKey": "سندرلاند|مانسيتي|٢٠٢٦-٠٩-٢٠",
-    "homeName": "مان سيتي",
-    "awayName": "سندرلاند",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/4481690118308.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/10001690823905.png",
-    "baghdadTime": "",
-    "meccaTime": "",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "a31c00da-68d2-413d-8d1f-7b5ca27fd7cf",
-        "channelTitle": "BEIN 4"
-      },
-      {
-        "channelId": "8404dbe2-41ea-4c50-88bb-7f3ee2d15cd0",
-        "channelTitle": "Alwan Sport 4"
-      }
-    ]
-  },
-  {
-    "id": "640926b5-8c10-4b8d-a967-19a96704582f",
-    "matchId": "5868072",
-    "matchKey": "اتلتيكومدريد|ريالمدريد|٢٠٢٦-٠٩-٢٠|17:15",
-    "homeName": "أتلتيكو مدريد",
-    "awayName": "ريال مدريد",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/1431719588699.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/1871690196746.png",
-    "baghdadTime": "05:15 م",
-    "meccaTime": "05:15 م",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      },
-      {
-        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
-        "channelTitle": "Alwan Sport 1"
-      }
-    ]
-  },
-  {
-    "id": "4803372a-3467-4d15-acf4-dce3ab286276",
-    "matchId": "5795459",
-    "matchKey": "فولهام|مانيونايتد|٢٠٢٦-٠٩-٢٠|18:30",
-    "homeName": "فولهام",
-    "awayName": "مان يونايتد",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/4711690118927.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/4871690119302.png",
-    "baghdadTime": "06:30 م",
-    "meccaTime": "06:30 م",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
-        "channelTitle": "BEIN 2"
-      },
-      {
-        "channelId": "17cc02cf-fb33-488d-8461-9464d5aabbe5",
-        "channelTitle": "Alwan Sport 2"
-      }
-    ]
-  },
-  {
-    "id": "691bdba6-af10-40f9-b2c2-05142101b54e",
-    "matchId": "5749685",
-    "matchKey": "اتالانتا|يوفنتوس|٢٠٢٦-٠٩-٢٠|19:00",
-    "homeName": "يوفنتوس",
-    "awayName": "أتالانتا",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/9331690283003.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/17795813126107.png",
-    "baghdadTime": "07:00 م",
-    "meccaTime": "07:00 م",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "5724b8b3-ee31-4fd1-b9f1-1b5a7500c92c",
-        "channelTitle": "Starz Sport 1"
-      }
-    ]
-  },
-  {
-    "id": "eca607d1-6309-4056-9619-a58dca579040",
-    "matchId": "98236996",
-    "matchKey": "البقعه|الفيصلي|٢٠٢٦-٠٩-٢٠|19:00",
-    "homeName": "البقعة",
-    "awayName": "الفيصلي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/7051753524387.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/17889795135313.png",
-    "baghdadTime": "07:00 م",
-    "meccaTime": "07:00 م",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
+    "score": "0 - 0",
+    "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "cedbeef4-9bbe-4949-b83c-ef2958b455d2",
-    "matchId": "5749680",
-    "matchKey": "ليتشي|ميلان|٢٠٢٦-٠٩-٢٠|21:45",
-    "homeName": "ميلان",
-    "awayName": "ليتشي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/3181690283002.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/9031690283003.png",
-    "baghdadTime": "09:45 م",
-    "meccaTime": "09:45 م",
-    "sourceDate": "2026-09-20",
+    "id": "e0b2f5ce-b9a6-4a6e-82c2-c0ccbf1da784",
+    "matchId": "55244654",
+    "matchKey": "السعوديه|الكويت|٢٠٢٦-٠٩-٢٣|21:00",
+    "homeName": "السعودية",
+    "awayName": "الكويت",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/7171763086301.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7891763081821.png",
+    "baghdadTime": "09:00 م",
+    "meccaTime": "09:00 م",
+    "sourceDate": "2026-09-23",
     "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "5724b8b3-ee31-4fd1-b9f1-1b5a7500c92c",
-        "channelTitle": "Starz Sport 1"
-      }
-    ]
-  },
-  {
-    "id": "89060930-4a9b-4065-ae27-b10b2f7ae790",
-    "matchId": "5802945",
-    "matchKey": "باريس|مارسيليا|٢٠٢٦-٠٩-٢٠|21:45",
-    "homeName": "مارسيليا",
-    "awayName": "باريس",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/17816370094121.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/4461690287785.png",
-    "baghdadTime": "09:45 م",
-    "meccaTime": "09:45 م",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      },
-      {
-        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
-        "channelTitle": "Alwan Sport 1"
-      }
-    ]
-  },
-  {
-    "id": "9e3d4a9d-e338-4612-a136-dc96778a8801",
-    "matchId": "5103637",
-    "matchKey": "فلومينينسي|كورينثيانز|٢٠٢٦-٠٩-٢٠|22:00",
-    "homeName": "كورينثيانز",
-    "awayName": "فلومينينسي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/6101691418710.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/9451691418710.png",
-    "baghdadTime": "10:00 م",
-    "meccaTime": "10:00 م",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "45f97600-9eb0-4dd0-b502-90c5f5b04334",
-    "matchId": "5887641",
-    "matchKey": "بنفيكا|بورتو|٢٠٢٦-٠٩-٢٠|22:30",
-    "homeName": "بورتو",
-    "awayName": "بنفيكا",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/4801690385949.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/4491690386690.png",
-    "baghdadTime": "10:30 م",
-    "meccaTime": "10:30 م",
-    "sourceDate": "2026-09-20",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الأحد",
+    "score": "0 - 0",
+    "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   }
