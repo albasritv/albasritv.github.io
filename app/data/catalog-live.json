@@ -1,6 +1,6 @@
 {
-  "version": 1790149617533,
-  "updatedAt": "2026-09-23T07:46:57.533Z",
+  "version": 1790149621893,
+  "updatedAt": "2026-09-23T07:47:01.893Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 8,
+      "channelCount": 9,
       "channels": [
         {
           "id": "6f0816a8-884f-4d59-a71d-7732c43afd74",
@@ -139,6 +139,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "f8c648d5-e3e0-4135-a541-9698948d8d35",
+          "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
+          "name": "البحرين الرياضيه 1",
+          "image": "",
+          "order": 8,
+          "enabled": true,
+          "servers": []
         },
         {
           "id": "75f063f2-e625-4755-8c6a-371d139a90e2",
