@@ -14,7 +14,24 @@
     "score": "0 - 0",
     "tournament": "مباريات الأربعاء",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "cb31cc3a-61e9-4791-aca4-9a990c11dd14",
+        "channelTitle": "عمان الرياضية"
+      },
+      {
+        "channelId": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
+        "channelTitle": "الشارقه"
+      },
+      {
+        "channelId": "2c797832-e22f-4c94-a48b-b5835853fa72",
+        "channelTitle": "البحرين الرياضية الاولى"
+      },
+      {
+        "channelId": "027c60d4-658c-4984-a0bc-2f0f87691c27",
+        "channelTitle": "1 الكاس"
+      }
+    ]
   },
   {
     "id": "e0b2f5ce-b9a6-4a6e-82c2-c0ccbf1da784",
