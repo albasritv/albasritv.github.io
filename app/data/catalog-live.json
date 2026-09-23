@@ -1,6 +1,6 @@
 {
-  "version": 1790172580888,
-  "updatedAt": "2026-09-23T14:09:40.888Z",
+  "version": 1790172785219,
+  "updatedAt": "2026-09-23T14:13:05.219Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3312,6 +3312,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://storage.googleapis.com/livealkass-eu/alkass1-p/main.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "78b43f79-53d7-46d6-a1da-9e28a79201d3",
+              "name": "S2",
+              "order": 1,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live-tv-116849026166.europe-west1.run.app/api/alkass/stream/1",
               "userAgent": "",
               "xRequestedWith": ""
             }
