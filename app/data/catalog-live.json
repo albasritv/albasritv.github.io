@@ -1,6 +1,6 @@
 {
-  "version": 1790149406796,
-  "updatedAt": "2026-09-23T07:43:26.796Z",
+  "version": 1790149456529,
+  "updatedAt": "2026-09-23T07:44:16.529Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -54,7 +54,29 @@
           "image": "",
           "order": 4,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "12d37f04317d5c2e5f044a79f967c67e:75deea8e41e389997f34d0ebca3f1fb7",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "582b7749-83d1-4839-800c-2d7123289f59",
+              "name": "الشارقه",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/SHS/wv-pr/manifest.mpd",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         },
         {
           "id": "5843904b-a86e-4f0d-a22a-76f816ee09c5",
