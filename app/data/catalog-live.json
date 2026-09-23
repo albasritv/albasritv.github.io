@@ -1,6 +1,6 @@
 {
-  "version": 1790171774891,
-  "updatedAt": "2026-09-23T13:56:14.891Z",
+  "version": 1790172391890,
+  "updatedAt": "2026-09-23T14:06:31.890Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 8,
+      "channelCount": 9,
       "channels": [
         {
           "id": "d52723c6-939b-40b1-ac32-840d0717434c",
@@ -227,6 +227,15 @@
               "xRequestedWith": ""
             }
           ]
+        },
+        {
+          "id": "dde1950e-28ab-4758-b177-674f50f6013c",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "متنوعه",
+          "image": "",
+          "order": 8,
+          "enabled": true,
+          "servers": []
         },
         {
           "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
