@@ -1,6 +1,6 @@
 {
-  "version": 1790167104971,
-  "updatedAt": "2026-09-23T12:38:24.971Z",
+  "version": 1790167123951,
+  "updatedAt": "2026-09-23T12:38:43.951Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3508,8 +3508,8 @@
               "playerMode": "EXO",
               "referer": "",
               "subtitleUrl": "",
-              "url": "https://liveeu-gcp.alkassdigital.net/alkass6-p/main.m3u8",
-              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
+              "url": "https://storage.googleapis.com/livealkass-eu/alkass6-p/main.m3u8",
+              "userAgent": "",
               "xRequestedWith": ""
             }
           ]
