@@ -1,6 +1,6 @@
 {
-  "version": 1790149456529,
-  "updatedAt": "2026-09-23T07:44:16.529Z",
+  "version": 1790149554925,
+  "updatedAt": "2026-09-23T07:45:54.925Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -99,7 +99,7 @@
         {
           "id": "1c4f760b-9720-4f25-a162-b0cd3c42fe3b",
           "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
-          "name": "الكويت الرياضية",
+          "name": "الكويت الرياضية 1",
           "image": "",
           "order": 7,
           "enabled": true,
