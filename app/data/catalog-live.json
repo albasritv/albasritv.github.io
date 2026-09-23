@@ -1,6 +1,6 @@
 {
-  "version": 1790149560149,
-  "updatedAt": "2026-09-23T07:46:00.149Z",
+  "version": 1790149564305,
+  "updatedAt": "2026-09-23T07:46:04.305Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 8,
+      "channelCount": 9,
       "channels": [
         {
           "id": "6f0816a8-884f-4d59-a71d-7732c43afd74",
@@ -102,6 +102,15 @@
           "name": "الكويت الرياضية 1",
           "image": "",
           "order": 7,
+          "enabled": true,
+          "servers": []
+        },
+        {
+          "id": "75f063f2-e625-4755-8c6a-371d139a90e2",
+          "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
+          "name": "الكويت الرياضية 2",
+          "image": "",
+          "order": 8,
           "enabled": true,
           "servers": []
         }
