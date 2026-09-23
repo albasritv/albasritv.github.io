@@ -1,6 +1,6 @@
 {
-  "version": 1790149584231,
-  "updatedAt": "2026-09-23T07:46:24.231Z",
+  "version": 1790149598532,
+  "updatedAt": "2026-09-23T07:46:38.532Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -94,7 +94,29 @@
           "image": "",
           "order": 6,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "894098f7-e63c-4add-96bb-075962da7676",
+              "name": ".",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         },
         {
           "id": "1c4f760b-9720-4f25-a162-b0cd3c42fe3b",
