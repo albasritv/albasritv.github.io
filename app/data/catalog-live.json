@@ -1,6 +1,6 @@
 {
-  "version": 1790149895405,
-  "updatedAt": "2026-09-23T07:51:35.405Z",
+  "version": 1790149903757,
+  "updatedAt": "2026-09-23T07:51:43.757Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3757,7 +3757,7 @@
           "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
           "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
           "name": "الشارقه",
-          "image": "غ",
+          "image": "https://up6.cc/2026/09/178996720714171.png",
           "order": 8,
           "enabled": true,
           "servers": [
