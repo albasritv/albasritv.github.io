@@ -1,6 +1,6 @@
 {
-  "version": 1790150203738,
-  "updatedAt": "2026-09-23T07:56:43.738Z",
+  "version": 1790150307121,
+  "updatedAt": "2026-09-23T07:58:27.121Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 10,
+      "channelCount": 9,
       "channels": [
         {
           "id": "6ad02884-dea9-47ac-8728-082eb23955cb",
@@ -203,58 +203,6 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "106118e7-8a48-4aea-a81b-97ae384bb56c",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "الشارقة الرياضية",
-          "image": "https://up6.cc/2026/09/178996720714171.png",
-          "order": 5,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "03edd2de-2d4f-4ccd-b0de-f35989facabc",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://live.kwikmotion.com/smc4sportslive/smc4tv.smil/playlist.m3u8?hdnts=exp=1789926253~acl=/smc4sportslive/smc4tv.smil/*~hmac=85eb58f2ebde1389e076b85ca1974b0c4c3c112cbc52b2a0360cb30f50ad1254",
-              "userAgent": "",
-              "xRequestedWith": ""
-            },
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "d440d401-76f8-4788-b8cd-af01377e3903",
-              "name": "الشارقة الثانيه",
-              "order": 1,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://live.kwikmotion.com/smc4sports2live/sports2.smil/playlist.m3u8?hdnts=exp=1789926371~acl=/smc4sports2live/sports2.smil/*~hmac=34f47bb768f37f10acc52cc1d6e84188ed766660a704490b7dfaad3a22796b27",
               "userAgent": "",
               "xRequestedWith": ""
             }
