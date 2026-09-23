@@ -1,6 +1,6 @@
 {
-  "version": 1790149728619,
-  "updatedAt": "2026-09-23T07:48:48.619Z",
+  "version": 1790149738174,
+  "updatedAt": "2026-09-23T07:48:58.174Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -128,7 +128,7 @@
               "drmMultiSession": false,
               "drmType": "Auto",
               "id": "ee0724bd-f2c3-46a1-8a98-4aa7d755fc17",
-              "name": ".",
+              "name": "الكويت الرياضية 1",
               "order": 0,
               "origin": "",
               "playerMode": "EXO",
