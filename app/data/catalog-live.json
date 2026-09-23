@@ -1,6 +1,6 @@
 {
-  "version": 1790149688300,
-  "updatedAt": "2026-09-23T07:48:08.300Z",
+  "version": 1790149699100,
+  "updatedAt": "2026-09-23T07:48:19.100Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -159,7 +159,7 @@
               "drmMultiSession": false,
               "drmType": "Auto",
               "id": "9bc0e721-e354-4396-a950-137bf6dd9d22",
-              "name": ".",
+              "name": "البحرين الرياضيه",
               "order": 0,
               "origin": "",
               "playerMode": "EXO",
