@@ -1,6 +1,6 @@
 {
-  "version": 1790149648159,
-  "updatedAt": "2026-09-23T07:47:28.159Z",
+  "version": 1790149668357,
+  "updatedAt": "2026-09-23T07:47:48.357Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -209,7 +209,29 @@
           "image": "",
           "order": 9,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "59e94f28-7e86-493b-afe0-d72635467362",
+              "name": ".",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     },
