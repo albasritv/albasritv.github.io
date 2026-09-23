@@ -1,6 +1,6 @@
 {
-  "version": 1790149926830,
-  "updatedAt": "2026-09-23T07:52:06.830Z",
+  "version": 1790150012057,
+  "updatedAt": "2026-09-23T07:53:32.057Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -3277,8 +3277,8 @@
     },
     {
       "id": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-      "name": "Arab Sports",
-      "image": "https://up6.cc/2026/09/178990872766931.png",
+      "name": "خليجي 2027",
+      "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 10,
       "enabled": true,
       "channelCount": 9,
