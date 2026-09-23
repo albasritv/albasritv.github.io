@@ -1,8 +1,318 @@
 {
-  "version": 1790150012057,
-  "updatedAt": "2026-09-23T07:53:32.057Z",
+  "version": 1790150019092,
+  "updatedAt": "2026-09-23T07:53:39.092Z",
   "source": "firebase-direct-worker",
   "sections": [
+    {
+      "id": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+      "name": "خليجي 2027",
+      "image": "https://up6.cc/2026/09/179008341454451.png",
+      "order": 0,
+      "enabled": true,
+      "channelCount": 9,
+      "channels": [
+        {
+          "id": "d52723c6-939b-40b1-ac32-840d0717434c",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الاردن الرياضية",
+          "image": "https://up6.cc/2026/09/178996623062551.png",
+          "order": 0,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "8639bea1-5f8e-4993-a600-2b66db34ad4e",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "cb31cc3a-61e9-4791-aca4-9a990c11dd14",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "عمان الرياضية",
+          "image": "https://up6.cc/2026/09/178996656726081.png",
+          "order": 1,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "aec144f8-a360-4f1a-a9a7-eede1d624978",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "2c797832-e22f-4c94-a48b-b5835853fa72",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "البحرين الرياضية الاولى",
+          "image": "https://up6.cc/2026/09/178996685048021.png",
+          "order": 2,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "afa9d871-43b0-4061-8942-692b859d46f3",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "27af97d9-d7d7-4e95-92ce-559e17965a45",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "البحرين الرياضية الثانية",
+          "image": "https://up6.cc/2026/09/178996690788421.png",
+          "order": 3,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "5321df1a-da7c-4698-9e67-4197fa7bdbd3",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "106118e7-8a48-4aea-a81b-97ae384bb56c",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الشارقة الرياضية",
+          "image": "https://up6.cc/2026/09/178996720714171.png",
+          "order": 4,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "03edd2de-2d4f-4ccd-b0de-f35989facabc",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live.kwikmotion.com/smc4sportslive/smc4tv.smil/playlist.m3u8?hdnts=exp=1789926253~acl=/smc4sportslive/smc4tv.smil/*~hmac=85eb58f2ebde1389e076b85ca1974b0c4c3c112cbc52b2a0360cb30f50ad1254",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "d440d401-76f8-4788-b8cd-af01377e3903",
+              "name": "الشارقة الثانيه",
+              "order": 1,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live.kwikmotion.com/smc4sports2live/sports2.smil/playlist.m3u8?hdnts=exp=1789926371~acl=/smc4sports2live/sports2.smil/*~hmac=34f47bb768f37f10acc52cc1d6e84188ed766660a704490b7dfaad3a22796b27",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "714308ab-53cd-41de-8f90-20a2030e7ccb",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الرياضية المغربية",
+          "image": "https://up6.cc/2026/09/178996746339821.png",
+          "order": 5,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "2d78f350-0074-4235-bbe1-c6c1063c8eb9",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://cdn.live.easybroadcast.io/abr_corp/73_arryadia_k2tgcj0/playlist_dvr.m3u8?token=tukkxXxBXF1_pge9UhWXun2uvRKBEJEdpeOaOJRFThs&token_path=%2Fabr_corp%2F73_arryadia_k2tgcj0&expires=1789929966",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "d71a8697-5d28-4bfe-872a-4fb91057ebf9",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الكويت الاولى",
+          "image": "https://up6.cc/2026/09/178996781679111.png",
+          "order": 6,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "1ef6c144-4377-454d-be96-ff506453ed36",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "f0f66d70-c4d9-4634-8406-9c425926ab45",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الكويت الثانية",
+          "image": "https://up6.cc/2026/09/178996791955341.png",
+          "order": 7,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "280203da-d27b-46fe-ab30-5bade168a52a",
+              "name": "",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الشارقه",
+          "image": "https://up6.cc/2026/09/178996720714171.png",
+          "order": 8,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "12d37f04317d5c2e5f044a79f967c67e:75deea8e41e389997f34d0ebca3f1fb7",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "582b7749-83d1-4839-800c-2d7123289f59",
+              "name": "الشارقه",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/SHS/wv-pr/manifest.mpd",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "80e84539-a8a9-47ef-832a-535d8b9e3747",
       "name": "BEIN",
@@ -3276,320 +3586,10 @@
       ]
     },
     {
-      "id": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-      "name": "خليجي 2027",
-      "image": "https://up6.cc/2026/09/179008341454451.png",
-      "order": 10,
-      "enabled": true,
-      "channelCount": 9,
-      "channels": [
-        {
-          "id": "d52723c6-939b-40b1-ac32-840d0717434c",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "الاردن الرياضية",
-          "image": "https://up6.cc/2026/09/178996623062551.png",
-          "order": 0,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "8639bea1-5f8e-4993-a600-2b66db34ad4e",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "cb31cc3a-61e9-4791-aca4-9a990c11dd14",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "عمان الرياضية",
-          "image": "https://up6.cc/2026/09/178996656726081.png",
-          "order": 1,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "aec144f8-a360-4f1a-a9a7-eede1d624978",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "2c797832-e22f-4c94-a48b-b5835853fa72",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "البحرين الرياضية الاولى",
-          "image": "https://up6.cc/2026/09/178996685048021.png",
-          "order": 2,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "afa9d871-43b0-4061-8942-692b859d46f3",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "27af97d9-d7d7-4e95-92ce-559e17965a45",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "البحرين الرياضية الثانية",
-          "image": "https://up6.cc/2026/09/178996690788421.png",
-          "order": 3,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "5321df1a-da7c-4698-9e67-4197fa7bdbd3",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "106118e7-8a48-4aea-a81b-97ae384bb56c",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "الشارقة الرياضية",
-          "image": "https://up6.cc/2026/09/178996720714171.png",
-          "order": 4,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "03edd2de-2d4f-4ccd-b0de-f35989facabc",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://live.kwikmotion.com/smc4sportslive/smc4tv.smil/playlist.m3u8?hdnts=exp=1789926253~acl=/smc4sportslive/smc4tv.smil/*~hmac=85eb58f2ebde1389e076b85ca1974b0c4c3c112cbc52b2a0360cb30f50ad1254",
-              "userAgent": "",
-              "xRequestedWith": ""
-            },
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "d440d401-76f8-4788-b8cd-af01377e3903",
-              "name": "الشارقة الثانيه",
-              "order": 1,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://live.kwikmotion.com/smc4sports2live/sports2.smil/playlist.m3u8?hdnts=exp=1789926371~acl=/smc4sports2live/sports2.smil/*~hmac=34f47bb768f37f10acc52cc1d6e84188ed766660a704490b7dfaad3a22796b27",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "714308ab-53cd-41de-8f90-20a2030e7ccb",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "الرياضية المغربية",
-          "image": "https://up6.cc/2026/09/178996746339821.png",
-          "order": 5,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "2d78f350-0074-4235-bbe1-c6c1063c8eb9",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://cdn.live.easybroadcast.io/abr_corp/73_arryadia_k2tgcj0/playlist_dvr.m3u8?token=tukkxXxBXF1_pge9UhWXun2uvRKBEJEdpeOaOJRFThs&token_path=%2Fabr_corp%2F73_arryadia_k2tgcj0&expires=1789929966",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "d71a8697-5d28-4bfe-872a-4fb91057ebf9",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "الكويت الاولى",
-          "image": "https://up6.cc/2026/09/178996781679111.png",
-          "order": 6,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "1ef6c144-4377-454d-be96-ff506453ed36",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "f0f66d70-c4d9-4634-8406-9c425926ab45",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "الكويت الثانية",
-          "image": "https://up6.cc/2026/09/178996791955341.png",
-          "order": 7,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "280203da-d27b-46fe-ab30-5bade168a52a",
-              "name": "",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        },
-        {
-          "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
-          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-          "name": "الشارقه",
-          "image": "https://up6.cc/2026/09/178996720714171.png",
-          "order": 8,
-          "enabled": true,
-          "servers": [
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "12d37f04317d5c2e5f044a79f967c67e:75deea8e41e389997f34d0ebca3f1fb7",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "582b7749-83d1-4839-800c-2d7123289f59",
-              "name": "الشارقه",
-              "order": 0,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://scccrwb-live.cdn.intigral-ott.net/bpk-tv/SHS/wv-pr/manifest.mpd",
-              "userAgent": "",
-              "xRequestedWith": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "d358ae55-02e3-4c51-a4df-3ea7742e390e",
       "name": "Fajer TV",
       "image": "https://up6.cc/2024/11/173263752464681.png",
-      "order": 11,
+      "order": 10,
       "enabled": true,
       "channelCount": 5,
       "channels": [
@@ -3687,7 +3687,7 @@
       "id": "8533cd27-3b08-4904-b8c2-977063e2f86f",
       "name": "MBC GROUP",
       "image": "https://up6.cc/2026/05/177810331590721.png",
-      "order": 12,
+      "order": 11,
       "enabled": true,
       "channelCount": 17,
       "channels": [
@@ -4245,7 +4245,7 @@
       "id": "3a86da72-5914-4d87-b843-e602f9729230",
       "name": "NEWS",
       "image": "https://up6.cc/2024/09/172561206372761.jpg",
-      "order": 13,
+      "order": 12,
       "enabled": true,
       "channelCount": 21,
       "channels": [
@@ -4906,7 +4906,7 @@
       "id": "f323aace-4826-4b82-9ee2-a53e6c01dfe3",
       "name": "Rotana",
       "image": "https://up6.cc/2026/05/177810340677912.png",
-      "order": 14,
+      "order": 13,
       "enabled": true,
       "channelCount": 10,
       "channels": [
@@ -5226,7 +5226,7 @@
       "id": "893be6ea-997c-4a8c-a80c-05e6c9beccc5",
       "name": "Majestic",
       "image": "https://up6.cc/2026/08/178714483878441.png",
-      "order": 15,
+      "order": 14,
       "enabled": true,
       "channelCount": 9,
       "channels": [
@@ -5536,7 +5536,7 @@
       "id": "yacine_category_13",
       "name": "KIDS CHANNELS",
       "image": "https://i.ibb.co/wF0S0r76/file-00000000f1fc82118b0ea15698a0db71.png",
-      "order": 16,
+      "order": 15,
       "enabled": true,
       "channelCount": 19,
       "channels": [
@@ -6177,7 +6177,7 @@
       "id": "8cf95dbe-b34d-4232-877f-7ec3a0abd3e7",
       "name": "قنوات العراق",
       "image": "https://up6.cc/2026/09/178998311337621.png",
-      "order": 17,
+      "order": 16,
       "enabled": true,
       "channelCount": 13,
       "channels": [
@@ -6590,7 +6590,7 @@
       "id": "97402a04-3e2f-4792-8b5f-a92e5d94c833",
       "name": "وثائقية و ثقافية",
       "image": "https://up6.cc/2026/09/178997903006761.png",
-      "order": 18,
+      "order": 17,
       "enabled": true,
       "channelCount": 6,
       "channels": [
