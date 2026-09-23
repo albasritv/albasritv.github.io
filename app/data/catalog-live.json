@@ -1,6 +1,6 @@
 {
-  "version": 1790149334300,
-  "updatedAt": "2026-09-23T07:42:14.300Z",
+  "version": 1790149349376,
+  "updatedAt": "2026-09-23T07:42:29.376Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 3,
+      "channelCount": 4,
       "channels": [
         {
           "id": "6f0816a8-884f-4d59-a71d-7732c43afd74",
@@ -35,6 +35,15 @@
           "name": "الكاس 3",
           "image": "",
           "order": 2,
+          "enabled": true,
+          "servers": []
+        },
+        {
+          "id": "6957c245-bf20-411e-8717-898905eef0cf",
+          "categoryId": "20996fa0-fcfa-47fa-a851-aad3a57e3089",
+          "name": "الكاس 4",
+          "image": "",
+          "order": 3,
           "enabled": true,
           "servers": []
         }
