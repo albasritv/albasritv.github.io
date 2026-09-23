@@ -1,6 +1,6 @@
 {
-  "version": 1790150198713,
-  "updatedAt": "2026-09-23T07:56:38.713Z",
+  "version": 1790150203738,
+  "updatedAt": "2026-09-23T07:56:43.738Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -53,6 +53,27 @@
               "id": "3f127652-e265-4a4b-ace4-b2186135f3ed",
               "name": "سيرفر 2",
               "order": 1,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": ".",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "881ac2a7-df2f-4fb3-be6d-dde16b86ebc2",
+              "name": "سيرفر 3",
+              "order": 2,
               "origin": "",
               "playerMode": "EXO",
               "referer": "",
