@@ -1,6 +1,6 @@
 {
-  "version": 1790172397093,
-  "updatedAt": "2026-09-23T14:06:37.093Z",
+  "version": 1790172436972,
+  "updatedAt": "2026-09-23T14:07:16.972Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -235,7 +235,29 @@
           "image": "",
           "order": 8,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "f8d7c184-be04-4009-becc-40587bfa6a24",
+              "name": "1",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live-tv-116849026166.europe-west1.run.app/api/alkass/stream/1",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         },
         {
           "id": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
