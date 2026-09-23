@@ -1,6 +1,6 @@
 {
-  "version": 1790149668357,
-  "updatedAt": "2026-09-23T07:47:48.357Z",
+  "version": 1790149688300,
+  "updatedAt": "2026-09-23T07:48:08.300Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -97,7 +97,7 @@
               "drmMultiSession": false,
               "drmType": "Auto",
               "id": "894098f7-e63c-4add-96bb-075962da7676",
-              "name": ".",
+              "name": "عمان الرياضية",
               "order": 0,
               "origin": "",
               "playerMode": "EXO",
