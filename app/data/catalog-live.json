@@ -1,6 +1,6 @@
 {
-  "version": 1790149572306,
-  "updatedAt": "2026-09-23T07:46:12.306Z",
+  "version": 1790149584231,
+  "updatedAt": "2026-09-23T07:46:24.231Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -134,7 +134,29 @@
           "image": "",
           "order": 8,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "7157f1e2-77e2-4121-9a20-7e66aae7db60",
+              "name": ".",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     },
