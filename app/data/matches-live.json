@@ -102,7 +102,12 @@
     "score": "",
     "tournament": "مباريات الخميس",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
+      }
+    ]
   },
   {
     "id": "6a205862-fd75-4f7d-b929-0c7017c0995b",
