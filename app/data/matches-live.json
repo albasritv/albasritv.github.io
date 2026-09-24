@@ -136,7 +136,16 @@
     "score": "",
     "tournament": "مباريات الخميس",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "027c60d4-658c-4984-a0bc-2f0f87691c27",
+        "channelTitle": "1 الكاس"
+      },
+      {
+        "channelId": "4d68be52-4392-44d9-8b58-9cbb9c3d129b",
+        "channelTitle": "2 الكاس"
+      }
+    ]
   },
   {
     "id": "bc993650-fac1-4f5e-a458-f0bf59f6a56f",
