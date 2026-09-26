@@ -1,249 +1,104 @@
 [
   {
-    "id": "f8344b60-3808-4397-8067-87ed190cdc47",
-    "matchId": "5071094",
-    "matchKey": "ريالسالتليك|سياتل|٢٠٢٦-٠٩-٢٤",
-    "homeName": "سياتل",
-    "awayName": "ريال سالت ليك",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/241740040401.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/9521691410292.png",
+    "id": "5c881a2e-9045-4a9a-8a6b-57aaf0c74c22",
+    "matchId": "45379286",
+    "matchKey": "سيئون|شعباب|٢٠٢٦-٠٩-٢٦",
+    "homeName": "سيئون",
+    "awayName": "شعب إب",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/17841243986522.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/3601746336289.png",
     "baghdadTime": "",
     "meccaTime": "",
-    "sourceDate": "2026-09-24",
+    "sourceDate": "2026-09-26",
     "status": "انتهت",
-    "score": "2 - 0",
-    "tournament": "مباريات الخميس",
+    "score": "0 - 1",
+    "tournament": "مباريات السبت",
     "important": true,
     "channels": []
   },
   {
-    "id": "b13cbfa1-46a4-40fa-9dfe-e95bf56c671c",
-    "matchId": "6280194",
-    "matchKey": "اليابان|اوروغواي|٢٠٢٦-٠٩-٢٤",
-    "homeName": "اليابان",
-    "awayName": "أوروغواي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/6361763081321.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/9901763117716.png",
-    "baghdadTime": "",
-    "meccaTime": "",
-    "sourceDate": "2026-09-24",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات الخميس",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "e1d44c10-0045-44f9-8a00-18ccec7d4745",
-    "matchId": "71956504",
-    "matchKey": "الامارات|اليمن|٢٠٢٦-٠٩-٢٤|18:55",
-    "homeName": "الإمارات",
-    "awayName": "اليمن",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/9431763117463.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/621763118201.png",
+    "id": "a3baa0a5-c049-4f23-990f-f5b315c984cb",
+    "matchId": "97328725",
+    "matchKey": "العراق|الكويت|٢٠٢٦-٠٩-٢٦|18:55",
+    "homeName": "الكويت",
+    "awayName": "العراق",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/7891763081821.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/8191763081021.png",
     "baghdadTime": "06:55 م",
     "meccaTime": "06:55 م",
-    "sourceDate": "2026-09-24",
+    "sourceDate": "2026-09-26",
     "status": "لم تبدأ",
     "score": "",
-    "tournament": "مباريات الخميس",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "cb31cc3a-61e9-4791-aca4-9a990c11dd14",
-        "channelTitle": "عمان الرياضية"
-      },
-      {
-        "channelId": "d52723c6-939b-40b1-ac32-840d0717434c",
-        "channelTitle": "الاردن الرياضية"
-      },
-      {
-        "channelId": "2c797832-e22f-4c94-a48b-b5835853fa72",
-        "channelTitle": "البحرين الرياضية الاولى"
-      },
-      {
-        "channelId": "27af97d9-d7d7-4e95-92ce-559e17965a45",
-        "channelTitle": "البحرين الرياضية الثانية"
-      },
-      {
-        "channelId": "d71a8697-5d28-4bfe-872a-4fb91057ebf9",
-        "channelTitle": "الكويت الاولى"
-      },
-      {
-        "channelId": "f0f66d70-c4d9-4634-8406-9c425926ab45",
-        "channelTitle": "الكويت الثانية"
-      },
-      {
-        "channelId": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
-        "channelTitle": "الشارقه"
-      },
-      {
-        "channelId": "027c60d4-658c-4984-a0bc-2f0f87691c27",
-        "channelTitle": "1 الكاس"
-      },
-      {
-        "channelId": "4d68be52-4392-44d9-8b58-9cbb9c3d129b",
-        "channelTitle": "2 الكاس"
-      }
-    ]
-  },
-  {
-    "id": "e0c393ba-bb47-4905-bffe-168f5009e9fd",
-    "matchId": "6040344",
-    "matchKey": "بوتسوانا|ليبيا|٢٠٢٦-٠٩-٢٤|19:00",
-    "homeName": "ليبيا",
-    "awayName": "بوتسوانا",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/3741763082470.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/4041763069740.png",
-    "baghdadTime": "07:00 م",
-    "meccaTime": "07:00 م",
-    "sourceDate": "2026-09-24",
-    "status": "لم تبدأ",
-    "score": "",
-    "tournament": "مباريات الخميس",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      }
-    ]
-  },
-  {
-    "id": "17ea85a4-a59a-4190-930f-f674990ed3eb",
-    "matchId": "34290538",
-    "matchKey": "الجيشالملكي|الرجاءالرياضي|٢٠٢٦-٠٩-٢٤|20:00",
-    "homeName": "الجيش الملكي",
-    "awayName": "الرجاء الرياضي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/4171692205946.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/6421692794445.png",
-    "baghdadTime": "08:00 م",
-    "meccaTime": "08:00 م",
-    "sourceDate": "2026-09-24",
-    "status": "تأجلت",
-    "score": "",
-    "tournament": "مباريات الخميس",
+    "tournament": "مباريات السبت",
     "important": true,
     "channels": []
   },
   {
-    "id": "dc8a0f66-c07d-4e09-bec1-1544aa04613b",
-    "matchId": "24390481",
-    "matchKey": "البحرين|قطر|٢٠٢٦-٠٩-٢٤|21:00",
-    "homeName": "قطر",
-    "awayName": "البحرين",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/3451763085544.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/9791763068542.png",
+    "id": "9413c39a-f3ec-4807-baef-c6ad486240e6",
+    "matchId": "69263394",
+    "matchKey": "السعوديه|عمان|٢٠٢٦-٠٩-٢٦|21:00",
+    "homeName": "عُمان",
+    "awayName": "السعودية",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/7281763084559.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7171763086301.png",
     "baghdadTime": "09:00 م",
     "meccaTime": "09:00 م",
-    "sourceDate": "2026-09-24",
+    "sourceDate": "2026-09-26",
     "status": "لم تبدأ",
     "score": "",
-    "tournament": "مباريات الخميس",
+    "tournament": "مباريات السبت",
     "important": true,
-    "channels": [
-      {
-        "channelId": "027c60d4-658c-4984-a0bc-2f0f87691c27",
-        "channelTitle": "1 الكاس"
-      },
-      {
-        "channelId": "4d68be52-4392-44d9-8b58-9cbb9c3d129b",
-        "channelTitle": "2 الكاس"
-      },
-      {
-        "channelId": "d52723c6-939b-40b1-ac32-840d0717434c",
-        "channelTitle": "الاردن الرياضية"
-      },
-      {
-        "channelId": "cb31cc3a-61e9-4791-aca4-9a990c11dd14",
-        "channelTitle": "عمان الرياضية"
-      },
-      {
-        "channelId": "2c797832-e22f-4c94-a48b-b5835853fa72",
-        "channelTitle": "البحرين الرياضية الاولى"
-      },
-      {
-        "channelId": "27af97d9-d7d7-4e95-92ce-559e17965a45",
-        "channelTitle": "البحرين الرياضية الثانية"
-      },
-      {
-        "channelId": "d71a8697-5d28-4bfe-872a-4fb91057ebf9",
-        "channelTitle": "الكويت الاولى"
-      },
-      {
-        "channelId": "f0f66d70-c4d9-4634-8406-9c425926ab45",
-        "channelTitle": "الكويت الثانية"
-      },
-      {
-        "channelId": "e392a4a0-193a-41a4-91a0-af74d2a61f9f",
-        "channelTitle": "الشارقه"
-      }
-    ]
+    "channels": []
   },
   {
-    "id": "bc993650-fac1-4f5e-a458-f0bf59f6a56f",
-    "matchId": "5181825",
-    "matchKey": "المانيا|هولندا|٢٠٢٦-٠٩-٢٤|21:45",
-    "homeName": "هولندا",
-    "awayName": "ألمانيا",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/6941763083796.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/8941763078415.png",
+    "id": "b2b15e58-733d-476b-9e65-70a98482cd1e",
+    "matchId": "5181849",
+    "matchKey": "التشيك|كرواتيا|٢٠٢٦-٠٩-٢٦|21:45",
+    "homeName": "التشيك",
+    "awayName": "كرواتيا",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/1641763071555.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7661763071283.png",
     "baghdadTime": "09:45 م",
     "meccaTime": "09:45 م",
-    "sourceDate": "2026-09-24",
+    "sourceDate": "2026-09-26",
     "status": "لم تبدأ",
     "score": "",
-    "tournament": "مباريات الخميس",
+    "tournament": "مباريات السبت",
     "important": true,
-    "channels": [
-      {
-        "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
-        "channelTitle": "BEIN 2"
-      }
-    ]
+    "channels": []
   },
   {
-    "id": "b6b255ae-86bd-491d-a5b5-1e5778e2602d",
-    "matchId": "5181862",
-    "matchKey": "البرتغال|ويلز|٢٠٢٦-٠٩-٢٤|21:45",
-    "homeName": "البرتغال",
-    "awayName": "ويلز",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/3431763085446.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/7371763118142.png",
+    "id": "2e2c4a1c-411e-429e-b0f7-ea3a6fe8ae0f",
+    "matchId": "5181850",
+    "matchKey": "اسبانيا|انجلترا|٢٠٢٦-٠٩-٢٦|21:45",
+    "homeName": "إنجلترا",
+    "awayName": "إسبانيا",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/5831763072178.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/6231763087210.png",
     "baghdadTime": "09:45 م",
     "meccaTime": "09:45 م",
-    "sourceDate": "2026-09-24",
+    "sourceDate": "2026-09-26",
     "status": "لم تبدأ",
     "score": "",
-    "tournament": "مباريات الخميس",
+    "tournament": "مباريات السبت",
     "important": true,
-    "channels": [
-      {
-        "channelId": "6070876d-b628-4ec6-ad11-bf2ab1d9def3",
-        "channelTitle": "BEIN 3"
-      }
-    ]
+    "channels": []
   },
   {
-    "id": "330246e1-77e2-40ae-8899-2a667ff20a6c",
-    "matchId": "6040345",
-    "matchKey": "اوغندا|تونس|٢٠٢٦-٠٩-٢٤|22:00",
-    "homeName": "تونس",
-    "awayName": "أوغندا",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/8201763117043.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/2921763117370.png",
-    "baghdadTime": "10:00 م",
-    "meccaTime": "10:00 م",
-    "sourceDate": "2026-09-24",
+    "id": "1c71fda9-2269-4517-9bd7-c93e088a7fc6",
+    "matchId": "21087998",
+    "matchKey": "الودادالرياضي|ودادتماره|٢٠٢٦-٠٩-٢٦|23:00",
+    "homeName": "الوداد الرياضي",
+    "awayName": "وداد تمارة",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/3131694715431.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/17880899678924.png",
+    "baghdadTime": "11:00 م",
+    "meccaTime": "11:00 م",
+    "sourceDate": "2026-09-26",
     "status": "لم تبدأ",
     "score": "",
-    "tournament": "مباريات الخميس",
+    "tournament": "مباريات السبت",
     "important": true,
-    "channels": [
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      }
-    ]
+    "channels": []
   }
 ]
