@@ -1,6 +1,6 @@
 {
-  "version": 1790437037865,
-  "updatedAt": "2026-09-26T15:37:17.865Z",
+  "version": 1790700200996,
+  "updatedAt": "2026-09-29T16:43:20.996Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -9,7 +9,7 @@
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
-      "channelCount": 8,
+      "channelCount": 9,
       "channels": [
         {
           "id": "d52723c6-939b-40b1-ac32-840d0717434c",
@@ -192,6 +192,58 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        },
+        {
+          "id": "85a89af4-9993-4800-bb85-009a8dec63f0",
+          "categoryId": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
+          "name": "الخليج 27",
+          "image": "https://up6.cc/2026/09/179008341454451.png",
+          "order": 8,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "a17062d1-149f-4ac9-a0e8-5fcb3b6f6491",
+              "name": "HD",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "http://asmr4k.pro:8080/live/67389201934/0572884955/1346824.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "54afae81-d862-47e2-af40-48d16f3cd125",
+              "name": "SD",
+              "order": 1,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "http://asmr4k.pro:8080/live/67389201934/0572884955/1346825.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
