@@ -1,6 +1,40 @@
 [
   {
-    "id": "6705c2d9-11d7-4d2a-b205-d86b33b107f2",
+    "id": "fc367c14-b28d-440f-8f14-6ef91d50dc46",
+    "matchId": "62512797",
+    "matchKey": "الكويت|عمان|٢٠٢٦-٠٩-٢٩",
+    "homeName": "عُمان",
+    "awayName": "الكويت",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/7281763084559.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7891763081821.png",
+    "baghdadTime": "",
+    "meccaTime": "",
+    "sourceDate": "2026-09-29",
+    "status": "جاري الآن",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "2ab92d76-4a8b-4584-a6f9-56b938888376",
+    "matchId": "95908332",
+    "matchKey": "السعوديه|العراق|٢٠٢٦-٠٩-٢٩",
+    "homeName": "السعودية",
+    "awayName": "العراق",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/7171763086301.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/8191763081021.png",
+    "baghdadTime": "",
+    "meccaTime": "",
+    "sourceDate": "2026-09-29",
+    "status": "جاري الآن",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "e6ef57ac-1aa9-4451-a029-c34c6b514daa",
     "matchId": "6040347",
     "matchKey": "اوغندا|ليبيا|٢٠٢٦-٠٩-٢٩",
     "homeName": "أوغندا",
@@ -17,7 +51,7 @@
     "channels": []
   },
   {
-    "id": "2793354e-9ec3-4181-97fa-9ae8297964ed",
+    "id": "a50993b1-8c4e-4538-bbe3-3c92dc096590",
     "matchId": "6040358",
     "matchKey": "الجزائر|بوروندي|٢٠٢٦-٠٩-٢٩",
     "homeName": "بوروندي",
@@ -34,7 +68,7 @@
     "channels": []
   },
   {
-    "id": "1b7a32c5-73f1-49c9-8a70-73fde3cb41c5",
+    "id": "3c69df9a-289f-4766-bf31-e1017294a4d4",
     "matchId": "6040399",
     "matchKey": "السودان|موزمبيق|٢٠٢٦-٠٩-٢٩",
     "homeName": "موزمبيق",
@@ -51,7 +85,7 @@
     "channels": []
   },
   {
-    "id": "7d0c1870-c82a-4838-8fdd-2ce9522ecea7",
+    "id": "81511b0e-50aa-4d60-a405-bfc4bac4d538",
     "matchId": "6040202",
     "matchKey": "المغرب|ليسوتو|٢٠٢٦-٠٩-٢٩",
     "homeName": "ليسوتو",
@@ -68,7 +102,7 @@
     "channels": []
   },
   {
-    "id": "e0db18e7-8cac-4894-8a6c-0193c0a99d3c",
+    "id": "e676842d-c7b7-4c64-ac5b-6c5f32f89d8a",
     "matchId": "6040215",
     "matchKey": "جنوبالسودان|مصر|٢٠٢٦-٠٩-٢٩",
     "homeName": "جنوب السودان",
@@ -85,41 +119,7 @@
     "channels": []
   },
   {
-    "id": "52f36596-c685-4233-8476-9e20b58a4a3c",
-    "matchId": "62512797",
-    "matchKey": "الكويت|عمان|٢٠٢٦-٠٩-٢٩|20:30",
-    "homeName": "عُمان",
-    "awayName": "الكويت",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/7281763084559.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/7891763081821.png",
-    "baghdadTime": "08:30 م",
-    "meccaTime": "08:30 م",
-    "sourceDate": "2026-09-29",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات الثلاثاء",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "2ac82719-9d53-4040-9a31-a9d64192edde",
-    "matchId": "95908332",
-    "matchKey": "السعوديه|العراق|٢٠٢٦-٠٩-٢٩|20:30",
-    "homeName": "السعودية",
-    "awayName": "العراق",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/7171763086301.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/8191763081021.png",
-    "baghdadTime": "08:30 م",
-    "meccaTime": "08:30 م",
-    "sourceDate": "2026-09-29",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات الثلاثاء",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "359538c9-79b9-4e31-bebd-9ed269842a98",
+    "id": "598256bb-058d-475b-ab1d-69da55a5dace",
     "matchId": "5181851",
     "matchKey": "التشيك|انجلترا|٢٠٢٦-٠٩-٢٩|21:45",
     "homeName": "التشيك",
@@ -136,7 +136,7 @@
     "channels": []
   },
   {
-    "id": "c218deb3-9a5b-485e-98d5-a094811da85f",
+    "id": "5116066f-c66f-40b5-8a5b-b66b6c9c892d",
     "matchId": "5181852",
     "matchKey": "اسبانيا|كرواتيا|٢٠٢٦-٠٩-٢٩|21:45",
     "homeName": "إسبانيا",
