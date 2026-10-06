@@ -14,7 +14,12 @@
     "score": "",
     "tournament": "مباريات الأربعاء",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      }
+    ]
   },
   {
     "id": "b5a26cc3-04a4-4b08-ab40-c6c1ec5081dd",
