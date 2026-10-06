@@ -1,57 +1,6 @@
 [
   {
-    "id": "c8ae4aff-1639-485e-b597-a065eaa1b417",
-    "matchId": "6162940",
-    "matchKey": "الهند|اوروغواي|٢٠٢٦-١٠-٠٦|17:00",
-    "homeName": "الهند",
-    "awayName": "أوروغواي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/4801763080864.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/9901763117716.png",
-    "baghdadTime": "05:00 م",
-    "meccaTime": "05:00 م",
-    "sourceDate": "2026-10-06",
-    "status": "انتهت",
-    "score": "1 - 6",
-    "tournament": "مباريات الثلاثاء",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "72687fec-9bfe-4c1d-9d0c-ee5bc6e02cac",
-    "matchId": "11158038",
-    "matchKey": "الجزائر|النيجر|٢٠٢٦-١٠-٠٦|20:00",
-    "homeName": "الجزائر",
-    "awayName": "النيجر",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/2341763066345.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/6141763084139.png",
-    "baghdadTime": "08:00 م",
-    "meccaTime": "08:00 م",
-    "sourceDate": "2026-10-06",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات الثلاثاء",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "3e92ad74-6490-430f-90a5-036064d75c7e",
-    "matchId": "29141360",
-    "matchKey": "الاردن|فنزويلا|٢٠٢٦-١٠-٠٦|20:00",
-    "homeName": "الأردن",
-    "awayName": "فنزويلا",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/1821763081406.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/3031763117870.png",
-    "baghdadTime": "08:00 م",
-    "meccaTime": "08:00 م",
-    "sourceDate": "2026-10-06",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات الثلاثاء",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "a7021ea0-d98a-43c5-a149-e100a020ba56",
+    "id": "e16bd202-84ff-422a-9c18-1fe12d3ed628",
     "matchId": "5989821",
     "matchKey": "شبيبهالقبائل|مولوديهالجزائر|٢٠٢٦-١٠-٠٦|21:00",
     "homeName": "شبيبة القبائل",
@@ -62,13 +11,13 @@
     "meccaTime": "09:00 م",
     "sourceDate": "2026-10-06",
     "status": "تأجلت",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الثلاثاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "95e111eb-5c2b-4a38-ba13-41895c8566a3",
+    "id": "bdb8e1fb-ab48-4c00-9f85-48b92c00f0a0",
     "matchId": "31810872",
     "matchKey": "الامارات|السعوديه|٢٠٢٦-١٠-٠٦|21:00",
     "homeName": "السعودية",
@@ -79,7 +28,7 @@
     "meccaTime": "09:00 م",
     "sourceDate": "2026-10-06",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الثلاثاء",
     "important": true,
     "channels": [
@@ -138,7 +87,7 @@
     ]
   },
   {
-    "id": "592ed74a-cb3b-4c2c-bee6-4e641281d883",
+    "id": "8ec7caa5-be09-4c12-9a0b-03fff6142883",
     "matchId": "5181855",
     "matchKey": "اسبانيا|كرواتيا|٢٠٢٦-١٠-٠٦|21:45",
     "homeName": "كرواتيا",
@@ -149,7 +98,7 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-10-06",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الثلاثاء",
     "important": true,
     "channels": [
@@ -160,7 +109,7 @@
     ]
   },
   {
-    "id": "b620406a-743e-480d-b189-dbfb77ca3a7f",
+    "id": "47be9290-02f8-4e79-a71c-d6ef670c75f0",
     "matchId": "5181856",
     "matchKey": "التشيك|انجلترا|٢٠٢٦-١٠-٠٦|21:45",
     "homeName": "إنجلترا",
@@ -171,7 +120,7 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-10-06",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الثلاثاء",
     "important": true,
     "channels": [
@@ -180,5 +129,56 @@
         "channelTitle": "BEIN 2"
       }
     ]
+  },
+  {
+    "id": "3d07d880-ac21-40e3-bb9c-567a9f0c7e39",
+    "matchId": "6162940",
+    "matchKey": "الهند|اوروغواي|٢٠٢٦-١٠-٠٦|17:00",
+    "homeName": "الهند",
+    "awayName": "أوروغواي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/4801763080864.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/9901763117716.png",
+    "baghdadTime": "17:00:00",
+    "meccaTime": "17:00:00",
+    "sourceDate": "2026-10-06",
+    "status": "انتهت",
+    "score": "1 - 6",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "a7004cb2-98be-47f6-81c3-581e1af7970b",
+    "matchId": "11158038",
+    "matchKey": "الجزائر|النيجر|٢٠٢٦-١٠-٠٦|20:00",
+    "homeName": "الجزائر",
+    "awayName": "النيجر",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2341763066345.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/6141763084139.png",
+    "baghdadTime": "20:00:00",
+    "meccaTime": "20:00:00",
+    "sourceDate": "2026-10-06",
+    "status": "جاري الآن",
+    "score": "0 - 1",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "f0403130-04e6-49ef-a4f4-31c67666b22d",
+    "matchId": "29141360",
+    "matchKey": "الاردن|فنزويلا|٢٠٢٦-١٠-٠٦|20:00",
+    "homeName": "الأردن",
+    "awayName": "فنزويلا",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/1821763081406.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/3031763117870.png",
+    "baghdadTime": "20:00:00",
+    "meccaTime": "20:00:00",
+    "sourceDate": "2026-10-06",
+    "status": "جاري الآن",
+    "score": "0 - 0",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
   }
 ]
