@@ -22,7 +22,7 @@
     ]
   },
   {
-    "id": "1a32db8e-ddb6-4a88-b5b3-5965fadb2391",
+    "id": "c1b7949a-8d61-47e9-9e89-be9c8e39754f",
     "matchId": "26995609",
     "matchKey": "القناه|بيراميدز|٢٠٢٦-١٠-٠٧|17:00",
     "homeName": "بيراميدز",
@@ -33,13 +33,13 @@
     "meccaTime": "05:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "0 - 0",
+    "score": "",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "aacf153c-0886-4d7f-aa92-e087532e7561",
+    "id": "d68b5557-1928-4bad-b12b-7f37ce4ae8c6",
     "matchId": "28041702",
     "matchKey": "الاهلي|بترولاسيوط|٢٠٢٦-١٠-٠٧|17:00",
     "homeName": "بترول أسيوط",
@@ -50,13 +50,13 @@
     "meccaTime": "05:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "0 - 0",
+    "score": "",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "f2cb5287-3247-4933-a9f6-8b0ec552ca7d",
+    "id": "01109814-f3b2-47bb-8b78-d570868e039b",
     "matchId": "48412172",
     "matchKey": "الزمالك|ناديزد|٢٠٢٦-١٠-٠٧|20:00",
     "homeName": "الزمالك",
@@ -67,13 +67,13 @@
     "meccaTime": "08:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "0 - 0",
+    "score": "",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "805ca522-9980-410c-a700-6d550863c4a1",
+    "id": "ebf19348-ddd8-490f-bb3e-3ffc96f717ba",
     "matchId": "5989833",
     "matchKey": "اتحادخنشله|شباببلوزداد|٢٠٢٦-١٠-٠٧|22:00",
     "homeName": "شباب بلوزداد",
@@ -84,7 +84,7 @@
     "meccaTime": "10:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "0 - 0",
+    "score": "",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
