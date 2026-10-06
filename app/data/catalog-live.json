@@ -1,11 +1,11 @@
 {
-  "version": 1791325871633,
-  "updatedAt": "2026-10-06T22:31:11.633Z",
+  "version": 1791325880165,
+  "updatedAt": "2026-10-06T22:31:20.165Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
       "id": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-      "name": "خليجي 2027",
+      "name": "عرب سبورت",
       "image": "https://up6.cc/2026/09/179008341454451.png",
       "order": 0,
       "enabled": true,
