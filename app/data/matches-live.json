@@ -11,13 +11,13 @@
     "meccaTime": "02:00 ص",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "42262047-bab7-428d-8383-f6e8357076a7",
+    "id": "b5a26cc3-04a4-4b08-ab40-c6c1ec5081dd",
     "matchId": "26995609",
     "matchKey": "القناه|بيراميدز|٢٠٢٦-١٠-٠٧|17:00",
     "homeName": "بيراميدز",
@@ -28,13 +28,13 @@
     "meccaTime": "05:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "59a5ff9f-aa49-41b8-9a24-a40874e5942f",
+    "id": "aab8d56f-ab23-4af6-83b4-7ff84af26bb8",
     "matchId": "28041702",
     "matchKey": "الاهلي|بترولاسيوط|٢٠٢٦-١٠-٠٧|17:00",
     "homeName": "بترول أسيوط",
@@ -45,13 +45,13 @@
     "meccaTime": "05:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "61d0b4b2-5aac-4d61-96e6-b80bd4950bae",
+    "id": "951bda30-faf5-41c2-b9ee-b8b6cc23bdbe",
     "matchId": "48412172",
     "matchKey": "الزمالك|ناديزد|٢٠٢٦-١٠-٠٧|20:00",
     "homeName": "الزمالك",
@@ -62,13 +62,13 @@
     "meccaTime": "08:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
   },
   {
-    "id": "890b7865-65e6-4d19-a02a-f0e8751b9efe",
+    "id": "1b605866-ccac-4af3-a4c1-a600886709a1",
     "matchId": "5989833",
     "matchKey": "اتحادخنشله|شباببلوزداد|٢٠٢٦-١٠-٠٧|22:00",
     "homeName": "شباب بلوزداد",
@@ -79,7 +79,7 @@
     "meccaTime": "10:00 م",
     "sourceDate": "2026-10-07",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الأربعاء",
     "important": true,
     "channels": []
