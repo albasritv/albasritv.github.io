@@ -1,6 +1,6 @@
 {
-  "version": 1791328563618,
-  "updatedAt": "2026-10-06T23:16:03.618Z",
+  "version": 1791578561365,
+  "updatedAt": "2026-10-09T20:42:41.365Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -1992,8 +1992,8 @@
     },
     {
       "id": "c9d73781-977d-4e35-a6ca-2d568d8d4d11",
-      "name": "عرب سبورت",
-      "image": "https://up6.cc/2026/09/179008341454451.png",
+      "name": "Arab Sports",
+      "image": "https://up6.cc/2026/09/178990872766931.png",
       "order": 5,
       "enabled": true,
       "channelCount": 8,
