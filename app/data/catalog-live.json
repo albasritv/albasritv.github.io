@@ -1,6 +1,6 @@
 {
-  "version": 1791628499892,
-  "updatedAt": "2026-10-10T10:34:59.892Z",
+  "version": 1791628515148,
+  "updatedAt": "2026-10-10T10:35:15.148Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -412,6 +412,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://bein7.houdatv.workers.dev/live.m3u8?key=68452",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "24c16ae4-ab95-43dc-a872-5613642795be",
+              "name": "S2",
+              "order": 1,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "http://cname1.elg-26.com:8080/live/Abdo20250505/hze7pmru27/7.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
