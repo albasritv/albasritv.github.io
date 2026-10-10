@@ -1,6 +1,6 @@
 {
-  "version": 1791629970689,
-  "updatedAt": "2026-10-10T10:59:30.689Z",
+  "version": 1791630006436,
+  "updatedAt": "2026-10-10T11:00:06.436Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -309,6 +309,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "http://cname1.elg-26.com:8080/live/Abdo20250505/hze7pmru27/3.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "869fbe95-51f3-496b-9873-622d93119ad2",
+              "name": "240p",
+              "order": 2,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live-tv-116849026166.europe-west1.run.app/api/korasport/stream/bein3-240p.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
