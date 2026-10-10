@@ -151,7 +151,12 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "bcadec99-f2aa-4e7c-9d60-1098194b3cca",
+        "channelTitle": "BEIN 5"
+      }
+    ]
   },
   {
     "id": "31460a5f-3cc0-477a-8995-f89bd1fa3d35",
