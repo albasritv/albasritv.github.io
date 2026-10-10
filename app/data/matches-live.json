@@ -57,7 +57,12 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "68606fa1-e0d0-4358-bbf0-f634bb78e63e",
+        "channelTitle": "شاهد 1"
+      }
+    ]
   },
   {
     "id": "56d0ad2b-0703-49ed-9345-3a133bfad25d",
