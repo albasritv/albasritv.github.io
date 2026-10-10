@@ -31,7 +31,12 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      }
+    ]
   },
   {
     "id": "2c892e29-9375-486b-8c75-6e91a6797d4e",
