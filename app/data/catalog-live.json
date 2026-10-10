@@ -1,6 +1,6 @@
 {
-  "version": 1791629889541,
-  "updatedAt": "2026-10-10T10:58:09.541Z",
+  "version": 1791629920267,
+  "updatedAt": "2026-10-10T10:58:40.267Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -194,6 +194,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://live-tv-116849026166.europe-west1.run.app/api/korasport/stream/bein2-240p.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "fbf7c6e0-8054-4314-ab76-0e661ad48394",
+              "name": "480p",
+              "order": 4,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live-tv-116849026166.europe-west1.run.app/api/korasport/stream/bein2-480p.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
