@@ -1,6 +1,6 @@
 {
-  "version": 1791628416665,
-  "updatedAt": "2026-10-10T10:33:36.665Z",
+  "version": 1791628435028,
+  "updatedAt": "2026-10-10T10:33:55.028Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -131,6 +131,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "http://194.76.0.163/8zpo3GsVY7/beneficial2concern/652334?token=ShJdY2ZmQQNHCmMZCDZXUh9GSHAWGFMD.ZDsGQVN.WGBFNX013GR9YV1QbGBp0QE9SWmpcXlQXXlUHWlcbRxFACmcDY1tXEVkbVAoAAQJUFxUbRFldAxdeUAdaVAFcUwcHAhwWQlpXQQMLTFhUG0FQQU1VQl4HWTsFVBQLVABGCVxEXFgeEVwNZgFcWVlZBxcDGwESHERcFxETWAxCCQgfEFNZQEBSRwYbX1dBVFtPF1pWRV5EFExGWxMmJxVJRlZKRVVaQVpcDRtfG0BLFU8XUEpvQlUVQRYEUA8HRUdeEQITHBZfUks8WgpXWl1UF1xWV0MSCkQERk0TDw1ZDBBcQG5AXVYRCQ1MCVVJ",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "b8cb5f0c-ad34-48e4-8c45-8515fbaa6344",
+              "name": "S3",
+              "order": 2,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "http://cname1.elg-26.com:8080/live/Abdo20250505/hze7pmru27/2.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
