@@ -1,6 +1,6 @@
 {
-  "version": 1791628435028,
-  "updatedAt": "2026-10-10T10:33:55.028Z",
+  "version": 1791628451634,
+  "updatedAt": "2026-10-10T10:34:11.634Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -183,6 +183,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://bein3.houdatv.workers.dev/live.m3u8?key=68452",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "d2501632-2b92-48d6-9d80-44f31e2ca261",
+              "name": "S3",
+              "order": 1,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "http://cname1.elg-26.com:8080/live/Abdo20250505/hze7pmru27/3.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
