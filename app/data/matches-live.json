@@ -260,7 +260,12 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "5724b8b3-ee31-4fd1-b9f1-1b5a7500c92c",
+        "channelTitle": "Starz Sport 1"
+      }
+    ]
   },
   {
     "id": "4c34acd1-f3c0-4d52-937b-0d67b3cd58d6",
