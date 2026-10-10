@@ -1,167 +1,20 @@
 [
   {
-    "id": "46ee2d36-ef3b-422d-b315-944dfcaa0602",
+    "id": "566bd8a4-5aaa-4dac-be88-3aaa05fb0a2d",
     "matchId": "5116043",
-    "matchKey": "انيستتوتو|بوكاجونيورز|٢٠٢٦-١٠-١٠",
+    "matchKey": "انيستتوتو|بوكاجونيورز|٢٠٢٦-١٠-١٠|01:30",
     "homeName": "انيستتوتو",
     "awayName": "بوكا جونيورز",
     "homeLogo": "https://imgs.ysscores.com/teams/64/3131717933825.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/17769918946692.png",
-    "baghdadTime": "",
-    "meccaTime": "",
+    "baghdadTime": "01:30 ص",
+    "meccaTime": "01:30 ص",
     "sourceDate": "2026-10-10",
     "status": "انتهت",
     "score": "2 - 2",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": []
-  },
-  {
-    "id": "219f788b-222e-4902-b28f-28606faca119",
-    "matchId": "5795465",
-    "matchKey": "ارسنال|ليدزيونايتد|٢٠٢٦-١٠-١٠|14:30",
-    "homeName": "أرسنال",
-    "awayName": "ليدز يونايتد",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/1701690118820.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/4691690458244.png",
-    "baghdadTime": "02:30 م",
-    "meccaTime": "02:30 م",
-    "sourceDate": "2026-10-10",
-    "status": "انتهت",
-    "score": "2 - 1",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
-        "channelTitle": "Alwan Sport 1"
-      },
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      }
-    ]
-  },
-  {
-    "id": "187265fe-04e8-4cf6-99a6-1fa815bf707a",
-    "matchId": "5881179",
-    "matchKey": "اوجسبورغ|بايرنميونخ|٢٠٢٦-١٠-١٠|16:30",
-    "homeName": "أوجسبورغ",
-    "awayName": "بايرن ميونخ",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/7221690288817.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/2351690288818.png",
-    "baghdadTime": "04:30 م",
-    "meccaTime": "04:30 م",
-    "sourceDate": "2026-10-10",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "68606fa1-e0d0-4358-bbf0-f634bb78e63e",
-        "channelTitle": "شاهد 1"
-      }
-    ]
-  },
-  {
-    "id": "064e0438-e2a8-4770-ae1c-51585854f339",
-    "matchId": "12069819",
-    "matchKey": "الصفاقسي|تقدمساقيهالدائر|٢٠٢٦-١٠-١٠|16:30",
-    "homeName": "تقدم ساقية الدائر",
-    "awayName": "الصفاقسي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/17873566094108.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/6131692796238.png",
-    "baghdadTime": "04:30 م",
-    "meccaTime": "04:30 م",
-    "sourceDate": "2026-10-10",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "6c21c2dd-6e0f-4bd5-bc5d-444b1d085911",
-    "matchId": "28053604",
-    "matchKey": "اتحادبنقردان|الافريقي|٢٠٢٦-١٠-١٠|16:30",
-    "homeName": "اتحاد بن قردان",
-    "awayName": "الإفريقي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/4451692796073.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/5191692795665.png",
-    "baghdadTime": "04:30 م",
-    "meccaTime": "04:30 م",
-    "sourceDate": "2026-10-10",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "dc9d811f-596d-4817-a3ab-c91d7c5cfda7",
-    "matchId": "80199395",
-    "matchKey": "الاولمبيالباجي|الترجي|٢٠٢٦-١٠-١٠|16:30",
-    "homeName": "الترجي",
-    "awayName": "الأولمبي الباجي",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/9451695299186.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/821692795939.png",
-    "baghdadTime": "04:30 م",
-    "meccaTime": "04:30 م",
-    "sourceDate": "2026-10-10",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "15cce631-0729-4e7c-93a1-0d75e72e610c",
-    "matchId": "5795467",
-    "matchKey": "بورنموث|تشيلسي|٢٠٢٦-١٠-١٠|17:00",
-    "homeName": "تشيلسي",
-    "awayName": "بورنموث",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/2571690118280.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/7651690118769.png",
-    "baghdadTime": "05:00 م",
-    "meccaTime": "05:00 م",
-    "sourceDate": "2026-10-10",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
-        "channelTitle": "Alwan Sport 1"
-      },
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      }
-    ]
-  },
-  {
-    "id": "c271cd35-d992-48f9-8c4e-b543a30aed95",
-    "matchId": "5868081",
-    "matchKey": "اتلتيكومدريد|الافيس|٢٠٢٦-١٠-١٠|17:15",
-    "homeName": "ألافيس",
-    "awayName": "أتلتيكو مدريد",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/2381690196746.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/1431719588699.png",
-    "baghdadTime": "05:15 م",
-    "meccaTime": "05:15 م",
-    "sourceDate": "2026-10-10",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "bcadec99-f2aa-4e7c-9d60-1098194b3cca",
-        "channelTitle": "BEIN 5"
-      }
-    ]
   },
   {
     "id": "e19d9765-115d-4a72-b356-9666d81c6e54",
@@ -175,7 +28,7 @@
     "meccaTime": "07:00 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -197,7 +50,7 @@
     "meccaTime": "07:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -223,7 +76,7 @@
     "meccaTime": "07:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -245,7 +98,7 @@
     "meccaTime": "09:00 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -289,7 +142,7 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -311,7 +164,7 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -333,13 +186,160 @@
     "meccaTime": "10:00 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
       {
         "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
         "channelTitle": "BEIN 2"
+      }
+    ]
+  },
+  {
+    "id": "219f788b-222e-4902-b28f-28606faca119",
+    "matchId": "5795465",
+    "matchKey": "ارسنال|ليدزيونايتد|٢٠٢٦-١٠-١٠|14:30",
+    "homeName": "أرسنال",
+    "awayName": "ليدز يونايتد",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/1701690118820.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4691690458244.png",
+    "baghdadTime": "14:30:00",
+    "meccaTime": "14:30:00",
+    "sourceDate": "2026-10-10",
+    "status": "انتهت",
+    "score": "2 - 1",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": [
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      },
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
+      }
+    ]
+  },
+  {
+    "id": "187265fe-04e8-4cf6-99a6-1fa815bf707a",
+    "matchId": "5881179",
+    "matchKey": "اوجسبورغ|بايرنميونخ|٢٠٢٦-١٠-١٠|16:30",
+    "homeName": "أوجسبورغ",
+    "awayName": "بايرن ميونخ",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/7221690288817.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/2351690288818.png",
+    "baghdadTime": "16:30:00",
+    "meccaTime": "16:30:00",
+    "sourceDate": "2026-10-10",
+    "status": "جاري الآن",
+    "score": "2 - 1",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": [
+      {
+        "channelId": "68606fa1-e0d0-4358-bbf0-f634bb78e63e",
+        "channelTitle": "شاهد 1"
+      }
+    ]
+  },
+  {
+    "id": "63741d46-d61f-4788-9d1e-6d7bb482c539",
+    "matchId": "12069819",
+    "matchKey": "الصفاقسي|تقدمساقيهالدائر|٢٠٢٦-١٠-١٠|16:30",
+    "homeName": "تقدم ساقية الدائر",
+    "awayName": "الصفاقسي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/17873566094108.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/6131692796238.png",
+    "baghdadTime": "16:30:00",
+    "meccaTime": "16:30:00",
+    "sourceDate": "2026-10-10",
+    "status": "جاري الآن",
+    "score": "1 - 0",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "59a9f218-8277-4410-a15b-21be6e7864bb",
+    "matchId": "28053604",
+    "matchKey": "اتحادبنقردان|الافريقي|٢٠٢٦-١٠-١٠|16:30",
+    "homeName": "اتحاد بن قردان",
+    "awayName": "الإفريقي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/4451692796073.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/5191692795665.png",
+    "baghdadTime": "16:30:00",
+    "meccaTime": "16:30:00",
+    "sourceDate": "2026-10-10",
+    "status": "جاري الآن",
+    "score": "2 - 1",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "d162ff78-f3eb-4a14-b60e-f1a03c00de15",
+    "matchId": "80199395",
+    "matchKey": "الاولمبيالباجي|الترجي|٢٠٢٦-١٠-١٠|16:30",
+    "homeName": "الترجي",
+    "awayName": "الأولمبي الباجي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/9451695299186.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/821692795939.png",
+    "baghdadTime": "16:30:00",
+    "meccaTime": "16:30:00",
+    "sourceDate": "2026-10-10",
+    "status": "جاري الآن",
+    "score": "3 - 1",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "15cce631-0729-4e7c-93a1-0d75e72e610c",
+    "matchId": "5795467",
+    "matchKey": "بورنموث|تشيلسي|٢٠٢٦-١٠-١٠|17:00",
+    "homeName": "تشيلسي",
+    "awayName": "بورنموث",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2571690118280.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7651690118769.png",
+    "baghdadTime": "17:00:00",
+    "meccaTime": "17:00:00",
+    "sourceDate": "2026-10-10",
+    "status": "جاري الآن",
+    "score": "3 - 0",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": [
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      },
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
+      }
+    ]
+  },
+  {
+    "id": "c271cd35-d992-48f9-8c4e-b543a30aed95",
+    "matchId": "5868081",
+    "matchKey": "اتلتيكومدريد|الافيس|٢٠٢٦-١٠-١٠|17:15",
+    "homeName": "ألافيس",
+    "awayName": "أتلتيكو مدريد",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2381690196746.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/1431719588699.png",
+    "baghdadTime": "17:15:00",
+    "meccaTime": "17:15:00",
+    "sourceDate": "2026-10-10",
+    "status": "جاري الآن",
+    "score": "1 - 1",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": [
+      {
+        "channelId": "bcadec99-f2aa-4e7c-9d60-1098194b3cca",
+        "channelTitle": "BEIN 5"
       }
     ]
   }
