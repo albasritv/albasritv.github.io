@@ -248,7 +248,34 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "5084ffd6-17a8-49be-8dd0-0ebdc74ba0ee",
+        "channelTitle": "الثامنة 1"
+      }
+    ]
+  },
+  {
+    "id": "85934809-84e4-4eea-b267-e0c12676956d",
+    "matchId": "5970149",
+    "matchKey": "الاتحاد|الهلال|٢٠٢٦-١٠-١٠|21:00",
+    "homeName": "الهلال",
+    "awayName": "الاتحاد",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/8761690298716.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/2231690298782.png",
+    "baghdadTime": "09:00 م",
+    "meccaTime": "09:00 م",
+    "sourceDate": "2026-10-10",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": [
+      {
+        "channelId": "5084ffd6-17a8-49be-8dd0-0ebdc74ba0ee",
+        "channelTitle": "الثامنة 1"
+      }
+    ]
   },
   {
     "id": "92461395-07f7-4a22-8c38-6512e6001a1e",
