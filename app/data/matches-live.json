@@ -289,6 +289,11 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
+        "channelTitle": "BEIN 2"
+      }
+    ]
   }
 ]
