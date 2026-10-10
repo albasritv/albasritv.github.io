@@ -185,7 +185,16 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      },
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
+      }
+    ]
   },
   {
     "id": "ae41cecf-5883-4695-8949-40af57cba00b",
