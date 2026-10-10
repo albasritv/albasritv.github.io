@@ -1,6 +1,6 @@
 {
-  "version": 1791629333465,
-  "updatedAt": "2026-10-10T10:48:53.465Z",
+  "version": 1791629566704,
+  "updatedAt": "2026-10-10T10:52:46.704Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -79,6 +79,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "http://cname1.elg-26.com:8080/live/Abdo20250505/hze7pmru27/1.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "3c06e090-3a36-47db-af0f-419168e57d86",
+              "name": "4",
+              "order": 3,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://live-tv-116849026166.europe-west1.run.app/api/yacine/stream/b1/master.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
