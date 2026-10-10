@@ -1,46 +1,20 @@
 [
   {
-    "id": "46ee2d36-ef3b-422d-b315-944dfcaa0602",
+    "id": "e878b75b-dbaf-4084-a1fa-e119ecdf77b1",
     "matchId": "5116043",
-    "matchKey": "انيستتوتو|بوكاجونيورز|٢٠٢٦-١٠-١٠",
+    "matchKey": "انيستتوتو|بوكاجونيورز|٢٠٢٦-١٠-١٠|01:30",
     "homeName": "انيستتوتو",
     "awayName": "بوكا جونيورز",
     "homeLogo": "https://imgs.ysscores.com/teams/64/3131717933825.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/17769918946692.png",
-    "baghdadTime": "",
-    "meccaTime": "",
+    "baghdadTime": "01:30 ص",
+    "meccaTime": "01:30 ص",
     "sourceDate": "2026-10-10",
     "status": "انتهت",
     "score": "2 - 2",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": []
-  },
-  {
-    "id": "219f788b-222e-4902-b28f-28606faca119",
-    "matchId": "5795465",
-    "matchKey": "ارسنال|ليدزيونايتد|٢٠٢٦-١٠-١٠|14:30",
-    "homeName": "أرسنال",
-    "awayName": "ليدز يونايتد",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/1701690118820.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/4691690458244.png",
-    "baghdadTime": "02:30 م",
-    "meccaTime": "02:30 م",
-    "sourceDate": "2026-10-10",
-    "status": "جاري الآن",
-    "score": "",
-    "tournament": "مباريات السبت",
-    "important": true,
-    "channels": [
-      {
-        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
-        "channelTitle": "Alwan Sport 1"
-      },
-      {
-        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
-        "channelTitle": "BEIN 1"
-      }
-    ]
   },
   {
     "id": "187265fe-04e8-4cf6-99a6-1fa815bf707a",
@@ -54,7 +28,7 @@
     "meccaTime": "04:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -65,7 +39,7 @@
     ]
   },
   {
-    "id": "064e0438-e2a8-4770-ae1c-51585854f339",
+    "id": "ad571b05-0c99-450a-b0cc-40d2f871a2f0",
     "matchId": "12069819",
     "matchKey": "الصفاقسي|تقدمساقيهالدائر|٢٠٢٦-١٠-١٠|16:30",
     "homeName": "تقدم ساقية الدائر",
@@ -76,13 +50,13 @@
     "meccaTime": "04:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": []
   },
   {
-    "id": "6c21c2dd-6e0f-4bd5-bc5d-444b1d085911",
+    "id": "fa973ccd-3105-4b3d-a97e-1f3ddbe6d00b",
     "matchId": "28053604",
     "matchKey": "اتحادبنقردان|الافريقي|٢٠٢٦-١٠-١٠|16:30",
     "homeName": "اتحاد بن قردان",
@@ -93,13 +67,13 @@
     "meccaTime": "04:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": []
   },
   {
-    "id": "dc9d811f-596d-4817-a3ab-c91d7c5cfda7",
+    "id": "eedfee30-842d-45bd-abdb-e623cf3edfc5",
     "matchId": "80199395",
     "matchKey": "الاولمبيالباجي|الترجي|٢٠٢٦-١٠-١٠|16:30",
     "homeName": "الترجي",
@@ -110,7 +84,7 @@
     "meccaTime": "04:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": []
@@ -127,7 +101,7 @@
     "meccaTime": "05:00 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -153,7 +127,7 @@
     "meccaTime": "05:15 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -175,7 +149,7 @@
     "meccaTime": "07:00 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -197,7 +171,7 @@
     "meccaTime": "07:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -223,7 +197,7 @@
     "meccaTime": "07:30 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -245,7 +219,7 @@
     "meccaTime": "09:00 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -289,7 +263,7 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -311,7 +285,7 @@
     "meccaTime": "09:45 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
@@ -333,13 +307,39 @@
     "meccaTime": "10:00 م",
     "sourceDate": "2026-10-10",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات السبت",
     "important": true,
     "channels": [
       {
         "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
         "channelTitle": "BEIN 2"
+      }
+    ]
+  },
+  {
+    "id": "219f788b-222e-4902-b28f-28606faca119",
+    "matchId": "5795465",
+    "matchKey": "ارسنال|ليدزيونايتد|٢٠٢٦-١٠-١٠|14:30",
+    "homeName": "أرسنال",
+    "awayName": "ليدز يونايتد",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/1701690118820.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4691690458244.png",
+    "baghdadTime": "14:30:00",
+    "meccaTime": "14:30:00",
+    "sourceDate": "2026-10-10",
+    "status": "جاري الآن",
+    "score": "2 - 1",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": [
+      {
+        "channelId": "f52b11f0-7eb7-4f07-bde9-a34dc3012e9a",
+        "channelTitle": "Alwan Sport 1"
+      },
+      {
+        "channelId": "a5e4e378-a183-412b-b03a-fd2f8634de31",
+        "channelTitle": "BEIN 1"
       }
     ]
   }
