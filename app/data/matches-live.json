@@ -70,7 +70,12 @@
     "score": "",
     "tournament": "مباريات الإثنين",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "6070876d-b628-4ec6-ad11-bf2ab1d9def3",
+        "channelTitle": "BEIN 3"
+      }
+    ]
   },
   {
     "id": "56e3956e-c3db-4fe1-8216-62cb8b730cbd",
@@ -87,7 +92,12 @@
     "score": "",
     "tournament": "مباريات الإثنين",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "a31c00da-68d2-413d-8d1f-7b5ca27fd7cf",
+        "channelTitle": "BEIN 4"
+      }
+    ]
   },
   {
     "id": "f6b1c4f6-6823-42be-97aa-b9685e6e6b84",
