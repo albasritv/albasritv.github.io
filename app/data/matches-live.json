@@ -132,5 +132,22 @@
     "tournament": "مباريات الإثنين",
     "important": true,
     "channels": []
+  },
+  {
+    "id": "7135a659-3e47-442b-a654-80167a7813d5",
+    "matchId": "6050078",
+    "matchKey": "السد|الهلال|٢٠٢٦-١٠-١٣|19:00",
+    "homeName": "السد",
+    "awayName": "الهلال",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/6901727693223.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/8761690298716.png",
+    "baghdadTime": "07:00 م",
+    "meccaTime": "07:00 م",
+    "sourceDate": "2026-10-13",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
   }
 ]
