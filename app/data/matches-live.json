@@ -204,7 +204,7 @@
     ]
   },
   {
-    "id": "b78444e0-d054-4fd1-9354-cbdfb255b12d",
+    "id": "c5b13b7d-58ed-4d70-aa0a-b28836b4aaf4",
     "matchId": "6106267",
     "matchKey": "اتلتيكومدريد|مانيونايتد|٢٠٢٦-١٠-١٣|22:00",
     "homeName": "أتلتيكو مدريد",
@@ -221,7 +221,7 @@
     "channels": []
   },
   {
-    "id": "8d34e202-eef0-410d-ba11-a63afe5f63a1",
+    "id": "f967c05c-97fd-4f0f-a8f1-1a6dcc7a5431",
     "matchId": "6106328",
     "matchKey": "فياريال|نابولي|٢٠٢٦-١٠-١٣|22:00",
     "homeName": "فياريال",
@@ -238,7 +238,7 @@
     "channels": []
   },
   {
-    "id": "f0940a94-dcb5-45fc-9520-8e81746b316f",
+    "id": "a1e72326-360e-40ee-af23-39575b192c58",
     "matchId": "6106260",
     "matchKey": "ارسنال|ناديليل|٢٠٢٦-١٠-١٣|22:00",
     "homeName": "أرسنال",
@@ -255,7 +255,7 @@
     "channels": []
   },
   {
-    "id": "29ac1f49-5a28-4a6f-b25a-97b9e86d3673",
+    "id": "2e2b5d66-de04-4174-a0b8-8499e2f3720c",
     "matchId": "6106251",
     "matchKey": "انترميلان|كلوببروج|٢٠٢٦-١٠-١٣|22:00",
     "homeName": "إنتر ميلان",
@@ -272,13 +272,30 @@
     "channels": []
   },
   {
-    "id": "b1045ffd-998a-45ad-ba3a-32689b7e4c66",
+    "id": "ad6493b3-4fa0-42d0-9a22-63ca98674e80",
     "matchId": "6106417",
     "matchKey": "بايرنميونخ|فايكنج|٢٠٢٦-١٠-١٣|22:00",
     "homeName": "فايكنج",
     "awayName": "بايرن ميونخ",
     "homeLogo": "https://imgs.ysscores.com/teams/64/2981690370526.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/2351690288818.png",
+    "baghdadTime": "10:00 م",
+    "meccaTime": "10:00 م",
+    "sourceDate": "2026-10-13",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "e20cd66e-d902-4bb0-a2e0-2de888b639d1",
+    "matchId": "6106338",
+    "matchKey": "برشلونه|غلطهسراي|٢٠٢٦-١٠-١٣|22:00",
+    "homeName": "غلطة سراي",
+    "awayName": "برشلونة",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2081756067376.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/9541690196746.png",
     "baghdadTime": "10:00 م",
     "meccaTime": "10:00 م",
     "sourceDate": "2026-10-13",
