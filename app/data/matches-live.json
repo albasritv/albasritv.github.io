@@ -217,5 +217,39 @@
     "tournament": "مباريات الثلاثاء",
     "important": true,
     "channels": []
+  },
+  {
+    "id": "9e97b9c9-8b56-4277-aa0e-acd1903e4fef",
+    "matchId": "6106417",
+    "matchKey": "بايرنميونخ|فايكنج|٢٠٢٦-١٠-١٣|22:00",
+    "homeName": "فايكنج",
+    "awayName": "بايرن ميونخ",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2981690370526.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/2351690288818.png",
+    "baghdadTime": "10:00 م",
+    "meccaTime": "10:00 م",
+    "sourceDate": "2026-10-13",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "1d9ab470-aecc-4f66-94ed-78ad4df0fad6",
+    "matchId": "6106338",
+    "matchKey": "برشلونه|غلطهسراي|٢٠٢٦-١٠-١٣|22:00",
+    "homeName": "غلطة سراي",
+    "awayName": "برشلونة",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2081756067376.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/9541690196746.png",
+    "baghdadTime": "10:00 م",
+    "meccaTime": "10:00 م",
+    "sourceDate": "2026-10-13",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
   }
 ]
