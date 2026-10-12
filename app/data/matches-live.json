@@ -309,7 +309,12 @@
     "score": "",
     "tournament": "مباريات الثلاثاء",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "642159bb-702b-4885-ac1e-707e632e1400",
+        "channelTitle": "BEIN 7"
+      }
+    ]
   },
   {
     "id": "e20cd66e-d902-4bb0-a2e0-2de888b639d1",
@@ -453,7 +458,12 @@
     "score": "",
     "tournament": "مباريات الثلاثاء",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "642159bb-702b-4885-ac1e-707e632e1400",
+        "channelTitle": "BEIN 7"
+      }
+    ]
   },
   {
     "id": "1d9ab470-aecc-4f66-94ed-78ad4df0fad6",
