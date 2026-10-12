@@ -149,5 +149,39 @@
     "tournament": "مباريات الثلاثاء",
     "important": true,
     "channels": []
+  },
+  {
+    "id": "a6276650-7c5f-41cb-b18e-27e4f228401f",
+    "matchId": "6050079",
+    "matchKey": "الاتحاد|شبابالاهلي|٢٠٢٦-١٠-١٣|21:15",
+    "homeName": "الاتحاد",
+    "awayName": "شباب الأهلي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2231690298782.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/5261690300570.png",
+    "baghdadTime": "09:15 م",
+    "meccaTime": "09:15 م",
+    "sourceDate": "2026-10-13",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "d711159a-5458-4008-844f-6f3c969eb128",
+    "matchId": "6106267",
+    "matchKey": "اتلتيكومدريد|مانيونايتد|٢٠٢٦-١٠-١٣|22:00",
+    "homeName": "أتلتيكو مدريد",
+    "awayName": "مان يونايتد",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/1431719588699.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4871690119302.png",
+    "baghdadTime": "10:00 م",
+    "meccaTime": "10:00 م",
+    "sourceDate": "2026-10-13",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات الثلاثاء",
+    "important": true,
+    "channels": []
   }
 ]
