@@ -1,6 +1,6 @@
 {
-  "version": 1792233571984,
-  "updatedAt": "2026-10-17T10:39:31.984Z",
+  "version": 1792233576496,
+  "updatedAt": "2026-10-17T10:39:36.496Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -58,27 +58,6 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://primetv.cc.cd/beinfhd1/index.m3u8",
-              "userAgent": "",
-              "xRequestedWith": ""
-            },
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "3c06e090-3a36-47db-af0f-419168e57d86",
-              "name": "4",
-              "order": 2,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://live-tv-116849026166.europe-west1.run.app/api/yacine/stream/b1/master.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
