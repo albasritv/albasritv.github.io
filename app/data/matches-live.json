@@ -539,6 +539,23 @@
     "channels": []
   },
   {
+    "id": "d48e9c6a-42d3-4c93-b97d-c9261883621d",
+    "matchId": "95812774",
+    "matchKey": "الاهلي|كيتارا|٢٠٢٦-١٠-١٧|16:00",
+    "homeName": "كيتارا",
+    "awayName": "الأهلي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/3601724361969.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/9591694714907.png",
+    "baghdadTime": "04:00 م",
+    "meccaTime": "04:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "ee487763-8771-40a4-a064-6cea10ff3044",
     "matchId": "5904771",
     "matchKey": "غلطهسراي|غنتشلربيرليغي|٢٠٢٦-١٠-١٧|16:00",
