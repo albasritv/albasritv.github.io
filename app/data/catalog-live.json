@@ -1,6 +1,6 @@
 {
-  "version": 1792233598339,
-  "updatedAt": "2026-10-17T10:39:58.339Z",
+  "version": 1792233614102,
+  "updatedAt": "2026-10-17T10:40:14.102Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -266,7 +266,7 @@
               "playerMode": "EXO",
               "referer": "",
               "subtitleUrl": "",
-              "url": "http://cname1.elg-26.com:8080/live/Abdo20250505/hze7pmru27/3.m3u8",
+              "url": "https://primetv.cc.cd/beinfhd3/index.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             },
