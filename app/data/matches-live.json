@@ -488,6 +488,23 @@
     ]
   },
   {
+    "id": "4f157bb8-d5f6-4640-ba03-642881e0fee2",
+    "matchId": "5795478",
+    "matchKey": "ايفرتون|تشيلسي|٢٠٢٦-١٠-١٧|14:30",
+    "homeName": "إيفرتون",
+    "awayName": "تشيلسي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/8461690118694.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/2571690118280.png",
+    "baghdadTime": "02:30 م",
+    "meccaTime": "02:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "885061c4-898c-4e99-bf3a-cf469fc983f6",
     "matchId": "5868091",
     "matchKey": "برشلونه|ريالبيتيس|٢٠٢٦-١٠-١٧|19:30",
