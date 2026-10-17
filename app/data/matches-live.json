@@ -590,6 +590,23 @@
     "channels": []
   },
   {
+    "id": "55498b4e-e18d-4ddd-a28d-5163a684f06f",
+    "matchId": "5795476",
+    "matchKey": "برينتفورد|ليفربول|٢٠٢٦-١٠-١٧|17:00",
+    "homeName": "برينتفورد",
+    "awayName": "ليفربول",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/4791690118957.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4081724601375.png",
+    "baghdadTime": "05:00 م",
+    "meccaTime": "05:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "885061c4-898c-4e99-bf3a-cf469fc983f6",
     "matchId": "5868091",
     "matchKey": "برشلونه|ريالبيتيس|٢٠٢٦-١٠-١٧|19:30",
