@@ -505,6 +505,23 @@
     "channels": []
   },
   {
+    "id": "5d236b90-29e0-4204-a030-b609f07597db",
+    "matchId": "5881189",
+    "matchKey": "بايرنميونخ|لايبزيج|٢٠٢٦-١٠-١٧|19:30",
+    "homeName": "بايرن ميونخ",
+    "awayName": "لايبزيج",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2351690288818.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/8361734715237.png",
+    "baghdadTime": "07:30 م",
+    "meccaTime": "07:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "d8a95a07-bf1d-4d58-a52a-5a29c0a8eee5",
     "matchId": "5749701",
     "matchKey": "جنوي|روما|٢٠٢٦-١٠-١٧|21:45",
