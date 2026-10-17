@@ -488,6 +488,23 @@
     ]
   },
   {
+    "id": "885061c4-898c-4e99-bf3a-cf469fc983f6",
+    "matchId": "5868091",
+    "matchKey": "برشلونه|ريالبيتيس|٢٠٢٦-١٠-١٧|19:30",
+    "homeName": "ريال بيتيس",
+    "awayName": "برشلونة",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/17645945054618.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/9541690196746.png",
+    "baghdadTime": "07:30 م",
+    "meccaTime": "07:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "d8a95a07-bf1d-4d58-a52a-5a29c0a8eee5",
     "matchId": "5749701",
     "matchKey": "جنوي|روما|٢٠٢٦-١٠-١٧|21:45",
