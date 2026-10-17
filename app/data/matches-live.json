@@ -641,6 +641,23 @@
     "channels": []
   },
   {
+    "id": "62d31683-3926-434a-b1ef-3d8909e4df5c",
+    "matchId": "6216722",
+    "matchKey": "العين|شبابالاهلي|٢٠٢٦-١٠-١٧|18:45",
+    "homeName": "شباب الأهلي",
+    "awayName": "العين",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/5261690300570.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4661724620117.png",
+    "baghdadTime": "06:45 م",
+    "meccaTime": "06:45 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "49321ba8-d12e-4043-a8ee-416e4d46019f",
     "matchId": "99187161",
     "matchKey": "الجيشالملكي|كوروغو|٢٠٢٦-١٠-١٧|19:00",
