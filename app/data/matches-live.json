@@ -522,6 +522,23 @@
     "channels": []
   },
   {
+    "id": "e34ad393-0b98-4b3b-96c3-7dc4b3c988dd",
+    "matchId": "5749709",
+    "matchKey": "فينيسا|نابولي|٢٠٢٦-١٠-١٧|16:00",
+    "homeName": "فينيسا",
+    "awayName": "نابولي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/771690370510.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/9521720636634.png",
+    "baghdadTime": "04:00 م",
+    "meccaTime": "04:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "ee487763-8771-40a4-a064-6cea10ff3044",
     "matchId": "5904771",
     "matchKey": "غلطهسراي|غنتشلربيرليغي|٢٠٢٦-١٠-١٧|16:00",
