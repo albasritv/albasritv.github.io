@@ -573,6 +573,23 @@
     "channels": []
   },
   {
+    "id": "b63d36ca-5805-4509-ae61-332c355764ed",
+    "matchId": "5881195",
+    "matchKey": "دورتموند|يونيونبرلين|٢٠٢٦-١٠-١٧|16:30",
+    "homeName": "يونيون برلين",
+    "awayName": "دورتموند",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/6521690288816.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4201690288818.png",
+    "baghdadTime": "04:30 م",
+    "meccaTime": "04:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "885061c4-898c-4e99-bf3a-cf469fc983f6",
     "matchId": "5868091",
     "matchKey": "برشلونه|ريالبيتيس|٢٠٢٦-١٠-١٧|19:30",
