@@ -641,6 +641,23 @@
     "channels": []
   },
   {
+    "id": "fbdfc7b6-3cdf-49ad-af2f-cedaaaa27617",
+    "matchId": "5749702",
+    "matchKey": "انترميلان|بولونيا|٢٠٢٦-١٠-١٧|19:00",
+    "homeName": "بولونيا",
+    "awayName": "إنتر ميلان",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/4281690283003.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/3101690283003.png",
+    "baghdadTime": "07:00 م",
+    "meccaTime": "07:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "885061c4-898c-4e99-bf3a-cf469fc983f6",
     "matchId": "5868091",
     "matchKey": "برشلونه|ريالبيتيس|٢٠٢٦-١٠-١٧|19:30",
