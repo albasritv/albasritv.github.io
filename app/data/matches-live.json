@@ -641,6 +641,23 @@
     "channels": []
   },
   {
+    "id": "49321ba8-d12e-4043-a8ee-416e4d46019f",
+    "matchId": "99187161",
+    "matchKey": "الجيشالملكي|كوروغو|٢٠٢٦-١٠-١٧|19:00",
+    "homeName": "كوروغو",
+    "awayName": "الجيش الملكي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/8501747077714.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4171692205946.png",
+    "baghdadTime": "07:00 م",
+    "meccaTime": "07:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "fbdfc7b6-3cdf-49ad-af2f-cedaaaa27617",
     "matchId": "5749702",
     "matchKey": "انترميلان|بولونيا|٢٠٢٦-١٠-١٧|19:00",
