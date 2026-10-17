@@ -607,6 +607,23 @@
     "channels": []
   },
   {
+    "id": "8fba7903-297c-445e-bc54-ab51102b4a4a",
+    "matchId": "5795481",
+    "matchKey": "ايبسويتش|مانسيتي|٢٠٢٦-١٠-١٧|17:00",
+    "homeName": "مان سيتي",
+    "awayName": "إيبسويتش",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/4481690118308.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/8291690370545.png",
+    "baghdadTime": "05:00 م",
+    "meccaTime": "05:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "885061c4-898c-4e99-bf3a-cf469fc983f6",
     "matchId": "5868091",
     "matchKey": "برشلونه|ريالبيتيس|٢٠٢٦-١٠-١٧|19:30",
