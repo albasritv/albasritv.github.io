@@ -1,6 +1,6 @@
 {
-  "version": 1792233681992,
-  "updatedAt": "2026-10-17T10:41:21.992Z",
+  "version": 1792854437123,
+  "updatedAt": "2026-10-24T15:07:17.123Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -37,27 +37,6 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://bein1.houdatv.workers.dev/live.m3u8?key=68452",
-              "userAgent": "",
-              "xRequestedWith": ""
-            },
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "ba7d85f0-c0c9-4be9-b62f-1c99084d7728",
-              "name": "S2",
-              "order": 1,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "https://primetv.cc.cd/beinfhd1/index.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }

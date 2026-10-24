@@ -532,7 +532,7 @@
     ]
   },
   {
-    "id": "5ab806fe-83d2-4a44-b483-ea731a860aa0",
+    "id": "95d73ada-2390-4558-a902-21a430af04c1",
     "matchId": "5868094",
     "matchKey": "اتلتيكومدريد|اسبانيول|٢٠٢٦-١٠-١٧|15:00",
     "homeName": "إسبانيول",
@@ -546,7 +546,12 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
+        "channelTitle": "BEIN 2"
+      }
+    ]
   },
   {
     "id": "be92d96a-4091-4324-a68b-54af2c094e5e",
@@ -563,10 +568,15 @@
     "score": "",
     "tournament": "مباريات السبت",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
+        "channelTitle": "BEIN 2"
+      }
+    ]
   },
   {
-    "id": "011c6c22-2bc2-4e12-be00-9d7513f37473",
+    "id": "0dde4256-5b3b-4d0a-ab79-81a4ce6442da",
     "matchId": "5749709",
     "matchKey": "فينيسا|نابولي|٢٠٢٦-١٠-١٧|16:00",
     "homeName": "فينيسا",
@@ -583,13 +593,30 @@
     "channels": []
   },
   {
-    "id": "66939fc9-a196-4a20-adc9-b1b44276cd72",
+    "id": "51239086-0084-4a1a-b551-be08a040cf4a",
     "matchId": "95812774",
     "matchKey": "الاهلي|كيتارا|٢٠٢٦-١٠-١٧|16:00",
     "homeName": "كيتارا",
     "awayName": "الأهلي",
     "homeLogo": "https://imgs.ysscores.com/teams/64/3601724361969.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/9591694714907.png",
+    "baghdadTime": "04:00 م",
+    "meccaTime": "04:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "a7898322-e470-4524-a911-27e426f791c5",
+    "matchId": "5904771",
+    "matchKey": "غلطهسراي|غنتشلربيرليغي|٢٠٢٦-١٠-١٧|16:00",
+    "homeName": "غنتشلربيرليغي",
+    "awayName": "غلطة سراي",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/3881690370508.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/2081756067376.png",
     "baghdadTime": "04:00 م",
     "meccaTime": "04:00 م",
     "sourceDate": "2026-10-17",
@@ -668,6 +695,23 @@
     "channels": []
   },
   {
+    "id": "8c56b393-29b2-4619-b731-268d109c748b",
+    "matchId": "5881195",
+    "matchKey": "دورتموند|يونيونبرلين|٢٠٢٦-١٠-١٧|16:30",
+    "homeName": "يونيون برلين",
+    "awayName": "دورتموند",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/6521690288816.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4201690288818.png",
+    "baghdadTime": "04:30 م",
+    "meccaTime": "04:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "0eb8ab51-bb4f-4fa4-9640-bc430829db33",
     "matchId": "5881195",
     "matchKey": "دورتموند|يونيونبرلين|٢٠٢٦-١٠-١٧|16:30",
@@ -702,7 +746,7 @@
     "channels": []
   },
   {
-    "id": "1e6b4a45-81a8-4a25-a362-e9cd31a6242b",
+    "id": "d476558b-1f33-4e0a-b492-2d4652418959",
     "matchId": "5795476",
     "matchKey": "برينتفورد|ليفربول|٢٠٢٦-١٠-١٧|17:00",
     "homeName": "برينتفورد",
@@ -719,7 +763,7 @@
     "channels": []
   },
   {
-    "id": "c1ee207e-8f1c-4149-a98a-7583ecc83579",
+    "id": "58390098-37dc-45ae-821a-b23a48be0185",
     "matchId": "5795481",
     "matchKey": "ايبسويتش|مانسيتي|٢٠٢٦-١٠-١٧|17:00",
     "homeName": "مان سيتي",
@@ -770,6 +814,23 @@
     "channels": []
   },
   {
+    "id": "7d5de52e-7b9e-457d-a384-1e0907c53c47",
+    "matchId": "5802962",
+    "matchKey": "باريس|ستراسبورغ|٢٠٢٦-١٠-١٧|18:15",
+    "homeName": "ستراسبورغ",
+    "awayName": "باريس",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/8951690287872.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/4461690287785.png",
+    "baghdadTime": "06:15 م",
+    "meccaTime": "06:15 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "b34d8bd8-95d4-425e-99fe-7fbcfcf2a14d",
     "matchId": "5802962",
     "matchKey": "باريس|ستراسبورغ|٢٠٢٦-١٠-١٧|18:15",
@@ -804,7 +865,7 @@
     "channels": []
   },
   {
-    "id": "0fe385a8-463e-44fb-bb0d-fd893a4f413d",
+    "id": "b1fd9dad-8787-4d1e-83c8-7008b9f5dffe",
     "matchId": "6216722",
     "matchKey": "العين|شبابالاهلي|٢٠٢٦-١٠-١٧|18:45",
     "homeName": "شباب الأهلي",
@@ -838,13 +899,30 @@
     "channels": []
   },
   {
-    "id": "4a5df486-6b95-4f4d-b272-8720f53c828d",
+    "id": "29742be2-a21e-4165-9d5c-b90c597a1540",
     "matchId": "99187161",
     "matchKey": "الجيشالملكي|كوروغو|٢٠٢٦-١٠-١٧|19:00",
     "homeName": "كوروغو",
     "awayName": "الجيش الملكي",
     "homeLogo": "https://imgs.ysscores.com/teams/64/8501747077714.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/4171692205946.png",
+    "baghdadTime": "07:00 م",
+    "meccaTime": "07:00 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "f4414134-ab4e-4272-ad86-206a63cdf11c",
+    "matchId": "5749702",
+    "matchKey": "انترميلان|بولونيا|٢٠٢٦-١٠-١٧|19:00",
+    "homeName": "بولونيا",
+    "awayName": "إنتر ميلان",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/4281690283003.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/3101690283003.png",
     "baghdadTime": "07:00 م",
     "meccaTime": "07:00 م",
     "sourceDate": "2026-10-17",
@@ -906,13 +984,30 @@
     "channels": []
   },
   {
-    "id": "1788c86b-b098-4ebc-b54e-c620f607e76a",
+    "id": "1fd1a290-9b81-4b49-aafe-f480b3eabd24",
     "matchId": "5868091",
     "matchKey": "برشلونه|ريالبيتيس|٢٠٢٦-١٠-١٧|19:30",
     "homeName": "ريال بيتيس",
     "awayName": "برشلونة",
     "homeLogo": "https://imgs.ysscores.com/teams/64/17645945054618.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/9541690196746.png",
+    "baghdadTime": "07:30 م",
+    "meccaTime": "07:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "e57dd659-c5e8-43cf-9175-92995a9aef9b",
+    "matchId": "5881189",
+    "matchKey": "بايرنميونخ|لايبزيج|٢٠٢٦-١٠-١٧|19:30",
+    "homeName": "بايرن ميونخ",
+    "awayName": "لايبزيج",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/2351690288818.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/8361734715237.png",
     "baghdadTime": "07:30 م",
     "meccaTime": "07:30 م",
     "sourceDate": "2026-10-17",
@@ -930,6 +1025,23 @@
     "awayName": "لايبزيج",
     "homeLogo": "https://imgs.ysscores.com/teams/64/2351690288818.png",
     "awayLogo": "https://imgs.ysscores.com/teams/64/8361734715237.png",
+    "baghdadTime": "07:30 م",
+    "meccaTime": "07:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "21a4e411-74cf-4e54-9e41-1e2ebace7f55",
+    "matchId": "51358756",
+    "matchKey": "الحسين|الوحدات|٢٠٢٦-١٠-١٧|19:30",
+    "homeName": "الوحدات",
+    "awayName": "الحسين",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/5171690936731.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7671753043995.png",
     "baghdadTime": "07:30 م",
     "meccaTime": "07:30 م",
     "sourceDate": "2026-10-17",
@@ -1000,6 +1112,23 @@
     "awayLogo": "https://imgs.ysscores.com/teams/64/7671753043995.png",
     "baghdadTime": "07:30 م",
     "meccaTime": "07:30 م",
+    "sourceDate": "2026-10-17",
+    "status": "لم تبدأ",
+    "score": "",
+    "tournament": "مباريات السبت",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "1d4eced3-a444-4a9f-81a3-034478509900",
+    "matchId": "5749701",
+    "matchKey": "جنوي|روما|٢٠٢٦-١٠-١٧|21:45",
+    "homeName": "روما",
+    "awayName": "جنوى",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/17722024059541.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/1891690283004.png",
+    "baghdadTime": "09:45 م",
+    "meccaTime": "09:45 م",
     "sourceDate": "2026-10-17",
     "status": "لم تبدأ",
     "score": "",
