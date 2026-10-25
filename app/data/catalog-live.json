@@ -1,6 +1,6 @@
 {
-  "version": 1792953540758,
-  "updatedAt": "2026-10-25T18:39:00.758Z",
+  "version": 1792953587013,
+  "updatedAt": "2026-10-25T18:39:47.013Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -59,27 +59,6 @@
               "subtitleUrl": "",
               "url": "http://a.norzro.cfd/live/8667593288/2505245402/212313.m3u8",
               "userAgent": "",
-              "xRequestedWith": ""
-            },
-            {
-              "accept": "",
-              "authUrl": "",
-              "authorization": "",
-              "cookie": "",
-              "drmKey": "",
-              "drmLicenseHeaders": "",
-              "drmLicenseUrl": "",
-              "drmMultiSession": false,
-              "drmType": "Auto",
-              "id": "6a8728d6-550d-443b-8e01-474d40713c39",
-              "name": "S4",
-              "order": 2,
-              "origin": "",
-              "playerMode": "EXO",
-              "referer": "",
-              "subtitleUrl": "",
-              "url": "http://assets.pushyourcss.world:8080/assets/res2/java2/1319.css?x=/hls",
-              "userAgent": "دOSCARTV2021",
               "xRequestedWith": ""
             }
           ]
