@@ -1,6 +1,6 @@
 {
-  "version": 1792953815191,
-  "updatedAt": "2026-10-25T18:43:35.191Z",
+  "version": 1792953852727,
+  "updatedAt": "2026-10-25T18:44:12.727Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -121,6 +121,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://blcco.linkip.org/live/1114_.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "bf20c261-a957-43e0-b9e3-b57533068bc2",
+              "name": "S6",
+              "order": 5,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://cp11.adabmedia.com/hls2/bein1.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
