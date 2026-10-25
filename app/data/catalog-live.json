@@ -1,6 +1,6 @@
 {
-  "version": 1792953645847,
-  "updatedAt": "2026-10-25T18:40:45.847Z",
+  "version": 1792953699024,
+  "updatedAt": "2026-10-25T18:41:39.024Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -100,6 +100,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://balance.footballii.ir/hls2/bein1.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "07726f09-8bda-4d56-98fa-4608b0ee6650",
+              "name": "S5",
+              "order": 4,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://blcco.linkip.org/live/1114_.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
