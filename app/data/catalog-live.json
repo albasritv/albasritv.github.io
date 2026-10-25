@@ -1,6 +1,6 @@
 {
-  "version": 1792953587013,
-  "updatedAt": "2026-10-25T18:39:47.013Z",
+  "version": 1792953620413,
+  "updatedAt": "2026-10-25T18:40:20.413Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -58,6 +58,27 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "http://a.norzro.cfd/live/8667593288/2505245402/212313.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "815e05fd-1f73-4716-9567-355717d89184",
+              "name": "S2",
+              "order": 2,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://alwan-sports.malsafty21.workers.dev/channel1.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
