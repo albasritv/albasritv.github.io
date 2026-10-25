@@ -1,6 +1,6 @@
 {
-  "version": 1792953706407,
-  "updatedAt": "2026-10-25T18:41:46.407Z",
+  "version": 1792953714303,
+  "updatedAt": "2026-10-25T18:41:54.303Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -2333,7 +2333,7 @@
               "playerMode": "EXO",
               "referer": "",
               "subtitleUrl": "",
-              "url": "https://cdnfest.com/ftv1-720p-castx/playlist.mpd",
+              "url": "https://blcco.linkip.org/live/1114_.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
