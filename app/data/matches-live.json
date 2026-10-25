@@ -65,7 +65,12 @@
     "score": "",
     "tournament": "مباريات الأحد",
     "important": true,
-    "channels": []
+    "channels": [
+      {
+        "channelId": "b1951781-784d-44b9-bc35-4d1f5232ddca",
+        "channelTitle": "BEIN 2"
+      }
+    ]
   },
   {
     "id": "ebf898a8-7dac-4ce4-b464-0779788f9f82",
