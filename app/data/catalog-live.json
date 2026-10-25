@@ -1,6 +1,6 @@
 {
-  "version": 1792953800865,
-  "updatedAt": "2026-10-25T18:43:20.865Z",
+  "version": 1792953815191,
+  "updatedAt": "2026-10-25T18:43:35.191Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -2439,7 +2439,29 @@
           "image": "https://up6.cc/2026/02/177015703056251.png",
           "order": 28,
           "enabled": true,
-          "servers": []
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "d15db6d4-1fd1-4076-b697-4d9a6a3a3e41",
+              "name": "S1",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "",
+              "subtitleUrl": "",
+              "url": "https://blcco.linkip.org/live/1110_.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
         }
       ]
     },
