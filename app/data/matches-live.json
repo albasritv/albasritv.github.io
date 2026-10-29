@@ -268,40 +268,6 @@
     ]
   },
   {
-    "id": "857df0c9-34d9-46d6-a609-aaba1ebde514",
-    "matchId": "5103684",
-    "matchKey": "انترناسيونال|فلومينينسي|٢٠٢٦-١٠-٢٩",
-    "homeName": "فلومينينسي",
-    "awayName": "إنترناسيونال",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/9451691418710.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/3841691418709.png",
-    "baghdadTime": "",
-    "meccaTime": "",
-    "sourceDate": "2026-10-29",
-    "status": "انتهت",
-    "score": "2 - 1",
-    "tournament": "مباريات الخميس",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "2b066e87-2395-49b9-b8da-43eb57115bb3",
-    "matchId": "5103686",
-    "matchKey": "بالميراس|سانتوس|٢٠٢٦-١٠-٢٩",
-    "homeName": "سانتوس",
-    "awayName": "بالميراس",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/241691418709.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/7971691418711.png",
-    "baghdadTime": "",
-    "meccaTime": "",
-    "sourceDate": "2026-10-29",
-    "status": "انتهت",
-    "score": "0 - 0",
-    "tournament": "مباريات الخميس",
-    "important": true,
-    "channels": []
-  },
-  {
     "id": "9fd1985a-f887-4cbf-a687-976b4e2c7ed5",
     "matchId": "5103688",
     "matchKey": "براغانتينو|شابيكوينسي|٢٠٢٦-١٠-٢٩",
@@ -331,23 +297,6 @@
     "sourceDate": "2026-10-29",
     "status": "انتهت",
     "score": "3 - 2",
-    "tournament": "مباريات الخميس",
-    "important": true,
-    "channels": []
-  },
-  {
-    "id": "1980c7ce-9735-4758-b4b0-2c7f0041384d",
-    "matchId": "5103693",
-    "matchKey": "بوتافوغو|ريمو|٢٠٢٦-١٠-٢٩",
-    "homeName": "ريمو",
-    "awayName": "بوتافوغو",
-    "homeLogo": "https://imgs.ysscores.com/teams/64/17673059547919.png",
-    "awayLogo": "https://imgs.ysscores.com/teams/64/2731691418709.png",
-    "baghdadTime": "",
-    "meccaTime": "",
-    "sourceDate": "2026-10-29",
-    "status": "انتهت",
-    "score": "2 - 1",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
@@ -404,6 +353,40 @@
     "channels": []
   },
   {
+    "id": "eca22522-2032-4a57-bf29-172fcf4ede73",
+    "matchId": "5103684",
+    "matchKey": "انترناسيونال|فلومينينسي|٢٠٢٦-١٠-٢٩|01:30",
+    "homeName": "فلومينينسي",
+    "awayName": "إنترناسيونال",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/9451691418710.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/3841691418709.png",
+    "baghdadTime": "01:30:00",
+    "meccaTime": "01:30:00",
+    "sourceDate": "2026-10-29",
+    "status": "انتهت",
+    "score": "2 - 1",
+    "tournament": "مباريات الخميس",
+    "important": true,
+    "channels": []
+  },
+  {
+    "id": "8e2105fc-02c1-4ff0-951e-5061babc23e4",
+    "matchId": "5103686",
+    "matchKey": "بالميراس|سانتوس|٢٠٢٦-١٠-٢٩|01:30",
+    "homeName": "سانتوس",
+    "awayName": "بالميراس",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/241691418709.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/7971691418711.png",
+    "baghdadTime": "01:30:00",
+    "meccaTime": "01:30:00",
+    "sourceDate": "2026-10-29",
+    "status": "انتهت",
+    "score": "0 - 0",
+    "tournament": "مباريات الخميس",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "f8cd227d-bbd0-4b8f-ae4a-8f12c8494dff",
     "matchId": "6054755",
     "matchKey": "باثوميونايتد|تايبو|٢٠٢٦-١٠-٢٩|15:15",
@@ -455,6 +438,23 @@
     "channels": []
   },
   {
+    "id": "8bc06b7d-8079-4397-8117-1fc303e5a499",
+    "matchId": "5103693",
+    "matchKey": "بوتافوغو|ريمو|٢٠٢٦-١٠-٢٩|03:30",
+    "homeName": "ريمو",
+    "awayName": "بوتافوغو",
+    "homeLogo": "https://imgs.ysscores.com/teams/64/17673059547919.png",
+    "awayLogo": "https://imgs.ysscores.com/teams/64/2731691418709.png",
+    "baghdadTime": "03:30:00",
+    "meccaTime": "03:30:00",
+    "sourceDate": "2026-10-29",
+    "status": "انتهت",
+    "score": "2 - 1",
+    "tournament": "مباريات الخميس",
+    "important": true,
+    "channels": []
+  },
+  {
     "id": "f55143c7-e254-4057-a913-f68f01076c0d",
     "matchId": "66971032",
     "matchKey": "الجولان|الموصل|٢٠٢٦-١٠-٢٩|16:00",
@@ -489,7 +489,7 @@
     "channels": []
   },
   {
-    "id": "b4177b08-cb99-470d-846b-5091d4aae7d3",
+    "id": "a01f3e83-8b3b-40c6-a7ed-016d66903b83",
     "matchId": "42116405",
     "matchKey": "الترجي|الصفاقسي|٢٠٢٦-١٠-٢٩|16:30",
     "homeName": "الصفاقسي",
@@ -500,7 +500,7 @@
     "meccaTime": "04:30 م",
     "sourceDate": "2026-10-29",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
@@ -540,7 +540,7 @@
     "channels": []
   },
   {
-    "id": "bc0b0b64-0d02-4c34-bc30-9ccec181ed15",
+    "id": "50dc4d4c-2eb0-4260-b560-7b721eecf3f7",
     "matchId": "5996754",
     "matchKey": "الاهلي|مودرنسبورت|٢٠٢٦-١٠-٢٩|17:00",
     "homeName": "مودرن سبورت",
@@ -551,13 +551,13 @@
     "meccaTime": "05:00 م",
     "sourceDate": "2026-10-29",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
   },
   {
-    "id": "1eedd18f-8b3a-451a-9cef-8f64881c8755",
+    "id": "f9c72fb9-4d4f-4551-a3ba-0f0d57eeae79",
     "matchId": "6366040",
     "matchKey": "العين|عجمان|٢٠٢٦-١٠-٢٩|17:10",
     "homeName": "العين",
@@ -568,7 +568,7 @@
     "meccaTime": "05:10 م",
     "sourceDate": "2026-10-29",
     "status": "تأجلت",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
@@ -659,7 +659,7 @@
     "channels": []
   },
   {
-    "id": "b3a81622-4a73-481d-91d7-0f6ff9d0cb0c",
+    "id": "3bf621f4-e164-472c-b727-3a7d634c46d3",
     "matchId": "5996755",
     "matchKey": "بيراميدز|واديدجله|٢٠٢٦-١٠-٢٩|20:00",
     "homeName": "بيراميدز",
@@ -670,7 +670,7 @@
     "meccaTime": "08:00 م",
     "sourceDate": "2026-10-29",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
@@ -710,7 +710,7 @@
     "channels": []
   },
   {
-    "id": "681e3c9c-33be-4735-a712-3a7478dc2730",
+    "id": "57e9b0c1-5f64-436b-af2d-3c1b509853e8",
     "matchId": "27711767",
     "matchKey": "المغربالفاسي|نهضهبركان|٢٠٢٦-١٠-٢٩|20:00",
     "homeName": "المغرب الفاسي",
@@ -721,7 +721,7 @@
     "meccaTime": "08:00 م",
     "sourceDate": "2026-10-29",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
@@ -744,7 +744,7 @@
     "channels": []
   },
   {
-    "id": "c49b3ed2-8753-4c43-8f8c-223f203180ff",
+    "id": "ba09020c-2d9b-4bff-8714-70fade3ad0aa",
     "matchId": "5970193",
     "matchKey": "الخلود|النصر|٢٠٢٦-١٠-٢٩|21:00",
     "homeName": "النصر",
@@ -755,7 +755,7 @@
     "meccaTime": "09:00 م",
     "sourceDate": "2026-10-29",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
@@ -1169,7 +1169,7 @@
     "channels": []
   },
   {
-    "id": "fe8c3ee1-a7b9-4225-973f-d2250850edc0",
+    "id": "927538c3-f93c-4048-b2c3-5b9eccd6ff47",
     "matchId": "5985965",
     "matchKey": "بنفيكا|جيلفيسينتي|٢٠٢٦-١٠-٢٩|23:45",
     "homeName": "بنفيكا",
@@ -1180,7 +1180,7 @@
     "meccaTime": "11:45 م",
     "sourceDate": "2026-10-29",
     "status": "لم تبدأ",
-    "score": "",
+    "score": "0 - 0",
     "tournament": "مباريات الخميس",
     "important": true,
     "channels": []
