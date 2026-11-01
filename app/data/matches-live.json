@@ -461,7 +461,7 @@
   {
     "id": "m-8782",
     "matchId": "m-8782",
-    "matchKey": "اشبيليه|خيتافي|٢٠٢٦-١١-٠١|16:00",
+    "matchKey": "اشبيليه|خيتافي|2026-11-01|16:00",
     "homeName": "خيتافي",
     "awayName": "إشبيلية",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8aed98ad8aad8a7d981d98a-3.webp",
@@ -469,8 +469,8 @@
     "baghdadTime": "16:00",
     "meccaTime": "16:00",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
-    "score": "0-0",
+    "status": "انتهت",
+    "score": "3-1",
     "tournament": "",
     "important": true,
     "channels": []
@@ -478,7 +478,7 @@
   {
     "id": "m-8786",
     "matchId": "m-8786",
-    "matchKey": "راسينجسانتاندير|ريالمدريد|٢٠٢٦-١١-٠١|18:15",
+    "matchKey": "راسينجسانتاندير|ريالمدريد|2026-11-01|18:15",
     "homeName": "راسينج سانتاندير",
     "awayName": "ريال مدريد",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8b1d8a7d8b3d98ad986d8ac-d8b3d8a7d986d8aad8a7d986d8afd98ad8b1-3.webp",
@@ -486,8 +486,8 @@
     "baghdadTime": "18:15",
     "meccaTime": "18:15",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
-    "score": "0-0",
+    "status": "انتهت",
+    "score": "0-3",
     "tournament": "",
     "important": true,
     "channels": []
@@ -495,7 +495,7 @@
   {
     "id": "m-8790",
     "matchId": "m-8790",
-    "matchKey": "المغربالفاسي|الودادالرياضيتماره|٢٠٢٦-١١-٠١|19:00",
+    "matchKey": "المغربالفاسي|الودادالرياضيتماره|2026-11-01|19:00",
     "homeName": "الوداد الرياضي تمارة",
     "awayName": "المغرب الفاسي",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a7d984d988d8afd8a7d8af-d8a7d984d8b1d98ad8a7d8b6d98a-d8aad985d8a7d8b1d8a9-4.webp",
@@ -503,8 +503,8 @@
     "baghdadTime": "19:00",
     "meccaTime": "19:00",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
-    "score": "0-0",
+    "status": "انتهت",
+    "score": "1-0",
     "tournament": "",
     "important": true,
     "channels": []
@@ -512,7 +512,7 @@
   {
     "id": "m-8794",
     "matchId": "m-8794",
-    "matchKey": "ارسنال|ليفربول|٢٠٢٦-١١-٠١|19:30",
+    "matchKey": "ارسنال|ليفربول|2026-11-01|19:30",
     "homeName": "ليفربول",
     "awayName": "أرسنال",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d984d98ad981d8b1d8a8d988d984-6.webp",
@@ -520,8 +520,8 @@
     "baghdadTime": "19:30",
     "meccaTime": "19:30",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
-    "score": "0-0",
+    "status": "انتهت",
+    "score": "0-1",
     "tournament": "",
     "important": true,
     "channels": []
@@ -529,7 +529,7 @@
   {
     "id": "m-8798",
     "matchId": "m-8798",
-    "matchKey": "التشي|فالنسيا|٢٠٢٦-١١-٠١|20:30",
+    "matchKey": "التشي|فالنسيا|2026-11-01|20:30",
     "homeName": "إلتشي",
     "awayName": "فالنسيا",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a5d984d8aad8b4d98a-3.webp",
@@ -537,8 +537,8 @@
     "baghdadTime": "20:30",
     "meccaTime": "20:30",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
-    "score": "0-0",
+    "status": "انتهت",
+    "score": "0-1",
     "tournament": "",
     "important": true,
     "channels": []
@@ -546,7 +546,7 @@
   {
     "id": "m-8802",
     "matchId": "m-8802",
-    "matchKey": "اتحادطنجه|نهضهالزمامره|٢٠٢٦-١١-٠١|21:00",
+    "matchKey": "اتحادطنجه|نهضهالزمامره|2026-11-01|21:00",
     "homeName": "اتحاد طنجة",
     "awayName": "نهضة الزمامرة",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a7d8aad8add8a7d8af-d8b7d986d8acd8a9-4.webp",
@@ -554,8 +554,8 @@
     "baghdadTime": "21:00",
     "meccaTime": "21:00",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
-    "score": "0-0",
+    "status": "جاري الآن",
+    "score": "1-0",
     "tournament": "",
     "important": true,
     "channels": []
@@ -563,7 +563,7 @@
   {
     "id": "m-8806",
     "matchId": "m-8806",
-    "matchKey": "الجيشالملكي|الناديالمكناسي|٢٠٢٦-١١-٠١|21:00",
+    "matchKey": "الجيشالملكي|الناديالمكناسي|2026-11-01|21:00",
     "homeName": "النادي المكناسي",
     "awayName": "الجيش الملكي",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a7d984d986d8a7d8afd98a-d8a7d984d985d983d986d8a7d8b3d98a-4.webp",
@@ -571,7 +571,7 @@
     "baghdadTime": "21:00",
     "meccaTime": "21:00",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
+    "status": "انتهت",
     "score": "0-0",
     "tournament": "",
     "important": true,
@@ -580,7 +580,7 @@
   {
     "id": "m-8810",
     "matchId": "m-8810",
-    "matchKey": "نابولي|يوفنتوس|٢٠٢٦-١١-٠١|22:45",
+    "matchKey": "نابولي|يوفنتوس|2026-11-01|22:45",
     "homeName": "يوفنتوس",
     "awayName": "نابولي",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d98ad988d981d986d8aad988d8b3-6.webp",
@@ -588,7 +588,7 @@
     "baghdadTime": "22:45",
     "meccaTime": "22:45",
     "sourceDate": "2026-11-01",
-    "status": "لم تبدأ بعد",
+    "status": "جاري الآن",
     "score": "0-0",
     "tournament": "",
     "important": true,
@@ -597,7 +597,7 @@
   {
     "id": "m-8774",
     "matchId": "m-8774",
-    "matchKey": "الافيس|برشلونه|٢٠٢٦-١١-٠١|23:00",
+    "matchKey": "الافيس|برشلونه|2026-11-01|23:00",
     "homeName": "برشلونة",
     "awayName": "ألافيس",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a8d8b1d8b4d984d988d986d8a9-5.webp",
@@ -614,7 +614,7 @@
   {
     "id": "m-8770",
     "matchId": "m-8770",
-    "matchKey": "استونفيلا|فولهام|٢٠٢٦-١١-٠١|23:00",
+    "matchKey": "استونفيلا|فولهام|2026-11-01|23:00",
     "homeName": "أستون فيلا",
     "awayName": "فولهام",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a3d8b3d8aad988d986-d981d98ad984d8a7-6.webp",
@@ -631,7 +631,7 @@
   {
     "id": "m-8778",
     "matchId": "m-8778",
-    "matchKey": "الفتحالرباطي|حسنيهاكادير|٢٠٢٦-١١-٠١|23:00",
+    "matchKey": "الفتحالرباطي|حسنيهاكادير|2026-11-01|23:00",
     "homeName": "الفتح الرباطي",
     "awayName": "حسنية أكادير",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a7d984d981d8aad8ad-d8a7d984d8b1d8a8d8a7d8b7d98a-4.webp",
@@ -648,7 +648,7 @@
   {
     "id": "m-8814",
     "matchId": "m-8814",
-    "matchKey": "اتلتيكبلباو|ريالسوسيداد|٢٠٢٦-١١-٠١|23:00",
+    "matchKey": "اتلتيكبلباو|ريالسوسيداد|2026-11-01|23:00",
     "homeName": "أتلتيك بلباو",
     "awayName": "ريال سوسيداد",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d8a3d8aad984d8aad98ad983-d8a8d984d8a8d8a7d988-3.webp",
@@ -665,7 +665,7 @@
   {
     "id": "m-8818",
     "matchId": "m-8818",
-    "matchKey": "الرجاءالبيضاوي|نهضهبركان|٢٠٢٦-١١-٠١|23:00",
+    "matchKey": "الرجاءالبيضاوي|نهضهبركان|2026-11-01|23:00",
     "homeName": "نهضة بركان",
     "awayName": "الرجاء البيضاوي",
     "homeLogo": "https://sir-tv.vip/wp-content/uploads/2026/10/d986d987d8b6d8a9-d8a8d8b1d983d8a7d986-5.webp",
