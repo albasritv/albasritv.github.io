@@ -1,6 +1,6 @@
 {
-  "version": 1793563198648,
-  "updatedAt": "2026-11-01T19:59:58.648Z",
+  "version": 1793785953811,
+  "updatedAt": "2026-11-04T09:52:33.811Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -5578,6 +5578,47 @@
               "referer": "",
               "subtitleUrl": "",
               "url": "https://cdn.live.easybroadcast.io/abr_corp/73_arrabia_hthcj4p/playlist_dvr.m3u8?token=ePzCWcYE5-HINfGxiAp8XAuU8x2BmypUCah88SrZSso&token_path=%2Fabr_corp%2F73_arrabia_hthcj4p&expires=1789983068",
+              "userAgent": "",
+              "xRequestedWith": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sindbad_sport_root",
+      "name": "سندباد Sport",
+      "image": "",
+      "order": 17,
+      "enabled": true,
+      "channelCount": 1,
+      "channels": [
+        {
+          "id": "8ac75458-ed85-494a-b08a-7e2de7d7a067",
+          "categoryId": "sindbad_sport_root",
+          "name": "bein1 240p",
+          "image": "",
+          "order": 0,
+          "enabled": true,
+          "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "sindbad_d1604c71",
+              "name": "HLS — bein1-240p.m3u8",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "https://live-tv-116849026166.europe-west1.run.app/",
+              "subtitleUrl": "",
+              "url": "https://live-tv-116849026166.europe-west1.run.app/api/korasport/stream/bein1-240p.m3u8",
               "userAgent": "",
               "xRequestedWith": ""
             }
