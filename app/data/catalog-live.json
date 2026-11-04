@@ -1,6 +1,6 @@
 {
-  "version": 1793785970594,
-  "updatedAt": "2026-11-04T09:52:50.594Z",
+  "version": 1793786070617,
+  "updatedAt": "2026-11-04T09:54:30.617Z",
   "source": "firebase-direct-worker",
   "sections": [
     {
@@ -5601,6 +5601,27 @@
           "order": 0,
           "enabled": true,
           "servers": [
+            {
+              "accept": "",
+              "authUrl": "",
+              "authorization": "",
+              "cookie": "",
+              "drmKey": "",
+              "drmLicenseHeaders": "",
+              "drmLicenseUrl": "",
+              "drmMultiSession": false,
+              "drmType": "Auto",
+              "id": "sindbad_880a28e2",
+              "name": "HLS — bein1-1080p.m3u8",
+              "order": 0,
+              "origin": "",
+              "playerMode": "EXO",
+              "referer": "https://live-tv-116849026166.europe-west1.run.app/",
+              "subtitleUrl": "",
+              "url": "https://live-tv-116849026166.europe-west1.run.app/api/korasport/stream/bein1-1080p.m3u8",
+              "userAgent": "",
+              "xRequestedWith": ""
+            },
             {
               "accept": "",
               "authUrl": "",
